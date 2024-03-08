@@ -20,4 +20,7 @@ assignees: noraworld
 
 ## 新単語・新フレーズ
 * 
+
+## 所感・総評
+
 ```
