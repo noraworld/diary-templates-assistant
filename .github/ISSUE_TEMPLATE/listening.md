@@ -21,7 +21,8 @@ assignees: noraworld
 * 
 
 ## 新単語・新フレーズ
-* 
+| Word | Meaning | Example |
+| --- | --- | --- |
 
 ## 所感
 
