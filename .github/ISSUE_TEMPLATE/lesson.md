@@ -24,8 +24,8 @@ assignees: noraworld
 
 
 ## 新単語・新フレーズ
-| Word | Meaning | Example |
-| --- | --- | --- |
+| Word | Pronunciation | Meaning | Example |
+| --- | --- | --- | --- |
 
 
 ## 所感・総評
