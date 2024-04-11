@@ -19,6 +19,7 @@ assignees: noraworld
 | 先生 |  |
 | 時刻 |  |
 | 流暢度 |  |
+| アーカイブ | [Cambly](), [Google Drive](), [YouTube]() |
 
 ## 会話内容
 
