@@ -26,7 +26,7 @@ assignees: noraworld
 
 
 ## 学び
-
+* 
 
 ## 所感
 
