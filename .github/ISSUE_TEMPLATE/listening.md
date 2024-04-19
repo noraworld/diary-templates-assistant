@@ -7,10 +7,12 @@ assignees: noraworld
 
 ---
 
+## 集中的なアクティブ・イマージョン
 ```
 ## 基本情報
 | 項目 | 内容 |
 | --- | :---: |
+| 種別 | 集中的なアクティブ・イマージョン |
 | 教材 |  |
 | 所感難易度 |  |
 | 練習回数 |  |
@@ -42,4 +44,37 @@ assignees: noraworld
 
 ```
 
-[単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
+
+
+## 自由なアクティブ・イマージョン
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 自由なアクティブ・イマージョン |
+| 教材 |  |
+| 所感理解度 | % |
+
+## 所感
+
+```
+
+
+
+## 受動的なリスニング
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 受動的なリスニング |
+| 教材 |  |
+
+## 所感
+
+```
+
+
+
+## 参考リンク集
+* [単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
+* [イマージョンの方法](https://www.chads4.com/products/chads/categories/2150477918/posts/2156161422)
