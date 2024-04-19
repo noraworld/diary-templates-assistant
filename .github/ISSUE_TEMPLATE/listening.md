@@ -41,3 +41,5 @@ assignees: noraworld
 ## 所感
 
 ```
+
+[単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
