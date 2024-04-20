@@ -7,11 +7,15 @@ assignees: noraworld
 
 ---
 
+## 今日のレッスンで話したいこと
 ```
 ## 今日のレッスンで話したいこと
 > 
 ```
 
+
+
+## レッスンの内容
 ```
 ## 基本情報
 | 項目 | 内容 |
@@ -36,9 +40,15 @@ assignees: noraworld
 
 ```
 
+
+
+## 次回のレッスンで話したいこと
 ```
 ## 次回のレッスンで話したいこと
 > 
 ```
 
-[単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
+
+
+## 参考リンク集
+* [単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
