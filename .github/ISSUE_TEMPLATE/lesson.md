@@ -26,7 +26,7 @@ assignees: noraworld
 | アーカイブ | [Cambly](), [Google Drive](), [YouTube]() |
 
 ## 会話内容
-
+* 
 
 ## 新単語・新フレーズ
 | Word | Pronunciation | Meaning | Example |
