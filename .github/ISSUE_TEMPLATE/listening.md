@@ -66,7 +66,6 @@ assignees: noraworld
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
 
-
 ## 学び
 * 
 

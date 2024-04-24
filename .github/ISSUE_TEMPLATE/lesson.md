@@ -32,7 +32,6 @@ assignees: noraworld
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
 
-
 ## チェックリスト
 * [ ] 次のレッスンの予約
 
