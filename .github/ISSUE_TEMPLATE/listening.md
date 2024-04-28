@@ -69,6 +69,9 @@ assignees: noraworld
 ## 学び
 * 
 
+## チェックリスト
+* [ ] 翌日の YouTube 教材動画のダウンロード
+
 ## 所感
 
 ```
