@@ -70,7 +70,7 @@ assignees: noraworld
 * 
 
 ## チェックリスト
-* [ ] 翌日の YouTube 教材動画のダウンロード
+* [ ] 次の YouTube 教材動画のダウンロード
 
 ## 所感
 
