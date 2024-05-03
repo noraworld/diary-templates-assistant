@@ -7,7 +7,9 @@ assignees: noraworld
 
 ---
 
-## 受動的なリスニング
+<details>
+<summary>受動的なリスニング</summary>
+
 ```
 ## 基本情報
 | 項目 | 内容 |
@@ -18,10 +20,13 @@ assignees: noraworld
 ## 所感
 
 ```
+</details>
 
 
 
-## 自由なアクティブ・イマージョン
+<details>
+<summary>自由なアクティブ・イマージョン</summary>
+
 ```
 ## 基本情報
 | 項目 | 内容 |
@@ -34,10 +39,13 @@ assignees: noraworld
 ## 所感
 
 ```
+</details>
 
 
 
-## 集中的なアクティブ・イマージョン
+<details>
+<summary>集中的なアクティブ・イマージョン</summary>
+
 ```
 ## 基本情報
 | 項目 | 内容 |
@@ -75,6 +83,7 @@ assignees: noraworld
 ## 所感
 
 ```
+</details>
 
 
 
