@@ -7,15 +7,20 @@ assignees: noraworld
 
 ---
 
-## 今日のレッスンで話したいこと
+<details>
+<summary>今日のレッスンで話したいこと</summary>
+
 ```
 ## 今日のレッスンで話したいこと
 > 
 ```
+</details>
 
 
 
-## レッスンの内容
+<details>
+<summary>レッスンの内容</summary>
+
 ```
 ## 基本情報
 | 項目 | 内容 |
@@ -38,14 +43,18 @@ assignees: noraworld
 ## 所感・総評
 
 ```
+</details>
 
 
 
-## 次回のレッスンで話したいこと
+<details>
+<summary>次回のレッスンで話したいこと</summary>
+
 ```
 ## 次回のレッスンで話したいこと
 > 
 ```
+</details>
 
 
 
