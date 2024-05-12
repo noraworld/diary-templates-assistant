@@ -18,9 +18,6 @@ assignees: noraworld
 
 
 
-<details>
-<summary>レッスンの内容</summary>
-
 ```
 ## 基本情報
 | 項目 | 内容 |
@@ -43,7 +40,6 @@ assignees: noraworld
 ## 所感・総評
 
 ```
-</details>
 
 
 
