@@ -12,7 +12,12 @@ assignees: noraworld
 
 
 
-## 方法
+## 手順
+Todo リポジトリをチェックし明日やるべきタスクを整理・追加する。
+
+* [Issues](https://github.com/noraworld/to-do/issues)
+* [Board](https://github.com/users/noraworld/projects/1)
+
 以下のコマンドを実行して出力された結果をコピーしコメントとして投稿する。macOS の場合は自動的にクリップボードにコピーされる。
 
 ### Linux
