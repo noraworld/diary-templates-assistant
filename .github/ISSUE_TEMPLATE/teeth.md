@@ -45,7 +45,7 @@ assignees: noraworld
 | 手法 | 歯垢除去率 |
 | --- | :---: |
 | 歯ブラシのみ | 58 % |
-| 歯ブラシ + デンタルフロス | 85 % |
+| 歯ブラシ + デンタルフロス | 86 % |
 | 歯ブラシ + 歯間ブラシ | 95 % |
 
 _[歯と歯の間のケア方法](https://www.lion-dent-health.or.jp/labo/article/care/02-1/)_
