@@ -13,19 +13,21 @@ assignees: noraworld
 
 
 ## 手順
-Todo リポジトリをチェックし明日やるべきタスクを整理・追加する。
+### タスクの整理
+Todo リポジトリをチェックし明日やるべきタスクを整理・追加する。明日やるべきタスクには `tomorrow` ラベルを付与する。
 
 * [Issues](https://github.com/noraworld/to-do/issues)
 * [Board](https://github.com/users/noraworld/projects/1)
 
-以下のコマンドを実行して出力された結果をコピーしコメントとして投稿する。macOS の場合は自動的にクリップボードにコピーされる。
+### タスクの記録
+以下のコマンドを実行して出力された結果をコピーしコメントとして投稿する。macOS の場合は自動的にクリップボードにコピーされる。明日のタスクを追加しない場合は代わりにその理由をコメントする。
 
-### Linux
+#### Linux
 ```shell
 gh issue list --repo noraworld/to-do --search "label:today,tomorrow" --json title,url --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' | tac 
 ```
 
-### macOS
+#### macOS
 ```shell
 gh issue list --repo noraworld/to-do --search "label:today,tomorrow" --json title,url --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' | gtac | gtee >(pbcopy) 
 ```
