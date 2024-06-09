@@ -40,6 +40,8 @@ assignees: noraworld
     * なるべく止まらずにノンストップで書き続けるのがポイント
     * タイマーをセットしてやってみると良いかも
     * 8 分に慣れたら少しずつ時間を延ばしてみよう
+* リラックスするための歌詞の入っていないヒーリング系の音楽を聴きながら行っても良い
+    * Final Fantasy VII の "In Search of the Man in Black" がおすすめ
 
 ## その他
 <details>
