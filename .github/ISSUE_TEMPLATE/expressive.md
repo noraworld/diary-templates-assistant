@@ -41,7 +41,9 @@ assignees: noraworld
     * タイマーをセットしてやってみると良いかも
     * 8 分に慣れたら少しずつ時間を延ばしてみよう
 * リラックスするための歌詞の入っていないヒーリング系の音楽を聴きながら行っても良い
-    * Final Fantasy VII の "In Search of the Man in Black" がおすすめ
+    * おすすめ音楽一覧:
+        * In Search of the Man in Black (Final Fantasy VII)
+        * 深淵の果てに (Final Fantasy X)
 * Visual Studio Code で書くことを推奨する
     * 筆記開示のコメント欄に直接書いてしまうと非公開にしたい部分を精査せずに投稿してしまいがちになるので
     * 結果的に非公開にしなければならない内容は書かないようになってしまい思考の妨げになるので
