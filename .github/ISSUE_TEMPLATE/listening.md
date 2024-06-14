@@ -36,6 +36,10 @@ assignees: noraworld
 | 字幕 | なし |
 | 所感理解度 |  |
 
+## 新単語・新フレーズ
+| Word | Pronunciation | Meaning | Example |
+| --- | --- | --- | --- |
+
 ## 所感
 
 ```
