@@ -8,8 +8,17 @@ assignees: noraworld
 ---
 
 <details>
-<summary>えらい！</summary>
+<summary>唯我独尊</summary>
 
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 唯我独尊 |
+
+## 具体的な内容・感想・その他
+
+```
 </details>
 
 
@@ -17,6 +26,17 @@ assignees: noraworld
 <details>
 <summary>感謝日記</summary>
 
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 感謝日記 |
+| 感謝した相手 |  |
+| 感謝レベル |  |
+
+## 具体的な内容・感想・その他
+
+```
 </details>
 
 
@@ -24,4 +44,15 @@ assignees: noraworld
 <details>
 <summary>一日一善</summary>
 
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 一日一善 |
+| 善を施した相手 |  |
+| 自己肯定感レベル |  |
+
+## 具体的な内容・感想・その他
+
+```
 </details>
