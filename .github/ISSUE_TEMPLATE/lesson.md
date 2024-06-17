@@ -33,10 +33,10 @@ assignees: noraworld
 
 
 <details>
-<summary>次回のレッスンで話したいこと</summary>
+<summary>今日のレッスンで話したいこと</summary>
 
 ```
-## 次回のレッスンで話したいこと
+## 今日のレッスンで話したいこと
 > 
 ```
 </details>
@@ -44,10 +44,10 @@ assignees: noraworld
 
 
 <details>
-<summary>今日のレッスンで話したいこと</summary>
+<summary>次回のレッスンで話したいこと</summary>
 
 ```
-## 今日のレッスンで話したいこと
+## 次回のレッスンで話したいこと
 > 
 ```
 </details>
