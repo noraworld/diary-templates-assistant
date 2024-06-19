@@ -15,6 +15,14 @@ assignees: noraworld
 
 ```
 
+
+
+## リンク
+* [Issues](https://github.com/noraworld/to-do/issues)
+* [Board](https://github.com/users/noraworld/projects/1)
+
+
+
 ## 重要
 **たとえ明日はタスクを積むつもりがなくてもタスクリストを毎日必ずチェックすること！** たとえ明日はやらなかったとしても、今現在どのような課題があるのかを毎日把握しておくことが重要である。
 
@@ -27,13 +35,13 @@ assignees: noraworld
 
 ## 手順
 ### タスクの整理
-Todo リポジトリをチェックし明日やるべきタスクを整理・追加する。明日やるべきタスクには `tomorrow` ラベルを付与する。
-
-* [Issues](https://github.com/noraworld/to-do/issues)
-* [Board](https://github.com/users/noraworld/projects/1)
+* Todo リストをチェックして明日やるべきタスクを整理・追加する
+    * 明日やるべきタスクには `tomorrow` ラベルを付与する
 
 ### タスクの記録
-以下のコマンドを実行して出力された結果をコピーしコメントとして投稿する。macOS の場合は自動的にクリップボードにコピーされる。明日のタスクを追加しない場合は代わりにその理由をコメントする。
+* 以下のコマンドを実行して出力された結果をコピーしコメントとして投稿する
+    * macOS の場合は自動的にクリップボードにコピーされる
+    * 明日のタスクを追加しない場合はなぜやらないのかを代わりにコメントする
 
 #### Linux
 ```shell
