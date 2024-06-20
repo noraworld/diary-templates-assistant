@@ -19,6 +19,7 @@ assignees: noraworld
 
 <details>
 <summary>追加しない場合</summary>
+
 ```
 ## チェックリスト
 * [ ] 現在の課題をチェック
