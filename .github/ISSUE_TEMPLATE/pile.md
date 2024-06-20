@@ -18,8 +18,8 @@ assignees: noraworld
 
 
 ## リンク
-* [Issues](https://github.com/noraworld/to-do/issues)
 * [Board](https://github.com/users/noraworld/projects/1)
+* [Issues](https://github.com/noraworld/to-do/issues)
 
 
 
