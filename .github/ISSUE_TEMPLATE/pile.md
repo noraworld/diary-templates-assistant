@@ -17,6 +17,22 @@ assignees: noraworld
 
 
 
+<details>
+<summary>追加しない場合</summary>
+```
+## チェックリスト
+* [ ] 現在の課題をチェック
+
+## 明日やること
+特になし。
+
+## 理由
+
+```
+</details>
+
+
+
 ## リンク
 * [Board](https://github.com/users/noraworld/projects/1)
 * [Issues](https://github.com/noraworld/to-do/issues)
