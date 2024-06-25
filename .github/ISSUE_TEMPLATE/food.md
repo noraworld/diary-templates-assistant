@@ -39,6 +39,11 @@ assignees: noraworld
 特になし。
 ```
 
+
+
+<details>
+<summary>MIND スコアボード フードカテゴリー・配点表</summary>
+
 ## フードカテゴリー・配点表
 | カテゴリー | スコア | 例 | 推奨摂取量・上限摂取量 | 手ばかり |
 | --- | :---: | --- | --- | --- |
@@ -62,6 +67,12 @@ assignees: noraworld
 | ワイン (グラス 1 杯以上) | -3 | | ― | |
 
 _『[ヤバい集中力](https://www.amazon.co.jp/dp/B07X32TV1M)』図 1　脳に良い 10 のフードカテゴリー、図 2　脳に悪い 7 つのフードカテゴリー、図 3　MIND スコアボードより引用 (一部改変)_
+</details>
+
+
+
+<details>
+<summary>SMILES</summary>
 
 ## SMILES
 * 地中海式の食事がベース
@@ -135,3 +146,4 @@ _『[ヤバい集中力](https://www.amazon.co.jp/dp/B07X32TV1M)』図 1　脳�
 * カッテージチーズ
 
 _[超ストレス解消法 イライラが一瞬で消える100の科学的メソッド](https://www.amazon.co.jp/dp/4865371265)_
+</details>
