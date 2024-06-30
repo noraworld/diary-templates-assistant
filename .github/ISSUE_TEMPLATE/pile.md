@@ -13,6 +13,9 @@ assignees: noraworld
 
 ## 明日やること
 
+
+## 備考
+特になし。
 ```
 
 
@@ -27,8 +30,11 @@ assignees: noraworld
 ## 明日やること
 特になし。
 
-## 理由
+## やらない理由
 
+
+## 備考
+特になし。
 ```
 </details>
 
