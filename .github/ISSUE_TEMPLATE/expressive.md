@@ -8,6 +8,20 @@ assignees: noraworld
 ---
 
 <details>
+<summary>心配スケジューリング</summary>
+
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 心配スケジューリング |
+
+## 悩み事や心配事の内容
+
+```
+</details>
+
+<details>
 <summary>筆記開示</summary>
 
 ```
@@ -19,20 +33,6 @@ assignees: noraworld
 | 実時間 | 分 |
 
 ## 内容
-
-```
-</details>
-
-<details>
-<summary>心配スケジューリング</summary>
-
-```
-## 基本情報
-| 項目 | 内容 |
-| --- | :---: |
-| 種別 | 心配スケジューリング |
-
-## 悩み事や心配事の内容
 
 ```
 </details>
