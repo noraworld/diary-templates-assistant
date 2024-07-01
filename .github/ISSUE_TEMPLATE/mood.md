@@ -8,6 +8,14 @@ assignees: noraworld
 ---
 
 <details>
+<summary>コーピング・レパートリー</summary>
+
+* TBD
+</details>
+
+
+
+<details>
 <summary>ストレス日記</summary>
 
 ```
@@ -192,12 +200,4 @@ _[1 日 4 回ずつ、そのときに自分がどんな感情を抱いていた�
 
 ### 要因
 その気分になったと考えられる要因について考察して記入します。特に理由が思い浮かばない場合は「不明」と記入します。
-</details>
-
-
-
-<details>
-<summary>コーピング・レパートリー</summary>
-
-* TBD
 </details>
