@@ -19,6 +19,20 @@ assignees: noraworld
 
 ```
 
+<details>
+<summary>繰越時</summary>
+
+## チェックリスト
+* [ ] ~~キシリトールガム~~
+* [ ] ~~歯磨き粉~~
+* [ ] ~~デンタルフロス~~
+* [ ] ~~歯間ブラシ~~
+* [ ] ~~Health アプリへの保存~~
+
+## 備考
+翌日分に繰り越し。
+</details>
+
 ## 注意点
 * [歯磨き7つのNG習慣](https://www.ohsakicity.dental/4326.html)
 * 歯を磨く時間は 3 分以上
