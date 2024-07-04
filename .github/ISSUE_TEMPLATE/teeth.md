@@ -22,6 +22,7 @@ assignees: noraworld
 <details>
 <summary>繰越時</summary>
 
+```
 ## チェックリスト
 * [ ] ~~キシリトールガム~~
 * [ ] ~~歯磨き粉~~
@@ -31,6 +32,7 @@ assignees: noraworld
 
 ## 備考
 翌日分に繰り越し。
+```
 </details>
 
 ## 注意点
