@@ -171,7 +171,7 @@ _記録の力 p.144_
 ### ストレスサーモメーター
 以下のような架空の温度計を見ながら、今のストレスが何点なのか採点します。「過去にも味わったことがないストレス」が 10 点で、「まったく何のイライラも不安もない」なら 0 点です。
 
-![ストレスサーモメーター](https://github.com/noraworld/diary-templates/blob/main/assets/images/stress_thermometer.png?raw=true)
+<img alt="ストレスサーモメーター" src="https://github.com/noraworld/diary-templates/blob/main/assets/images/stress_thermometer.png?raw=true" width="30%">
 
 ### 幸福度
 そのストレスを受けたせいで、気分がどこまで落ち込んだかを 10 点満点で採点します。最低の気分なら 0 点で、最高の気分なら 10 点です。
