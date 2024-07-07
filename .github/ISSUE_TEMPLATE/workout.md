@@ -23,3 +23,4 @@ assignees: noraworld
 * 隣人の物音や騒音にイライラしたのをトリガーとしてやる
     * バーピーやジャンピングジャックなどのジャンプ系で仕返しすることをモチベーションとする
     * 他人がもたらすイライラを無駄にしない
+    * Inspired by Teasing Master Takagi-san (Nishikata does as many push-ups as Takagi-san teases him.)
