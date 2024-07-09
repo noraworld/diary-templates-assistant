@@ -70,7 +70,21 @@ assignees: noraworld
 
 #### Linux
 ```shell
-gh issue list --repo noraworld/to-do --search "label:today,tomorrow" --json title,url --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' | tac 
+gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md" --jq .content |
+  base64 --decode |
+  awk '/^```/{f++; next} f==1' |
+  while IFS= read -r line; do
+    if [ "$line" = "<ここにやることを挿入>" ]; then
+      gh issue list \
+        --repo noraworld/to-do \
+        --search "label:today,tomorrow" \
+        --json title,url \
+        --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
+        tac
+    else
+      echo "$line"
+    fi
+  done 
 ```
 
 #### macOS
