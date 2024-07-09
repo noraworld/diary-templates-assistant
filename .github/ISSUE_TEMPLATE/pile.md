@@ -80,7 +80,7 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
     if [ "$line" = "<ここにやることを挿入>" ]; then
       gh issue list \
         --repo noraworld/to-do \
-        --search "label:wip" \
+        --search "label:today,tomorrow" \
         --json title,url \
         --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
         gtac
