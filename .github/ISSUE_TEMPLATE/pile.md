@@ -68,7 +68,9 @@ assignees: noraworld
     * macOS の場合は自動的にクリップボードにコピーされる
     * 明日のタスクを追加しない場合はなぜやらないのかを代わりにコメントする
 
-#### Linux
+<details>
+<summary>Linux</summary>
+
 ```shell
 gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md" --jq .content |
   base64 --decode |
@@ -86,8 +88,11 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
     fi
   done 
 ```
+</details>
 
-#### macOS
+<details>
+<summary>macOS</summary>
+
 ```shell
 gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md" --jq .content |
   gbase64 --decode |
@@ -108,3 +113,4 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
   pbcopy &&
   exit 
 ```
+</details>
