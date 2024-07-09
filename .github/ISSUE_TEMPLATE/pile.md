@@ -73,5 +73,22 @@ gh issue list --repo noraworld/to-do --search "label:today,tomorrow" --json titl
 
 #### macOS
 ```shell
-gh issue list --repo noraworld/to-do --search "label:today,tomorrow" --json title,url --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' | gtac | gtee >(pbcopy) 
+gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md" --jq .content |
+  gbase64 --decode |
+  awk '/^```/{f++; next} f==1' |
+  while IFS= read -r line; do
+    if [ "$line" = "<ここにやることを挿入>" ]; then
+      gh issue list \
+        --repo noraworld/to-do \
+        --search "label:wip" \
+        --json title,url \
+        --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
+        gtac
+    else
+      echo "$line"
+    fi
+  done |
+  ghead -c -1 |
+  pbcopy &&
+  exit 
 ```
