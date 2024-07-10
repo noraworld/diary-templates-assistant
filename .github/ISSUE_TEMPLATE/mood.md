@@ -162,13 +162,13 @@ _参考: 『[超ストレス解消法 イライラが一瞬で消える100の科
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | ストレス日記 |
+| 状況 |  |
+| 感情 |  |
 | ストレスサーモメーター |  |
 | 幸福度 |  |
 | 生産性 |  |
 | 持続時間 |  |
-| 状況 |  |
 | ストレス源 |  |
-| 感情 |  |
 | トリガー |  |
 | リアクション |  |
 | 身体反応 |  |
@@ -739,4 +739,4 @@ _[1 日 4 回ずつ、そのときに自分がどんな感情を抱いていた�
 TBD
 </details>
 
-[`このテンプレートを更新`](https://github.com/noraworld/diary-templates/edit/main/.github/ISSUE_TEMPLATE/mood.md)
+[`🖋️ このテンプレートを更新`](https://github.com/noraworld/diary-templates/edit/main/.github/ISSUE_TEMPLATE/mood.md)
