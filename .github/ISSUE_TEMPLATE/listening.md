@@ -40,6 +40,9 @@ assignees: noraworld
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
 
+## チェックリスト
+* [ ] 新単語や新フレーズがある場合は単語帳に転記
+
 ## 所感
 
 ```
@@ -83,6 +86,7 @@ assignees: noraworld
 
 ## チェックリスト
 * [ ] 次の YouTube 教材動画のダウンロード
+* [ ] 新単語や新フレーズがある場合は単語帳に転記
 
 ## 所感
 
