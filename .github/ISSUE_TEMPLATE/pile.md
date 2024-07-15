@@ -68,8 +68,9 @@ assignees: noraworld
     * macOS の場合は自動的にクリップボードにコピーされるのでこちらを推奨する
     * 明日のタスクを追加しない場合はなぜやらないのかを代わりにコメントする
 
+#### macOS
 <details>
-<summary>macOS</summary>
+<summary>テンプレート全体をコピー</summary>
 
 ```shell
 gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md" --jq .content |
@@ -94,7 +95,24 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
 </details>
 
 <details>
-<summary>Linux</summary>
+<summary>タスクリストのみコピー</summary>
+
+```shell
+gh issue list \
+  --repo noraworld/to-do \
+  --search "label:today,tomorrow" \
+  --json title,url \
+  --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
+  gtac |
+  ghead -c -2 |
+  pbcopy &&
+  exit 
+```
+</details>
+
+#### Linux
+<details>
+<summary>テンプレート全体をコピー</summary>
 
 ```shell
 gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md" --jq .content |
@@ -112,5 +130,18 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
       echo "$line"
     fi
   done 
+```
+</details>
+
+<details>
+<summary>タスクリストのみコピー</summary>
+
+```shell
+gh issue list \
+  --repo noraworld/to-do \
+  --search "label:today,tomorrow" \
+  --json title,url \
+  --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
+  tac
 ```
 </details>
