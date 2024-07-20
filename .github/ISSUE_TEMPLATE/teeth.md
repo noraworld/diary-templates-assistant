@@ -24,7 +24,7 @@ assignees: noraworld
 * [ ] Health アプリへの保存
 
 ## 感想・その他
-
+特になし。
 ```
 
 <details>
