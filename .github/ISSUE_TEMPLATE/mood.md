@@ -787,7 +787,8 @@ _[1 日 4 回ずつ、そのときに自分がどんな感情を抱いていた�
 * 罪悪感
 
 ## オリジナル
-TBD
+* 焦燥感
+* 憂鬱
 </details>
 
 [`🖋️ このテンプレートを更新`](https://github.com/noraworld/diary-templates/edit/main/.github/ISSUE_TEMPLATE/mood.md)
