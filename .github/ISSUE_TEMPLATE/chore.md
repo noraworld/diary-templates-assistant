@@ -10,8 +10,14 @@ assignees: noraworld
 ```
 ## チェックリスト
 * [ ] レッスンのリマインダー設定
-* [ ] メールチェック
 * [ ] 書類整理
+* [ ] メッセージチェック
+    * [ ] Gmail
+    * [ ] Twitter
+    * [ ] Instagram
+    * [ ] Facebook
+    * [ ] LINE
+    * [ ] Discord
 
 ## 感想・その他
 
