@@ -15,6 +15,7 @@ assignees: noraworld
     * [ ] Gmail
     * [ ] Twitter
     * [ ] Instagram
+    * [ ] Threads
     * [ ] Facebook
     * [ ] LINE
     * [ ] Discord
