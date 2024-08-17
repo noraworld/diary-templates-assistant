@@ -43,6 +43,22 @@ assignees: noraworld
 ```
 </details>
 
+<details>
+<summary>絶食時</summary>
+
+```
+## チェックリスト
+* [ ] ~~キシリトールガム~~
+* [ ] ~~歯磨き粉~~
+* [ ] ~~デンタルフロス~~
+* [ ] ~~歯間ブラシ~~
+* [ ] ~~Health アプリへの保存~~
+
+## 備考
+今日は食べていないので歯も磨かない。
+```
+</details>
+
 ## 注意点
 * [歯磨き7つのNG習慣](https://www.ohsakicity.dental/4326.html)
 * 歯を磨く時間は 3 分以上
