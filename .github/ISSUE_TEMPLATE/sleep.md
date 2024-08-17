@@ -77,7 +77,7 @@ assignees: noraworld
 
 
 <details>
-<summary>徹夜・昼寝のみ</summary>
+<summary>昼寝のみ</summary>
 
 ```
 ## 基本情報
@@ -96,6 +96,17 @@ assignees: noraworld
 ## 分析・所感
 昼寝のみだったため正確な記録は確認できていない。この睡眠時間は翌日のものと合算されるはず。
 
+
+```
+</details>
+
+
+
+<details>
+<summary>徹夜</summary>
+
+```
+## 分析・所感
 
 ```
 </details>
