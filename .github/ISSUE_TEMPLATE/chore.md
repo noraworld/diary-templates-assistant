@@ -21,5 +21,5 @@ assignees: noraworld
     * [ ] Discord
 
 ## 感想・その他
-
+特になし。
 ```
