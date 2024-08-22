@@ -18,6 +18,7 @@ assignees: noraworld
     * [ ] Threads
     * [ ] Facebook
     * [ ] LINE
+    * [ ] Slack
     * [ ] Discord
 
 ## 感想・その他
