@@ -11,6 +11,9 @@ assignees: noraworld
 ## チェックリスト
 * [ ] レッスンのリマインダー設定
 * [ ] 書類整理
+* [ ] メールチェック
+
+<!--
 * [ ] メッセージチェック
     * [ ] Gmail
     * [ ] Twitter
@@ -20,6 +23,7 @@ assignees: noraworld
     * [ ] LINE
     * [ ] Slack
     * [ ] Discord
+-->
 
 ## 感想・その他
 特になし。
