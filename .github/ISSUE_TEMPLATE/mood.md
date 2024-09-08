@@ -160,7 +160,7 @@ _参考: 『[超ストレス解消法 イライラが一瞬で消える100の科
 ~~~
 ## 感情パイチャート [^pie]
 ```mermaid
-pie
+pie showData
 "" : 0
 ```
 
@@ -402,7 +402,7 @@ _記録の力 p.203_
 ~~~
 ## 感情パイチャート [^pie]
 ```mermaid
-pie
+pie showData
 "" : 0
 ```
 
@@ -580,7 +580,7 @@ _[1 日 4 回ずつ、そのときに自分がどんな感情を抱いていた�
 ~~~
 ## 感情パイチャート [^pie]
 ```mermaid
-pie
+pie showData
 "" : 0
 ```
 
@@ -625,7 +625,7 @@ pie
 ~~~
 ## 感情パイチャート [^pie]
 ```mermaid
-pie
+pie showData
 "" : 0
 ```
 
@@ -677,7 +677,7 @@ pie
 ~~~
 ## 感情パイチャート [^pie]
 ```mermaid
-pie
+pie showData
 "" : 0
 ```
 
