@@ -12,9 +12,11 @@ assignees: noraworld
 * [ ] Money Forward
 * [ ] Wise
 
+<!--
 ## 支出
 | 概要 | 金額 | 妥当性 |
 | --- | :---: | :---: |
+-->
 
 ## 分析・所感
 特になし。
