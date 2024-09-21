@@ -45,6 +45,7 @@ assignees: noraworld
 ## リンク
 * [Board](https://github.com/users/noraworld/projects/1)
 * [Issues](https://github.com/noraworld/to-do/issues)
+* [GitHub Actions](https://github.com/noraworld/diary-templates/actions/workflows/pile.yml)
 
 
 
@@ -64,6 +65,12 @@ assignees: noraworld
     * 明日やるべきタスクには `tomorrow` ラベルを付与する
 
 ### タスクの記録
+* [GitHub Actions](https://github.com/noraworld/diary-templates/actions/workflows/pile.yml) を実行する
+    * 明日のタスクを追加しない場合はなぜやらないのかを代わりにコメントする
+
+<details>
+<summary>ローカル実行版（旧）</summary>
+
 * 以下のコマンドを実行して出力された結果をコピーしコメントとして投稿する
     * macOS の場合は自動的にクリップボードにコピーされるのでこちらを推奨する
     * 明日のタスクを追加しない場合はなぜやらないのかを代わりにコメントする
@@ -144,4 +151,5 @@ gh issue list \
   --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
   tac
 ```
+</details>
 </details>
