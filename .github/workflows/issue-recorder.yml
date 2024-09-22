@@ -1,0 +1,76 @@
+name: Issue Recorder
+
+on:
+  issues:
+    types:
+      - closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retrieve the title prefix
+        run: |
+          # https://zenn.dev/link/comments/ac4003f2728de7
+          # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "abandoned")" -gt 0 ]; then
+            echo "TITLE_PREFIX=😞" >> $GITHUB_ENV
+          else
+            echo "TITLE_PREFIX=✅" >> $GITHUB_ENV
+          fi
+
+      - name: Track issues
+        uses: noraworld/issue-recorder@main
+        with:
+          mode: "file, issue"
+          filepath: default
+          committer_name: Kosuke Aoki
+          committer_email: mail@noraworld.com
+          overwrite_when_modified: true
+          extra_text_when_modified: "# 重複投稿！"
+          notification_comment: このタスクの内容は [`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>)) に保存されました。
+          title_prefix_for_file: ${{ env.TITLE_PREFIX }}
+          target_issue_repo: noraworld/daily-report
+          target_issue_number: latest
+          fold_threshold: infinity
+          fold_summary: 詳細を表示
+          title_prefix_for_issue: ${{ env.TITLE_PREFIX }}
+          with_date: true
+          timezone: Asia/Tokyo
+          time_format: h:mm a · MMM d, yyyy (ZZZZ)
+          with_header: "---\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nassignees: <ASSIGNEES>\r\nlabels: <LABELS>\r\ncreated_at: <CREATED_AT>\r\n---"
+          with_title: true
+          with_quote: issue
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Pile up today's to-do list on daily report's issue
+        run: |
+          NUMBER=$(gh issue list --repo "noraworld/daily-report" --limit 1 | awk '{ print $1 }')
+          body=$(gh issue view --repo "noraworld/daily-report" --json body --jq .body "$NUMBER")
+          processed_body=$(echo "$body" | sed -E 's/\* 特になし//g')
+
+          # It works:
+          #   https://chat.openai.com/share/72f96556-1e59-4711-9a47-3eed72b8b184 (ja)
+          #   https://chat.openai.com/share/1e516c7f-0382-4361-89c1-9be185bd7fb2 (ja)
+          #
+          # It doesn't work for some reason:
+          #   https://hkobayash.hatenadiary.org/entry/20111106/1320560290 (ja)
+          #
+          ESCAPED_TITLE=$( echo "$TITLE" | sed 's/[^^]/[&]/g; s/\^/\\^/g; s/\[\[/\[\\[/g; s/\]\]/\]\\]/g' )
+          ESCAPED_URL=$(   echo "$URL"   | sed 's/[^^]/[&]/g; s/\^/\\^/g' )
+
+          # Do not indent inside the condition.
+          if [ "$(echo "$processed_body" | grep -cE "\[$ESCAPED_TITLE\]\($ESCAPED_URL\)")" -eq 0 ]; then
+          gh issue edit --repo "noraworld/daily-report" --body "$processed_body
+          * [x] [$TITLE]($URL)
+          " "$NUMBER"
+          else
+          NEW_BODY=$( echo "$processed_body" | sed -E "s/\* \[ \] (\[$ESCAPED_TITLE\]\($ESCAPED_URL\))/\* \[x\] \1/g" )
+          gh issue edit --repo "noraworld/daily-report" --body "$NEW_BODY" "$NUMBER"
+          fi
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          TITLE: ${{ github.event.issue.title }}
+          URL: ${{ github.event.issue.html_url }}
