@@ -56,3 +56,19 @@ assignees: noraworld
 
 ```
 </details>
+
+
+
+<details>
+<summary>学而不厭</summary>
+
+```
+## 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 学而不厭 |
+
+## 具体的な内容・感想・その他
+
+```
+</details>
