@@ -12,7 +12,7 @@ assignees: noraworld
 
 
 <details>
-<summary>【状況: ストレスを感じたとき】コーピング・レパートリー</summary>
+<summary>【状況: ストレスを感じたとき】<b>コーピング・レパートリー</b></summary>
 
 ## オリジナル
 | トリガー | アクション | コスパ | 手軽さ | 即効性 | 効果の高さ | 持続時間 | 合計スコア |
@@ -112,7 +112,17 @@ _参考: 『[超ストレス解消法 イライラが一瞬で消える100の科
 
 
 <details>
-<summary>【状況: 人生においてなにかコントロールできないことや許せないこと、モヤモヤしたことがあったとき】受容の精神を鍛えるチャンス</summary>
+<summary>【状況: 落ち込むことがあったとき】<b>感動的な泣ける作品一覧</b></summary>
+
+* [FINAL FANTASY X](https://www.youtube.com/watch?v=YvSOr3NPpTA)
+* 推しの子（特にシーズン 1 エピソード 1）
+* [Yesterday Once More](https://music.youtube.com/watch?v=Aa9YmR8SdeA)
+</details>
+
+
+
+<details>
+<summary>【状況: 人生においてなにかコントロールできないことや許せないこと、モヤモヤしたことがあったとき】<b>受容の精神を鍛えるチャンス</b></summary>
 
 * 何十日、何百日と毎日欠かさず続けていた日常の習慣が途切れてしまうとき
 * レッスン前の短い時間でやるべきことが中途半端に中断されてしまうとき
@@ -821,7 +831,7 @@ pie showData
 
 
 <details>
-<summary>【頻度: 1 日 1 回】アクセプタンス・ワードセラピー</summary>
+<summary>【頻度: 1 日 1 回】<b>アクセプタンス・ワードセラピー</b></summary>
 
 1 日に 1 回は「受容の精神」について述べた言葉や書物に触れる。
 
