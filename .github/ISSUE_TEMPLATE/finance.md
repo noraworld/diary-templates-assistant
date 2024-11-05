@@ -10,7 +10,10 @@ assignees: noraworld
 ```
 ## チェックリスト
 * [ ] Money Forward
+
+<!--
 * [ ] Wise
+-->
 
 <!--
 ## 支出
