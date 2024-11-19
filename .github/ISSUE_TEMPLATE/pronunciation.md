@@ -19,7 +19,7 @@ assignees: noraworld
 * 
 
 ## 感想
-
+特になし。
 ```
 
 ## 心構え
