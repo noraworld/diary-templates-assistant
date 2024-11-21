@@ -555,7 +555,7 @@ pie showData
 
 
 
-## 数週間毎
+## 数週間毎（1 日、15 日）
 <details>
 <summary>【頻度: 2 〜 4 週間に 1 回】ストレス・シンプトム・スケール</summary>
 
@@ -636,7 +636,7 @@ pie showData
 
 
 
-## 毎月
+## 毎月（1 日）
 <details>
 <summary>【頻度: 月 1 回】PSS4</summary>
 
