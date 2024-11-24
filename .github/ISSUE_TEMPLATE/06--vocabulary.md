@@ -1,5 +1,5 @@
 ---
-name: Vocabulary
+name: 06. Vocabulary
 about: 単語学習 | ネイティブと遜色ない会話を目指すには語彙力が必要不可欠です
 title: "[{{DATE}}]_vocabulary_単語学習"
 labels: ''
