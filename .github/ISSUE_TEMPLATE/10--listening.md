@@ -11,13 +11,13 @@ assignees: noraworld
 <summary>受動的なリスニング</summary>
 
 ```
-## 基本情報
+### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | 受動的なリスニング |
 | 教材 |  |
 
-## 所感
+### 所感
 
 ```
 </details>
@@ -28,13 +28,13 @@ assignees: noraworld
 <summary>自由なアクティブ・イマージョン（簡易版）</summary>
 
 ```
-## 基本情報
+### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | 自由なアクティブ・イマージョン（簡易版） |
 | 教材 |  |
 
-## 所感
+### 所感
 特になし。
 ```
 </details>
@@ -45,7 +45,7 @@ assignees: noraworld
 <summary>自由なアクティブ・イマージョン</summary>
 
 ```
-## 基本情報
+### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | 自由なアクティブ・イマージョン |
@@ -53,11 +53,11 @@ assignees: noraworld
 | 字幕 | なし |
 | 所感理解度 |  |
 
-## 新単語・新フレーズ
+### 新単語・新フレーズ
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
 
-## チェックリスト
+### チェックリスト
 * [ ] 新単語や新フレーズがある場合は単語帳に転記
 
 ## 所感
@@ -71,7 +71,7 @@ assignees: noraworld
 <summary>集中的なアクティブ・イマージョン</summary>
 
 ```
-## 基本情報
+### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | 集中的なアクティブ・イマージョン |
@@ -79,7 +79,7 @@ assignees: noraworld
 | 所感難易度 |  |
 | 練習回数 |  |
 
-## ディクテーション
+### ディクテーション
 > 
 
 > <details>
@@ -91,27 +91,27 @@ assignees: noraworld
 > * **太字**: 答えを見て正しいものに修正したところ
 > </details>
 
-## 分析
+### 分析
 * 
 
-## 新単語・新フレーズ
+### 新単語・新フレーズ
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
 
-## 学び
+### 学び
 * 
 
-## チェックリスト
+### チェックリスト
 * [ ] 次の YouTube 教材動画のダウンロード
 * [ ] 新単語や新フレーズがある場合は単語帳に転記
 
-## 所感
+### 所感
 
 ```
 </details>
 
 
 
-## 参考リンク集
+### 参考リンク集
 * [単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
 * [イマージョンの方法](https://www.chads4.com/products/chads/categories/2150477918/posts/2156161422)
