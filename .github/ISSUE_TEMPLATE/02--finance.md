@@ -11,16 +11,23 @@ assignees: noraworld
 ### チェックリスト
 * [ ] Money Forward
 
-<!--
-* [ ] Wise
--->
+### 分析・所感
+特になし。
+```
 
-<!--
+<details>
+<summary>支出記録あり</summary>
+
+```
+### チェックリスト
+* [ ] Money Forward
+
 ### 支出
 | 概要 | 金額 | 妥当性 |
 | --- | :---: | :---: |
--->
+
 
 ### 分析・所感
 特になし。
 ```
+</details>
