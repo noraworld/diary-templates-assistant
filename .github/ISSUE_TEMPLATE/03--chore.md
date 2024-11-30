@@ -9,8 +9,8 @@ assignees: noraworld
 
 ```
 ### チェックリスト
-* [ ] [書類整理](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
 * [ ] [メールチェック](https://mail.google.com/mail/u/0/#inbox)
+* [ ] [書類整理](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
 
 ### 感想・その他
 特になし。
