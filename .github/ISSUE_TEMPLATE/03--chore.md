@@ -9,8 +9,8 @@ assignees: noraworld
 
 ```
 ### チェックリスト
-* [ ] 書類整理
-* [ ] メールチェック
+* [ ] [書類整理](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
+* [ ] [メールチェック](https://mail.google.com/mail/u/0/#inbox)
 
 ### 感想・その他
 特になし。
@@ -25,13 +25,15 @@ assignees: noraworld
 
 ```
 ### チェックリスト
-* [ ] Twitter
-* [ ] Instagram
-* [ ] Threads
-* [ ] Facebook
+* [ ] [Twitter](https://x.com/notifications)
+* [ ] [Instagram](https://www.instagram.com/direct/inbox/)
+* [ ] [Threads](https://www.threads.net/activity)
+* [ ] [Mastodon](https://mastodon.social/deck/notifications)
+* [ ] [Misskey](https://misskey.io/my/notifications)
+* [ ] [Facebook](https://www.facebook.com/notifications)
 * [ ] LINE
-* [ ] Slack
-* [ ] Discord
+* [ ] [Slack](https://slack.com)
+* [ ] [Discord](https://discord.com/channels/@me)
 
 ### 感想・その他
 特になし。
