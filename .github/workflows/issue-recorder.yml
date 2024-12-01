@@ -28,7 +28,7 @@ jobs:
           committer_email: mail@noraworld.com
           overwrite_when_modified: true
           extra_text_when_modified: "# 重複投稿！"
-          notification_comment: このタスクの内容は [`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>)) に保存されました。
+          notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
           title_prefix_for_file: ${{ env.TITLE_PREFIX }}
           target_issue_repo: noraworld/daily-report
           target_issue_number: latest
