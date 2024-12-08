@@ -32,7 +32,7 @@ assignees: noraworld
 | 教材 | ELSA Speak |
 
 ### 感想・その他
-前日分で達成済みのためスキップ。
+前日分で達成済み。
 ```
 </details>
 
