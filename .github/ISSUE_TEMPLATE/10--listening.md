@@ -18,7 +18,7 @@ assignees: noraworld
 | 教材 |  |
 
 ### 所感
-
+特になし。
 ```
 </details>
 
@@ -61,7 +61,7 @@ assignees: noraworld
 * [ ] 新単語や新フレーズがある場合は単語帳に転記
 
 ### 所感
-
+特になし。
 ```
 </details>
 
@@ -106,7 +106,7 @@ assignees: noraworld
 * [ ] 新単語や新フレーズがある場合は単語帳に転記
 
 ### 所感
-
+特になし。
 ```
 </details>
 
