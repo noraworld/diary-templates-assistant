@@ -86,3 +86,4 @@ assignees: noraworld
 
 ### 参考リンク集
 * [単語帳](https://github.com/noraworld/memo/blob/main/Atsueigo%20School/%E5%8D%98%E8%AA%9E/wordbook.md)
+* [レッスン履歴](https://github.com/noraworld/diary-templates/tree/main/templates/lesson)
