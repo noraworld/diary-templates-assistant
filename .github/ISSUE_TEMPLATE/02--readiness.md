@@ -1,5 +1,5 @@
 ---
-name: 01. Readiness
+name: 02. Readiness
 about: 心構え | 最初に必ずこれを見ること
 title: "[{{DATE}}]_readiness_心構え"
 labels: ''
