@@ -7,6 +7,21 @@ assignees: noraworld
 
 ---
 
+### 一覧
+* [メールチェック](https://mail.google.com/mail/u/0/#inbox)
+* [書類整理](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
+* [Twitter](https://x.com/notifications)
+* [Instagram](https://www.instagram.com/direct/inbox/)
+* [Threads](https://www.threads.net/activity)
+* [Mastodon](https://mastodon.social/deck/notifications)
+* [Misskey](https://misskey.io/my/notifications)
+* [Facebook](https://www.facebook.com/notifications)
+* LINE
+* [Slack](https://slack.com)
+* [Discord](https://discord.com/channels/@me)
+
+
+
 ```
 ### チェックリスト
 * [ ] [メールチェック](https://mail.google.com/mail/u/0/#inbox)
@@ -15,6 +30,8 @@ assignees: noraworld
 ### 感想・その他
 特になし。
 ```
+
+
 
 <details>
 <summary>SNS 系</summary>
