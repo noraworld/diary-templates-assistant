@@ -75,6 +75,12 @@ assignees: noraworld
     >
     > 特になし。
     > </details>
+* [ ] **日常の出来事でさえうまくいかないことばかりだし失敗することは当たり前だと考える**
+    > <details>
+    > <summary>詳細を読む</summary>
+    >
+    > 特になし。
+    > </details>
 * [ ] **人と意見や考え方がすれ違い対立したらそういう考え方・意見もあるよねと思う**。
     > <details>
     > <summary>詳細を読む</summary>
