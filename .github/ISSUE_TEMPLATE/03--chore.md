@@ -8,15 +8,15 @@ assignees: noraworld
 ---
 
 ### 一覧
-* [メールチェック](https://mail.google.com/mail/u/0/#inbox)
-* [書類整理](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
+* [Gmail](https://mail.google.com/mail/u/0/#inbox)
+* [Google Drive](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
 * [Twitter](https://x.com/notifications)
 * [Instagram](https://www.instagram.com/direct/inbox/)
 * [Threads](https://www.threads.net/activity)
 * [Mastodon](https://mastodon.social/deck/notifications)
 * [Misskey](https://misskey.io/my/notifications)
 * [Facebook](https://www.facebook.com/notifications)
-* LINE
+* [LINE](https://www.line.me)
 * [Slack](https://slack.com)
 * [Discord](https://discord.com/channels/@me)
 
@@ -24,8 +24,8 @@ assignees: noraworld
 
 ```
 ### チェックリスト
-* [ ] [メールチェック](https://mail.google.com/mail/u/0/#inbox)
-* [ ] [書類整理](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
+* [ ] メールチェック
+* [ ] 書類整理
 
 ### 感想・その他
 特になし。
