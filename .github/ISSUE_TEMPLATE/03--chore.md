@@ -8,8 +8,11 @@ assignees: noraworld
 ---
 
 ### 一覧
+#### 毎日
 * [Google Drive](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
 * [Gmail](https://mail.google.com/mail/u/0/#inbox)
+
+#### 気が向いたとき
 * [Twitter](https://x.com/notifications)
 * [Instagram](https://www.instagram.com/direct/inbox/)
 * [Threads](https://www.threads.net/activity)
@@ -42,15 +45,15 @@ assignees: noraworld
 
 ```
 ### チェックリスト
-* [ ] [Twitter](https://x.com/notifications)
-* [ ] [Instagram](https://www.instagram.com/direct/inbox/)
-* [ ] [Threads](https://www.threads.net/activity)
-* [ ] [Mastodon](https://mastodon.social/deck/notifications)
-* [ ] [Misskey](https://misskey.io/my/notifications)
-* [ ] [Facebook](https://www.facebook.com/notifications)
+* [ ] Twitter
+* [ ] Instagram
+* [ ] Threads
+* [ ] Mastodon
+* [ ] Misskey
+* [ ] Facebook
 * [ ] LINE
-* [ ] [Slack](https://slack.com)
-* [ ] [Discord](https://discord.com/channels/@me)
+* [ ] Slack
+* [ ] Discord
 
 ### 感想・その他
 特になし。
