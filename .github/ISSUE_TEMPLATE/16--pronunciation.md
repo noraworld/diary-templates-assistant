@@ -12,7 +12,23 @@ assignees: noraworld
 | 項目 | 内容 |
 | --- | :---: |
 | 教材 | ELSA Speak |
-| 累計時間 |  分 |
+| 累計時間 | 分 |
+| 積極性 |  |
+| 出来 |  |
+
+### 感想・その他
+特になし。
+```
+
+<details>
+<summary>正式版</summary>
+
+```
+### 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 教材 | ELSA Speak |
+| 累計時間 | 分 |
 | 積極性 |  |
 | 出来 |  |
 
@@ -22,6 +38,7 @@ assignees: noraworld
 ### 感想・その他
 特になし。
 ```
+</details>
 
 <details>
 <summary>前日分で達成済みの場合</summary>
