@@ -11,6 +11,7 @@ assignees: noraworld
 #### 毎日
 * [Google Drive](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)
 * [Gmail](https://mail.google.com/mail/u/0/#inbox)
+    * 対応・返信しなければならないメールで時間や手間がかかりそうなものは別タスクに切り出してメールチェックとしては全部対応しなくても完了として良い
 
 #### 気が向いたとき
 * [Twitter](https://x.com/notifications)
