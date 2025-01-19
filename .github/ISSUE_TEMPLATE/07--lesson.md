@@ -15,10 +15,10 @@ assignees: noraworld
 | 先生 |  |
 | 時刻 |  |
 | 流暢度 |  |
-| アーカイブ | [Cambly](), [Google Drive](), [YouTube]() |
+| アーカイブ | [Cambly](), [Google Drive](), [YouTube](), [ChatGPT]() |
 
 ### 会話内容
-* 
+
 
 ### 英語でうまく言えなかったこと・表現できなかったこと
 * 
