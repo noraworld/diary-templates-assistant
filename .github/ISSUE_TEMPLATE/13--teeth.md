@@ -1,5 +1,5 @@
 ---
-name: 12. Teeth
+name: 13. Teeth
 about: 歯磨き | 虫歯にならないように食後は歯を磨きましょう
 title: "[{{DATE}}]_teeth_歯磨き"
 labels: ''
