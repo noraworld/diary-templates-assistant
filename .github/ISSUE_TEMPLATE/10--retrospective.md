@@ -7,8 +7,12 @@ assignees: noraworld
 
 ---
 
-* [公開された日記](https://noraworld.github.io/diary/)
-* [タイムライン](https://github.com/noraworld/diary/blob/main/static/TIMELINE.md)
+* `✍️` 日記
+    * `📜` [パブリックウェブページ](https://noraworld.github.io/diary/)
+    * `📘` [パブリック日記](https://github.com/noraworld/diary/tree/main/_posts)
+    * `📔` [リザーブド日記](https://github.com/noraworld/reserved-diary/tree/main/_posts)
+    * `📙` [プライベート日記](https://github.com/noraworld/private-diary/tree/main/_posts)
+* `📆` [タイムライン](https://github.com/noraworld/diary/blob/main/static/TIMELINE.md)
 
 ```
 ### 振り返った過去の日記
