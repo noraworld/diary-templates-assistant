@@ -19,6 +19,7 @@ assignees: noraworld
 
 ### 会話内容
 
+> From ChatGPT
 
 ### 英語でうまく言えなかったこと・表現できなかったこと
 * 
@@ -26,6 +27,8 @@ assignees: noraworld
 ### 新単語・新フレーズ
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
+
+> From ChatGPT
 
 ### 表現・コロケーション
 * 
