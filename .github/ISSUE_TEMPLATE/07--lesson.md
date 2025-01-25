@@ -14,6 +14,9 @@ assignees: noraworld
 | 回数 |  |
 | 先生 |  |
 | 時刻 |  |
+| 会話比率 | % |
+| WPM |  |
+| ユニーク単語数 |  |
 | 流暢度 |  |
 | アーカイブ | [Cambly](), [Google Drive](), [YouTube](), [ChatGPT]() |
 
