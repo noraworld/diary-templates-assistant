@@ -25,6 +25,12 @@ assignees: noraworld
 
 > From ChatGPT
 
+<details>
+<summary>トランスクリプト</summary>
+
+
+</details>
+
 ### 英語でうまく言えなかったこと・表現できなかったこと
 * 
 
