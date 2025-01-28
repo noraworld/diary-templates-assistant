@@ -63,7 +63,7 @@ assignees: noraworld
     >
     > なにごとにも全力に取り組む姿勢が重要である。たとえつまらないことでも自分にとって楽しいと思えるやり方・考え方に工夫してみたり、自分の人生にとってプラスになることを考えてみたりすることが重要である。
     > </details>
-* [ ] **[コーピング・レパートリー](https://github.com/noraworld/diary-templates/blob/main/.github/ISSUE_TEMPLATE/08--mood.md#:~:text=%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB-,%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC,-%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3) と [アクセプタンス・ワードセラピー](https://github.com/noraworld/diary-templates/blob/main/.github/ISSUE_TEMPLATE/08--mood.md#:~:text=%E6%9B%B8%E7%89%A9%E3%81%AB%E8%A7%A6%E3%82%8C%E3%82%8B%E3%80%82-,%E5%90%8D%E8%A8%80,-%E4%BD%9C%E8%80%85) を毎日眺めることが重要であると理解している**。
+* [ ] **[コーピング・レパートリー](https://github.com/noraworld/diary-templates/blob/main/.github/ISSUE_TEMPLATE/08--mood.md#:~:text=%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC-,%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3,-%E3%82%B3%E3%82%B9%E3%83%91) と [アクセプタンス・ワードセラピー](https://github.com/noraworld/diary-templates/blob/main/.github/ISSUE_TEMPLATE/08--mood.md#:~:text=%E6%9B%B8%E7%89%A9%E3%81%AB%E8%A7%A6%E3%82%8C%E3%82%8B%E3%80%82-,%E5%90%8D%E8%A8%80,-%E4%BD%9C%E8%80%85) を毎日眺めることが重要であると理解している**。
     > <details>
     > <summary>詳細を読む</summary>
     >
