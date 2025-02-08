@@ -9,7 +9,7 @@ assignees: noraworld
 
 ```
 ### チェックリスト
-* [ ] Money Forward
+* [x] Money Forward
 
 ### 分析・所感
 特になし。
