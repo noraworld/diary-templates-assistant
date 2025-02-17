@@ -2,7 +2,7 @@
 name: 10. Retrospective
 about: 振り返り | 数年前や今日の日記を振り返りましょう
 title: "[{{DATE}}]_retrospective_振り返り"
-labels: ''
+labels: yet
 assignees: noraworld
 
 ---
@@ -20,7 +20,9 @@ assignees: noraworld
 
 ### 過去の日記を振り返った感想
 特になし。
+```
 
+```
 ### タイムラインへの記録
 * 
 
