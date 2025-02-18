@@ -7,6 +7,8 @@ assignees: noraworld
 
 ---
 
+⚠️ ポモドーロセッション数は「今日やること」だけではなくて「毎日やること」も含めて計測すること！
+
 * `✍️` 日記
     * `📜` [パブリックウェブページ](https://noraworld.github.io/diary/)
     * `📘` [パブリック日記](https://github.com/noraworld/diary/tree/main/_posts)
@@ -23,6 +25,13 @@ assignees: noraworld
 ```
 
 ```
+### 基本情報
+| 項目 | 内容 |
+| :---: | :---: |
+| ポモドーロセッション数 |  |
+| やる気度 |  |
+| 生産性 |  |
+
 ### タイムラインへの記録
 * 
 
