@@ -137,6 +137,12 @@ assignees: noraworld
 4. 今後の人生で毎日でも他人から言われたい言葉は何ですか？
     * 例: 私はあなたの味方だよ、しんどいこともあるだろうけど困ったときは休んでもいいんだよ、いつもありがとう
 5. 自分の人生で最も達成したいことは何ですか？
+
+#### 祈りと願いのフレーズアーカイブ
+* [2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
+
+### 参考
+[史上最強の瞑想法を解説〜ハーバード大学式セルフコンパッション【後編】](https://daigovideolab.jp/play/a7ztQAsbPiKMpgVC4sYU)
 </details>
 
 
