@@ -64,7 +64,7 @@ assignees: noraworld
 | 気分レベル |  |
 
 ### 祈りと願いのフレーズ
-
+[2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
 
 ### 気がそれたときに考えていたことやそのときの感情
 
@@ -95,7 +95,7 @@ assignees: noraworld
 | 気分レベル |  |
 
 ### 気がそれたときに考えていたことやそのときの感情
-[2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
+
 
 ### 身体の感覚の変化や痛み
 
