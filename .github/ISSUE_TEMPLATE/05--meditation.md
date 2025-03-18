@@ -8,7 +8,7 @@ assignees: noraworld
 ---
 
 <details>
-<summary>簡易版</summary>
+<summary>簡易版（呼吸瞑想）</summary>
 
 ```
 ### 基本情報
@@ -24,6 +24,27 @@ assignees: noraworld
 特になし。
 ```
 </details>
+
+
+
+<details>
+<summary>簡易版（慈悲の瞑想カスタム版）</summary>
+
+```
+### 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 慈悲の瞑想（簡易カスタム版） |
+| 時間 | 分 秒 |
+| 集中レベル |  |
+| リラックスレベル |  |
+| 気分レベル |  |
+
+### 所感・その他
+特になし。
+```
+</details>
+
 
 
 ```
