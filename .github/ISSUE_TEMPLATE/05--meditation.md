@@ -57,11 +57,14 @@ assignees: noraworld
 ### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
-| 種別 | 慈悲の瞑想（） |
+| 種別 | 慈悲の瞑想（カスタム版） |
 | 時間 | 分 秒 |
 | 集中レベル |  |
 | リラックスレベル |  |
 | 気分レベル |  |
+
+### 祈りと願いのフレーズ
+
 
 ### 気がそれたときに考えていたことやそのときの感情
 
@@ -75,6 +78,37 @@ assignees: noraworld
 ### 所感・その他
 特になし。
 ```
+
+
+
+<details>
+<summary>慈悲の瞑想（通常版）</summary>
+
+```
+### 基本情報
+| 項目 | 内容 |
+| --- | :---: |
+| 種別 | 慈悲の瞑想（通常版） |
+| 時間 | 分 秒 |
+| 集中レベル |  |
+| リラックスレベル |  |
+| 気分レベル |  |
+
+### 気がそれたときに考えていたことやそのときの感情
+[2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
+
+### 身体の感覚の変化や痛み
+
+
+### 気持ちや感情の変化
+
+
+### 所感・その他
+特になし。
+```
+</details>
+
+
 
 <details>
 <summary>慈悲の瞑想について</summary>
@@ -138,11 +172,16 @@ assignees: noraworld
     * 例: 私はあなたの味方だよ、しんどいこともあるだろうけど困ったときは休んでもいいんだよ、いつもありがとう
 5. 自分の人生で最も達成したいことは何ですか？
 
-#### 祈りと願いのフレーズアーカイブ
-* [2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
-
 ### 参考
 [史上最強の瞑想法を解説〜ハーバード大学式セルフコンパッション【後編】](https://daigovideolab.jp/play/a7ztQAsbPiKMpgVC4sYU)
+</details>
+
+
+
+<details>
+<summary>祈りと願いのフレーズアーカイブ</summary>
+
+* [2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
 </details>
 
 
