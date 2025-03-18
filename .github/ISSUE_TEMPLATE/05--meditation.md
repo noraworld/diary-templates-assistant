@@ -40,6 +40,9 @@ assignees: noraworld
 | リラックスレベル |  |
 | 気分レベル |  |
 
+### 祈りと願いのフレーズ
+[2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)
+
 ### 所感・その他
 特になし。
 ```
