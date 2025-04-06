@@ -43,14 +43,20 @@ assignees: noraworld
 
 
 ### リンク
-* [Board](https://github.com/users/noraworld/projects/1)
-* [Issues](https://github.com/noraworld/to-do/issues)
+* [Board](https://github.com/users/noraworld/projects/1) (原則最大 3 つ！ どんなに多くても 5 つ！！)
+* [Issues](https://github.com/noraworld/to-do/issues) (原則最大 3 つ！ どんなに多くても 5 つ！！)
 * [GitHub Actions](https://github.com/noraworld/diary/actions/workflows/pile.yml)
 
 
 
 ### 重要
 **たとえ明日はタスクを積むつもりがなくてもタスクリストを毎日必ずチェックすること！** たとえ明日はやらなかったとしても、今現在どのような課題があるのかを毎日把握しておくことが重要である。
+
+積むタスクの数は原則は 3 つを上限とする。どんなに多くても 5 つを超えてはいけない。
+
+> 「デイリータスク」はいくつ選んでもいいのですが、あまりに多すぎると獣が混乱をきたしますし、第１章でも述べたとおり調教師は３つ以上の情報を一気に処理できません。とりあえず１日の作業は最大でも５つまでに収めておき、時間があまったらそのたびにつけたすのが無難です。
+>
+> 鈴木 祐. ヤバい集中力　1日ブッ通しでアタマが冴えわたる神ライフハック45 (Japanese Edition) (p. 80). (Function). Kindle Edition.
 
 
 
