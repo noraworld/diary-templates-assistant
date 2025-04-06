@@ -43,8 +43,8 @@ assignees: noraworld
 
 
 ### リンク
-* [Board](https://github.com/users/noraworld/projects/1) (原則最大 3 つ！ どんなに多くても 5 つ！！)
-* [Issues](https://github.com/noraworld/to-do/issues) (原則最大 3 つ！ どんなに多くても 5 つ！！)
+* [Board](https://github.com/users/noraworld/projects/1) (原則最大 3 つ！ どんなに多くても 5 つ！！ 4 つ以上になったら備考欄に理由を記載！！！)
+* [Issues](https://github.com/noraworld/to-do/issues) (原則最大 3 つ！ どんなに多くても 5 つ！！ 4 つ以上になったら備考欄に理由を記載！！！)
 * [GitHub Actions](https://github.com/noraworld/diary/actions/workflows/pile.yml)
 
 
