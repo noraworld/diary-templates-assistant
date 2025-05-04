@@ -12,6 +12,9 @@ on:
       template_repo:
         required: true
         type: string
+    secrets:
+      token:
+        required: true
 
 jobs:
   build:
@@ -33,7 +36,7 @@ jobs:
         run: node app/comment_from_dispatch.js
         shell: sh
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.token }}
           SEARCH_QUERY: ${{ inputs.search_query }}
           TEMPLATE_NAME: ${{ inputs.template_name }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}
