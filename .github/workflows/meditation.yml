@@ -92,6 +92,6 @@ jobs:
             --body "$template"
         shell: sh
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SEARCH_QUERY: "meditation 瞑想"
           TEMPLATE_REPO: "noraworld/diary-templates"
