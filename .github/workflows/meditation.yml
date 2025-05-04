@@ -69,7 +69,7 @@ jobs:
         shell: sh
 
       - name: Meditation
-        run: node comment_from_dispatch.js
+        run: node app/comment_from_dispatch.js
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
