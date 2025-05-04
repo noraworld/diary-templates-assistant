@@ -1,0 +1,51 @@
+name: 13. 歯磨き
+
+on:
+  workflow_dispatch:
+    inputs:
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
+        type: number
+      elapsed:
+        required: true
+        description: '食事からの経過時間'
+        type: string
+      health:
+        required: true
+        description: 'Health アプリへの保存'
+        type: boolean
+      toothpaste:
+        required: true
+        description: '歯磨き粉'
+        type: boolean
+      xylitol:
+        required: true
+        description: 'キシリトールガム'
+        type: boolean
+      floss:
+        required: true
+        description: 'デンタルフロス'
+        type: boolean
+      interdental:
+        required: true
+        description: '歯間ブラシ'
+        type: boolean
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+
+jobs:
+  meditation:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "teeth 歯磨き"
+      template_name: "teeth"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
