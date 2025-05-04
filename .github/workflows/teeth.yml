@@ -6,11 +6,11 @@ on:
       minutes:
         required: true
         description: '分'
-        type: number
+        type: string
       seconds:
         required: true
         description: '秒'
-        type: number
+        type: string
       elapsed:
         required: true
         description: '食事からの経過時間'

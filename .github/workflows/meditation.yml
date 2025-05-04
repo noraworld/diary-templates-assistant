@@ -14,11 +14,11 @@ on:
       minutes:
         required: true
         description: '分'
-        type: number
+        type: string
       seconds:
         required: true
         description: '秒'
-        type: number
+        type: string
       focused:
         required: true
         description: '集中レベル'
