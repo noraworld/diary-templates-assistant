@@ -1,0 +1,97 @@
+name: 5. 瞑想
+
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        required: true
+        description: '種別'
+        type: choice
+        options:
+          - ''
+          - '呼吸瞑想'
+          - '慈悲の瞑想（カスタム版）'
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
+        type: number
+      focused:
+        required: true
+        description: '集中レベル'
+        type: string
+      relaxed:
+        required: true
+        description: 'リラックスレベル'
+        type: string
+      mood:
+        required: true
+        description: '気分レベル'
+        type: string
+      thoughts:
+        required: false
+        description: '気がそれたときに考えていたことやそのときの感情'
+        type: string
+        default: '特になし。'
+      sensation:
+        required: false
+        description: '身体の感覚や痛みの変化'
+        type: string
+        default: '特になし。'
+      feelings:
+        required: false
+        description: '気持ちや感情の変化'
+        type: string
+        default: '特になし。'
+      impression:
+        required: false
+        description: '所感・その他'
+        type: string
+        default: '特になし。'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Meditation
+        run: |
+          template=$(cat << EOS
+          ### 基本情報
+          | 項目 | 内容 |
+          | --- | :---: |
+          | 種別 | ${{ github.event.inputs.type }} |
+          | 時間 | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
+          | 集中レベル | ${{ github.event.inputs.focused }} |
+          | リラックスレベル | ${{ github.event.inputs.relaxed }} |
+          | 気分レベル | ${{ github.event.inputs.mood }} |
+
+          ### 気がそれたときに考えていたことやそのときの感情
+          ${{ github.event.inputs.thoughts }}
+
+          ### 身体の感覚の変化や痛み
+          ${{ github.event.inputs.sensation }}
+
+          ### 気持ちや感情の変化
+          ${{ github.event.inputs.feelings }}
+
+          ### 所感・その他
+          ${{ github.event.inputs.impression }}
+          EOS
+          )
+
+          issue_number=$(gh issue list \
+                           --repo $TEMPLATE_REPO \
+                           --search "$SEARCH_QUERY" |
+                           awk '{ print $1 }')
+
+          gh issue comment "$issue_number" \
+            --repo $TEMPLATE_REPO \
+            --body "$template"
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SEARCH_QUERY: "meditation 瞑想"
+          TEMPLATE_REPO: "noraworld/diary-templates"
