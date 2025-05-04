@@ -16,8 +16,10 @@ async function run() {
       }
 
       switch (json.inputs[key]) {
+        case true:
         case 'true':
           return 'x';
+        case false:
         case 'false':
           return ' ';
         default:
