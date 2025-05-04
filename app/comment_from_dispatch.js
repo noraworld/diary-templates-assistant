@@ -11,6 +11,10 @@ async function run() {
   const regex = /\${{\s*github\.event\.inputs\.([a-zA-Z0-9_]+)(?:\s*\|\|\s*'([^']*)')?\s*}}/g;
   const replaced = template.replace(regex, (_match, key, fallback) => {
     if (json.inputs.hasOwnProperty(key)) {
+      if (typeof json.inputs[key] === 'number') {
+        return String(json.inputs[key]);
+      }
+
       switch (json.inputs[key]) {
         case true:
           return 'x';
