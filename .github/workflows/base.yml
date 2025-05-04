@@ -1,0 +1,39 @@
+name: Base
+
+on:
+  workflow_call:
+    inputs:
+      search_query:
+        required: true
+        type: string
+      template_name:
+        required: true
+        type: string
+      template_repo:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23.11.0'
+
+      - name: Install packages
+        run: npm install
+        shell: sh
+
+      - name: Comment
+        run: node app/comment_from_dispatch.js
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SEARCH_QUERY: ${{ inputs.search_query }}
+          TEMPLATE_NAME: ${{ inputs.template_name }}
+          TEMPLATE_REPO: ${{ inputs.template_repo }}

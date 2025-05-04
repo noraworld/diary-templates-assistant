@@ -49,26 +49,9 @@ on:
         type: string
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '23.11.0'
-
-      - name: Install packages
-        run: npm install
-        shell: sh
-
-      - name: Meditation
-        run: node app/comment_from_dispatch.js
-        shell: sh
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SEARCH_QUERY: "meditation 瞑想"
-          TEMPLATE_NAME: "meditation"
-          TEMPLATE_REPO: "noraworld/diary-templates"
+  meditation:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "meditation 瞑想"
+      template_name: "meditation"
+      template_repo: "noraworld/diary-templates"
