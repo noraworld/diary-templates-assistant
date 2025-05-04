@@ -8,13 +8,13 @@
 | 気分レベル | ${{ github.event.inputs.mood }} |
 
 ### 気がそれたときに考えていたことやそのときの感情
-${{ github.event.inputs.thoughts }}
+${{ github.event.inputs.thoughts || '特になし。' }}
 
 ### 身体の感覚の変化や痛み
-${{ github.event.inputs.sensation }}
+${{ github.event.inputs.sensation || '特になし。' }}
 
 ### 気持ちや感情の変化
-${{ github.event.inputs.feelings }}
+${{ github.event.inputs.feelings || '特になし。' }}
 
 ### 所感・その他
-${{ github.event.inputs.impression }}
+${{ github.event.inputs.impression || '特になし。' }}

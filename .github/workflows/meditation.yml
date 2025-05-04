@@ -35,22 +35,18 @@ on:
         required: false
         description: '気がそれたときに考えていたことやそのときの感情'
         type: string
-        default: '特になし。'
       sensation:
         required: false
         description: '身体の感覚や痛みの変化'
         type: string
-        default: '特になし。'
       feelings:
         required: false
         description: '気持ちや感情の変化'
         type: string
-        default: '特になし。'
       impression:
         required: false
         description: '所感・その他'
         type: string
-        default: '特になし。'
 
 jobs:
   build:
