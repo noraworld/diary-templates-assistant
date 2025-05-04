@@ -20,16 +20,20 @@ async function run() {
   }).trim();
   const [ owner, repo ] = process.env.TEMPLATE_REPO.split('/');
 
-  await getIssueNumber({ owner, repo })
-  .then(issueNumber => comment({
-    owner: owner,
-    repo: repo,
-    issueNumber: issueNumber,
-    body: replaced,
-  })).catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+  if (process.env.DRY_RUN !== 'true') {
+    await getIssueNumber({ owner, repo })
+    .then(issueNumber => comment({
+      owner: owner,
+      repo: repo,
+      issueNumber: issueNumber,
+      body: replaced,
+    })).catch((err) => {
+      console.error(err);
+      process.exit(1);
+    });
+  } else {
+    console.log(replaced);
+  }
 }
 
 async function getIssueNumber({ owner, repo }) {
