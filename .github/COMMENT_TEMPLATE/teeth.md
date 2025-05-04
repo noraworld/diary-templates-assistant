@@ -14,4 +14,4 @@
 * [${{ github.event.inputs.interdental }}] 歯間ブラシ
 
 ### 感想・その他
-${{ github.event.inputs.impression }}
+${{ github.event.inputs.impression || '特になし。' }}
