@@ -1,0 +1,31 @@
+name: 06. ワークアウト
+
+on:
+  workflow_dispatch:
+    inputs:
+      time:
+        required: true
+        description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
+        type: number
+      strength:
+        required: true
+        description: '所感強度'
+        type: string
+      comfortable:
+        required: true
+        description: '動きやすさ'
+        type: string
+      impression:
+        required: false
+        description: '所感・その他'
+        type: string
+
+jobs:
+  workout:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "workout ワークアウト"
+      template_name: "workout"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
