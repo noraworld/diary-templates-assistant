@@ -6,26 +6,10 @@ const fs = require('fs');
 const { Octokit } = require('@octokit/rest');
 
 async function run() {
-  const json = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf-8'));
   const template = fs.readFileSync(`.github/COMMENT_TEMPLATE/${process.env.TEMPLATE_NAME}.md`, 'utf-8');
   const regex = /\${{\s*github\.event\.inputs\.([a-zA-Z0-9_]+)(?:\s*\|\|\s*'([^']*)')?\s*}}/g;
   const replaced = template.replace(regex, (_match, key, fallback) => {
-    if (json.inputs.hasOwnProperty(key)) {
-      switch (json.inputs[key]) {
-        case true:
-        case 'true':
-          return 'x';
-        case false:
-        case 'false':
-          return ' ';
-        default:
-          return json.inputs[key];
-      }
-    } else if (fallback !== undefined) {
-      return fallback;
-    } else {
-      return '';
-    }
+    return parseInputs(key, fallback);
   }).trim();
   const [ owner, repo ] = process.env.TEMPLATE_REPO.split('/');
 
@@ -43,6 +27,48 @@ async function run() {
   } else {
     console.log(replaced);
   }
+}
+
+function parseInputs(key, fallback) {
+  const json = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf-8'));
+  const floatRegex = /^([0-9]+\.)+[0-9]+$/g;
+
+  if (json.inputs.hasOwnProperty(key)) {
+    if (floatRegex.test(json.inputs[key])) return formatTime(json.inputs[key]);
+
+    switch (json.inputs[key]) {
+      case true:
+      case 'true':
+        return 'x';
+      case false:
+      case 'false':
+        return ' ';
+      default:
+        return json.inputs[key];
+    }
+  } else if (fallback !== undefined) {
+    return fallback;
+  } else {
+    return '';
+  }
+}
+
+// "1.20.30" => "1 時間 20 分 30 秒"
+//   https://chatgpt.com/c/681841d7-69cc-8004-8b5c-c30807ded8b5
+function formatTime(input) {
+  const units = [' 秒', ' 分', ' 時間'];
+  const parts = input.split('.').map(Number);
+
+  const result = parts
+    .reverse()
+    .map((value, index) => {
+      const unit = units[index] || '';
+      return `${value}${unit}`;
+    })
+    .reverse()
+    .join(' ');
+
+  return result;
 }
 
 async function getIssueNumber({ owner, repo }) {
