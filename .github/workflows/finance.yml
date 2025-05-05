@@ -1,0 +1,19 @@
+name: 04. 入出金履歴チェック
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '分析・所感'
+        type: string
+
+jobs:
+  finance:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "finance 入出金履歴チェック"
+      template_name: "finance"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
