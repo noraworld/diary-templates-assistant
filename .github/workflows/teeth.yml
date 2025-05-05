@@ -37,7 +37,7 @@ on:
         type: string
 
 jobs:
-  meditation:
+  teeth:
     uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
     with:
       search_query: "teeth 歯磨き"
