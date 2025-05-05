@@ -1,4 +1,4 @@
 .env
 /tmp/*
-!/tmp/.keep
+!/tmp/github_event_path_sample.json
 node_modules
