@@ -11,6 +11,10 @@ on:
           - 'Streaks Workout'
           - 'Home Workout'
         default: 'Home Workout'
+      streaks:
+        required: true
+        description: '連続日数'
+        type: string
       time:
         required: true
         description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'

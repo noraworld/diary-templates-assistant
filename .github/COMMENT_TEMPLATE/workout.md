@@ -3,6 +3,7 @@
 | --- | :---: |
 | 種別 | ミックス |
 | トレーナー | ${{ github.event.inputs.trainer }} |
+| ストリーク | ${{ github.event.inputs.streaks }} |
 | 時間 | ${{ github.event.inputs.time }} |
 | 消費カロリー | ${{ github.event.inputs.burned }} |
 | 所感強度 | ${{ github.event.inputs.strength }} |
