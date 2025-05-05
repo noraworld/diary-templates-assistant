@@ -3,6 +3,14 @@ name: 06. ワークアウト
 on:
   workflow_dispatch:
     inputs:
+      trainer:
+        required: true
+        description: 'トレーナー'
+        type: choice
+        options:
+          - 'Streaks Workout'
+          - 'Home Workout'
+        default: 'Home Workout'
       time:
         required: true
         description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
