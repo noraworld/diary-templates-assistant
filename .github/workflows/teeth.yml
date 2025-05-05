@@ -6,7 +6,7 @@ on:
       time:
         required: true
         description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
-        type: string
+        type: number
       elapsed:
         required: true
         description: '食事からの経過時間'

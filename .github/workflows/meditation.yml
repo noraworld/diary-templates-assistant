@@ -14,7 +14,7 @@ on:
       time:
         required: true
         description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
-        type: string
+        type: number
       focused:
         required: true
         description: '集中レベル'
