@@ -1,4 +1,4 @@
-name: 5. 瞑想
+name: 05. 瞑想
 
 on:
   workflow_dispatch:
