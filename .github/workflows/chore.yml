@@ -1,0 +1,55 @@
+name: 03. デジタルハウスキーピング
+
+on:
+  workflow_dispatch:
+    inputs:
+      twitter:
+        required: true
+        description: 'Twitter'
+        type: boolean
+      instagram:
+        required: true
+        description: 'Instagram'
+        type: boolean
+      threads:
+        required: true
+        description: 'Threads'
+        type: boolean
+      mastodon:
+        required: true
+        description: 'Mastodon'
+        type: boolean
+      misskey:
+        required: true
+        description: 'Misskey'
+        type: boolean
+      facebook:
+        required: true
+        description: 'Facebook'
+        type: boolean
+      line:
+        required: true
+        description: 'LINE'
+        type: boolean
+      slack:
+        required: true
+        description: 'Slack'
+        type: boolean
+      discord:
+        required: true
+        description: 'Discord'
+        type: boolean
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+
+jobs:
+  chore:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "chore デジタルハウスキーピング"
+      template_name: "chore"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
