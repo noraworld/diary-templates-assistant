@@ -1,7 +1,7 @@
 ### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
-| 時間 [^gum] | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
+| 時間 [^gum] | ${{ github.event.inputs.time }} |
 | 食後からの経過時間 | ${{ github.event.inputs.elapsed }} |
 
 [^gum]: キシリトールガムを噛んでいる時間はカウントしていない。歯ブラシ、デンタルフロス、歯間ブラシの時間を計測している。

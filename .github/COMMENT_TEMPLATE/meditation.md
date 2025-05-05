@@ -2,7 +2,7 @@
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | ${{ github.event.inputs.type }} |
-| 時間 | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
+| 時間 | ${{ github.event.inputs.time }} |
 | 集中レベル | ${{ github.event.inputs.focused }} |
 | リラックスレベル | ${{ github.event.inputs.relaxed }} |
 | 気分レベル | ${{ github.event.inputs.mood }} |
