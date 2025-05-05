@@ -15,6 +15,10 @@ on:
         required: true
         description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
         type: number
+      burned:
+        required: true
+        description: '消費カロリー'
+        type: string
       strength:
         required: true
         description: '所感強度'
