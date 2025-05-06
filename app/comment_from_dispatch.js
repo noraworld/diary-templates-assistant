@@ -59,6 +59,12 @@ function parseInputs(key, fallback) {
 async function getIssueNumber({ owner, repo }) {
   const octokit = getToken();
   const q = `repo:${owner}/${repo} is:issue state:open ${process.env.SEARCH_QUERY}`;
+
+  if (process.env.DRY_RUN === 'true') {
+    console.info('INFO: Getting an issue number skipped');
+    return 7141;
+  }
+
   // DEPRECATED WARNING!
   // https://docs.github.com/rest/search/search#search-issues-and-pull-requests
   // https://github.blog/changelog/2025-03-06-github-issues-projects-api-support-for-issues-advanced-search-and-more/
