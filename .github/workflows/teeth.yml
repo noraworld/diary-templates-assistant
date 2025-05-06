@@ -3,9 +3,13 @@ name: 13. 歯磨き
 on:
   workflow_dispatch:
     inputs:
-      time:
+      minutes:
         required: true
-        description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
         type: number
       elapsed:
         required: true

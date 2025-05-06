@@ -11,9 +11,13 @@ on:
           - ''
           - '呼吸瞑想'
           - '慈悲の瞑想（カスタム版）'
-      time:
+      minutes:
         required: true
-        description: '時間（{時間}.{分}.{秒} または {分}.{秒}）'
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
         type: number
       focused:
         required: true
