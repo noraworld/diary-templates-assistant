@@ -14,7 +14,7 @@ on:
       streaks:
         required: true
         description: '連続日数'
-        type: string
+        type: number
       minutes:
         required: true
         description: '分'
@@ -26,7 +26,7 @@ on:
       burned:
         required: true
         description: '消費カロリー'
-        type: string
+        type: number
       strength:
         required: true
         description: '所感強度'
