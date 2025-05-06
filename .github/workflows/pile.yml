@@ -1,4 +1,4 @@
-name: Pile
+name: '10: 翌日やること整理'
 
 on:
   workflow_dispatch:
@@ -13,10 +13,9 @@ on:
           - '仕事'
         default: ''
       arranged:
-        required: false
-        description: '現在の課題を整理したか'
+        required: true
+        description: '現在の課題を整理'
         type: boolean
-        default: true
       remarks:
         required: false
         description: '備考'
@@ -26,7 +25,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment a pile template
+      - name: Pile
         run: |
           case "${{ github.event.inputs.target }}" in
             "プライベート")
