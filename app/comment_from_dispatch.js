@@ -7,10 +7,17 @@ const { Octokit } = require('@octokit/rest');
 
 async function run() {
   const template = fs.readFileSync(`.github/COMMENT_TEMPLATE/${process.env.TEMPLATE_NAME}.md`, 'utf-8');
-  const regex = /\${{\s*github\.event\.inputs\.([a-zA-Z0-9_]+)(?:\s*\|\|\s*'([^']*)')?\s*}}/g;
-  const replaced = template.replace(regex, (_match, key, fallback) => {
-    return parseInputs(key, fallback);
-  }).trim();
+  const json = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf-8'));
+  const ifRegex = /\${{\s*if\(github\.event\.inputs\.([a-zA-Z0-9_]+)\)\s*}}([\s\S]*?)\${{\s*endif\s*}}[\r|\n|\r\n]?/g;
+  const inputRegex = /\${{\s*github\.event\.inputs\.([a-zA-Z0-9_]+)(?:\s*\|\|\s*'([^']*)')?\s*}}/g;
+  const replaced = template
+    .replace(ifRegex, (_match, key, content) => {
+      return json.inputs?.[key] ? content.trimStart() : '';
+    })
+    .replace(inputRegex, (_match, key, fallback) => {
+      return parseInputs(json, key, fallback);
+    })
+    .trim();
   const [ owner, repo ] = process.env.TEMPLATE_REPO.split('/');
 
   await getIssueNumber({ owner, repo })
@@ -32,8 +39,7 @@ async function run() {
   });
 }
 
-function parseInputs(key, fallback) {
-  const json = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf-8'));
+function parseInputs(json, key, fallback) {
   const floatRegex = /^[0-9]+\.0$/g;
 
   if (json.inputs.hasOwnProperty(key)) {
