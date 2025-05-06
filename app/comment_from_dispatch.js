@@ -34,10 +34,10 @@ async function run() {
 
 function parseInputs(key, fallback) {
   const json = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf-8'));
-  const floatRegex = /^([0-9]+\.)+[0-9]+$/g;
+  const floatRegex = /^[0-9]+\.0$/g;
 
   if (json.inputs.hasOwnProperty(key)) {
-    if (floatRegex.test(json.inputs[key])) return formatTime(json.inputs[key]);
+    if (floatRegex.test(json.inputs[key])) return json.inputs[key].split('.')[0];
 
     switch (json.inputs[key]) {
       case true:
@@ -54,24 +54,6 @@ function parseInputs(key, fallback) {
   } else {
     return '';
   }
-}
-
-// "1.20.30" => "1 時間 20 分 30 秒"
-//   https://chatgpt.com/c/681841d7-69cc-8004-8b5c-c30807ded8b5
-function formatTime(input) {
-  const units = [' 秒', ' 分', ' 時間'];
-  const parts = input.split('.').map(Number);
-
-  const result = parts
-    .reverse()
-    .map((value, index) => {
-      const unit = units[index] || '';
-      return `${value}${unit}`;
-    })
-    .reverse()
-    .join(' ');
-
-  return result;
 }
 
 async function getIssueNumber({ owner, repo }) {
