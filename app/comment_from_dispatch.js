@@ -106,7 +106,7 @@ function commentResponse() {
   return {
     status: 201,
     data: {
-      html_url: 'https://github.com/noraworld/diary-templates/issues/7141#issuecomment-2854469321',
+      html_url: 'https://github.com/noraworld/diary-templates/issues/7141#issuecomment-2854679866',
     },
   };
 }
