@@ -1,4 +1,4 @@
-name: 06. ワークアウト
+name: '06: ワークアウト'
 
 on:
   workflow_dispatch:
