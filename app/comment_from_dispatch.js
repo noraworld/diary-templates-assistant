@@ -78,7 +78,12 @@ async function getIssueNumber({ owner, repo }) {
 
 async function comment({ owner, repo, issueNumber, body }) {
   const octokit = getToken();
-  if (process.env.DRY_RUN === 'true') return commentResponse();
+
+  if (process.env.DRY_RUN === 'true') {
+    console.info('INFO: Creating a comment was skipped');
+    return commentResponse();
+  }
+
   return await octokit.issues.createComment({
     owner,
     repo,
