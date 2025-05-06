@@ -21,6 +21,9 @@ async function run() {
     body: replaced,
   }))
   .then(res => {
+    if (process.env.DRY_RUN === 'true') {
+      console.info(replaced, '\n');
+    }
     console.info(res.data.html_url);
   })
   .catch((err) => {
