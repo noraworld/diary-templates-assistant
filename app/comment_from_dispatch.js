@@ -13,20 +13,20 @@ async function run() {
   }).trim();
   const [ owner, repo ] = process.env.TEMPLATE_REPO.split('/');
 
-  if (process.env.DRY_RUN !== 'true') {
-    await getIssueNumber({ owner, repo })
-    .then(issueNumber => comment({
-      owner: owner,
-      repo: repo,
-      issueNumber: issueNumber,
-      body: replaced,
-    })).catch((err) => {
-      console.error(err);
-      process.exit(1);
-    });
-  } else {
-    console.log(replaced);
-  }
+  await getIssueNumber({ owner, repo })
+  .then(issueNumber => comment({
+    owner: owner,
+    repo: repo,
+    issueNumber: issueNumber,
+    body: replaced,
+  }))
+  .then(res => {
+    console.info(res.data.html_url);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 }
 
 function parseInputs(key, fallback) {
@@ -87,7 +87,8 @@ async function getIssueNumber({ owner, repo }) {
 
 async function comment({ owner, repo, issueNumber, body }) {
   const octokit = getToken();
-  await octokit.issues.createComment({
+  if (process.env.DRY_RUN === 'true') return commentResponse();
+  return await octokit.issues.createComment({
     owner,
     repo,
     issue_number: issueNumber,
@@ -99,6 +100,15 @@ function getToken() {
   const token = process.env.GH_TOKEN;
   if (!token) throw new Error('GH_TOKEN is not set in environment variables');
   return new Octokit({ auth: token });
+}
+
+function commentResponse() {
+  return {
+    status: 201,
+    data: {
+      html_url: 'https://github.com/noraworld/diary-templates/issues/7141#issuecomment-2854469321',
+    },
+  };
 }
 
 run().catch((error) => {
