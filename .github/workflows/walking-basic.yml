@@ -1,0 +1,85 @@
+name: '14-1: ウォーキング (基本情報)'
+
+on:
+  workflow_dispatch:
+    inputs:
+      weather:
+        required: true
+        description: '天気'
+        type: string
+      temperature:
+        required: true
+        description: '体感気温'
+        type: string
+      destination:
+        required: true
+        description: '行き先'
+        type: string
+      hours:
+        required: true
+        description: '時間'
+        type: number
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
+        type: number
+      burned:
+        required: true
+        description: '消費カロリー'
+        type: number
+      motivation:
+        required: true
+        description: '外出意欲'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      mood:
+        required: true
+        description: '気分レベル'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      garbage:
+        required: true
+        description: 'ゴミ捨て'
+        type: choice
+        options:
+          - ''
+          - 'あり'
+          - 'なし'
+
+jobs:
+  walking:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "walking ウォーキング"
+      template_name: "walking-basic"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

@@ -1,0 +1,31 @@
+name: '14-3: ウォーキング (詳細情報)'
+
+on:
+  workflow_dispatch:
+    inputs:
+      mail:
+        required: true
+        description: '郵便物'
+        type: string
+      scenery:
+        required: true
+        description: '今回見たいい景色'
+        type: string
+      mood:
+        required: true
+        description: '気分の変化'
+        type: string
+      impression:
+        required: false
+        description: '所感'
+        type: string
+
+jobs:
+  walking:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "walking ウォーキング"
+      template_name: "walking-details"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
