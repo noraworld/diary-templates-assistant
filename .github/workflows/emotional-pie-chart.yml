@@ -1,0 +1,55 @@
+name: '07-1: 気分記録（感情パイチャート）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      type1:
+        required: true
+        description: '感情の種類 1'
+        type: string
+      degree1:
+        required: true
+        description: '感情の度合い 1'
+        type: string
+      type2:
+        required: false
+        description: '感情の種類 2'
+        type: string
+      degree2:
+        required: false
+        description: '感情の度合い 2'
+        type: string
+      type3:
+        required: false
+        description: '感情の種類 3'
+        type: string
+      degree3:
+        required: false
+        description: '感情の度合い 3'
+        type: string
+      type4:
+        required: false
+        description: '感情の種類 4'
+        type: string
+      degree4:
+        required: false
+        description: '感情の度合い 4'
+        type: string
+      type5:
+        required: false
+        description: '感情の種類 5'
+        type: string
+      degree5:
+        required: false
+        description: '感情の度合い 5'
+        type: string
+
+jobs:
+  emotional-pie-chart:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "mood 気分記録"
+      template_name: "emotional-pie-chart"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
