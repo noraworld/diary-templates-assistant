@@ -2,7 +2,7 @@
 | 項目 | 内容 |
 | --- | :---: |
 | 時間 | ${{ github.event.inputs.hours }} 時間 ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
-| 消費カロリー | ${{ github.event.inputs.burned }} |
+| 消費カロリー | ${{ github.event.inputs.burned }} kcal |
 | 天気 | ${{ github.event.inputs.weather }} |
 | 気温 | ${{ github.event.inputs.temperature }} |
 | 行き先 | ${{ github.event.inputs.destination }} |
