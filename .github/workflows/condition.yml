@@ -1,0 +1,52 @@
+name: '07-2: 気分記録（体調記録）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      area:
+        required: true
+        description: '不快な場所'
+        type: string
+      discomfort:
+        required: true
+        description: '不快レベル'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      situation:
+        required: true
+        description: '状況'
+        type: string
+      cause:
+        required: false
+        description: '原因'
+        type: string
+      coping:
+        required: false
+        description: '対処'
+        type: string
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+
+jobs:
+  condition:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "mood 気分記録"
+      template_name: "condition"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
