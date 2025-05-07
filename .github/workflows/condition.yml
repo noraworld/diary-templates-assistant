@@ -3,9 +3,9 @@ name: '07-2: 気分記録（体調記録）'
 on:
   workflow_dispatch:
     inputs:
-      area:
+      condition:
         required: true
-        description: '不快な場所'
+        description: '身体の状態'
         type: string
       discomfort:
         required: true

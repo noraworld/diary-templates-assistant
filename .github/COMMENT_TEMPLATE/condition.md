@@ -2,7 +2,7 @@
 | 項目 | 内容 |
 | --- | :---: |
 | 種別 | 体調記録 |
-| 不快な場所 | ${{ github.event.inputs.area }} |
+| 身体の状態 | ${{ github.event.inputs.condition }} |
 | 不快レベル | ${{ github.event.inputs.discomfort }} |
 | 状況 | ${{ github.event.inputs.situation }} |
 | 原因 | ${{ github.event.inputs.cause || '不明' }} |
