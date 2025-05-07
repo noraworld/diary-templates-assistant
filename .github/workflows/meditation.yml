@@ -33,15 +33,15 @@ on:
         type: string
       thoughts:
         required: false
-        description: '気がそれたときに考えていたことやそのときの感情'
+        description: '思考・感情'
         type: string
       sensation:
         required: false
-        description: '身体の感覚や痛みの変化'
+        description: '身体感覚'
         type: string
       feelings:
         required: false
-        description: '気持ちや感情の変化'
+        description: '気持ち・感情'
         type: string
       impression:
         required: false
