@@ -3,14 +3,10 @@ name: '06: ワークアウト'
 on:
   workflow_dispatch:
     inputs:
-      trainer:
-        required: true
-        description: 'トレーナー'
-        type: choice
-        options:
-          - 'Streaks Workout'
-          - 'Home Workout'
-        default: 'Home Workout'
+      impression:
+        required: false
+        description: '所感・その他'
+        type: string
       streaks:
         required: true
         description: '連続日数'
@@ -27,6 +23,14 @@ on:
         required: true
         description: '消費カロリー'
         type: number
+      trainer:
+        required: true
+        description: 'トレーナー'
+        type: choice
+        options:
+          - 'Streaks Workout'
+          - 'Home Workout'
+        default: 'Home Workout'
       strength:
         required: true
         description: '所感強度'
@@ -34,10 +38,6 @@ on:
       comfortable:
         required: true
         description: '動きやすさ'
-        type: string
-      impression:
-        required: false
-        description: '所感・その他'
         type: string
 
 jobs:
