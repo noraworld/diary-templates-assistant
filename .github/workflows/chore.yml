@@ -3,6 +3,10 @@ name: '03: デジタルハウスキーピング'
 on:
   workflow_dispatch:
     inputs:
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
       twitter:
         required: true
         description: 'Twitter'
@@ -39,10 +43,6 @@ on:
         required: true
         description: 'Discord'
         type: boolean
-      impression:
-        required: false
-        description: '感想・その他'
-        type: string
 
 jobs:
   chore:
