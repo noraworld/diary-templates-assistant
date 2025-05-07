@@ -3,34 +3,6 @@ name: '05: 瞑想'
 on:
   workflow_dispatch:
     inputs:
-      type:
-        required: true
-        description: '種別'
-        type: choice
-        options:
-          - ''
-          - '呼吸瞑想'
-          - '慈悲の瞑想（カスタム版）'
-      minutes:
-        required: true
-        description: '分'
-        type: number
-      seconds:
-        required: true
-        description: '秒'
-        type: number
-      focused:
-        required: true
-        description: '集中レベル'
-        type: string
-      relaxed:
-        required: true
-        description: 'リラックスレベル'
-        type: string
-      mood:
-        required: true
-        description: '気分レベル'
-        type: string
       thoughts:
         required: false
         description: '思考・感情'
@@ -47,6 +19,34 @@ on:
         required: false
         description: '所感・その他'
         type: string
+      focused:
+        required: true
+        description: '集中レベル'
+        type: string
+      relaxed:
+        required: true
+        description: 'リラックスレベル'
+        type: string
+      mood:
+        required: true
+        description: '気分レベル'
+        type: string
+      type:
+        required: true
+        description: '種別'
+        type: choice
+        options:
+          - ''
+          - '呼吸瞑想'
+          - '慈悲の瞑想（カスタム版）'
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
+        type: number
 
 jobs:
   meditation:
