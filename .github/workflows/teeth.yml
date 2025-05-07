@@ -1,4 +1,4 @@
-name: '13: 歯磨き'
+name: '11: 歯磨き'
 
 on:
   workflow_dispatch:
