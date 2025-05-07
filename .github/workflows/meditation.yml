@@ -31,14 +31,6 @@ on:
         required: true
         description: '気分レベル'
         type: string
-      type:
-        required: true
-        description: '種別'
-        type: choice
-        options:
-          - ''
-          - '呼吸瞑想'
-          - '慈悲の瞑想（カスタム版）'
       minutes:
         required: true
         description: '分'
@@ -47,6 +39,14 @@ on:
         required: true
         description: '秒'
         type: number
+      type:
+        required: true
+        description: '種別'
+        type: choice
+        options:
+          - ''
+          - '呼吸瞑想'
+          - '慈悲の瞑想（カスタム版）'
 
 jobs:
   meditation:
