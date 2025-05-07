@@ -19,6 +19,22 @@ on:
         required: false
         description: '所感・その他'
         type: string
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
+        type: number
+      type:
+        required: true
+        description: '種別'
+        type: choice
+        options:
+          - ''
+          - '呼吸瞑想'
+          - '慈悲の瞑想（カスタム版）'
       focused:
         required: true
         description: '集中レベル'
@@ -70,22 +86,6 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
-      minutes:
-        required: true
-        description: '分'
-        type: number
-      seconds:
-        required: true
-        description: '秒'
-        type: number
-      type:
-        required: true
-        description: '種別'
-        type: choice
-        options:
-          - ''
-          - '呼吸瞑想'
-          - '慈悲の瞑想（カスタム版）'
 
 jobs:
   meditation:
