@@ -3,17 +3,6 @@ name: '11: 歯磨き'
 on:
   workflow_dispatch:
     inputs:
-      elapsed:
-        required: true
-        description: '食事後経過時間'
-        type: choice
-        options:
-          - ''
-          - 'すぐ'
-          - '1 時間以内'
-          - '数時間以内'
-          - '数時間以上'
-          - '翌日'
       impression:
         required: false
         description: '感想・その他'
@@ -26,6 +15,17 @@ on:
         required: true
         description: '秒'
         type: number
+      elapsed:
+        required: true
+        description: '食事後経過時間'
+        type: choice
+        options:
+          - ''
+          - 'すぐ'
+          - '1 時間以内'
+          - '数時間以内'
+          - '数時間以上'
+          - '翌日'
       health:
         required: true
         description: 'Health アプリへの保存'
