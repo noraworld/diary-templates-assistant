@@ -1,0 +1,69 @@
+name: '09: 振り返り'
+
+on:
+  workflow_dispatch:
+    inputs:
+      diary:
+        required: false
+        description: '振り返った過去の日記'
+        type: string
+      impression:
+        required: false
+        description: '振り返った感想'
+        type: string
+      timeline:
+        required: false
+        description: 'タイムラインへの記録'
+        type: string
+      retrospective:
+        required: false
+        description: '今日の振り返り'
+        type: string
+      pomodoro:
+        required: true
+        description: 'ポモドーロセッション数'
+        type: number
+      motivation:
+        required: true
+        description: 'やる気度'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      productivity:
+        required: true
+        description: '生産性'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+
+jobs:
+  retrospective:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "retrospective 振り返り"
+      template_name: "retrospective"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
