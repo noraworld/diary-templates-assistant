@@ -1,0 +1,55 @@
+name: '08-2: 慰労記録 (一日一善)'
+
+on:
+  workflow_dispatch:
+    inputs:
+      people1:
+        required: true
+        description: '親切にした相手 1'
+        type: string
+      words1:
+        required: true
+        description: '親切の内容 1'
+        type: string
+      people2:
+        required: false
+        description: '親切にした相手 2'
+        type: string
+      words2:
+        required: false
+        description: '親切の内容 2'
+        type: string
+      people3:
+        required: false
+        description: '親切にした相手 3'
+        type: string
+      words3:
+        required: false
+        description: '親切の内容 3'
+        type: string
+      people4:
+        required: false
+        description: '親切にした相手 4'
+        type: string
+      words4:
+        required: false
+        description: '親切の内容 4'
+        type: string
+      people5:
+        required: false
+        description: '親切にした相手 5'
+        type: string
+      words5:
+        required: false
+        description: '親切の内容 5'
+        type: string
+
+jobs:
+  kindness:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "esteem 慰労記録"
+      template_name: "kindness"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

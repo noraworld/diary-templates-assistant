@@ -1,0 +1,55 @@
+name: '08-3: 慰労記録 (ポジティブ)'
+
+on:
+  workflow_dispatch:
+    inputs:
+      content1:
+        required: true
+        description: 'ポジティブ 1'
+        type: string
+      content2:
+        required: false
+        description: 'ポジティブ 2'
+        type: string
+      content3:
+        required: false
+        description: 'ポジティブ 3'
+        type: string
+      content4:
+        required: false
+        description: 'ポジティブ 4'
+        type: string
+      content5:
+        required: false
+        description: 'ポジティブ 5'
+        type: string
+      content6:
+        required: false
+        description: 'ポジティブ 6'
+        type: string
+      content7:
+        required: false
+        description: 'ポジティブ 7'
+        type: string
+      content8:
+        required: false
+        description: 'ポジティブ 8'
+        type: string
+      content9:
+        required: false
+        description: 'ポジティブ 9'
+        type: string
+      content10:
+        required: false
+        description: 'ポジティブ 10'
+        type: string
+
+jobs:
+  positive:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "esteem 慰労記録"
+      template_name: "positive"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

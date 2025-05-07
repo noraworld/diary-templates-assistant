@@ -1,0 +1,55 @@
+name: '08-4: 慰労記録 (改善点)'
+
+on:
+  workflow_dispatch:
+    inputs:
+      content1:
+        required: true
+        description: '改善点 1'
+        type: string
+      content2:
+        required: false
+        description: '改善点 2'
+        type: string
+      content3:
+        required: false
+        description: '改善点 3'
+        type: string
+      content4:
+        required: false
+        description: '改善点 4'
+        type: string
+      content5:
+        required: false
+        description: '改善点 5'
+        type: string
+      content6:
+        required: false
+        description: '改善点 6'
+        type: string
+      content7:
+        required: false
+        description: '改善点 7'
+        type: string
+      content8:
+        required: false
+        description: '改善点 8'
+        type: string
+      content9:
+        required: false
+        description: '改善点 9'
+        type: string
+      content10:
+        required: false
+        description: '改善点 10'
+        type: string
+
+jobs:
+  improvement:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "esteem 慰労記録"
+      template_name: "improvement"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
