@@ -6,7 +6,14 @@ on:
       elapsed:
         required: true
         description: '食事後経過時間'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'すぐ'
+          - '1 時間以内'
+          - '数時間以内'
+          - '数時間以上'
+          - '翌日'
       impression:
         required: false
         description: '感想・その他'
