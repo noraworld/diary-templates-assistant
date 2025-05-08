@@ -1,4 +1,4 @@
-name: '09: 振り返り'
+name: '09: 💭 振り返り'
 
 on:
   workflow_dispatch:
