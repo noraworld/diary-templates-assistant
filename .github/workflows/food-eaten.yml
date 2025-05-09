@@ -1,0 +1,55 @@
+name: '12-2: 🥗 食事記録（食べたもの）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      food1:
+        required: true
+        description: '食べたもの 1'
+        type: string
+      food2:
+        required: false
+        description: '食べたもの 2'
+        type: string
+      food3:
+        required: false
+        description: '食べたもの 3'
+        type: string
+      food4:
+        required: false
+        description: '食べたもの 4'
+        type: string
+      food5:
+        required: false
+        description: '食べたもの 5'
+        type: string
+      food6:
+        required: false
+        description: '食べたもの 6'
+        type: string
+      food7:
+        required: false
+        description: '食べたもの 7'
+        type: string
+      food8:
+        required: false
+        description: '食べたもの 8'
+        type: string
+      food9:
+        required: false
+        description: '食べたもの 9'
+        type: string
+      food10:
+        required: false
+        description: '食べたもの 10'
+        type: string
+
+jobs:
+  food:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "food 食事記録"
+      template_name: "food-eaten"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

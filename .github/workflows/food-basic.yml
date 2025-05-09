@@ -1,0 +1,23 @@
+name: '12-1: 🥗 食事記録（基本情報）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '分析・所感'
+        type: string
+      saffron:
+        required: true
+        description: 'サフランカプセル'
+        type: boolean
+
+jobs:
+  food:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "food 食事記録"
+      template_name: "food-basic"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
