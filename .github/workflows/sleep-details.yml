@@ -1,0 +1,47 @@
+name: '01-3: 😴 睡眠記録（詳細情報）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '所感'
+        type: string
+      dream:
+        required: false
+        description: '夢日記'
+        type: string
+      night:
+        required: false
+        description: '就寝'
+        type: string
+      morning:
+        required: false
+        description: '起床'
+        type: string
+      quality:
+        required: false
+        description: '質'
+        type: string
+      mood:
+        required: false
+        description: '気分'
+        type: string
+      stress:
+        required: false
+        description: 'ストレス'
+        type: string
+      resilience:
+        required: false
+        description: 'レジリエンス'
+        type: string
+
+jobs:
+  sleep:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "sleep 睡眠記録"
+      template_name: "sleep-details"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

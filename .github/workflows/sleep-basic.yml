@@ -1,0 +1,76 @@
+name: '01-1: 😴 睡眠記録（基本情報）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      night:
+        required: true
+        description: '就寝時刻'
+        type: string
+      morning:
+        required: true
+        description: '起床時刻'
+        type: string
+      bed:
+        required: true
+        description: '就寝時間'
+        type: string
+      sleep:
+        required: true
+        description: '睡眠時間'
+        type: string
+      efficiency:
+        required: true
+        description: '睡眠効率'
+        type: number
+      score:
+        required: true
+        description: '合計スコア'
+        type: number
+      mood:
+        required: true
+        description: '寝起きの気分'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      stress:
+        required: true
+        description: '昨日のストレス値'
+        type: choice
+        options:
+          - ''
+          - '修復'
+          - '普通'
+          - '多い'
+      resilience:
+        required: true
+        description: 'レジリエンス'
+        type: choice
+        options:
+          - ''
+          - '絶好調'
+          - '好調'
+          - '普通'
+          - 'やや不足'
+          - '不足'
+
+jobs:
+  sleep:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "sleep 睡眠記録"
+      template_name: "sleep-basic"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

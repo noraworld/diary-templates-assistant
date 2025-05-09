@@ -1,0 +1,43 @@
+name: '01-2: 😴 睡眠記録（パラメータ）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      sleep:
+        required: true
+        description: '合計睡眠'
+        type: boolean
+      efficiency:
+        required: true
+        description: '効率'
+        type: boolean
+      restfulness:
+        required: true
+        description: '安眠度'
+        type: boolean
+      rem:
+        required: true
+        description: 'レム睡眠'
+        type: boolean
+      deep:
+        required: true
+        description: '深い睡眠'
+        type: boolean
+      latency:
+        required: true
+        description: '入眠潜時'
+        type: boolean
+      timing:
+        required: true
+        description: 'タイミング'
+        type: boolean
+
+jobs:
+  sleep:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "sleep 睡眠記録"
+      template_name: "sleep-parameters"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
