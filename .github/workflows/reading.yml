@@ -1,0 +1,27 @@
+name: '15: 📚 読書'
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        required: true
+        description: '書籍名'
+        type: string
+      percent:
+        required: true
+        description: '読了率'
+        type: number
+      impression:
+        required: false
+        description: '感想・学び'
+        type: string
+
+jobs:
+  reading:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "reading 読書"
+      template_name: "reading"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
