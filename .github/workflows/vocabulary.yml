@@ -1,0 +1,76 @@
+name: '18: 📖 単語学習'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+      hardships1:
+        required: false
+        description: '苦労 1'
+        type: string
+      hardships2:
+        required: false
+        description: '苦労 2'
+        type: string
+      hardships3:
+        required: false
+        description: '苦労 3'
+        type: string
+      hardships4:
+        required: false
+        description: '苦労 4'
+        type: string
+      hardships5:
+        required: false
+        description: '苦労 5'
+        type: string
+      words:
+        required: true
+        description: '単語数'
+        type: number
+      progress:
+        required: true
+        description: '進捗率'
+        type: number
+      activeness:
+        required: true
+        description: '積極性'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      material:
+        required: true
+        description: '教材'
+        type: choice
+        options:
+          - ''
+          - 'Distinction I'
+          - 'Distinction II'
+          - 'Distinction III'
+          - 'Distinction IV'
+          - 'Distinction V'
+          - 'Distinction 2000'
+
+jobs:
+  vocabulary:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "vocabulary 単語学習"
+      template_name: "vocabulary"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
