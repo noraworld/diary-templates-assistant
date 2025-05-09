@@ -45,6 +45,10 @@ on:
         required: true
         description: '残尿感'
         type: boolean
+      pain:
+        required: true
+        description: '痛み'
+        type: boolean
 
 jobs:
   urination:
