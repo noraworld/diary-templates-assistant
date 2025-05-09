@@ -1,0 +1,48 @@
+name: '07-3: 😡 気分記録（アンガーログ）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      cause:
+        required: true
+        description: '原因'
+        type: string
+      degree:
+        required: true
+        description: 'レベル'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      reaction:
+        required: true
+        description: '反応'
+        type: string
+      judgment:
+        required: true
+        description: '反応判断'
+        type: string
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+
+jobs:
+  anger:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "mood 気分記録"
+      template_name: "anger"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
