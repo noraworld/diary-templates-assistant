@@ -1,0 +1,57 @@
+name: '20-1: 💧 排泄記録（排尿）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: 'メモ'
+        type: string
+      color:
+        required: true
+        description: '色'
+        type: choice
+        options:
+          - ''
+          - 'バブル'
+          - '透明'
+          - 'レモン'
+          - 'パイン'
+          - 'みかん'
+          - 'あんず'
+          - 'チェリー'
+          - 'コーラ'
+          - 'ブルーハワイ'
+      amount:
+        required: true
+        description: '量'
+        type: choice
+        options:
+          - ''
+          - 'チョロチョロ（100ml）'
+          - 'チョロッ（200ml）'
+          - 'ふつう（300ml）'
+          - 'ドバッ（400ml）'
+          - 'ドバドバ（500ml）'
+      urgency:
+        required: true
+        description: '切迫感'
+        type: boolean
+      incontinence:
+        required: true
+        description: '失禁'
+        type: boolean
+      residuals:
+        required: true
+        description: '残尿感'
+        type: boolean
+
+jobs:
+  urination:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "excretion 排泄記録"
+      template_name: "urination"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
