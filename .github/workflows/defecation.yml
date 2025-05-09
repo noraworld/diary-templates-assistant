@@ -1,0 +1,88 @@
+name: '20-2: 💩 排泄記録（排便）'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: 'メモ'
+        type: string
+      duration:
+        required: false
+        description: 'ふんばりタイム'
+        type: number
+      shape:
+        required: true
+        description: 'かたち'
+        type: choice
+        options:
+          - ''
+          - 'ころころ'
+          - 'かちかち'
+          - 'ぶりぶり'
+          - 'ほそほそ'
+          - 'ふわふわ'
+          - 'どろどろ'
+          - 'びちびち'
+      color:
+        required: true
+        description: '色'
+        type: choice
+        options:
+          - ''
+          - 'マシュマロ'
+          - 'レモン'
+          - 'オレンジ'
+          - 'かつおぶし'
+          - 'カレー'
+          - 'チョコレート'
+          - 'もろへいや'
+          - 'いかすみ'
+          - 'ハバネロ'
+      amount:
+        required: true
+        description: '量'
+        type: choice
+        options:
+          - ''
+          - 'ちょろり（〜 50g）'
+          - '小盛り（100g）'
+          - '並盛り（200g）'
+          - '大盛り（300g）'
+          - 'チョモランマ（350g 〜）'
+      smell:
+        required: true
+        description: 'におい'
+        type: choice
+        options:
+          - ''
+          - 'くさくない'
+          - 'くさい'
+          - 'とてもくさい'
+      relief:
+        required: true
+        description: 'すっきり感'
+        type: choice
+        options:
+          - ''
+          - 'すっきり'
+          - 'ちょい残り'
+          - '苦しい'
+      float:
+        required: true
+        description: 'ぷかぷか'
+        type: boolean
+      pain:
+        required: true
+        description: 'はらいた'
+        type: boolean
+
+jobs:
+  defecation:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "excretion 排泄記録"
+      template_name: "defecation"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
