@@ -1,7 +1,7 @@
 ---
 name: 19. Listening
 about: リスニング | 毎日リスニングしてネイティブの会話が日本語並みに聴き取れることを目指しましょう
-title: "[{{DATE}}]_listening_リスニング"
+title: "\U0001F3A7_[{{DATE}}]_listening_リスニング"
 labels: ''
 assignees: noraworld
 

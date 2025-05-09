@@ -1,7 +1,7 @@
 ---
 name: 13. Teeth
 about: 歯磨き | 虫歯にならないように食後は歯を磨きましょう
-title: "[{{DATE}}]_teeth_歯磨き"
+title: "\U0001F9B7_[{{DATE}}]_teeth_歯磨き"
 labels: ''
 assignees: noraworld
 

@@ -1,7 +1,7 @@
 ---
 name: 16. Expressive
 about: 筆記開示 | 思ったことや感じたことをありのままに表現することでメンタルの改善に寄与します
-title: "[{{DATE}}]_expressive_筆記開示"
+title: "✍️_[{{DATE}}]_expressive_筆記開示"
 labels: ''
 assignees: noraworld
 

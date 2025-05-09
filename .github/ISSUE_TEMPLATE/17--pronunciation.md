@@ -1,7 +1,7 @@
 ---
 name: 17. Pronunciation
 about: 発音練習 | 発音の間違いはなかなか気付けないので AI に添削してもらい発音を向上させましょう
-title: "[{{DATE}}]_pronunciation_発音練習"
+title: "\U0001F5E3️_[{{DATE}}]_pronunciation_発音練習"
 labels: ''
 assignees: noraworld
 
