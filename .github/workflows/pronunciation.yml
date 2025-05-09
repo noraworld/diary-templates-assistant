@@ -1,0 +1,84 @@
+name: '17: 🗣️ 発音練習'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+      hardships1:
+        required: false
+        description: '苦労 1'
+        type: string
+      hardships2:
+        required: false
+        description: '苦労 2'
+        type: string
+      hardships3:
+        required: false
+        description: '苦労 3'
+        type: string
+      hardships4:
+        required: false
+        description: '苦労 4'
+        type: string
+      hardships5:
+        required: false
+        description: '苦労 5'
+        type: string
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      activeness:
+        required: true
+        description: '積極性'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      workmanship:
+        required: true
+        description: '出来'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      material:
+        required: true
+        description: '教材'
+        type: choice
+        options:
+          - 'ELSA Speak'
+        default: 'ELSA Speak'
+
+jobs:
+  pronunciation:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "pronunciation 発音練習"
+      template_name: "pronunciation"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
