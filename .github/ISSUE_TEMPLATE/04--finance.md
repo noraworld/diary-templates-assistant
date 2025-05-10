@@ -1,7 +1,7 @@
 ---
 name: 04. Finance
 about: 入出金履歴チェック | クレジットカードの不正利用などがないか毎日しっかりと確かめましょう
-title: "\U0001F4B0_[{{DATE}}]_finance_入出金履歴チェック"
+title: "💰_[{{DATE}}]_finance_入出金履歴チェック"
 labels: ''
 assignees: noraworld
 
