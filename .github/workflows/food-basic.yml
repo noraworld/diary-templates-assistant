@@ -1,4 +1,4 @@
-name: '12-1: 🥗 食事記録（基本情報）'
+name: '12-2: 🥗 食事記録（基本情報）'
 
 on:
   workflow_dispatch:
