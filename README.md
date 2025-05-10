@@ -9,8 +9,3 @@ cp -i .env.sample .env
 cp -i tmp/github_event_path_sample.json tmp/github_event_path.json
 node --env-file=.env app/comment_from_dispatch.js
 ```
-
-## リンク集 [^link_note]
-* [リザーブド日記テンプレート一覧](https://github.com/noraworld/diary-templates/issues?q=is%3Aissue%20state%3Aopen%20sort%3Acreated-asc)
-
-[^link_note]: 個人用途のためそれ以外の人はアクセスできません。
