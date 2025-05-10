@@ -1,7 +1,7 @@
 ---
 name: 01. Sleep
 about: 睡眠記録 | 寝不足や不眠の原因を特定して毎日よい睡眠を取れるように心がけましょう
-title: "\U0001F4A4_[{{DATE}}]_sleep_睡眠記録"
+title: "💤_[{{DATE}}]_sleep_睡眠記録"
 labels: ''
 assignees: noraworld
 
