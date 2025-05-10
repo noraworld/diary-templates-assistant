@@ -1,7 +1,7 @@
 ---
 name: '08. Mood'
 about: 気分記録 | 感情がゆらいだらその都度記録することでコントロールすることができるようになります
-title: "🤔_[{{DATE}}]_mood_気分記録"
+title: "\U0001F914_[{{DATE}}]_mood_気分記録"
 labels: ''
 assignees: noraworld
 

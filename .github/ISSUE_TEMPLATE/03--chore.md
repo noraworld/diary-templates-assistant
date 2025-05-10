@@ -1,7 +1,7 @@
 ---
 name: 03. Chore
 about: デジタルハウスキーピング
-title: "📨_[{{DATE}}]_chore_デジタルハウスキーピング"
+title: "\U0001F4E8_[{{DATE}}]_chore_デジタルハウスキーピング"
 labels: ''
 assignees: noraworld
 

@@ -1,14 +1,11 @@
 ---
 name: 05. Meditation
 about: 瞑想 | 悩みから解放されストレスフリーな生活を送りましょう
-title: "🌱_[{{DATE}}]_meditation_瞑想"
+title: "\U0001F331_[{{DATE}}]_meditation_瞑想"
 labels: ''
 assignees: noraworld
 
 ---
-
-### ワークフローディスパッチ
-https://github.com/noraworld/diary-templates-assistant/actions/workflows/meditation.yml
 
 ### 祈りと願いのフレーズ（慈悲瞑想用）
 [2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)

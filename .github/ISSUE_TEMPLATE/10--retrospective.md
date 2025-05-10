@@ -1,7 +1,7 @@
 ---
 name: 10. Retrospective
 about: 振り返り | 数年前や今日の日記を振り返りましょう
-title: "💭_[{{DATE}}]_retrospective_振り返り"
+title: "\U0001F4AD_[{{DATE}}]_retrospective_振り返り"
 labels: ''
 assignees: noraworld
 
