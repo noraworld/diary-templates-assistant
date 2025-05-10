@@ -31,7 +31,7 @@ jobs:
             "プライベート")
               TEMPLATE_REPO="noraworld/diary-templates"
               TEMPLATE_FILE_REPO="noraworld/diary-templates-assistant"
-              TEMPLATE_FILE_PATH=".github/ISSUE_TEMPLATE/11--pile.md"
+              TEMPLATE_FILE_PATH=".github/ISSUE_TEMPLATE/pile.md"
               TASK_REPO="noraworld/to-do"
               SEARCH_QUERY="pile 翌日やること整理"
               ;;
