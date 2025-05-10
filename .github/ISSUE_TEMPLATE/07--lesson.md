@@ -32,17 +32,17 @@ assignees: noraworld
 </details>
 
 ### 英語でうまく言えなかったこと・表現できなかったこと
-* 
+*
 
 ### 新単語・新フレーズ
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
-| 
+|
 
 > From ChatGPT
 
 ### 表現・コロケーション
-* 
+*
 
 ### チェックリスト
 * [ ] 次のレッスンの予約 or まだ予約が取れないことを確認
@@ -59,7 +59,7 @@ assignees: noraworld
 
 ```
 ### 今日のレッスンで話したいこと
-> 
+>
 ```
 </details>
 
@@ -70,7 +70,7 @@ assignees: noraworld
 
 ```
 ### 次回のレッスンで話したいこと
-> 
+>
 ```
 </details>
 

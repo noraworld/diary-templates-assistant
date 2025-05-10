@@ -80,7 +80,7 @@ assignees: noraworld
 | 練習回数 |  |
 
 ### ディクテーション
-> 
+>
 
 > <details>
 > <summary>装飾の説明</summary>
@@ -92,14 +92,14 @@ assignees: noraworld
 > </details>
 
 ### 分析
-* 
+*
 
 ### 新単語・新フレーズ
 | Word | Pronunciation | Meaning | Example |
 | --- | --- | --- | --- |
 
 ### 学び
-* 
+*
 
 ### チェックリスト
 * [ ] 次の YouTube 教材動画のダウンロード

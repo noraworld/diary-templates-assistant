@@ -108,7 +108,7 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
   done |
   ghead -c -1 |
   pbcopy &&
-  exit 
+  exit
 ```
 </details>
 
@@ -124,7 +124,7 @@ gh issue list \
   gtac |
   ghead -c -2 |
   pbcopy &&
-  exit 
+  exit
 ```
 </details>
 
@@ -147,7 +147,7 @@ gh api "/repos/noraworld/diary-templates/contents/.github/ISSUE_TEMPLATE/pile.md
     else
       echo "$line"
     fi
-  done 
+  done
 ```
 </details>
 

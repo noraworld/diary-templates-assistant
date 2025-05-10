@@ -142,12 +142,12 @@ https://github.com/noraworld/diary-templates-assistant/actions/workflows/meditat
 | 気分レベル |  |
 
 ### 気がそれたときに考えていたことやそのときの感情
-* 
+*
 
 ### 身体の感覚や痛みの変化
 | タイミング | 部位 | 感覚・痛み |
 | --- | --- | --- |
-| 
+|
 
 ### 気持ちや感情の変化
 
