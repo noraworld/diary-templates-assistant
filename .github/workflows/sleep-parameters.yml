@@ -6,31 +6,80 @@ on:
       sleep:
         required: true
         description: '合計睡眠'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
       efficiency:
         required: true
         description: '効率'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
       restfulness:
         required: true
         description: '安眠度'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
       rem:
         required: true
         description: 'レム睡眠'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
       deep:
         required: true
         description: '深い睡眠'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
       latency:
         required: true
         description: '入眠潜時'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
       timing:
         required: true
         description: 'タイミング'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - '最適'
+          - '良好'
+          - '最適・良好'
+          - '適度'
+          - '注意'
 
 jobs:
   sleep:

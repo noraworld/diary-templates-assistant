@@ -1,22 +1,10 @@
 ### 低いパラメータ
-${{ if(github.event.inputs.sleep) }}
-* 合計睡眠
-${{ endif }}
-${{ if(github.event.inputs.efficiency) }}
-* 効率
-${{ endif }}
-${{ if(github.event.inputs.restfulness) }}
-* 安眠度
-${{ endif }}
-${{ if(github.event.inputs.rem) }}
-* レム睡眠
-${{ endif }}
-${{ if(github.event.inputs.deep) }}
-* 深い睡眠
-${{ endif }}
-${{ if(github.event.inputs.latency) }}
-* 入眠潜時
-${{ endif }}
-${{ if(github.event.inputs.timing) }}
-* タイミング
-${{ endif }}
+| パラメータ | 値 |
+| --- | :---: |
+| 合計睡眠 | ${{ github.event.inputs.sleep }} |
+| 効率 | ${{ github.event.inputs.efficiency }} |
+| 安眠度 | ${{ github.event.inputs.restfulness }} |
+| レム睡眠 | ${{ github.event.inputs.rem }} |
+| 深い睡眠 | ${{ github.event.inputs.deep }} |
+| 入眠潜時 | ${{ github.event.inputs.latency }} |
+| タイミング | ${{ github.event.inputs.timing }} |
