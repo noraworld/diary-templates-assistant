@@ -7,41 +7,17 @@ on:
         required: false
         description: '感想・その他'
         type: string
-      twitter:
+      scanned:
         required: true
-        description: 'Twitter'
+        description: '書類スキャン'
         type: boolean
-      instagram:
+      organized:
         required: true
-        description: 'Instagram'
+        description: '書類整理'
         type: boolean
-      threads:
+      mail:
         required: true
-        description: 'Threads'
-        type: boolean
-      mastodon:
-        required: true
-        description: 'Mastodon'
-        type: boolean
-      misskey:
-        required: true
-        description: 'Misskey'
-        type: boolean
-      facebook:
-        required: true
-        description: 'Facebook'
-        type: boolean
-      line:
-        required: true
-        description: 'LINE'
-        type: boolean
-      slack:
-        required: true
-        description: 'Slack'
-        type: boolean
-      discord:
-        required: true
-        description: 'Discord'
+        description: 'メールチェック'
         type: boolean
 
 jobs:
