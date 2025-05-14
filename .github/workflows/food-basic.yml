@@ -3,14 +3,14 @@ name: '10-2: 🥗 食事記録（基本情報）'
 on:
   workflow_dispatch:
     inputs:
-      impression:
-        required: false
-        description: '分析・所感'
-        type: string
       saffron:
         required: true
         description: 'サフランカプセル'
         type: boolean
+      impression:
+        required: false
+        description: '分析・所感'
+        type: string
       notification:
         required: true
         description: '写真を忘れずに'
