@@ -3,30 +3,6 @@ name: '01-1: 💤 睡眠記録（基本情報）'
 on:
   workflow_dispatch:
     inputs:
-      night:
-        required: true
-        description: '就寝時刻'
-        type: string
-      morning:
-        required: true
-        description: '起床時刻'
-        type: string
-      bed:
-        required: true
-        description: '就寝時間'
-        type: string
-      sleep:
-        required: true
-        description: '睡眠時間'
-        type: string
-      efficiency:
-        required: true
-        description: '睡眠効率'
-        type: number
-      score:
-        required: true
-        description: '合計スコア'
-        type: number
       mood:
         required: true
         description: '寝起きの気分'
@@ -44,6 +20,30 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
+      sleep:
+        required: true
+        description: '合計睡眠'
+        type: string
+      bed:
+        required: true
+        description: 'ベッド時間'
+        type: string
+      efficiency:
+        required: true
+        description: '睡眠効率'
+        type: number
+      score:
+        required: true
+        description: '合計スコア'
+        type: number
+      night:
+        required: true
+        description: '就寝時刻'
+        type: string
+      morning:
+        required: true
+        description: '起床時刻'
+        type: string
       stress:
         required: true
         description: '昨日のストレス値'
