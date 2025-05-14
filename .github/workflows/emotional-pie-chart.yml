@@ -3,6 +3,27 @@ name: '13-1: 🤔 気分記録 / 感情パイチャート'
 on:
   workflow_dispatch:
     inputs:
+      event:
+        required: true
+        description: '出来事'
+        type: string
+      mood:
+        required: true
+        description: '気分度'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
       type1:
         required: true
         description: '感情の種類 1'
@@ -34,14 +55,6 @@ on:
       degree4:
         required: false
         description: '度合い 4'
-        type: number
-      type5:
-        required: false
-        description: '感情の種類 5'
-        type: string
-      degree5:
-        required: false
-        description: '度合い 5'
         type: number
 
 jobs:

@@ -1,4 +1,9 @@
 ### 感情パイチャート
+| 項目 | 内容 |
+| --- | :---: |
+| 出来事 | ${{ github.event.inputs.event }} |
+| 気分レベル | ${{ github.event.inputs.mood }} |
+
 ```mermaid
 pie showData
 ${{ if(github.event.inputs.type1) }}
@@ -12,8 +17,5 @@ ${{ if(github.event.inputs.type3) }}
 ${{ endif }}
 ${{ if(github.event.inputs.type4) }}
 "${{ github.event.inputs.type4 }}" : ${{ github.event.inputs.degree4 }}
-${{ endif }}
-${{ if(github.event.inputs.type5) }}
-"${{ github.event.inputs.type5 }}" : ${{ github.event.inputs.degree5 }}
 ${{ endif }}
 ```
