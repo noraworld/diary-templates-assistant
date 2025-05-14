@@ -1,5 +1,5 @@
 ---
-name: 14. Expressive
+name: 15. Expressive
 about: 筆記開示 | 思ったことや感じたことをありのままに表現することでメンタルの改善に寄与します
 title: "✍️_[{{DATE}}]_expressive_筆記開示"
 labels: ''
