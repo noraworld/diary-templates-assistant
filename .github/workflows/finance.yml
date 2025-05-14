@@ -7,6 +7,58 @@ on:
         required: false
         description: '分析・所感'
         type: string
+      expense1:
+        required: false
+        description: '支出 1'
+        type: string
+      reasonable1:
+        required: false
+        description: '妥当性 1'
+        type: choice
+        options:
+          - ''
+          - '😉 妥当'
+          - '🤔 微妙'
+          - '☹️ 無駄'
+      expense2:
+        required: false
+        description: '支出 2'
+        type: string
+      reasonable2:
+        required: false
+        description: '妥当性 2'
+        type: choice
+        options:
+          - ''
+          - '😉 妥当'
+          - '🤔 微妙'
+          - '☹️ 無駄'
+      expense3:
+        required: false
+        description: '支出 3'
+        type: string
+      reasonable3:
+        required: false
+        description: '妥当性 3'
+        type: choice
+        options:
+          - ''
+          - '😉 妥当'
+          - '🤔 微妙'
+          - '☹️ 無駄'
+      expense4:
+        required: false
+        description: '支出 4'
+        type: string
+      reasonable4:
+        required: false
+        description: '妥当性 4'
+        type: choice
+        options:
+          - ''
+          - '😉 妥当'
+          - '🤔 微妙'
+          - '☹️ 無駄'
 
 jobs:
   finance:
