@@ -1,0 +1,64 @@
+name: '08-0: 🎓🎧 リスニング'
+
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        required: true
+        description: '種別'
+        type: choice
+        options:
+          - ''
+          - '受動的なリスニング'
+          - '自由なアクティブ・イマージョン'
+      material:
+        required: true
+        description: '教材'
+        type: string
+      subtitle:
+        required: true
+        description: '字幕の有無'
+        type: choice
+        options:
+          - ''
+          - 'なし'
+          - 'あり'
+      comprehension:
+        required: false
+        description: '理解度'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      analysis:
+        required: false
+        description: '分析'
+        type: string
+      knowledge:
+        required: false
+        description: '学び'
+        type: string
+      impression:
+        required: false
+        description: '所感'
+        type: string
+
+jobs:
+  listening:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "listening リスニング"
+      template_name: "listening"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
