@@ -1,0 +1,47 @@
+name: '21-0: 🧹🛁 入浴記録'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '所感'
+        type: string
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      toner:
+        required: true
+        description: '化粧水'
+        type: boolean
+      shaved:
+        required: true
+        description: '髭剃り'
+        type: boolean
+      shampoo:
+        required: true
+        description: 'シャンプー'
+        type: boolean
+      bathed:
+        required: true
+        description: '洗体'
+        type: boolean
+      bath:
+        required: true
+        description: '入浴'
+        type: boolean
+
+jobs:
+  shower:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "shower 入浴記録"
+      template_name: "shower"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
