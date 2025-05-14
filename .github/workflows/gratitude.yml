@@ -1,4 +1,4 @@
-name: '15-1: 🙏 慰労記録（感謝日記）'
+name: '15-1: 🙏 慰労記録 / 感謝日記'
 
 on:
   workflow_dispatch:

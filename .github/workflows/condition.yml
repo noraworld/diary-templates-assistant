@@ -1,4 +1,4 @@
-name: '13-2: 😷 気分記録（体調記録）'
+name: '13-2: 😷 気分記録 / 体調記録'
 
 on:
   workflow_dispatch:
