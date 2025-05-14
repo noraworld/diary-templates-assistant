@@ -1,4 +1,4 @@
-name: '13-2: 🪷😷 気分記録 / 体調記録'
+name: '13-2: 🪷😷 体調記録'
 
 on:
   workflow_dispatch:
@@ -45,7 +45,7 @@ jobs:
   condition:
     uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
     with:
-      search_query: "mood 気分記録"
+      search_query: "condition 体調記録"
       template_name: "condition"
       template_repo: "noraworld/diary-templates"
     secrets:
