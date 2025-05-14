@@ -11,6 +11,13 @@ on:
         required: true
         description: 'サフランカプセル'
         type: boolean
+      notification:
+        required: true
+        description: '写真を忘れずに'
+        type: choice
+        options:
+          - ''
+          - 'わかった'
 
 jobs:
   food:
