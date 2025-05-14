@@ -3,7 +3,9 @@
 | --- | :---: |
 | 種別 | ${{ github.event.inputs.type }} |
 | 教材 | ${{ github.event.inputs.material }} |
+${{ if(github.event.inputs.subtitle) }}
 | 字幕 | ${{ github.event.inputs.subtitle }} |
+${{ endif }}
 ${{ if(github.event.inputs.comprehension) }}
 | 理解度 | ${{ github.event.inputs.comprehension }} |
 ${{ endif }}

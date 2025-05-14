@@ -16,7 +16,7 @@ on:
         description: '教材'
         type: string
       subtitle:
-        required: true
+        required: false
         description: '字幕の有無'
         type: choice
         options:
