@@ -1,4 +1,4 @@
-name: '04: 📚 読書'
+name: '04: 🎓📚 読書'
 
 on:
   workflow_dispatch:
