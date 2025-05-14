@@ -27,7 +27,18 @@ on:
       type1:
         required: true
         description: '感情の種類 1'
-        type: string
+        type: choice
+        options:
+          - ''
+          - '悲しみ'
+          - '不安'
+          - '怒り'
+          - 'イライラ'
+          - '恥'
+          - '嫌悪'
+          - '罪悪感'
+          - '焦燥感'
+          - '憂鬱'
       degree1:
         required: true
         description: '度合い 1'
@@ -35,7 +46,18 @@ on:
       type2:
         required: false
         description: '感情の種類 2'
-        type: string
+        type: choice
+        options:
+          - ''
+          - '悲しみ'
+          - '不安'
+          - '怒り'
+          - 'イライラ'
+          - '恥'
+          - '嫌悪'
+          - '罪悪感'
+          - '焦燥感'
+          - '憂鬱'
       degree2:
         required: false
         description: '度合い 2'
@@ -43,7 +65,18 @@ on:
       type3:
         required: false
         description: '感情の種類 3'
-        type: string
+        type: choice
+        options:
+          - ''
+          - '悲しみ'
+          - '不安'
+          - '怒り'
+          - 'イライラ'
+          - '恥'
+          - '嫌悪'
+          - '罪悪感'
+          - '焦燥感'
+          - '憂鬱'
       degree3:
         required: false
         description: '度合い 3'
@@ -51,7 +84,18 @@ on:
       type4:
         required: false
         description: '感情の種類 4'
-        type: string
+        type: choice
+        options:
+          - ''
+          - '悲しみ'
+          - '不安'
+          - '怒り'
+          - 'イライラ'
+          - '恥'
+          - '嫌悪'
+          - '罪悪感'
+          - '焦燥感'
+          - '憂鬱'
       degree4:
         required: false
         description: '度合い 4'
