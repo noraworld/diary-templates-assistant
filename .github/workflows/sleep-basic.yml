@@ -5,7 +5,7 @@ on:
     inputs:
       mood:
         required: true
-        description: '寝起きの気分'
+        description: '寝起気分'
         type: choice
         options:
           - ''

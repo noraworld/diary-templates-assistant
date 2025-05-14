@@ -50,7 +50,7 @@ on:
           - '★★★★★★★★★★'
       comfortable:
         required: true
-        description: '動きやすさ'
+        description: '動き易さ'
         type: choice
         options:
           - ''

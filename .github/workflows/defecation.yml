@@ -67,7 +67,7 @@ on:
           - '🤢 苦しい'
       duration:
         required: true
-        description: 'ふんばりタイム'
+        description: '時間'
         type: choice
         options:
           - ''

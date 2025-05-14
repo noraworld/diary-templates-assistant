@@ -33,7 +33,7 @@ on:
         type: string
       degree:
         required: true
-        description: 'レベル'
+        description: 'スト度'
         type: choice
         options:
           - ''

@@ -9,7 +9,7 @@ on:
         type: string
       discomfort:
         required: true
-        description: '不快レベル'
+        description: '不快度'
         type: choice
         options:
           - ''

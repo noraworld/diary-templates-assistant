@@ -50,7 +50,7 @@ on:
           - '★★★★★★★★★★'
       mood:
         required: true
-        description: '気分レベル'
+        description: '気分度'
         type: choice
         options:
           - ''

@@ -9,7 +9,7 @@ on:
         type: string
       degree:
         required: true
-        description: 'レベル'
+        description: '怒レベル'
         type: choice
         options:
           - ''
