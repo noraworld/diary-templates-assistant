@@ -23,6 +23,7 @@ on:
           - ''
           - 'なし'
           - 'あり'
+          - '最初なし（あとからあり）'
       comprehension:
         required: false
         description: '理解度'
