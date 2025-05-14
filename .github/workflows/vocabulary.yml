@@ -1,4 +1,4 @@
-name: '18: 📖 単語学習'
+name: '06: 📖 単語学習'
 
 on:
   workflow_dispatch:

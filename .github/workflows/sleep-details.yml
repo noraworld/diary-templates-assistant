@@ -1,4 +1,4 @@
-name: '01-3: 💤 睡眠記録（詳細情報）'
+name: '09-3: 💤 睡眠記録（詳細情報）'
 
 on:
   workflow_dispatch:

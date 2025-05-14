@@ -1,4 +1,4 @@
-name: '20-2: 💩 排泄記録（排便）'
+name: '12-2: 💩 排泄記録（排便）'
 
 on:
   workflow_dispatch:
