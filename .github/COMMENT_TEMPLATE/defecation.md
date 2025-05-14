@@ -7,7 +7,7 @@
 | におい | ${{ github.event.inputs.smell }} |
 | すっきり感 | ${{ github.event.inputs.relief }} |
 ${{ if(github.event.inputs.duration) }}
-| ふんばりタイム | ${{ github.event.inputs.duration }} 分 |
+| ふんばりタイム | ${{ github.event.inputs.duration }} |
 ${{ endif }}
 
 ### 詳細
