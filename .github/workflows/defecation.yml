@@ -7,10 +7,6 @@ on:
         required: false
         description: 'メモ'
         type: string
-      duration:
-        required: false
-        description: 'ふんばりタイム'
-        type: number
       shape:
         required: true
         description: 'かたち'
@@ -76,6 +72,17 @@ on:
         required: true
         description: 'はらいた'
         type: boolean
+      duration:
+        required: true
+        description: 'ふんばりタイム'
+        type: choice
+        options:
+          - ''
+          - 'すぐ（体感 5 分以内）'
+          - 'あっさり（体感 10 分前後）'
+          - 'ちょいふんばり（体感 15 分前後）'
+          - 'ふんばり（体感 20 分前後）'
+          - '超ふんばり（体感 30 分以上）'
 
 jobs:
   defecation:
