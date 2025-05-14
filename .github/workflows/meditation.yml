@@ -5,7 +5,7 @@ on:
     inputs:
       thoughts:
         required: false
-        description: '思考・感情'
+        description: '気がそれたとき'
         type: string
       sensation:
         required: false
@@ -13,11 +13,11 @@ on:
         type: string
       feelings:
         required: false
-        description: '気持ち・感情'
+        description: '気持ち・感情変化'
         type: string
       impression:
         required: false
-        description: '所感・その他'
+        description: '所感'
         type: string
       minutes:
         required: true
@@ -37,7 +37,7 @@ on:
           - '慈悲の瞑想（カスタム版）'
       focused:
         required: true
-        description: '集中レベル'
+        description: '集中度'
         type: choice
         options:
           - ''
@@ -54,7 +54,7 @@ on:
           - '★★★★★★★★★★'
       relaxed:
         required: true
-        description: 'リラックスレベル'
+        description: 'リラ度'
         type: choice
         options:
           - ''
@@ -71,7 +71,7 @@ on:
           - '★★★★★★★★★★'
       mood:
         required: true
-        description: '気分レベル'
+        description: '気分度'
         type: choice
         options:
           - ''
