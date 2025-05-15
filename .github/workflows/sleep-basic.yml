@@ -38,7 +38,7 @@ on:
         type: number
       score:
         required: true
-        description: '合計スコア'
+        description: '睡眠スコア'
         type: number
       night:
         required: true
