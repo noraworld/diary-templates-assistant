@@ -32,6 +32,10 @@ on:
         required: true
         description: '睡眠効率'
         type: number
+      bpm:
+        required: true
+        description: '安静時心拍数'
+        type: number
       score:
         required: true
         description: '合計スコア'
