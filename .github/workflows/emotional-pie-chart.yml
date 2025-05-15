@@ -7,23 +7,6 @@ on:
         required: true
         description: '出来事'
         type: string
-      mood:
-        required: true
-        description: '気分度'
-        type: choice
-        options:
-          - ''
-          - '☆☆☆☆☆☆☆☆☆☆'
-          - '★☆☆☆☆☆☆☆☆☆'
-          - '★★☆☆☆☆☆☆☆☆'
-          - '★★★☆☆☆☆☆☆☆'
-          - '★★★★☆☆☆☆☆☆'
-          - '★★★★★☆☆☆☆☆'
-          - '★★★★★★☆☆☆☆'
-          - '★★★★★★★☆☆☆'
-          - '★★★★★★★★☆☆'
-          - '★★★★★★★★★☆'
-          - '★★★★★★★★★★'
       type1:
         required: true
         description: '感情の種類 1'
@@ -100,6 +83,23 @@ on:
         required: false
         description: '度合い 4'
         type: number
+      mood:
+        required: true
+        description: '気分度'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
 
 jobs:
   emotional-pie-chart:
