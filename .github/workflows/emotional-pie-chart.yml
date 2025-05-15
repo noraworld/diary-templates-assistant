@@ -25,7 +25,30 @@ on:
       degree1:
         required: true
         description: '度合い 1'
-        type: number
+        type: choice
+        options:
+          - ''
+          - '0'
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+          - '65'
+          - '70'
+          - '75'
+          - '80'
+          - '85'
+          - '90'
+          - '95'
+          - '100'
       type2:
         required: false
         description: '感情の種類 2'
@@ -44,7 +67,30 @@ on:
       degree2:
         required: false
         description: '度合い 2'
-        type: number
+        type: choice
+        options:
+          - ''
+          - '0'
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+          - '65'
+          - '70'
+          - '75'
+          - '80'
+          - '85'
+          - '90'
+          - '95'
+          - '100'
       type3:
         required: false
         description: '感情の種類 3'
@@ -63,7 +109,30 @@ on:
       degree3:
         required: false
         description: '度合い 3'
-        type: number
+        type: choice
+        options:
+          - ''
+          - '0'
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+          - '65'
+          - '70'
+          - '75'
+          - '80'
+          - '85'
+          - '90'
+          - '95'
+          - '100'
       type4:
         required: false
         description: '感情の種類 4'
@@ -82,7 +151,30 @@ on:
       degree4:
         required: false
         description: '度合い 4'
-        type: number
+        type: choice
+        options:
+          - ''
+          - '0'
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+          - '65'
+          - '70'
+          - '75'
+          - '80'
+          - '85'
+          - '90'
+          - '95'
+          - '100'
       mood:
         required: true
         description: '気分度'
