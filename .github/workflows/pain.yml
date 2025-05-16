@@ -1,0 +1,52 @@
+name: '12-2: 🌿😖 痛みダイアリー'
+
+on:
+  workflow_dispatch:
+    inputs:
+      pain:
+        required: true
+        description: '痛い部位'
+        type: string
+      degree:
+        required: true
+        description: '痛レベル'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      situation:
+        required: true
+        description: '状況'
+        type: string
+      cause:
+        required: false
+        description: '原因'
+        type: string
+      coping:
+        required: false
+        description: '対処'
+        type: string
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+
+jobs:
+  pain:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "condition 体調記録"
+      template_name: "pain"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
