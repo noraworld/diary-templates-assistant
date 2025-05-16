@@ -1,4 +1,4 @@
-name: '18-0: 🍀📆 翌日やること整理'
+name: '18-1: 🍀📆 翌日やること整理'
 
 on:
   workflow_dispatch:
