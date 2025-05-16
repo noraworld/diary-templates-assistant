@@ -9,7 +9,7 @@ on:
         type: string
       type1:
         required: true
-        description: '感情の種類 1'
+        description: 'ラベル 1'
         type: choice
         options:
           - ''
@@ -74,7 +74,7 @@ on:
           - '100'
       type2:
         required: false
-        description: '感情の種類 2'
+        description: 'ラベル 2'
         type: choice
         options:
           - ''
@@ -139,7 +139,7 @@ on:
           - '100'
       type3:
         required: false
-        description: '感情の種類 3'
+        description: 'ラベル 3'
         type: choice
         options:
           - ''
@@ -204,7 +204,7 @@ on:
           - '100'
       type4:
         required: false
-        description: '感情の種類 4'
+        description: 'ラベル 4'
         type: choice
         options:
           - ''
