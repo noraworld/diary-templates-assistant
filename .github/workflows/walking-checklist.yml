@@ -7,9 +7,13 @@ on:
         required: true
         description: 'Pokémon GO'
         type: boolean
-      mail:
+      mail_check:
         required: true
-        description: '郵便物チェック'
+        description: '郵便物の確認'
+        type: boolean
+      mail_collection:
+        required: true
+        description: '郵便物の回収'
         type: boolean
       negative:
         required: true
