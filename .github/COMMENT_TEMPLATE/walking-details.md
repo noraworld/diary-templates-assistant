@@ -8,4 +8,4 @@ ${{ github.event.inputs.scenery }}
 ${{ github.event.inputs.mood }}
 
 ### 所感
-${{ github.event.inputs.impression }}
+${{ github.event.inputs.impression || '特になし。' }}
