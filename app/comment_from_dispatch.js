@@ -29,9 +29,15 @@ async function run() {
   }))
   .then(res => {
     if (process.env.DRY_RUN === 'true') {
-      console.info(replaced, '\n');
+      console.info(replaced);
     }
-    console.info(res.data.html_url);
+
+    console.info();
+    // https://blog.katsubemakito.net/nodejs/json-pretty
+    console.info(JSON.stringify({
+      issue_comment_url: res.data.html_url,
+      created_at: getDate(),
+    }, null, 2));
   })
   .catch((err) => {
     console.error(err);
@@ -111,6 +117,13 @@ function commentResponse() {
       html_url: 'https://github.com/noraworld/diary-templates/issues/7141#issuecomment-2854679866',
     },
   };
+}
+
+// https://dev.matumo.com/1019/
+function getDate() {
+  const date = new Date();
+  date.setTime(date.getTime() + (9 * 60 * 60 * 1000));
+  return date.toISOString().replace('T', ' ').substr(0, 19);
 }
 
 run().catch((error) => {
