@@ -7,7 +7,7 @@ import os
 import re
 
 DATE_DELIMITER_REGEXP = '[\/\-]'
-DAY_OFF_JSON = 'day-off.json'
+DAY_OFF_JSON = 'data/day-off.json'
 WEEKLY_OFF_DAYS = ['Saturday', 'Sunday']
 
 class Util:
