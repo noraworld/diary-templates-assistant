@@ -39,7 +39,7 @@ jobs:
         run: pipenv install
 
       - name: Check if today is a day off or a holiday
-        run: pipenv run python day-off.py
+        run: pipenv run python app/day-off.py
         shell: sh
         env:
           TZ: ${{ inputs.timezone || github.event.inputs.timezone }}
