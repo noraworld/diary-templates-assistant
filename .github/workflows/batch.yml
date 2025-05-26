@@ -39,7 +39,7 @@ jobs:
 
   templates-closer:
     needs: comments-transferor-force
-    uses: noraworld/diary/.github/workflows/templates-closer.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
     with:
       repo: noraworld/diary-templates
       # Comment #2
@@ -82,7 +82,7 @@ jobs:
 
   convert-unchecked:
     needs: wait-for-templates-closed
-    uses: noraworld/diary/.github/workflows/convert-unchecked.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
     with:
       main_repo: noraworld/reserved-diary
     secrets:
@@ -90,7 +90,7 @@ jobs:
 
   issue-changer:
     needs: convert-unchecked
-    uses: noraworld/diary/.github/workflows/issue-changer.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/reserved-diary
       template_repo: noraworld/diary-templates
@@ -100,7 +100,7 @@ jobs:
 
   templates-creator:
     needs: issue-changer
-    uses: noraworld/diary/.github/workflows/templates-creator.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/reserved-diary
       template_repo: noraworld/diary-templates
@@ -111,7 +111,7 @@ jobs:
 
   templates-linker:
     needs: templates-creator
-    uses: noraworld/diary/.github/workflows/templates-linker.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-linker.yml@main
     with:
       main_repo: noraworld/reserved-diary
       template_repo: noraworld/diary-templates
@@ -124,7 +124,7 @@ jobs:
   # private-diary
   private-templates-closer:
     needs: templates-linker
-    uses: noraworld/diary/.github/workflows/templates-closer.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
     with:
       repo: noraworld/private-diary-templates
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
@@ -164,7 +164,7 @@ jobs:
 
   private-convert-unchecked:
     needs: private-wait-for-templates-closed
-    uses: noraworld/diary/.github/workflows/convert-unchecked.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
     with:
       main_repo: noraworld/private-diary
     secrets:
@@ -172,7 +172,7 @@ jobs:
 
   private-issue-changer:
     needs: private-convert-unchecked
-    uses: noraworld/diary/.github/workflows/issue-changer.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/private-diary
       template_repo: noraworld/private-diary-templates
@@ -182,7 +182,7 @@ jobs:
 
   private-templates-creator:
     needs: private-issue-changer
-    uses: noraworld/diary/.github/workflows/templates-creator.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/private-diary
       template_repo: noraworld/private-diary-templates
@@ -193,7 +193,7 @@ jobs:
 
   private-templates-linker:
     needs: private-templates-creator
-    uses: noraworld/diary/.github/workflows/templates-linker.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-linker.yml@main
     with:
       main_repo: noraworld/private-diary
       template_repo: noraworld/private-diary-templates
@@ -205,13 +205,13 @@ jobs:
 
   # daily-report
   daily-report-day-off:
-    uses: noraworld/diary/.github/workflows/day-off.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/day-off.yml@main
     with:
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
 
   daily-report-templates-closer:
     needs: daily-report-day-off
-    uses: noraworld/diary/.github/workflows/templates-closer.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
     with:
       repo: noraworld/daily-report-templates
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
@@ -251,7 +251,7 @@ jobs:
 
   daily-report-convert-unchecked:
     needs: daily-report-wait-for-templates-closed
-    uses: noraworld/diary/.github/workflows/convert-unchecked.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
     with:
       main_repo: noraworld/daily-report
     secrets:
@@ -259,7 +259,7 @@ jobs:
 
   daily-report-issue-changer:
     needs: daily-report-convert-unchecked
-    uses: noraworld/diary/.github/workflows/issue-changer.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/daily-report
       template_repo: noraworld/daily-report-templates
@@ -269,7 +269,7 @@ jobs:
 
   daily-report-templates-creator:
     needs: daily-report-issue-changer
-    uses: noraworld/diary/.github/workflows/templates-creator.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/daily-report
       template_repo: noraworld/daily-report-templates
@@ -280,7 +280,7 @@ jobs:
 
   daily-report-templates-linker:
     needs: daily-report-templates-creator
-    uses: noraworld/diary/.github/workflows/templates-linker.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/templates-linker.yml@main
     with:
       main_repo: noraworld/daily-report
       template_repo: noraworld/daily-report-templates
@@ -290,7 +290,7 @@ jobs:
 
   daily-report-wage:
     needs: daily-report-templates-linker
-    uses: noraworld/diary/.github/workflows/wage.yml@main
+    uses: noraworld/diary-templates-assistant/.github/workflows/wage.yml@main
     with:
       my_annual: ${{ github.event.inputs.my_annual || '864' }}
     secrets:
