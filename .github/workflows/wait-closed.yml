@@ -3,6 +3,10 @@ name: Wait Closed
 on:
   workflow_call:
     inputs:
+      sleep_interval:
+        default: 10
+        required: false
+        type: string
       template_repo:
         required: true
         type: string
@@ -25,7 +29,7 @@ jobs:
           while [ "$(gh issue list --repo "$TEMPLATE_REPO" | wc -l)" -ne 0 ]; do
             # The shorter the sleep interval is, the more frequently the error below may occur.
             #   GraphQL: was submitted too quickly (createIssue)
-            sleep 15
+            sleep $SLEEP_INTERVAL
 
             attempt=$(($attempt + 1))
             if [ "$attempt" -gt 5 ]; then
@@ -35,8 +39,9 @@ jobs:
           done
 
           # To avoid causing the error. Just in case.
-          sleep 30
+          sleep $SLEEP_INTERVAL
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.token }}
+          SLEEP_INTERVAL: ${{ inputs.sleep_interval }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}
