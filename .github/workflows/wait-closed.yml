@@ -3,6 +3,10 @@ name: Wait Closed
 on:
   workflow_call:
     inputs:
+      maximum_attempt_threshold:
+        default: 30
+        required: false
+        type: string
       sleep_interval:
         default: 10
         required: false
@@ -32,7 +36,7 @@ jobs:
             sleep $SLEEP_INTERVAL
 
             attempt=$(($attempt + 1))
-            if [ "$attempt" -gt 5 ]; then
+            if [ "$attempt" -gt "$MAXIMUM_ATTEMPT_THRESHOLD" ]; then
               echo "Timeout period exceeded." >&2
               exit 1
             fi
@@ -43,5 +47,6 @@ jobs:
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.token }}
+          MAXIMUM_ATTEMPT_THRESHOLD: ${{ inputs.maximum_attempt_threshold }}
           SLEEP_INTERVAL: ${{ inputs.sleep_interval }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}
