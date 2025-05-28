@@ -1,5 +1,15 @@
 name: Wait Closed
 
+on:
+  workflow_call:
+    inputs:
+      template_repo:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +22,7 @@ jobs:
           trial=0
 
           # Wait for all of the diary templates to be closed.
-          while [ "$(gh issue list --repo "noraworld/diary-templates" | wc -l)" -ne 0 ]; do
+          while [ "$(gh issue list --repo "$TEMPLATE_REPO" | wc -l)" -ne 0 ]; do
             # The shorter the sleep interval is, the more frequently the error below may occur.
             #   GraphQL: was submitted too quickly (createIssue)
             sleep 15
@@ -28,4 +38,5 @@ jobs:
           sleep 30
         shell: sh
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.token }}
+          TEMPLATE_REPO: ${{ inputs.template_repo }}
