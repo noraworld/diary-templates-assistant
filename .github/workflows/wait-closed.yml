@@ -19,7 +19,7 @@ jobs:
 
       - name: Check if all of the templates have successfully been closed
         run: |
-          trial=0
+          attempt=0
 
           # Wait for all of the templates to be closed.
           while [ "$(gh issue list --repo "$TEMPLATE_REPO" | wc -l)" -ne 0 ]; do
@@ -27,8 +27,8 @@ jobs:
             #   GraphQL: was submitted too quickly (createIssue)
             sleep 15
 
-            trial=$(($trial + 1))
-            if [ "$trial" -gt 5 ]; then
+            attempt=$(($attempt + 1))
+            if [ "$attempt" -gt 5 ]; then
               echo "Timeout period exceeded." >&2
               exit 1
             fi
