@@ -1,0 +1,31 @@
+name: Wait Closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Check if all of the diary templates have successfully been closed
+        run: |
+          trial=0
+
+          # Wait for all of the diary templates to be closed.
+          while [ "$(gh issue list --repo "noraworld/diary-templates" | wc -l)" -ne 0 ]; do
+            # The shorter the sleep interval is, the more frequently the error below may occur.
+            #   GraphQL: was submitted too quickly (createIssue)
+            sleep 15
+
+            trial=$(($trial + 1))
+            if [ "$trial" -gt 5 ]; then
+              echo "Timeout period exceeded." >&2
+              exit 1
+            fi
+          done
+
+          # To avoid causing the error. Just in case.
+          sleep 30
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
