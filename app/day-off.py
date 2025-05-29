@@ -51,11 +51,14 @@ class Util:
 
         error = error_class()
         if Util.cast_bool(os.getenv('FAIL_IF_DAY_OFF')) is True:
+            print('DEBUG: reached if')
             raise error
         elif Util.cast_bool(os.getenv('GITHUB_OUTPUT')) is True:
+            print('DEBUG: reached elif')
             print('day_off=true')
             exit()
         else:
+            print('DEBUG: reached else')
             print(error)
             exit()
 
