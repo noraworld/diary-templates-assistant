@@ -8,6 +8,11 @@ on:
         description: 'Fail if day off'
         type: boolean
         default: false
+      github_output:
+        required: false
+        description: 'GitHub output'
+        type: boolean
+        default: true
       timezone:
         required: true
         description: 'Timezone'
@@ -169,6 +174,7 @@ jobs:
     uses: noraworld/diary-templates-assistant/.github/workflows/day-off.yml@main
     with:
       fail_if_day_off: ${{ github.event.inputs.fail_if_day_off || false }}
+      github_output: ${{ github.event.inputs.github_output || true }}
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
 
   daily-report-templates-closer:

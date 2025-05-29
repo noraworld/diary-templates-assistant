@@ -49,8 +49,12 @@ class Util:
         error = error_class()
         if Util.cast_bool(os.getenv('FAIL_IF_DAY_OFF')) is True:
             raise error
+        elif Util.cast_bool(os.getenv('GITHUB_OUTPUT')) is True:
+            print('day_off=true')
+            exit()
         else:
             print(error)
+            exit()
 
     def cast_bool(bool):
         if bool is True or bool.lower() == 'true':
@@ -85,3 +89,6 @@ if __name__ == '__main__':
 
     if (datetime.date.today().strftime('%A') in WEEKLY_OFF_DAYS) is True:
         Util.handle_error(WeeklyOffError)
+
+    if Util.cast_bool(os.getenv('GITHUB_OUTPUT')) is True:
+        print('day_off=false')

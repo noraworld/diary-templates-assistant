@@ -8,6 +8,11 @@ on:
         description: 'Fail if day off'
         type: boolean
         default: false
+      github_output:
+        required: false
+        description: 'GitHub output'
+        type: boolean
+        default: true
       timezone:
         required: true
         description: 'Timezone'
@@ -21,6 +26,9 @@ on:
   workflow_call:
     inputs:
       fail_if_day_off:
+        required: false
+        type: boolean
+      github_output:
         required: false
         type: boolean
       timezone:
@@ -51,4 +59,5 @@ jobs:
         shell: sh
         env:
           FAIL_IF_DAY_OFF: ${{ inputs.fail_if_day_off || github.event.inputs.fail_if_day_off }}
+          GITHUB_OUTPUT: ${{ inputs.github_output || github.event.inputs.github_output }}
           TZ: ${{ inputs.timezone || github.event.inputs.timezone }}
