@@ -4,8 +4,19 @@
 完全個人用途のため一般にはあまり役に立たないかもしれません。
 
 ## ワークフローディスパッチ動作検証用環境構築
+### 全般
 ```shell
 cp -i .env.sample .env
 cp -i tmp/github_event_path_sample.json tmp/github_event_path.json
-node --env-file=.env app/comment_from_dispatch.js
+```
+
+### Node.js
+```shell
+node --env-file=.env app/<FILENAME>.js
+```
+
+### Python
+```shell
+pipenv install
+pipenv run python app/<FILENAME>.py
 ```
