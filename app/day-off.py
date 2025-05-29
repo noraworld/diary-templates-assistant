@@ -45,6 +45,19 @@ class Util:
 
         return datetime.date(year, month, day)
 
+    def handle_error(error_class):
+        error = error_class()
+        if Util.cast_bool(os.getenv('FAIL_IF_DAY_OFF')) is True:
+            raise error
+        else:
+            print(error)
+
+    def cast_bool(bool):
+        if bool is True or bool.lower() == 'true':
+            return True
+        else:
+            return False
+
 class HolidayError(Exception):
     def __str__(self):
         return 'today is a holiday!'
@@ -65,10 +78,10 @@ if __name__ == '__main__':
 
         for day_off in data['day_off']:
             if datetime.date.today() == Util.full_date(day_off):
-                raise DayOffError
+                Util.handle_error(DayOffError)
 
     if jpholiday.is_holiday(datetime.date.today()) is True:
-        raise HolidayError
+        Util.handle_error(HolidayError)
 
     if (datetime.date.today().strftime('%A') in WEEKLY_OFF_DAYS) is True:
-        raise WeeklyOffError
+        Util.handle_error(WeeklyOffError)

@@ -3,6 +3,11 @@ name: Issue Refresh Batch
 on:
   workflow_dispatch:
     inputs:
+      fail_if_day_off:
+        required: false
+        description: 'Fail if day off'
+        type: boolean
+        default: false
       timezone:
         required: true
         description: 'Timezone'
@@ -163,6 +168,7 @@ jobs:
   daily-report-day-off:
     uses: noraworld/diary-templates-assistant/.github/workflows/day-off.yml@main
     with:
+      fail_if_day_off: ${{ github.event.inputs.fail_if_day_off || false }}
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
 
   daily-report-templates-closer:

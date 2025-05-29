@@ -3,6 +3,11 @@ name: Day Off
 on:
   workflow_dispatch:
     inputs:
+      fail_if_day_off:
+        required: false
+        description: 'Fail if day off'
+        type: boolean
+        default: false
       timezone:
         required: true
         description: 'Timezone'
@@ -15,6 +20,9 @@ on:
         default: 'Asia/Tokyo'
   workflow_call:
     inputs:
+      fail_if_day_off:
+        required: false
+        type: boolean
       timezone:
         required: true
         type: string
@@ -42,4 +50,5 @@ jobs:
         run: pipenv run python app/day-off.py
         shell: sh
         env:
+          FAIL_IF_DAY_OFF: ${{ inputs.fail_if_day_off || github.event.inputs.fail_if_day_off }}
           TZ: ${{ inputs.timezone || github.event.inputs.timezone }}
