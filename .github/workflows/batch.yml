@@ -179,7 +179,7 @@ jobs:
 
   check-if-skipped:
     needs: daily-report-day-off
-    if: needs.daily-report-day-off.outputs.day_off == 'true'
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     runs-on: ubuntu-latest
     steps:
       - run: echo "check-if-skipped was performed!"
