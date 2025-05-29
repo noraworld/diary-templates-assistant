@@ -27,10 +27,10 @@ on:
     inputs:
       fail_if_day_off:
         required: false
-        type: boolean
+        type: string
       gh_output_format:
         required: false
-        type: boolean
+        type: string
       timezone:
         required: true
         type: string

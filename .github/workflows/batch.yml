@@ -173,8 +173,8 @@ jobs:
   daily-report-day-off:
     uses: noraworld/diary-templates-assistant/.github/workflows/day-off.yml@main
     with:
-      fail_if_day_off: ${{ github.event.inputs.fail_if_day_off || 'false' }}
-      gh_output_format: ${{ github.event.inputs.gh_output_format || 'true' }}
+      fail_if_day_off: ${{ github.event.inputs.fail_if_day_off || false }}
+      gh_output_format: ${{ github.event.inputs.gh_output_format || true }}
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
 
   check-if-skipped:
