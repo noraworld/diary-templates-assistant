@@ -179,6 +179,7 @@ jobs:
 
   daily-report-templates-closer:
     needs: daily-report-day-off
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
     with:
       repo: noraworld/daily-report-templates
@@ -189,6 +190,7 @@ jobs:
 
   daily-report-wait-for-templates-closed:
     needs: daily-report-templates-closer
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
     with:
       template_repo: noraworld/daily-report-templates
@@ -197,6 +199,7 @@ jobs:
 
   daily-report-convert-unchecked:
     needs: daily-report-wait-for-templates-closed
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
     with:
       main_repo: noraworld/daily-report
@@ -205,6 +208,7 @@ jobs:
 
   daily-report-issue-changer:
     needs: daily-report-convert-unchecked
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/daily-report
@@ -215,6 +219,7 @@ jobs:
 
   daily-report-templates-creator:
     needs: daily-report-issue-changer
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/daily-report
@@ -226,6 +231,7 @@ jobs:
 
   daily-report-templates-linker:
     needs: daily-report-templates-creator
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-linker.yml@main
     with:
       main_repo: noraworld/daily-report
@@ -236,6 +242,7 @@ jobs:
 
   daily-report-wage:
     needs: daily-report-templates-linker
+    if: needs.daily-report-day-off.outputs.day_off == 'false'
     uses: noraworld/diary-templates-assistant/.github/workflows/wage.yml@main
     with:
       my_annual: ${{ github.event.inputs.my_annual || '864' }}
