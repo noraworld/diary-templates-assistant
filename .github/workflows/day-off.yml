@@ -34,6 +34,9 @@ on:
       timezone:
         required: true
         type: string
+    outputs:
+      day_off:
+        value: ${{ jobs.build.outputs.day_off }}
 
 jobs:
   build:
