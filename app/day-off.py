@@ -46,7 +46,9 @@ class Util:
         return datetime.date(year, month, day)
 
     def handle_error(error_class):
-        print(f"FAIL_IF_DAY_OFF = {Util.cast_bool(os.getenv('FAIL_IF_DAY_OFF'))}")
+        print(f"type(os.getenv('GITHUB_OUTPUT')) = {type(os.getenv('GITHUB_OUTPUT'))}")
+        print(f"os.getenv('GITHUB_OUTPUT') = {os.getenv('GITHUB_OUTPUT')}")
+        print(f"os.getenv('GITHUB_OUTPUT').lower() = {os.getenv('GITHUB_OUTPUT').lower()}")
         print(f"GITHUB_OUTPUT = {Util.cast_bool(os.getenv('GITHUB_OUTPUT'))}")
 
         error = error_class()
