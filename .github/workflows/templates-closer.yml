@@ -12,6 +12,9 @@ on:
       date_check:
         required: true
         type: string
+    outputs:
+      succeeded:
+        value: ${{ jobs.build.outputs.succeeded }}
     secrets:
       token:
         required: true
@@ -19,11 +22,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      succeeded: ${{ steps.close.outputs.succeeded }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
 
       - name: Add done label to close issues
+        id: close
         run: |
           issue_templates_count=$(gh issue list  \
                                   --repo "$REPO" \
@@ -42,13 +48,16 @@ jobs:
             printf "DEBUG: the current time in %-18s %s\n" "$TZ:" "$(date)" >&2
             printf "DEBUG: the target date in %-19s %s\n" "$TZ:" "$(date '+%Y-%m-%d' --date '-1 day')" >&2
             echo   "Some of or all of the diary templates issue title does not match yesterday's date." >&2
-            exit 1
+            echo "succeeded=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
           gh issue list        \
             --repo "$REPO"     |
             awk '{ print $1 }' |
             xargs -I {} gh issue edit {} --repo "$REPO" --add-label "done"
+
+          echo "succeeded=true" >> $GITHUB_OUTPUT
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.token }}

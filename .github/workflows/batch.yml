@@ -62,6 +62,7 @@ jobs:
 
   wait-for-templates-closed:
     needs: templates-closer
+    if: needs.templates-closer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
     with:
       template_repo: noraworld/diary-templates
@@ -122,6 +123,7 @@ jobs:
 
   private-wait-for-templates-closed:
     needs: private-templates-closer
+    if: needs.private-templates-closer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
     with:
       template_repo: noraworld/private-diary-templates
@@ -190,6 +192,7 @@ jobs:
 
   daily-report-wait-for-templates-closed:
     needs: daily-report-templates-closer
+    if: needs.daily-report-templates-closer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
     with:
       template_repo: noraworld/daily-report-templates
