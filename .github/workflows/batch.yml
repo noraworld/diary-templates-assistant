@@ -89,6 +89,7 @@ jobs:
 
   templates-creator:
     needs: issue-changer
+    if: needs.issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/reserved-diary
@@ -150,6 +151,7 @@ jobs:
 
   private-templates-creator:
     needs: private-issue-changer
+    if: needs.private-issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/private-diary
@@ -219,6 +221,7 @@ jobs:
 
   daily-report-templates-creator:
     needs: daily-report-issue-changer
+    if: needs.daily-report-issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/daily-report

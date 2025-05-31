@@ -12,6 +12,9 @@ on:
       timezone:
         required: true
         type: string
+    outputs:
+      succeeded:
+        value: ${{ jobs.build.outputs.succeeded }}
     secrets:
       token:
         required: true
@@ -19,15 +22,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      succeeded: ${{ steps.change.outputs.succeeded }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
 
       - name: Change issues
+        id: change
         run: |
           if [ "$(gh issue list --repo "$TEMPLATE_REPO" | wc -l)" -ne 0 ]; then
             echo "Some of or all of the diary templates have not been closed yet." >&2
-            exit 1
+            echo "succeeded=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
           ISSUE_TEMPLATE=$(gh api "/repos/$MAIN_REPO/contents/.github/ISSUE_TEMPLATE/general.md" \
@@ -43,7 +50,8 @@ jobs:
 
           if [ "$(echo "$ISSUE_TITLE_LIST" | grep -c "$title")" -ne 0 ]; then
             echo "It will be skipped because \"$title\" already exists." >&2
-            exit 1
+            echo "succeeded=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
           body=$(echo "$ISSUE_TEMPLATE" | sed -e '/^---$/,/^---$/d')
@@ -86,7 +94,8 @@ jobs:
 
           if [ "$(gh issue list --repo "$MAIN_REPO" | wc -l)" -ne 2 ]; then
             echo "There are more than 2 issues, which means something is wrong." >&2
-            exit 1
+            echo "succeeded=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
 
           gh issue list         \
@@ -94,6 +103,8 @@ jobs:
             awk '{ print $1 }'  |
             tail -n 1           |
             xargs -I {} gh issue close {} --repo "$MAIN_REPO"
+
+          echo "succeeded=true" >> $GITHUB_OUTPUT
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.token }}
