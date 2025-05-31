@@ -78,7 +78,7 @@ jobs:
   #     token: ${{ secrets.GH_TOKEN }}
 
   issue-changer:
-    needs: convert-unchecked
+    # needs: convert-unchecked
     uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/reserved-diary
