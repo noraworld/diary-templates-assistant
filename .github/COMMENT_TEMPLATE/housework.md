@@ -9,6 +9,7 @@ ${{ endif }}
 * [${{ github.event.inputs.dish }}] 皿洗い
 * [${{ github.event.inputs.laundry }}] 洗濯機
 * [${{ github.event.inputs.cleaning }}] 掃除
+* [${{ github.event.inputs.flesh }}] ホルダー洗浄
 
 ### 感想・その他
 ${{ github.event.inputs.impression || '特になし。' }}

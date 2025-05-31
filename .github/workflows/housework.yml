@@ -27,6 +27,10 @@ on:
         required: true
         description: '掃除'
         type: boolean
+      flesh:
+        required: true
+        description: 'ホルダー洗浄'
+        type: boolean
 
 jobs:
   housework:
