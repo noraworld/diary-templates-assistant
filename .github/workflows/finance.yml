@@ -1,4 +1,4 @@
-name: '20-1: 🧹💰 入出金履歴チェック'
+name: '21-1: 🧹💰 入出金履歴チェック'
 
 on:
   workflow_dispatch:
