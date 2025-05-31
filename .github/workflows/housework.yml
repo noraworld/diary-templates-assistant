@@ -1,0 +1,39 @@
+name: '20-1: 🧹🧼 家事'
+
+on:
+  workflow_dispatch:
+    inputs:
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      dish:
+        required: true
+        description: '皿洗い'
+        type: boolean
+      laundry:
+        required: true
+        description: '洗濯機'
+        type: boolean
+      cleaning:
+        required: true
+        description: '掃除'
+        type: boolean
+
+jobs:
+  housework:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "housework 家事"
+      template_name: "housework"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
