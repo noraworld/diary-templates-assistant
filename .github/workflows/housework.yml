@@ -27,6 +27,10 @@ on:
         required: true
         description: '掃除'
         type: boolean
+      garbage:
+        required: true
+        description: 'ゴミ袋交換'
+        type: boolean
       flesh:
         required: true
         description: 'ホルダー洗浄'
