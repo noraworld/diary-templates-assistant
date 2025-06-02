@@ -7,6 +7,9 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/retrospective.yml)
+
 ### ⚠️ 注意点
 * ポモドーロセッション数は「今日やること」だけではなくて「毎日やること」も含めて計測すること！
     * ただし瞑想やワークアウト、歯磨きなど時間計測されているものは含めなくていい

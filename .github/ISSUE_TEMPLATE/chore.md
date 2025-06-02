@@ -7,6 +7,9 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/chore.yml)
+
 ### 一覧
 #### 毎日
 * [Google Drive](https://drive.google.com/drive/folders/1141T4IghECu6fE3TwfyrJcM6NpqXB98R)

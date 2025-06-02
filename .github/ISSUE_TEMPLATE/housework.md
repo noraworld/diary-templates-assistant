@@ -6,3 +6,6 @@ labels: ''
 assignees: noraworld
 
 ---
+
+### クイックリンク
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/housework.yml)

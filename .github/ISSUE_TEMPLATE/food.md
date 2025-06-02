@@ -7,6 +7,11 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* ワークフローディスパッチ
+    * [食べたもの](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten.yml)
+    * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-basic.yml)
+
 ### 注意事項
 ⚠️ **口に食べ物を運ぶ前に記録を始めること！**
 

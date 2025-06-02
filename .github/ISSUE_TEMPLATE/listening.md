@@ -7,6 +7,9 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/listening.yml)
+
 <details>
 <summary>受動的なリスニング</summary>
 

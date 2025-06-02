@@ -7,6 +7,12 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* ワークフローディスパッチ
+    * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-basic.yml)
+    * [パラメータ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-parameters.yml)
+    * [詳細情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-details.yml)
+
 ```
 ### 基本情報
 | 項目 | 内容 |

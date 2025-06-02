@@ -6,3 +6,8 @@ labels: ''
 assignees: noraworld
 
 ---
+
+### クイックリンク
+* ワークフローディスパッチ
+    * [排尿](https://github.com/noraworld/diary-templates-assistant/actions/workflows/urination.yml)
+    * [排便](https://github.com/noraworld/diary-templates-assistant/actions/workflows/defecation.yml)

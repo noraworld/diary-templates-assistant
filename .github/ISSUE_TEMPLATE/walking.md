@@ -7,6 +7,12 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* ワークフローディスパッチ
+    * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/walking-basic.yml)
+    * [チェックリスト](https://github.com/noraworld/diary-templates-assistant/actions/workflows/walking-checklist.yml)
+    * [詳細情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/walking-details.yml)
+
 ```
 ### 基本情報
 | 項目 | 内容 |

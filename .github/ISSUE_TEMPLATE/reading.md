@@ -7,6 +7,9 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/reading.yml)
+
 ```
 ### 基本情報
 | 項目 | 内容 |

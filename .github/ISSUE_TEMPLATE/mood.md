@@ -7,6 +7,14 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* ワークフローディスパッチ
+    * [感情パイチャート](https://github.com/noraworld/diary-templates-assistant/actions/workflows/emotional-pie-chart.yml)
+    * [アンガーログ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/anger.yml)
+    * [ストレス日記](https://github.com/noraworld/diary-templates-assistant/actions/workflows/stress.yml)
+
+
+
 ⚠️ **すべての項目を埋める必要はない**。たとえば「感情記録」には「生産性」や「要因」という入力欄があるが特に生産的なことをそもそもしない日だったり要因は「感想・その他」の項目で詳細に記述したから必要ないと判断したりした場合は省略して良い。
 
 

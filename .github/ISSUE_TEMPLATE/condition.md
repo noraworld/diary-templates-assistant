@@ -7,6 +7,11 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* ワークフローディスパッチ
+    * [体調記録](https://github.com/noraworld/diary-templates-assistant/actions/workflows/condition.yml)
+    * [痛みダイアリー](https://github.com/noraworld/diary-templates-assistant/actions/workflows/pain.yml)
+
 <details>
 <summary>【状況: 身体の痛みを感じたとき】痛みダイアリー</summary>
 
