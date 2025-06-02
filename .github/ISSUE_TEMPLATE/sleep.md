@@ -8,6 +8,7 @@ assignees: noraworld
 ---
 
 ### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
     * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-basic.yml)
     * [パラメータ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-parameters.yml)

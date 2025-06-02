@@ -8,6 +8,7 @@ assignees: noraworld
 ---
 
 ### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
     * [体調記録](https://github.com/noraworld/diary-templates-assistant/actions/workflows/condition.yml)
     * [痛みダイアリー](https://github.com/noraworld/diary-templates-assistant/actions/workflows/pain.yml)

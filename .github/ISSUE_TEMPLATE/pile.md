@@ -22,6 +22,13 @@ assignees: noraworld
 
 
 
+### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/pile.yml)
+* やることリスト (原則最大 3 つ！ どんなに多くても 5 つ！！ 4 つ以上になったら備考欄に理由を記載！！！)
+    * [Board](https://github.com/users/noraworld/projects/1)
+    * [Issues](https://github.com/noraworld/to-do/issues)
+
 <details>
 <summary>追加しない場合</summary>
 
@@ -39,13 +46,6 @@ assignees: noraworld
 特になし。
 ```
 </details>
-
-
-
-### リンク
-* [Board](https://github.com/users/noraworld/projects/1) (原則最大 3 つ！ どんなに多くても 5 つ！！ 4 つ以上になったら備考欄に理由を記載！！！)
-* [Issues](https://github.com/noraworld/to-do/issues) (原則最大 3 つ！ どんなに多くても 5 つ！！ 4 つ以上になったら備考欄に理由を記載！！！)
-* [GitHub Actions](https://github.com/noraworld/diary-templates-assistant/actions/workflows/pile.yml)
 
 
 

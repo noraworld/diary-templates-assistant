@@ -8,6 +8,7 @@ assignees: noraworld
 ---
 
 ### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
     * [感情パイチャート](https://github.com/noraworld/diary-templates-assistant/actions/workflows/emotional-pie-chart.yml)
     * [アンガーログ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/anger.yml)

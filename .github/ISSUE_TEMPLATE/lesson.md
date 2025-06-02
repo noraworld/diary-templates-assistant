@@ -7,6 +7,9 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
+
 ```
 ### 基本情報
 | 項目 | 内容 |
