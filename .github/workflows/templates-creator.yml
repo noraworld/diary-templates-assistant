@@ -53,7 +53,9 @@ jobs:
       - name: Create issues from templates
         id: create
         run: |
-          DIARY_ISSUE_NUMBER=$(gh issue list --repo "$MAIN_REPO" --limit 1 | awk '{ print $1 }')
+          DIARY_ISSUE=$(gh issue list --repo "$MAIN_REPO" --limit 1 --json number,url)
+          DIARY_ISSUE_NUMBER=$(echo "$DIARY_ISSUE" | jq -r '.[0].number')
+          DIARY_ISSUE_URL=$(echo "$DIARY_ISSUE" | jq -r '.[0].url')
           diary_issue_title=$(gh issue view --repo "$MAIN_REPO" --json title --jq .title "$DIARY_ISSUE_NUMBER")
           ISSUE_TITLE_LIST=$(gh issue list --repo "$TEMPLATE_REPO" --json title --jq .[].title)
 
@@ -80,7 +82,8 @@ jobs:
               continue
             fi
 
-            body=$(sed -e '/^---$/,/^---$/d' "$issue_template")
+            body=$(sed -e '/^---$/,/^---$/d' "$issue_template" |
+                   sed -e "s|\[{{MAIN_REPO_TODAY_URL}}\]|$DIARY_ISSUE_URL|g")
 
             assignee=$(grep "assignees: " "$issue_template" |
                        sed -e 's/^assignees: //g'           |
