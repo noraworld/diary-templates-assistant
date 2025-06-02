@@ -9,6 +9,7 @@ assignees: noraworld
 
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/expressive/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ```
 ### 基本情報

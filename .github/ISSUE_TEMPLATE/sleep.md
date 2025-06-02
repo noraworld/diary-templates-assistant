@@ -13,6 +13,7 @@ assignees: noraworld
     * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-basic.yml)
     * [パラメータ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-parameters.yml)
     * [詳細情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-details.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/sleep/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ```
 ### 基本情報

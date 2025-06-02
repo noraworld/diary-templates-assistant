@@ -13,6 +13,7 @@ assignees: noraworld
     * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/walking-basic.yml)
     * [チェックリスト](https://github.com/noraworld/diary-templates-assistant/actions/workflows/walking-checklist.yml)
     * [詳細情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/walking-details.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/walking/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ```
 ### 基本情報

@@ -10,6 +10,7 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/retrospective.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/retrospective/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ### ⚠️ 注意点
 * ポモドーロセッション数は「今日やること」だけではなくて「毎日やること」も含めて計測すること！

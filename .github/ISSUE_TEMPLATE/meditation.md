@@ -10,6 +10,7 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/meditation.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/meditation/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ### 祈りと願いのフレーズ（慈悲瞑想用）
 [2025-03-17](https://github.com/noraworld/diary-templates/issues/6191#issuecomment-2730231109)

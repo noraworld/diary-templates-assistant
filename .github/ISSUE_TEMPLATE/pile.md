@@ -25,6 +25,7 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/pile.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/pile/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 * やることリスト (原則最大 3 つ！ どんなに多くても 5 つ！！ 4 つ以上になったら備考欄に理由を記載！！！)
     * [Board](https://github.com/users/noraworld/projects/1)
     * [Issues](https://github.com/noraworld/to-do/issues)

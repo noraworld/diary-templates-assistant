@@ -14,6 +14,7 @@ assignees: noraworld
     * [一日一善](https://github.com/noraworld/diary-templates-assistant/actions/workflows/kindness.yml)
     * [ポジティブ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/positive.yml)
     * [改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/esteem/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ### 心構え
 * 感謝できることを書き留める日記を始めましょう。就寝前に 10 〜 15 分間、ポジティブなことについて書くことで、前向きな思考を呼び覚まし、穏やかな眠りにつくことができます。
