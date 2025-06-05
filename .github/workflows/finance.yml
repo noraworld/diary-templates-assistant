@@ -59,6 +59,13 @@ on:
           - '😉 妥当'
           - '🤔 微妙'
           - '☹️ 無駄'
+      notification:
+        required: true
+        description: '未確定入出金を既読にした？'
+        type: choice
+        options:
+          - ''
+          - 'はい'
 
 jobs:
   finance:
