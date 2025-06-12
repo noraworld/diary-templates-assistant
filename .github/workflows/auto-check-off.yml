@@ -69,6 +69,15 @@ jobs:
             echo "ERROR: body doesn't seem to be changed!" >&2
             exit 1
           fi
+
+          if [ "$(echo "$EDITED_BODY" | grep -cE "^\* *\[x\] *\[x\]")" -ne 0 ]; then
+            BODY_WITH_DUPLICATED_CHECKMARK_FIXED=$(
+              echo "$EDITED_BODY" |
+              sed -E "s/^\* *\[x\] *\[x\]/\* \[x\]/g"
+            )
+
+            gh issue edit --repo "$MAIN_REPO" --body "$BODY_WITH_DUPLICATED_CHECKMARK_FIXED" "$NUMBER"
+          fi
         shell: sh
         env:
           MAIN_REPO: ${{ inputs.main_repo }}
