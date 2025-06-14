@@ -6,7 +6,7 @@ ${{ if(github.event.inputs.minutes) }}
 ${{ endif }}
 
 ### チェックリスト
-* [${{ github.event.inputs.dish }}] 皿洗い
+* [${{ github.event.inputs.dish }}] 食器洗い
 * [${{ github.event.inputs.laundry }}] 洗濯機
 * [${{ github.event.inputs.cleaning }}] 掃除
 * [${{ github.event.inputs.garbage }}] ゴミ袋交換

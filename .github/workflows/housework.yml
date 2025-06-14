@@ -17,7 +17,7 @@ on:
         type: number
       dish:
         required: true
-        description: '皿洗い'
+        description: '食器洗い'
         type: boolean
       laundry:
         required: true
