@@ -12,6 +12,16 @@ jobs:
       github.event.label.name == 'done'
     runs-on: ubuntu-latest
     steps:
+      - name: Check if title is valid
+        run: |
+          if [ "$(
+            echo "${{ github.event.issue.title }}" |
+            grep -cE '^([0-9]{4}-[0-9]{2}-[0-9]{2})_([A-Za-z0-9]+(-[A-Za-z0-9]+)*)_([^_]+)$'
+          )" -eq 0 ]; then
+            echo "ERROR: title format is invalid" >&2
+            exit 1
+          fi
+
       # "start-blog_ブログはじめました" => "start-blog"
       - name: Get slug
         run: |
