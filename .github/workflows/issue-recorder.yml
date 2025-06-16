@@ -58,6 +58,12 @@ jobs:
       - name: Get day
         run: echo "DAY=$(cut -d '-' -f3 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
 
+      - name: Delete unnecessary labels
+        run: |
+          # These labels should be removed because the label information is used as the tag information as well.
+          UNNECESSARY_LABELS="done,link-only"
+          gh issue edit ${{ github.event.issue.number }} --remove-label "$UNNECESSARY_LABELS"
+
       - name: Issue Recorder
         uses: noraworld/issue-recorder@main
         with:
@@ -94,11 +100,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Delete unnecessary labels & close issue
-        run: |
-          # These labels should be removed because the label information is used as the tag information as well.
-          gh issue edit ${{ github.event.issue.number }} --remove-label 'done,link-only'
-          gh issue close ${{ github.event.issue.number }}
+      - name: Close issue
+        run: gh issue close ${{ github.event.issue.number }}
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
