@@ -1,0 +1,96 @@
+name: Issue Recorder
+
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  build:
+    if: >
+      github.event.issue.state == 'open' &&
+      github.event.label.name == 'done'
+    runs-on: ubuntu-latest
+    steps:
+      # "start-blog_ブログはじめました" => "start-blog"
+      - name: Get slug
+        run: echo "SLUG=$(cut -d '_' -f1 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+      # "start-blog_ブログはじめました" => "ブログはじめました"
+      - name: Get title
+        run: echo "TITLE=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      - name: Decide whether to save to diary issue
+        run: |
+          # https://zenn.dev/link/comments/ac4003f2728de7
+          # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "link-only")" -gt 0 ]; then
+            echo "MODE=file" >> $GITHUB_ENV
+          else
+            echo "MODE=file, issue" >> $GITHUB_ENV
+          fi
+
+      # "2025-06-16"
+      - name: Get diary title
+        run: echo "DIARY_TITLE=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $3 }')" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      # "2025-06-16" => "2025"
+      - name: Get year
+        run: echo "YEAR=$(cut -d '-' -f1 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
+      # "2025-06-16" => "06"
+      - name: Get month
+        run: echo "MONTH=$(cut -d '-' -f2 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
+      # "2025-06-16" => "16"
+      - name: Get day
+        run: echo "DAY=$(cut -d '-' -f3 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
+
+      - name: Issue Recorder
+        uses: noraworld/issue-recorder@main
+        with:
+          mode: ${{ env.MODE }}
+          filepath: _posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.YEAR }}-${{ env.MONTH }}-${{ env.DAY }}-${{ env.SLUG }}.md
+          committer_name: Kosuke Aoki
+          committer_email: mail@noraworld.com
+          overwrite_when_modified: true
+          notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
+          target_file_repo: noraworld/blog
+          target_issue_repo: noraworld/reserved-diary
+          target_issue_number: latest
+          partial_content_target_issue_repo: noraworld/private-diary
+          partial_content_target_issue_number: latest
+          partial_content_start_string: "(<span dir=\"auto\">{private}|<div dir=\"auto\"><p>{private})"
+          partial_content_end_string: "({/private}</span>|{/private}</div>)"
+          with_repo_assets: ${{ env.MODE }}
+          assets_repo: noraworld/box-ivysaur
+          assets_directory: ${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DAY }}
+          with_assets_compression: true
+          compression_threshold: 1048576
+          resize_width: 1920
+          with_compatible_format: true
+          title_prefix_for_issue: 🪶
+          with_date: ""
+          timezone: Asia/Tokyo
+          time_format: "yyyy-MM-dd HH:mm:ss ZZ"
+          with_header: "---\r\nlayout: post\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nauthor: <ASSIGNEES>\r\ndescription: <TITLE>\r\ndate: <CREATED_AT>\r\ntags: <LABELS>\r\npublished: true\r\n---" # author: <ASSIGNEES>
+          with_title: ""
+          custom_title: ${{ env.TITLE }}
+          with_quote: ""
+          with_hr: ""
+          personal_access_token: GH_TOKEN
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Close issue
+        run: gh issue close ${{ github.event.issue.number }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Share blog link with diary issue
+        if: env.MODE == 'file'
+        run: |
+          DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
+          gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "ブログ書いた。
+
+          [${{ env.TITLE }}](https://noraworld.github.io/blog/${{ env.SLUG }})"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
