@@ -9,7 +9,7 @@ jobs:
   build:
     if: >
       github.event.issue.state == 'open' &&
-      github.event.label.name == 'done'
+      github.event.label.name == 'system:done'
     runs-on: ubuntu-latest
     steps:
       - name: Check if title is valid
@@ -77,7 +77,7 @@ jobs:
         run: |
           # https://zenn.dev/link/comments/ac4003f2728de7
           # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
-          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "link-only")" -gt 0 ]; then
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:link-only")" -gt 0 ]; then
             echo "MODE=file" >> $GITHUB_ENV
           else
             echo "MODE=file, issue" >> $GITHUB_ENV
@@ -85,7 +85,7 @@ jobs:
 
       - name: Check if initial release or update
         run: |
-          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "published")" -gt 0 ]; then
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:published")" -gt 0 ]; then
             echo "PUBLISHED=true" >> $GITHUB_ENV
           else
             echo "PUBLISHED=false" >> $GITHUB_ENV
@@ -94,7 +94,7 @@ jobs:
       - name: Delete system labels
         run: |
           # These labels should be removed because the label information is used as the tag information as well.
-          SYSTEM_LABELS="done,link-only,published"
+          SYSTEM_LABELS="system:done,system:link-only,system:published"
           gh issue edit ${{ github.event.issue.number }} --remove-label "$SYSTEM_LABELS"
 
       - name: Issue Recorder
@@ -155,6 +155,6 @@ jobs:
           ##### DO NOT DELETE THE NEWLINE!! #####
 
           gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
-          gh issue edit ${{ github.event.issue.number }} --add-label "published"
+          gh issue edit ${{ github.event.issue.number }} --add-label "system:published"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
