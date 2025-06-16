@@ -155,6 +155,12 @@ jobs:
           ##### DO NOT DELETE THE NEWLINE!! #####
 
           gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
-          gh issue edit ${{ github.event.issue.number }} --add-label "system:published"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Restore labels
+        run: |
+          gh issue edit ${{ github.event.issue.number }} --add-label "system:done,system:published"
+          if [ "${{ env.MODE }}" = "file" ]; then
+            gh issue edit ${{ github.event.issue.number }} --add-label "system:link-only"
+          fi
