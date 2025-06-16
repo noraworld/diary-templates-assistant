@@ -14,10 +14,24 @@ jobs:
     steps:
       # "start-blog_ブログはじめました" => "start-blog"
       - name: Get slug
-        run: echo "SLUG=$(cut -d '_' -f1 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+        run: |
+          SLUG=$(cut -d '_' -f1 <<< "${{ github.event.issue.title }}")
+          if [ "$SLUG" = "" ] || [ "$(echo "$SLUG" | grep -cE '^[A-Za-z0-9-]+$')" -eq 0 ]; then
+            echo "ERROR: SLUG is empty or invalid" >&2
+            exit 1
+          else
+            echo "SLUG=$SLUG" >> $GITHUB_ENV
+          fi
       # "start-blog_ブログはじめました" => "ブログはじめました"
       - name: Get title
-        run: echo "TITLE=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+        run: |
+          TITLE=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")
+          if [ "$TITLE" = "" ]; then
+            echo "ERROR: TITLE is empty or invalid" >&2
+            exit 1
+          else
+            echo "TITLE=$TITLE" >> $GITHUB_ENV
+          fi
 
       - name: Decide whether to save to diary issue
         run: |
