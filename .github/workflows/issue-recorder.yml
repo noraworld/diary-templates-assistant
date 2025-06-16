@@ -83,11 +83,19 @@ jobs:
             echo "MODE=file, issue" >> $GITHUB_ENV
           fi
 
-      - name: Delete unnecessary labels
+      - name: Check if initial release or update
+        run: |
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "published")" -gt 0 ]; then
+            echo "PUBLISHED=true" >> $GITHUB_ENV
+          else
+            echo "PUBLISHED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Delete system labels
         run: |
           # These labels should be removed because the label information is used as the tag information as well.
-          UNNECESSARY_LABELS="done,link-only"
-          gh issue edit ${{ github.event.issue.number }} --remove-label "$UNNECESSARY_LABELS"
+          SYSTEM_LABELS="done,link-only,published"
+          gh issue edit ${{ github.event.issue.number }} --remove-label "$SYSTEM_LABELS"
 
       - name: Issue Recorder
         uses: noraworld/issue-recorder@main
@@ -131,11 +139,22 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Share blog link with diary issue
-        if: env.MODE == 'file'
         run: |
           DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
-          gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "ブログ書いた。
+
+          if [ "$PUBLISHED" = "true" ]; then
+            DIARY_NOTIFY_WORDING=ブログ更新した。"
+          else
+            DIARY_NOTIFY_WORDING=ブログ書いた。"
+          fi
+
+          ##### DO NOT DELETE THE NEWLINE!! #####
+          DIARY_NOTIFY_BODY="$DIARY_NOTIFY_WORDING
 
           [${{ env.TITLE }}](https://noraworld.github.io/blog/${{ env.SLUG }})"
+          ##### DO NOT DELETE THE NEWLINE!! #####
+
+          gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
+          gh issue edit ${{ github.event.issue.number }} --add-label "published"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
