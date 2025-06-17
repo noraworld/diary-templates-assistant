@@ -141,11 +141,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Close issue
-        run: gh issue close ${{ github.event.issue.number }}
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
       - name: Share blog link with diary issue
         run: |
           DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
@@ -172,3 +167,8 @@ jobs:
           if [ "${{ env.LINK_ONLY }}" = "true" ]; then
             gh issue edit ${{ github.event.issue.number }} --add-label "system:link-only"
           fi
+
+      - name: Close issue
+        run: gh issue close ${{ github.event.issue.number }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
