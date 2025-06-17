@@ -87,6 +87,8 @@ jobs:
           else
             echo "PUBLISHED=false" >> $GITHUB_ENV
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Decide whether to save to diary issue
         run: |
