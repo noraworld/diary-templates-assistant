@@ -92,7 +92,7 @@ jobs:
         run: |
           # https://zenn.dev/link/comments/ac4003f2728de7
           # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
-          if [ "$PUBLISHED" = "true" ]; then
+          if [ "${{ env.PUBLISHED }}" = "true" ]; then
             echo "MODE=file" >> $GITHUB_ENV
           else
             echo "MODE=file, issue" >> $GITHUB_ENV
@@ -185,7 +185,7 @@ jobs:
           [${{ env.TITLE }}](https://noraworld.github.io/blog/${{ env.SLUG }})"
           ##### DO NOT DELETE THE NEWLINE!! #####
 
-          if [ "$PUBLISHED" = "false" ]; then
+          if [ "${{ env.PUBLISHED }}" = "false" ]; then
             gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
           fi
         env:
