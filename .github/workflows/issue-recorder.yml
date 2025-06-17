@@ -111,6 +111,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+      # The list of the issue labels needs to be retrieved here
+      # because the value of '${{ toJson(github.event.issue.labels.*.name) }}' is fixed once a workflow is performed.
+      #
+      # 'jq --indent 2 .' is needed to output the result with multiple lines.
+      #
+      #   without 'jq --indent 2 .':
+      #
+      #     tags: ["test2","test3"]
+      #
+      #   https://github.com/noraworld/blog/blob/ac46249ee329e3690451b73a3ed5930ef291ba3f/_posts/2025/06/2025-06-16-writing-blog-from-issue.md?plain=1#L10
+      #
+      #   with 'jq --indent 2 .':
+      #
+      #     tags: [
+      #       "test2",
+      #       "test3"
+      #     ]
+      #
+      #   https://github.com/noraworld/blog/blob/f1f8e108fe5b8887cb49297a1bbfe2110668c483/_posts/2025/06/2025-06-16-writing-blog-from-issue.md?plain=1#L10-L13
+      #
       - name: Declare issue labels for blog
         run: |
           {
