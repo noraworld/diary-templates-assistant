@@ -115,7 +115,7 @@ jobs:
         run: |
           {
             echo 'ISSUE_LABELS<<EOF'
-            gh issue view --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --json labels --jq '.labels[].name'
+            gh issue view --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --json labels --jq '[.labels[].name]'
             echo EOF
           } >> "$GITHUB_ENV"
         env:
