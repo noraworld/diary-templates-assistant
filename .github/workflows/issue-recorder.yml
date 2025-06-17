@@ -6,11 +6,18 @@ on:
       - labeled
 
 jobs:
-  build:
-    if: >
-      github.event.issue.state == 'open' &&
-      github.event.label.name == 'system:done'
+  setup:
+    if: github.event.issue.state == 'open' && github.event.label.name == 'system:done'
     runs-on: ubuntu-latest
+    outputs:
+      year: ${{ steps.year.outputs.year }}
+      month: ${{ steps.month.outputs.month }}
+      day: ${{ steps.day.outputs.day }}
+      slug: ${{ steps.slug.outputs.slug }}
+      title: ${{ steps.title.outputs.title }}
+      published: ${{ steps.published.outputs.published }}
+      link_only: ${{ steps.link_only.outputs.link_only }}
+      mode: ${{ steps.mode.outputs.mode }}
     steps:
       - name: Check if title is valid
         run: |
@@ -25,6 +32,7 @@ jobs:
 
       # "2025-06-16_start-blog_ブログはじめました" => "2025"
       - name: Get year
+        id: year
         run: |
           YEAR=$(awk -F '[-_]' '{print $1}' <<< "${{ github.event.issue.title }}")
           if [ "$YEAR" = "" ] || [ "$(echo "$YEAR" | grep -cE '^[0-9]{4}$')" -eq 0 ]; then
@@ -32,10 +40,11 @@ jobs:
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
-            echo "YEAR=$YEAR" >> $GITHUB_ENV
+            echo "year=$YEAR" >> $GITHUB_OUTPUT
           fi
       # "2025-06-16_start-blog_ブログはじめました" => "06"
       - name: Get month
+        id: month
         run: |
           MONTH=$(awk -F '[-_]' '{print $2}' <<< "${{ github.event.issue.title }}")
           if [ "$MONTH" = "" ] || [ "$(echo "$MONTH" | grep -cE '^[0-9]{2}$')" -eq 0 ]; then
@@ -43,10 +52,11 @@ jobs:
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
-            echo "MONTH=$MONTH" >> $GITHUB_ENV
+            echo "month=$MONTH" >> $GITHUB_OUTPUT
           fi
       # "2025-06-16_start-blog_ブログはじめました" => "16"
       - name: Get day
+        id: day
         run: |
           DAY=$(awk -F '[-_]' '{print $3}' <<< "${{ github.event.issue.title }}")
           if [ "$DAY" = "" ] || [ "$(echo "$DAY" | grep -cE '^[0-9]{2}$')" -eq 0 ]; then
@@ -54,10 +64,11 @@ jobs:
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
-            echo "DAY=$DAY" >> $GITHUB_ENV
+            echo "day=$DAY" >> $GITHUB_OUTPUT
           fi
       # "2025-06-16_start-blog_ブログはじめました" => "start-blog"
       - name: Get slug
+        id: slug
         run: |
           SLUG=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")
           if [ "$SLUG" = "" ] || [ "$(echo "$SLUG" | grep -cE '^[A-Za-z0-9]+(-[A-Za-z0-9]+)*$')" -eq 0 ]; then
@@ -65,10 +76,11 @@ jobs:
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
-            echo "SLUG=$SLUG" >> $GITHUB_ENV
+            echo "slug=$SLUG" >> $GITHUB_OUTPUT
           fi
       # "2025-06-16_start-blog_ブログはじめました" => "ブログはじめました"
       - name: Get title
+        id: title
         run: |
           TITLE=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")
           if [ "$TITLE" = "" ] || [ "$(echo "$TITLE" | grep -cE '^[^_]+$')" -eq 0 ]; then
@@ -76,33 +88,36 @@ jobs:
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
-            echo "TITLE=$TITLE" >> $GITHUB_ENV
+            echo "title=$TITLE" >> $GITHUB_OUTPUT
           fi
 
       - name: Check if initial release or update
+        id: published
         run: |
           if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:published")" -gt 0 ]; then
-            echo "PUBLISHED=true" >> $GITHUB_ENV
+            echo "published=true" >> $GITHUB_OUTPUT
           else
-            echo "PUBLISHED=false" >> $GITHUB_ENV
+            echo "published=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Check if posting to diary is enabled or disabled
+        id: link_only
         run: |
           if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:link-only")" -gt 0 ]; then
-            echo "LINK_ONLY=true" >> $GITHUB_ENV
+            echo "link_only=true" >> $GITHUB_OUTPUT
           else
-            echo "LINK_ONLY=false" >> $GITHUB_ENV
+            echo "link_only=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Decide whether to save to diary issue
+        id: mode
         run: |
           # https://zenn.dev/link/comments/ac4003f2728de7
           # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
-          if [ "$LINK_ONLY" = "true" ] || [ "$PUBLISHED" = "true" ]; then
-            echo "MODE=file" >> $GITHUB_ENV
+          if [ "${{ steps.link_only.outputs.link_only }}" = "true" ] || [ "${{ steps.published.outputs.published }}" = "true" ]; then
+            echo "mode=file" >> $GITHUB_OUTPUT
           else
-            echo "MODE=file, issue" >> $GITHUB_ENV
+            echo "mode=file, issue" >> $GITHUB_OUTPUT
           fi
 
       - name: Delete system labels
@@ -113,6 +128,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+  publish:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
       - name: Issue Recorder
         uses: noraworld/issue-recorder@main
         with:
@@ -147,13 +166,19 @@ jobs:
           with_hr: ""
           personal_access_token: GH_TOKEN
         env:
+          YEAR: ${{ needs.setup.outputs.year }}
+          MONTH: ${{ needs.setup.outputs.month }}
+          DAY: ${{ needs.setup.outputs.day }}
+          SLUG: ${{ needs.setup.outputs.slug }}
+          TITLE: ${{ needs.setup.outputs.title }}
+          MODE: ${{ needs.setup.outputs.mode }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Share blog link with diary issue
         run: |
           DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
 
-          if [ "$PUBLISHED" = "true" ]; then
+          if [ "${{ env.PUBLISHED }}" = "true" ]; then
             DIARY_NOTIFY_WORDING="ブログ更新した。"
           else
             DIARY_NOTIFY_WORDING="ブログ書いた。"
@@ -167,6 +192,9 @@ jobs:
 
           gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
         env:
+          SLUG: ${{ needs.setup.outputs.slug }}
+          TITLE: ${{ needs.setup.outputs.title }}
+          PUBLISHED: ${{ needs.setup.outputs.published }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Close issue
@@ -181,4 +209,5 @@ jobs:
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --add-label "system:link-only"
           fi
         env:
+          LINK_ONLY: ${{ needs.setup.outputs.link_only }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
