@@ -79,7 +79,10 @@ jobs:
 
       - name: Check if initial release or update
         run: |
-          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:published")" -gt 0 ]; then
+          if [ "$(
+            gh issue view --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --json state --jq '.state' |
+            tr 'A-Z' 'a-z'
+          )" = "closed" ]; then
             echo "PUBLISHED=true" >> $GITHUB_ENV
           else
             echo "PUBLISHED=false" >> $GITHUB_ENV
@@ -106,7 +109,7 @@ jobs:
       - name: Delete system labels
         run: |
           # These labels should be removed because the label information is used as the tag information as well.
-          SYSTEM_LABELS="system:done,system:link-only,system:published"
+          SYSTEM_LABELS="system:done,system:link-only"
           gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "$SYSTEM_LABELS"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -207,7 +210,6 @@ jobs:
 
       - name: Restore labels
         run: |
-          gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --add-label "system:published"
           if [ "${{ env.LINK_ONLY }}" = "true" ]; then
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --add-label "system:link-only"
           fi
