@@ -154,9 +154,9 @@ jobs:
           DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
 
           if [ "$PUBLISHED" = "true" ]; then
-            DIARY_NOTIFY_WORDING=ブログ更新した。"
+            DIARY_NOTIFY_WORDING="ブログ更新した。"
           else
-            DIARY_NOTIFY_WORDING=ブログ書いた。"
+            DIARY_NOTIFY_WORDING="ブログ書いた。"
           fi
 
           ##### DO NOT DELETE THE NEWLINE!! #####
