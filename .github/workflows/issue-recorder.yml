@@ -110,6 +110,8 @@ jobs:
           # These labels should be removed because the label information is used as the tag information as well.
           SYSTEM_LABELS="system:done,system:link-only,system:published"
           gh issue edit ${{ github.event.issue.number }} --remove-label "$SYSTEM_LABELS"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Issue Recorder
         uses: noraworld/issue-recorder@main
@@ -173,6 +175,8 @@ jobs:
           if [ "${{ env.LINK_ONLY }}" = "true" ]; then
             gh issue edit ${{ github.event.issue.number }} --add-label "system:link-only"
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Close issue
         run: gh issue close ${{ github.event.issue.number }}
