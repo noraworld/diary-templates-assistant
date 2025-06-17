@@ -39,7 +39,7 @@ jobs:
           timezone: Asia/Tokyo
           time_format: h:mm a · MMM d, yyyy (ZZZZ)
           with_header: "---\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nassignees: <ASSIGNEES>\r\nlabels: <LABELS>\r\ncreated_at: <CREATED_AT>\r\n---"
-          with_title: true
+          with_title: "file, issue"
           # with_quote: issue
           skip_body: "file, issue"
         env:
