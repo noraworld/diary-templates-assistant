@@ -19,6 +19,7 @@ jobs:
             grep -cE '^([0-9]{4}-[0-9]{2}-[0-9]{2})_([A-Za-z0-9]+(-[A-Za-z0-9]+)*)_([^_]+)$'
           )" -eq 0 ]; then
             echo "ERROR: title format is invalid" >&2
+            gh issue edit ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           fi
 
@@ -28,6 +29,7 @@ jobs:
           YEAR=$(awk -F '[-_]' '{print $1}' <<< "${{ github.event.issue.title }}")
           if [ "$YEAR" = "" ] || [ "$(echo "$YEAR" | grep -cE '^[0-9]{4}$')" -eq 0 ]; then
             echo "ERROR: YEAR is empty or invalid" >&2
+            gh issue edit ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
             echo "YEAR=$YEAR" >> $GITHUB_ENV
@@ -38,6 +40,7 @@ jobs:
           MONTH=$(awk -F '[-_]' '{print $2}' <<< "${{ github.event.issue.title }}")
           if [ "$MONTH" = "" ] || [ "$(echo "$MONTH" | grep -cE '^[0-9]{2}$')" -eq 0 ]; then
             echo "ERROR: MONTH is empty or invalid" >&2
+            gh issue edit ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
             echo "MONTH=$MONTH" >> $GITHUB_ENV
@@ -48,6 +51,7 @@ jobs:
           DAY=$(awk -F '[-_]' '{print $3}' <<< "${{ github.event.issue.title }}")
           if [ "$DAY" = "" ] || [ "$(echo "$DAY" | grep -cE '^[0-9]{2}$')" -eq 0 ]; then
             echo "ERROR: DAY is empty or invalid" >&2
+            gh issue edit ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
             echo "DAY=$DAY" >> $GITHUB_ENV
@@ -58,6 +62,7 @@ jobs:
           SLUG=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")
           if [ "$SLUG" = "" ] || [ "$(echo "$SLUG" | grep -cE '^[A-Za-z0-9]+(-[A-Za-z0-9]+)*$')" -eq 0 ]; then
             echo "ERROR: SLUG is empty or invalid" >&2
+            gh issue edit ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
             echo "SLUG=$SLUG" >> $GITHUB_ENV
@@ -68,6 +73,7 @@ jobs:
           TITLE=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")
           if [ "$TITLE" = "" ] || [ "$(echo "$TITLE" | grep -cE '^[^_]+$')" -eq 0 ]; then
             echo "ERROR: TITLE is empty or invalid" >&2
+            gh issue edit ${{ github.event.issue.number }} --remove-label "system:done"
             exit 1
           else
             echo "TITLE=$TITLE" >> $GITHUB_ENV
