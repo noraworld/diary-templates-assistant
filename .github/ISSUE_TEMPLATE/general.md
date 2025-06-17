@@ -1,6 +1,6 @@
 ---
 name: General
-about: タイトルは {{ SLUG }}_{{ TITLE }} じゃないとダメ
+about: 'Title: `YYYY-MM-DD_SLUG-WITH-HYPHEN_TITLE`'
 title: 無題
 labels: ''
 assignees: noraworld
