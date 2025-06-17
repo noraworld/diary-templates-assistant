@@ -147,6 +147,7 @@ jobs:
           with_hr: ""
           personal_access_token: GH_TOKEN
         env:
+          ISSUE_LABELS: test
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Share blog link with diary issue
