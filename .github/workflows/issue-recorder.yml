@@ -121,7 +121,7 @@ jobs:
           committer_name: Kosuke Aoki
           committer_email: mail@noraworld.com
           overwrite_when_modified: true
-          notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
+          # notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
           target_file_repo: noraworld/blog
           target_issue_repo: noraworld/reserved-diary
           target_issue_number: latest
