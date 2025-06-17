@@ -7,9 +7,7 @@ on:
 
 jobs:
   build:
-    if: >
-      # github.event.issue.state == 'open' &&
-      github.event.label.name == 'system:done'
+    if: github.event.label.name == 'system:done'
     runs-on: ubuntu-latest
     steps:
       - name: Check if title is valid
