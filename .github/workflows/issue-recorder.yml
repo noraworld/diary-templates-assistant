@@ -113,10 +113,11 @@ jobs:
 
       - name: Declare issue labels for blog
         run: |
-          ISSUE_LABELS=$(gh issue view \
-            --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} \
-            --json labels --jq '.labels[].name')
-          echo "ISSUE_LABELS=$ISSUE_LABELS" >> $GITHUB_ENV
+          {
+            echo 'ISSUE_LABELS<<EOF'
+            gh issue view --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --json labels --jq '.labels[].name'
+            echo EOF
+          } >> "$GITHUB_ENV"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
