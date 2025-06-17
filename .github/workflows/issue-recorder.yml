@@ -179,19 +179,15 @@ jobs:
         run: |
           DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
 
-          if [ "$PUBLISHED" = "true" ]; then
-            DIARY_NOTIFY_WORDING="ブログ更新した。"
-          else
-            DIARY_NOTIFY_WORDING="ブログ書いた。"
-          fi
-
           ##### DO NOT DELETE THE NEWLINE!! #####
-          DIARY_NOTIFY_BODY="$DIARY_NOTIFY_WORDING
+          DIARY_NOTIFY_BODY="ブログ書いた。
 
           [${{ env.TITLE }}](https://noraworld.github.io/blog/${{ env.SLUG }})"
           ##### DO NOT DELETE THE NEWLINE!! #####
 
-          gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
+          if [ "$PUBLISHED" = "false" ]; then
+            gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
