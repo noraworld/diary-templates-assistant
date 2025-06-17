@@ -73,22 +73,30 @@ jobs:
             echo "TITLE=$TITLE" >> $GITHUB_ENV
           fi
 
-      - name: Decide whether to save to diary issue
-        run: |
-          # https://zenn.dev/link/comments/ac4003f2728de7
-          # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
-          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:link-only")" -gt 0 ]; then
-            echo "MODE=file" >> $GITHUB_ENV
-          else
-            echo "MODE=file, issue" >> $GITHUB_ENV
-          fi
-
       - name: Check if initial release or update
         run: |
           if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:published")" -gt 0 ]; then
             echo "PUBLISHED=true" >> $GITHUB_ENV
           else
             echo "PUBLISHED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Check if posting to diary is enabled or disabled
+        run: |
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:link-only")" -gt 0 ]; then
+            echo "LINK_ONLY=true" >> $GITHUB_ENV
+          else
+            echo "LINK_ONLY=false" >> $GITHUB_ENV
+          fi
+
+      - name: Decide whether to save to diary issue
+        run: |
+          # https://zenn.dev/link/comments/ac4003f2728de7
+          # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
+          if [ "$LINK_ONLY" = "true" ] || [ "$PUBLISHED" = "true" ]; then
+            echo "MODE=file" >> $GITHUB_ENV
+          else
+            echo "MODE=file, issue" >> $GITHUB_ENV
           fi
 
       - name: Delete system labels
@@ -161,6 +169,6 @@ jobs:
       - name: Restore labels
         run: |
           gh issue edit ${{ github.event.issue.number }} --add-label "system:done,system:published"
-          if [ "${{ env.MODE }}" = "file" ]; then
+          if [ "${{ env.LINK_ONLY }}" = "true" ]; then
             gh issue edit ${{ github.event.issue.number }} --add-label "system:link-only"
           fi
