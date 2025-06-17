@@ -169,16 +169,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+      - name: Close issue
+        run: gh issue close --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      # This should be performed after closing; otherwise this entire job will be run recursively.
       - name: Restore labels
         run: |
           gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --add-label "system:done,system:published"
           if [ "${{ env.LINK_ONLY }}" = "true" ]; then
             gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --add-label "system:link-only"
           fi
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Close issue
-        run: gh issue close --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }}
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
