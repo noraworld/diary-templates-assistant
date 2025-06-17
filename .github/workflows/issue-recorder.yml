@@ -140,7 +140,7 @@ jobs:
           with_date: ""
           timezone: Asia/Tokyo
           time_format: "yyyy-MM-dd HH:mm:ss ZZ"
-          with_header: "---\r\nlayout: post\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nauthor: <ASSIGNEES>\r\ndescription: <TITLE>\r\ndate: <CREATED_AT>\r\ntags: <LABELS>\r\npublished: true\r\n---"
+          with_header: "---\r\nlayout: post\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nauthor: <ASSIGNEES>\r\ndescription: <TITLE>\r\ndate: <CREATED_AT>\r\ntags: $ISSUE_LABELS\r\npublished: true\r\n---"
           with_title: "issue"
           custom_title: ${{ env.TITLE }}
           with_quote: ""
