@@ -88,19 +88,11 @@ jobs:
             echo "PUBLISHED=false" >> $GITHUB_ENV
           fi
 
-      - name: Check if posting to diary is enabled or disabled
-        run: |
-          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "system:link-only")" -gt 0 ]; then
-            echo "LINK_ONLY=true" >> $GITHUB_ENV
-          else
-            echo "LINK_ONLY=false" >> $GITHUB_ENV
-          fi
-
       - name: Decide whether to save to diary issue
         run: |
           # https://zenn.dev/link/comments/ac4003f2728de7
           # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
-          if [ "$LINK_ONLY" = "true" ] || [ "$PUBLISHED" = "true" ]; then
+          if [ "$PUBLISHED" = "true" ]; then
             echo "MODE=file" >> $GITHUB_ENV
           else
             echo "MODE=file, issue" >> $GITHUB_ENV
@@ -109,7 +101,7 @@ jobs:
       - name: Delete system labels
         run: |
           # These labels should be removed because the label information is used as the tag information as well.
-          SYSTEM_LABELS="system:done,system:link-only"
+          SYSTEM_LABELS="system:done"
           gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "$SYSTEM_LABELS"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -205,13 +197,5 @@ jobs:
 
       - name: Close issue
         run: gh issue close --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }}
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Restore labels
-        run: |
-          if [ "${{ env.LINK_ONLY }}" = "true" ]; then
-            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --add-label "system:link-only"
-          fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
