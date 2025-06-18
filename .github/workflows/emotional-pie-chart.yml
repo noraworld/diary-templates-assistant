@@ -8,7 +8,7 @@ on:
         description: '出来事'
         type: string
       type1:
-        required: true
+        required: false
         description: 'ラベル 1'
         type: choice
         options:
@@ -48,7 +48,7 @@ on:
           - '帰属意識'
           - '自信'
       degree1:
-        required: true
+        required: false
         description: '度合い 1'
         type: choice
         options:
