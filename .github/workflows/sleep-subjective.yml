@@ -33,11 +33,11 @@ on:
         description: '夢日記'
         type: string
       emotion:
-        required: true
+        required: false
         description: '気分考察'
         type: string
       window:
-        required: true
+        required: false
         description: '寝 & 起 考察'
         type: string
       impression:
