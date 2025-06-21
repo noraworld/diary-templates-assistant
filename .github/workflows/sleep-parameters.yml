@@ -1,4 +1,4 @@
-name: '09-2: 🌿💤 睡眠記録 / パラメータ'
+name: '09-3: 🌿💤 睡眠記録 / パラメータ'
 
 on:
   workflow_dispatch:
