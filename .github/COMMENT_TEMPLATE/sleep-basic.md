@@ -8,6 +8,6 @@
 | 睡眠効率 | ${{ github.event.inputs.efficiency }} % |
 | 安静時心拍数 | ${{ github.event.inputs.bpm }} bpm |
 | 合計スコア | ${{ github.event.inputs.score }} 点 |
-| 寝起きの気分 | ${{ github.event.inputs.mood }} |
-| 昨日のストレス値 | ${{ github.event.inputs.stress }} |
-| レジリエンス | ${{ github.event.inputs.resilience }} |
+
+### 熟睡度・眠りの質に関する考察
+${{ github.event.inputs.quality || '特になし。' }}

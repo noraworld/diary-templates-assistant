@@ -3,37 +3,39 @@ name: '09-4: 🌿💤 睡眠記録 / その他の情報'
 on:
   workflow_dispatch:
     inputs:
+      stress:
+        required: true
+        description: '昨日のストレス値'
+        type: choice
+        options:
+          - ''
+          - '修復'
+          - '普通'
+          - '多い'
+          - '概要なし'
+      stress2:
+        required: false
+        description: '考察'
+        type: string
+      resilience:
+        required: true
+        description: 'レジリエンス'
+        type: choice
+        options:
+          - ''
+          - '絶好調'
+          - '好調'
+          - '普通'
+          - 'やや不足'
+          - '不足'
+          - 'データなし'
+      resilience2:
+        required: false
+        description: '考察'
+        type: string
       impression:
         required: false
         description: '所感'
-        type: string
-      dream:
-        required: false
-        description: '夢日記'
-        type: string
-      night:
-        required: false
-        description: '就寝'
-        type: string
-      morning:
-        required: false
-        description: '起床'
-        type: string
-      quality:
-        required: false
-        description: '質'
-        type: string
-      mood:
-        required: false
-        description: '寝起きの気分'
-        type: string
-      stress:
-        required: false
-        description: 'ストレス'
-        type: string
-      resilience:
-        required: false
-        description: 'レジリエンス'
         type: string
 
 jobs:

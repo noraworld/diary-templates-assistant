@@ -3,23 +3,6 @@ name: '09-2: 🌿💤 睡眠記録 / 基本情報'
 on:
   workflow_dispatch:
     inputs:
-      mood:
-        required: true
-        description: '寝起気分'
-        type: choice
-        options:
-          - ''
-          - '☆☆☆☆☆☆☆☆☆☆'
-          - '★☆☆☆☆☆☆☆☆☆'
-          - '★★☆☆☆☆☆☆☆☆'
-          - '★★★☆☆☆☆☆☆☆'
-          - '★★★★☆☆☆☆☆☆'
-          - '★★★★★☆☆☆☆☆'
-          - '★★★★★★☆☆☆☆'
-          - '★★★★★★★☆☆☆'
-          - '★★★★★★★★☆☆'
-          - '★★★★★★★★★☆'
-          - '★★★★★★★★★★'
       sleep:
         required: true
         description: '合計睡眠'
@@ -40,6 +23,10 @@ on:
         required: true
         description: '睡眠スコア'
         type: number
+      quality:
+        required: false
+        description: '質の考察'
+        type: string
       night:
         required: true
         description: '就寝時刻'
@@ -48,28 +35,6 @@ on:
         required: true
         description: '起床時刻'
         type: string
-      stress:
-        required: true
-        description: '昨日のストレス値'
-        type: choice
-        options:
-          - ''
-          - '修復'
-          - '普通'
-          - '多い'
-          - '概要なし'
-      resilience:
-        required: true
-        description: 'レジリエンス'
-        type: choice
-        options:
-          - ''
-          - '絶好調'
-          - '好調'
-          - '普通'
-          - 'やや不足'
-          - '不足'
-          - 'データなし'
 
 jobs:
   sleep:
