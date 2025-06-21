@@ -1,0 +1,56 @@
+name: '09-1: 🌿💤 睡眠記録 / 主観情報'
+
+on:
+  workflow_dispatch:
+    inputs:
+      mood:
+        required: true
+        description: '寝起気分'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      night:
+        required: true
+        description: '主観就寝時刻'
+        type: string
+      morning:
+        required: true
+        description: '主観起床時刻'
+        type: string
+      dream:
+        required: false
+        description: '夢日記'
+        type: string
+      emotion:
+        required: true
+        description: '気分考察'
+        type: string
+      window:
+        required: true
+        description: '寝 & 起 考察'
+        type: string
+      impression:
+        required: false
+        description: '所感'
+        type: string
+
+jobs:
+  sleep:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "sleep 睡眠記録"
+      template_name: "sleep-subjective"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
