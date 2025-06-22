@@ -7,6 +7,11 @@ assignees: noraworld
 
 ---
 
+### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
+* [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/readiness.yml)
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/readiness/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
+
 ```
 ### チェックリスト
 * [ ] **仕事やプライベートのタスクを始める前に起床後のタスクをやるべきであることを理解している**。
