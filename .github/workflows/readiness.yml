@@ -1,0 +1,22 @@
+name: '??-?: 🍀🎯 心構え'
+
+on:
+  workflow_dispatch:
+    inputs:
+      notification:
+        required: true
+        description: '心構えを肝に銘じた？'
+        type: choice
+        options:
+          - ''
+          - 'はい'
+
+jobs:
+  readiness:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "readiness 心構え"
+      template_name: "readiness"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
