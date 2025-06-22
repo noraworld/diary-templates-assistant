@@ -12,8 +12,7 @@ assignees: noraworld
 * [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/readiness.yml)
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/readiness/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
-```
-### チェックリスト
+### 心構え
 * [ ] **仕事やプライベートのタスクを始める前に起床後のタスクをやるべきであることを理解している**。
     > <details>
     > <summary>詳細を読む</summary>
@@ -163,4 +162,3 @@ assignees: noraworld
     >
     > 睡眠は翌日のタスクをこなすために非常に重要なので最も蔑ろにしてはいけない要素の一つである。もし日が暮れたあともその日にやるべきタスクが終わっていなかった場合は次の日に持ち越して翌日のコンディションを万全にすることを優先することも考慮すべきである。日常タスクに関してはスキップまたは最低限終わらせれば良い。また、日が暮れるまでに今日の分として積んだタスクが終わっていないとかなり焦るしイライラするので、日中のうちになるべく早めに終わらせておいたほうが良いということも十分理解するべきである。
     > </details>
-```
