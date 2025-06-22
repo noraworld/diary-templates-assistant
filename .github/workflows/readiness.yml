@@ -3,7 +3,14 @@ name: '??-?: 🍀🎯 心構え'
 on:
   workflow_dispatch:
     inputs:
-      notification:
+      notification1:
+        required: true
+        description: '見ずに一括でチェックを付ける不正をしていない？'
+        type: choice
+        options:
+          - ''
+          - 'はい'
+      notification2:
         required: true
         description: '心構えを肝に銘じた？'
         type: choice
