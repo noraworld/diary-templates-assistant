@@ -17,6 +17,10 @@ on:
         options:
           - ''
           - 'はい'
+      impression:
+        required: false
+        description: '所感'
+        type: string
 
 jobs:
   readiness:
