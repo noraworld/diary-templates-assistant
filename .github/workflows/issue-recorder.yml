@@ -199,6 +199,7 @@ jobs:
           NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
           body=$(gh issue view --repo "noraworld/reserved-diary" --json body --jq .body "$NUMBER")
           processed_body=$(echo "$body" | sed -E 's/\* 特になし//g')
+          TITLE="ブログ執筆: $(echo "${{ github.event.issue.title }}" | cut -d '_' -f3)"
 
           ESCAPED_TITLE=$( echo "$TITLE" | sed 's/[^^]/[&]/g; s/\^/\\^/g; s/\[\[/\[\\[/g; s/\]\]/\]\\]/g' )
           ESCAPED_URL=$(   echo "$URL"   | sed 's/[^^]/[&]/g; s/\^/\\^/g' )
@@ -215,7 +216,6 @@ jobs:
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          TITLE: ${{ github.event.issue.title }}
           URL: ${{ github.event.issue.html_url }}
 
       - name: Close issue
