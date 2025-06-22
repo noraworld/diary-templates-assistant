@@ -1,7 +1,7 @@
 ---
-name: 02. Readiness
+name: 16. Readiness
 about: 心構え | 最初に必ずこれを見ること
-title: "[{{DATE}}]_readiness_心構え"
+title: "🎯_[{{DATE}}]_readiness_心構え"
 labels: ''
 assignees: noraworld
 
