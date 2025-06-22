@@ -193,6 +193,38 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+      # https://github.com/noraworld/to-do/blob/04bd6f5b9823bd52b7e273f0d82fea189910ceff/.github/workflows/issue-recorder.yml#L99-L128
+      - name: Pile up today's to-do list on diary's issue
+        run: |
+          NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
+          body=$(gh issue view --repo "noraworld/reserved-diary" --json body --jq .body "$NUMBER")
+          processed_body=$(echo "$body" | sed -E 's/\* 特になし//g')
+
+          # It works:
+          #   https://chat.openai.com/share/72f96556-1e59-4711-9a47-3eed72b8b184 (ja)
+          #   https://chat.openai.com/share/1e516c7f-0382-4361-89c1-9be185bd7fb2 (ja)
+          #
+          # It doesn't work for some reason:
+          #   https://hkobayash.hatenadiary.org/entry/20111106/1320560290 (ja)
+          #
+          ESCAPED_TITLE=$( echo "$TITLE" | sed 's/[^^]/[&]/g; s/\^/\\^/g; s/\[\[/\[\\[/g; s/\]\]/\]\\]/g' )
+          ESCAPED_URL=$(   echo "$URL"   | sed 's/[^^]/[&]/g; s/\^/\\^/g' )
+
+          # Do not indent inside the condition.
+          if [ "$(echo "$processed_body" | grep -cE "\[$ESCAPED_TITLE\]\($ESCAPED_URL\)")" -eq 0 ]; then
+          gh issue edit --repo "noraworld/reserved-diary" --body "$processed_body
+          * [x] [$TITLE]($URL)
+          " "$NUMBER"
+          else
+          NEW_BODY=$( echo "$processed_body" | sed -E "s/\* \[ \] (\[$ESCAPED_TITLE\]\($ESCAPED_URL\))/\* \[x\] \1/g" )
+          gh issue edit --repo "noraworld/reserved-diary" --body "$NEW_BODY" "$NUMBER"
+          fi
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          TITLE: ${{ github.event.issue.title }}
+          URL: ${{ github.event.issue.html_url }}
+
       - name: Close issue
         run: gh issue close --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }}
         env:
