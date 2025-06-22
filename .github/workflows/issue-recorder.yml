@@ -203,7 +203,7 @@ jobs:
           ESCAPED_TITLE=$( echo "$TITLE" | sed 's/[^^]/[&]/g; s/\^/\\^/g; s/\[\[/\[\\[/g; s/\]\]/\]\\]/g' )
           ESCAPED_URL=$(   echo "$URL"   | sed 's/[^^]/[&]/g; s/\^/\\^/g' )
 
-          # Do not indent inside the condition.
+          # DO NOT INDENT INSIDE THE CONDITION!
           if [ "$(echo "$processed_body" | grep -cE "\[$ESCAPED_TITLE\]\($ESCAPED_URL\)")" -eq 0 ]; then
           gh issue edit --repo "noraworld/reserved-diary" --body "$processed_body
           * [x] [$TITLE]($URL)
