@@ -28,17 +28,17 @@ on:
         required: true
         description: '主観起床時刻'
         type: string
-      dream:
+      window:
         required: false
-        description: '夢日記'
+        description: '就寝寝起考察'
         type: string
       emotion:
         required: false
         description: '気分考察'
         type: string
-      window:
+      dream:
         required: false
-        description: '寝 & 起 考察'
+        description: '夢日記'
         type: string
       impression:
         required: false
