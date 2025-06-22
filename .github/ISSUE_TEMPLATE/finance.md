@@ -1,5 +1,5 @@
 ---
-name: 21. Finance
+name: 22. Finance
 about: 入出金履歴チェック | クレジットカードの不正利用などがないか毎日しっかりと確かめましょう
 title: "💰_[{{DATE}}]_finance_入出金履歴チェック"
 labels: ''
