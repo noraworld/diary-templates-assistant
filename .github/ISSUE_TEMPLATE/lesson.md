@@ -25,7 +25,7 @@ assignees: noraworld
 | WPM |  |
 | ユニーク単語数 |  |
 | 流暢度 |  |
-| アーカイブ | [Cambly](), [Google Drive](), [YouTube](), [ChatGPT]() |
+| アーカイブ | [Cambly](), [Google Drive](), [YouTube]() |
 ```
 
 
