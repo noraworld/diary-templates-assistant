@@ -38,9 +38,9 @@ assignees: noraworld
 2. レスポンスをそのままファイルに保存するため、「わかりました」などの返答は一切しないでください。
 -->
 
-### トランスクリプト
+### 会話内容
 <details>
-<summary>クリックして詳細を表示</summary>
+<summary>トランスクリプト</summary>
 
 
 </details>
