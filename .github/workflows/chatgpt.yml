@@ -1,0 +1,49 @@
+name: ChatGPT
+
+on:
+  workflow_call:
+    secrets:
+      gh_token:
+        required: true
+      chatgpt_api_key:
+        required: true
+
+jobs:
+  chatgpt:
+    if: startsWith(github.event.comment.body, '<!-- chatgpt')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Load prompts
+        run: |
+          system_prompt=$(echo "${{ github.event.comment.body }}" | sed -n '/^<!-- chatgpt/,/^-->/p' | sed '1d;$d')
+          user_prompt=$(echo "${{ github.event.comment.body }}" | sed '/^<!-- chatgpt/,/^-->/d')
+
+          echo "SYSTEM_PROMPT<<EOF" >> "$GITHUB_ENV"
+          echo "$system_prompt" >> "$GITHUB_ENV"
+          echo "EOF" >> "$GITHUB_ENV"
+
+          echo "USER_PROMPT<<EOF" >> "$GITHUB_ENV"
+          echo "$user_prompt" >> "$GITHUB_ENV"
+          echo "EOF" >> "$GITHUB_ENV"
+        shell: bash
+
+      - name: Have ChatGPT assist something
+        uses: noraworld/chatgpt-feedback@main
+        with:
+          model: gpt-4o
+          system_prompt: >
+            ${{ env.SYSTEM_PROMPT }}
+          user_prompt: >
+            ${{ env.USER_PROMPT }}
+          output_file: response.txt
+          trailing_newline: false
+        env:
+          GH_TOKEN: ${{ secrets.gh_token }}
+          CHATGPT_API_KEY: ${{ secrets.chatgpt_api_key }}
+
+      - name: Comment response
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo "${{ github.repository }}" --body-file response.txt
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.gh_token }}
