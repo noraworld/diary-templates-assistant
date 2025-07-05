@@ -1,0 +1,68 @@
+name: '07-1: 🎓💬 オンライン英会話 / 基本情報'
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        required: true
+        description: '回数'
+        type: number
+      tutor:
+        required: true
+        description: '先生（リンク付き）'
+        type: string
+      time:
+        required: true
+        description: '時刻'
+        type: string
+      ratio:
+        required: true
+        description: '会話比率'
+        type: number
+      wpm:
+        required: true
+        description: 'WPM'
+        type: number
+      words:
+        required: true
+        description: 'ユニーク単語数'
+        type: number
+      fluency:
+        required: true
+        description: '流暢度'
+        type: choice
+        options:
+          - ''
+          - '☆☆☆☆☆☆☆☆☆☆'
+          - '★☆☆☆☆☆☆☆☆☆'
+          - '★★☆☆☆☆☆☆☆☆'
+          - '★★★☆☆☆☆☆☆☆'
+          - '★★★★☆☆☆☆☆☆'
+          - '★★★★★☆☆☆☆☆'
+          - '★★★★★★☆☆☆☆'
+          - '★★★★★★★☆☆☆'
+          - '★★★★★★★★☆☆'
+          - '★★★★★★★★★☆'
+          - '★★★★★★★★★★'
+      cambly:
+        required: true
+        description: 'Cambly リンク'
+        type: string
+      drive:
+        required: true
+        description: 'Google Drive リンク'
+        type: string
+      youtube:
+        required: true
+        description: 'YouTube リンク'
+        type: string
+
+jobs:
+  lesson:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "lesson オンライン英会話"
+      template_name: "lesson-basic"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
