@@ -36,6 +36,7 @@ jobs:
           user_prompt: >
             ${{ env.USER_PROMPT }}
           output_file: response.txt
+          text_after_result: "> From ChatGPT"
           trailing_newline: false
         env:
           GH_TOKEN: ${{ secrets.gh_token }}
