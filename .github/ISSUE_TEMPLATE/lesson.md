@@ -16,6 +16,8 @@ assignees: noraworld
 
 
 ### テンプレート
+* [ ] ↓
+
 ```
 <!-- chatgpt
 これは私がオンライン英会話に参加した際に英語でうまく言えなかったこと・表現できなかったことです。それぞれの日本語の自然な英語をまとめてください。
@@ -32,6 +34,8 @@ assignees: noraworld
 ```
 
 
+
+* [ ] ↓
 
 ```
 <!-- chatgpt
@@ -52,6 +56,8 @@ assignees: noraworld
 
 
 
+* [ ] ↓
+
 ```
 ### 表現・コロケーション
 *
@@ -65,6 +71,8 @@ assignees: noraworld
 ```
 
 
+
+* [ ] ↓
 
 ```
 ### 基本情報
@@ -81,6 +89,8 @@ assignees: noraworld
 ```
 
 
+
+* [ ] ↓
 
 ```
 <!-- chatgpt
