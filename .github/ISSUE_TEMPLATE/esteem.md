@@ -10,10 +10,10 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
-    * [改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)
-    * [ポジティブ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/positive.yml)
-    * [感謝日記](https://github.com/noraworld/diary-templates-assistant/actions/workflows/gratitude.yml)
-    * [一日一善](https://github.com/noraworld/diary-templates-assistant/actions/workflows/kindness.yml)
+    * 🧩 [改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)
+    * ✨ [ポジティブ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/positive.yml)
+    * 🙏 [感謝日記](https://github.com/noraworld/diary-templates-assistant/actions/workflows/gratitude.yml)
+    * 💖 [一日一善](https://github.com/noraworld/diary-templates-assistant/actions/workflows/kindness.yml)
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/esteem/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ### 心構え

@@ -10,10 +10,10 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
-    * [主観情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-subjective.yml)
-    * [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-basic.yml)
-    * [パラメータ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-parameters.yml)
-    * [その他の情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-details.yml)
+    * 💤 [主観情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-subjective.yml)
+    * 💤 [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-basic.yml)
+    * 💤 [パラメータ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-parameters.yml)
+    * 💤 [その他の情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/sleep-details.yml)
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/sleep/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ```

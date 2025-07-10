@@ -10,9 +10,9 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
-    * [感情パイチャート](https://github.com/noraworld/diary-templates-assistant/actions/workflows/emotional-pie-chart.yml)
-    * [アンガーログ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/anger.yml)
-    * [ストレス日記](https://github.com/noraworld/diary-templates-assistant/actions/workflows/stress.yml)
+    * 🤔 [感情パイチャート](https://github.com/noraworld/diary-templates-assistant/actions/workflows/emotional-pie-chart.yml)
+    * 😡 [アンガーログ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/anger.yml)
+    * 😫 [ストレス日記](https://github.com/noraworld/diary-templates-assistant/actions/workflows/stress.yml)
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/mood/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 
