@@ -14,6 +14,7 @@ on:
           - 'ふつう（300ml）'
           - 'ドバッ（400ml）'
           - 'ドバドバ（500ml）'
+          - 'ドバドバドバ（600ml）'
       color:
         required: true
         description: '色'
