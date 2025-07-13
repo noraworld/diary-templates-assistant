@@ -108,8 +108,6 @@ assignees: noraworld
 <details>
 <summary>トランスクリプトのみ</summary>
 
-* [ ] ↓
-
 ```
 <!-- chatgpt
 これはオンライン英会話レッスンのトランスクリプト（文字起こし）です。この会話の内容を日本語で要約して箇条書きでまとめてください。
@@ -132,8 +130,6 @@ assignees: noraworld
 
 <details>
 <summary>新単語・新フレーズのみ</summary>
-
-* [ ] ↓
 
 ```
 <!-- chatgpt
