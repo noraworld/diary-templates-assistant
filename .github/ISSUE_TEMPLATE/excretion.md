@@ -81,15 +81,11 @@ assignees: noraworld
 | びちびち | ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) |
 | 出なかった | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
 
-| ころころ | かちかち |
-| :---: | :---: |
-| ![pellet](https://noraworld.github.io/box-ash/assets/unlog/pellet.png) | ![hard](https://noraworld.github.io/box-ash/assets/unlog/hard.png) |
-| ぶりぶり | ほそほそ |
-| ![burst](https://noraworld.github.io/box-ash/assets/unlog/burst.png) | ![thin](https://noraworld.github.io/box-ash/assets/unlog/thin.png) |
-| ふわふわ | どろどろ |
-| ![fluffy](https://noraworld.github.io/box-ash/assets/unlog/fluffy.png) | ![mushy](https://noraworld.github.io/box-ash/assets/unlog/mushy.png) |
-| びちびち | 出なかった |
-| ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
+| ころころ | かちかち | ぶりぶり | ほそほそ |
+| :---: | :---: | :---: | :---: |
+| ![pellet](https://noraworld.github.io/box-ash/assets/unlog/pellet.png) | ![hard](https://noraworld.github.io/box-ash/assets/unlog/hard.png) | ![burst](https://noraworld.github.io/box-ash/assets/unlog/burst.png) | ![thin](https://noraworld.github.io/box-ash/assets/unlog/thin.png) |
+| ふわふわ | どろどろ | びちびち | 出なかった |
+| ![fluffy](https://noraworld.github.io/box-ash/assets/unlog/fluffy.png) | ![mushy](https://noraworld.github.io/box-ash/assets/unlog/mushy.png) | ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
 </details>
 
 ### 便の状態
