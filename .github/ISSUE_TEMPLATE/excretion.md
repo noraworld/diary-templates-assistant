@@ -14,6 +14,12 @@ assignees: noraworld
     * 💩 [排便](https://github.com/noraworld/diary-templates-assistant/actions/workflows/defecation.yml)
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/excretion/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
+
+
+---
+
+
+
 <details>
 <summary>📱 SP</summary>
 
@@ -81,3 +87,7 @@ assignees: noraworld
 | :---: | :---: | :---: | :---: | :---: |
 | ![shape](https://noraworld.github.io/box-ash/assets/unlog/shape.jpg) | ![color](https://noraworld.github.io/box-ash/assets/unlog/color.jpg) | ![amount](https://noraworld.github.io/box-ash/assets/unlog/amount.jpg) | ![smell](https://noraworld.github.io/box-ash/assets/unlog/smell.jpg) | ![relief](https://noraworld.github.io/box-ash/assets/unlog/relief.jpg) |
 </details>
+
+
+
+---
