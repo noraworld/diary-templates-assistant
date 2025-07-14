@@ -15,7 +15,10 @@ assignees: noraworld
   ↓ この項目を変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
 ----------------------------------------------------------------------------------------------------->
 
-### 心構え
+| <h3>考えすぎず気楽に生きていこっ ☺️</h3> |
+| --- |
+| <img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="100%"> |
+
 * [ ] **仕事やプライベートのタスクを始める前に起床後のタスクをやるべきであることを理解している**。
     > <details>
     > <summary>詳細を読む</summary>
@@ -170,5 +173,6 @@ assignees: noraworld
   ↑ この項目を変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
 ----------------------------------------------------------------------------------------------------->
 
-### 読了お疲れさまでした 😌
-[ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/readiness.yml)
+| <h3>読了お疲れさま！ 😌</h3> |
+| --- |
+| <a href="https://github.com/noraworld/diary-templates-assistant/actions/workflows/readiness.yml"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="100%"></a> |
