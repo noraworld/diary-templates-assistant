@@ -34,13 +34,11 @@ assignees: noraworld
 | コーラ | ![coke](https://noraworld.github.io/box-ash/assets/unlog/coke.png) |
 | ブルーハワイ | ![blue_hawaii](https://noraworld.github.io/box-ash/assets/unlog/blue_hawaii.png) |
 
-| バブル | 透明 | レモン |
-| :---: | :---: | :---: |
-| ![bubble](https://noraworld.github.io/box-ash/assets/unlog/bubble.png) | ![clear](https://noraworld.github.io/box-ash/assets/unlog/clear.png) | ![lemon](https://noraworld.github.io/box-ash/assets/unlog/lemon.png) |
-| パイン | みかん | あんず |
-| ![pineapple](https://noraworld.github.io/box-ash/assets/unlog/pineapple.png) | ![tangerine](https://noraworld.github.io/box-ash/assets/unlog/tangerine.png) | ![apricot](https://noraworld.github.io/box-ash/assets/unlog/apricot.png) |
-| チェリー | コーラ | ブルーハワイ |
-| ![cherry](https://noraworld.github.io/box-ash/assets/unlog/cherry.png) | ![coke](https://noraworld.github.io/box-ash/assets/unlog/coke.png) | ![blue_hawaii](https://noraworld.github.io/box-ash/assets/unlog/blue_hawaii.png) |
+| バブル | 透明 | レモン | パイン | みかん |
+| :---: | :---: | :---: | :---: | :---: |
+| ![bubble](https://noraworld.github.io/box-ash/assets/unlog/bubble.png) | ![clear](https://noraworld.github.io/box-ash/assets/unlog/clear.png) | ![lemon](https://noraworld.github.io/box-ash/assets/unlog/lemon.png) | ![pineapple](https://noraworld.github.io/box-ash/assets/unlog/pineapple.png) | ![tangerine](https://noraworld.github.io/box-ash/assets/unlog/tangerine.png) |
+| あんず | チェリー | コーラ | ブルーハワイ |
+| ![apricot](https://noraworld.github.io/box-ash/assets/unlog/apricot.png) | ![cherry](https://noraworld.github.io/box-ash/assets/unlog/cherry.png) | ![coke](https://noraworld.github.io/box-ash/assets/unlog/coke.png) | ![blue_hawaii](https://noraworld.github.io/box-ash/assets/unlog/blue_hawaii.png) |
 </details>
 
 ### 便の色
