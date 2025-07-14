@@ -87,12 +87,10 @@ assignees: noraworld
 | ![pellet](https://noraworld.github.io/box-ash/assets/unlog/pellet.png) | ![hard](https://noraworld.github.io/box-ash/assets/unlog/hard.png) | ![burst](https://noraworld.github.io/box-ash/assets/unlog/burst.png) | ![thin](https://noraworld.github.io/box-ash/assets/unlog/thin.png) | ![fluffy](https://noraworld.github.io/box-ash/assets/unlog/fluffy.png) | ![mushy](https://noraworld.github.io/box-ash/assets/unlog/mushy.png) | ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
 
 ### 便の状態
-| かたち | 色 |
-| :---: | :---: |
-| ![shape](https://noraworld.github.io/box-ash/assets/unlog/shape.jpg) | ![color](https://noraworld.github.io/box-ash/assets/unlog/color.jpg) |
-
-| 量 | におい | すっきり |
+| **かたち** | **色** |
 | :---: | :---: | :---: |
+| ![shape](https://noraworld.github.io/box-ash/assets/unlog/shape.jpg) | ![color](https://noraworld.github.io/box-ash/assets/unlog/color.jpg) |
+| **量** | **におい** | **すっきり** |
 | ![amount](https://noraworld.github.io/box-ash/assets/unlog/amount.jpg) | ![smell](https://noraworld.github.io/box-ash/assets/unlog/smell.jpg) | ![relief](https://noraworld.github.io/box-ash/assets/unlog/relief.jpg) |
 </details>
 
