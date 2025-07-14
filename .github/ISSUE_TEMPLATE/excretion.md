@@ -15,12 +15,12 @@ assignees: noraworld
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/excretion/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ### 尿の色
-| バブル | 透明 | レモン |
+| **バブル** | **透明** | **レモン** |
 | :---: | :---: | :---: |
 | ![bubble](https://noraworld.github.io/box-ash/assets/unlog/bubble.png) | ![clear](https://noraworld.github.io/box-ash/assets/unlog/clear.png) | ![lemon](https://noraworld.github.io/box-ash/assets/unlog/lemon.png) |
-| パイン | みかん | あんず |
+| **パイン** | **みかん** | **あんず** |
 | ![pineapple](https://noraworld.github.io/box-ash/assets/unlog/pineapple.png) | ![tangerine](https://noraworld.github.io/box-ash/assets/unlog/tangerine.png) | ![apricot](https://noraworld.github.io/box-ash/assets/unlog/apricot.png) |
-| チェリー | コーラ | ブルーハワイ |
+| **チェリー** | **コーラ** | **ブルーハワイ** |
 | ![cherry](https://noraworld.github.io/box-ash/assets/unlog/cherry.png) | ![coke](https://noraworld.github.io/box-ash/assets/unlog/coke.png) | ![blue_hawaii](https://noraworld.github.io/box-ash/assets/unlog/blue_hawaii.png) |
 
 <details>
@@ -32,12 +32,12 @@ assignees: noraworld
 </details>
 
 ### 便の色
-| マシュマロ | レモン | オレンジ |
+| **マシュマロ** | **レモン** | **オレンジ** |
 | :---: | :---: | :---: |
 | ![marshmallow](https://noraworld.github.io/box-ash/assets/unlog/marshmallow.png) | ![citrus_limon](https://noraworld.github.io/box-ash/assets/unlog/citrus_limon.png) | ![orange](https://noraworld.github.io/box-ash/assets/unlog/orange.png) |
-| かつおぶし | カレー | チョコレート |
+| **かつおぶし** | **カレー** | **チョコレート** |
 | ![dried_bonito](https://noraworld.github.io/box-ash/assets/unlog/dried_bonito.png) | ![curry](https://noraworld.github.io/box-ash/assets/unlog/curry.png) | ![chocolate](https://noraworld.github.io/box-ash/assets/unlog/chocolate.png) |
-| もろへいや | いかすみ | ハバネロ |
+| **もろへいや** | **いかすみ** | **ハバネロ** |
 | ![molokhia](https://noraworld.github.io/box-ash/assets/unlog/molokhia.png) | ![squid_ink](https://noraworld.github.io/box-ash/assets/unlog/squid_ink.png) | ![habanero](https://noraworld.github.io/box-ash/assets/unlog/habanero.png) |
 
 <details>
@@ -49,10 +49,10 @@ assignees: noraworld
 </details>
 
 ### 便のかたち
-| ころころ | かちかち | ぶりぶり | ほそほそ |
+| **ころころ** | **かちかち** | **ぶりぶり** | **ほそほそ** |
 | :---: | :---: | :---: | :---: |
 | ![pellet](https://noraworld.github.io/box-ash/assets/unlog/pellet.png) | ![hard](https://noraworld.github.io/box-ash/assets/unlog/hard.png) | ![burst](https://noraworld.github.io/box-ash/assets/unlog/burst.png) | ![thin](https://noraworld.github.io/box-ash/assets/unlog/thin.png) |
-| ふわふわ | どろどろ | びちびち | 出なかった |
+| **ふわふわ** | **どろどろ** | **びちびち** | **出なかった** |
 | ![fluffy](https://noraworld.github.io/box-ash/assets/unlog/fluffy.png) | ![mushy](https://noraworld.github.io/box-ash/assets/unlog/mushy.png) | ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
 
 <details>
