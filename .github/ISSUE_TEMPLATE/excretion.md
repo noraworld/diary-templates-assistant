@@ -33,6 +33,14 @@ assignees: noraworld
 | チェリー | ![cherry](https://noraworld.github.io/box-ash/assets/unlog/cherry.png) |
 | コーラ | ![coke](https://noraworld.github.io/box-ash/assets/unlog/coke.png) |
 | ブルーハワイ | ![blue_hawaii](https://noraworld.github.io/box-ash/assets/unlog/blue_hawaii.png) |
+
+| バブル | 透明 | レモン |
+| :---: | :---: | :---: |
+| ![bubble](https://noraworld.github.io/box-ash/assets/unlog/bubble.png) | ![clear](https://noraworld.github.io/box-ash/assets/unlog/clear.png) | ![lemon](https://noraworld.github.io/box-ash/assets/unlog/lemon.png) |
+| パイン | みかん | あんず |
+| ![pineapple](https://noraworld.github.io/box-ash/assets/unlog/pineapple.png) | ![tangerine](https://noraworld.github.io/box-ash/assets/unlog/tangerine.png) | ![apricot](https://noraworld.github.io/box-ash/assets/unlog/apricot.png) |
+| チェリー | コーラ | ブルーハワイ |
+| ![cherry](https://noraworld.github.io/box-ash/assets/unlog/cherry.png) | ![coke](https://noraworld.github.io/box-ash/assets/unlog/coke.png) | ![blue_hawaii](https://noraworld.github.io/box-ash/assets/unlog/blue_hawaii.png) |
 </details>
 
 ### 便の色
@@ -74,6 +82,16 @@ assignees: noraworld
 | どろどろ | ![mushy](https://noraworld.github.io/box-ash/assets/unlog/mushy.png) |
 | びちびち | ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) |
 | 出なかった | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
+
+| ころころ | かちかち |
+| :---: | :---: |
+| ![pellet](https://noraworld.github.io/box-ash/assets/unlog/pellet.png) | ![hard](https://noraworld.github.io/box-ash/assets/unlog/hard.png) |
+| ぶりぶり | ほそほそ |
+| ![burst](https://noraworld.github.io/box-ash/assets/unlog/burst.png) | ![thin](https://noraworld.github.io/box-ash/assets/unlog/thin.png) |
+| ふわふわ | どろどろ |
+| ![fluffy](https://noraworld.github.io/box-ash/assets/unlog/fluffy.png) | ![mushy](https://noraworld.github.io/box-ash/assets/unlog/mushy.png) |
+| びちびち | 出なかった |
+| ![watery](https://noraworld.github.io/box-ash/assets/unlog/watery.png) | ![none](https://noraworld.github.io/box-ash/assets/unlog/none.png) |
 </details>
 
 ### 便の状態
