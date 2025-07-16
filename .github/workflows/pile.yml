@@ -12,6 +12,11 @@ on:
           - 'プライベート'
           - '仕事'
         default: ''
+      work:
+        required: true
+        description: '明日は仕事する？'
+        type: boolean
+        default: true
       remarks:
         required: false
         description: '備考'
@@ -21,22 +26,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Pile
+      - name: Set
         run: |
           case "${{ github.event.inputs.target }}" in
             "プライベート")
-              TEMPLATE_REPO="noraworld/diary-templates"
-              TEMPLATE_FILE_REPO="noraworld/diary-templates-assistant"
-              TEMPLATE_FILE_PATH=".github/ISSUE_TEMPLATE/pile.md"
-              TASK_REPO="noraworld/to-do"
-              SEARCH_QUERY="pile 翌日やること整理"
+              echo "TEMPLATE_REPO=noraworld/diary-templates" >> $GITHUB_ENV
+              echo "TEMPLATE_FILE_REPO=noraworld/diary-templates-assistant" >> $GITHUB_ENV
+              echo "TEMPLATE_FILE_PATH=.github/ISSUE_TEMPLATE/pile.md" >> $GITHUB_ENV
+              echo "TASK_REPO=noraworld/to-do" >> $GITHUB_ENV
+              echo "SEARCH_QUERY=pile 翌日やること整理" >> $GITHUB_ENV
               ;;
             "仕事")
-              TEMPLATE_REPO="noraworld/daily-report-templates"
-              TEMPLATE_FILE_REPO="noraworld/daily-report-templates"
-              TEMPLATE_FILE_PATH=".github/ISSUE_TEMPLATE/pile.md"
-              TASK_REPO="noraworld/work-scraps"
-              SEARCH_QUERY="翌営業日にやること整理"
+              echo "TEMPLATE_REPO=noraworld/daily-report-templates" >> $GITHUB_ENV
+              echo "TEMPLATE_FILE_REPO=noraworld/daily-report-templates" >> $GITHUB_ENV
+              echo "TEMPLATE_FILE_PATH=.github/ISSUE_TEMPLATE/pile.md" >> $GITHUB_ENV
+              echo "TASK_REPO=noraworld/work-scraps" >> $GITHUB_ENV
+              echo "SEARCH_QUERY=翌営業日にやること整理" >> $GITHUB_ENV
               ;;
             *)
               echo "ERROR: invalid target" >&2
@@ -44,13 +49,15 @@ jobs:
               ;;
           esac
 
-          template=$(gh api "/repos/$TEMPLATE_FILE_REPO/contents/$TEMPLATE_FILE_PATH" --jq .content |
+      - name: Pile
+        run: |
+          template=$(gh api "/repos/${{ env.TEMPLATE_FILE_REPO }}/contents/${{ env.TEMPLATE_FILE_PATH }}" --jq .content |
                        base64 --decode |
                        awk '/^```/{f++; next} f==1' |
                        while IFS= read -r line; do
                          if [ "$line" = "<ここにやることを挿入>" ]; then
                            gh issue list \
-                             --repo $TASK_REPO \
+                             --repo ${{ env.TASK_REPO }} \
                              --search "label:today,tomorrow" \
                              --json title,url \
                              --template '{{range.}}* [{{.title}}]({{.url}}){{"\r\n"}}{{end}}' |
@@ -63,13 +70,55 @@ jobs:
                        done)
 
             issue_number=$(gh issue list \
-                             --repo $TEMPLATE_REPO \
-                             --search "$SEARCH_QUERY" |
+                             --repo ${{ env.TEMPLATE_REPO }} \
+                             --search "${{ env.SEARCH_QUERY }}" |
                              awk '{ print $1 }')
 
             gh issue comment "$issue_number" \
-              --repo $TEMPLATE_REPO \
+              --repo ${{ env.TEMPLATE_REPO }} \
               --body "$template"
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Check out repository
+        if: github.event.inputs.work == 'false'
+        uses: actions/checkout@v4
+
+      - name: Get date
+        if: github.event.inputs.work == 'false'
+        run: |
+          date=$(gh issue list \
+            --repo ${{ env.TEMPLATE_REPO }} \
+            --search "${{ env.SEARCH_QUERY }}" \
+            --limit 1 \
+            --json title \
+            --jq '.[].title' |
+            cut -d '_' -f2)
+          echo "DATE=$date" >> $GITHUB_ENV
+
+      - name: Check if weekly off days
+        if: github.event.inputs.work == 'false'
+        run: |
+          if [ "$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.DATE }} +%A))" -gt 0 ]; then
+            weekly_off_day="true"
+          else
+            weekly_off_day="false"
+          fi
+          echo "WEEKLY_OFF_DAY=$weekly_off_day" >> $GITHUB_ENV
+
+      - name: Update day-off list
+        if: github.event.inputs.work == 'false' && env.WEEKLY_OFF_DAY == 'false'
+        run: |
+          tmpfile=$(mktemp)
+          jq '.day_off |= (. + ["${{ env.DATE }}"] | unique)' data/day-off.json > "$tmpfile"
+
+          if [ "$(diff data/day-off.json "$tmpfile")" != "" ]; then
+            mv "$tmpfile" data/day-off.json
+            git add data/day-off.json
+            git commit -m "Make ${{ env.DATE }} day off"
+            git push -u origin main
+          fi
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}

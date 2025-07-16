@@ -1,4 +1,8 @@
 {
+  "weekly": [
+    "Saturday",
+    "Sunday"
+  ],
   "day_off": [
     "2024-10-16",
     "2024-12-24",
