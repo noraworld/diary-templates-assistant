@@ -85,18 +85,19 @@ jobs:
         if: github.event.inputs.work == 'false'
         uses: actions/checkout@v4
 
-      - name: Get date
+      - name: Get tomorrow
         if: github.event.inputs.work == 'false'
         run: |
-          date=$(gh issue list \
+          today=$(gh issue list \
             --repo ${{ env.TEMPLATE_REPO }} \
             --search "${{ env.SEARCH_QUERY }}" \
             --limit 1 \
             --json title \
             --jq '.[].title' |
             cut -d '_' -f2)
+          tomorrow=$(date -d "$today +1 day" +%F)
 
-          echo "DATE=$date" >> $GITHUB_ENV
+          echo "TOMORROW=$tomorrow" >> $GITHUB_ENV
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -104,7 +105,7 @@ jobs:
       - name: Check if weekly off days
         if: github.event.inputs.work == 'false'
         run: |
-          if [ "$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.DATE }} +%A))" -gt 0 ]; then
+          if [ "$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.TOMORROW }} +%A))" -gt 0 ]; then
             weekly_off_day="true"
           else
             weekly_off_day="false"
@@ -117,14 +118,14 @@ jobs:
         if: github.event.inputs.work == 'false' && env.WEEKLY_OFF_DAY == 'false'
         run: |
           tmpfile=$(mktemp)
-          jq '.day_off |= (. + ["${{ env.DATE }}"] | unique)' data/day-off.json > "$tmpfile"
+          jq '.day_off |= (. + ["${{ env.TOMORROW }}"] | unique)' data/day-off.json > "$tmpfile"
 
           if [ "$(diff data/day-off.json "$tmpfile")" != "" ]; then
             mv "$tmpfile" data/day-off.json
             git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
             git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
             git add data/day-off.json
-            git commit -m "Make ${{ env.DATE }} day off"
+            git commit -m "Make ${{ env.TOMORROW }} day off"
             git push -u origin main
           fi
         shell: sh
