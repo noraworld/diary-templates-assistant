@@ -95,17 +95,25 @@ jobs:
             --json title \
             --jq '.[].title' |
             cut -d '_' -f2)
+
           echo "DATE=$date" >> $GITHUB_ENV
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Check if weekly off days
         if: github.event.inputs.work == 'false'
         run: |
-          if [ "$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.DATE }} +%A))" -gt 0 ]; then
+          weekly=$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.DATE }} +%A))
+
+          if [ "$weekly" -gt 0 ]; then
             weekly_off_day="true"
           else
             weekly_off_day="false"
           fi
+
           echo "WEEKLY_OFF_DAY=$weekly_off_day" >> $GITHUB_ENV
+        shell: sh
 
       - name: Update day-off list
         if: github.event.inputs.work == 'false' && env.WEEKLY_OFF_DAY == 'false'
@@ -115,6 +123,8 @@ jobs:
 
           if [ "$(diff data/day-off.json "$tmpfile")" != "" ]; then
             mv "$tmpfile" data/day-off.json
+            git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+            git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
             git add data/day-off.json
             git commit -m "Make ${{ env.DATE }} day off"
             git push -u origin main
