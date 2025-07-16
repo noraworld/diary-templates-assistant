@@ -5,7 +5,7 @@ on:
     inputs:
       target:
         required: true
-        description: '対象'
+        description: '対象リポジトリ'
         type: choice
         options:
           - ''
