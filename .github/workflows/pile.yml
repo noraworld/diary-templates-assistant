@@ -12,10 +12,6 @@ on:
           - 'プライベート'
           - '仕事'
         default: ''
-      arranged:
-        required: true
-        description: '現在の課題を整理'
-        type: boolean
       remarks:
         required: false
         description: '備考'
@@ -61,8 +57,6 @@ jobs:
                              tac
                          elif [ "$line" = "<ここに備考を挿入>" ]; then
                            echo "${{ github.event.inputs.remarks || '特になし。' }}"
-                         elif [ "$line" = "* [ ] 現在の課題を整理" ] && [ "${{ github.event.inputs.arranged }}" = "true" ]; then
-                           echo "* [x] 現在の課題を整理"
                          else
                            echo "$line"
                          fi
