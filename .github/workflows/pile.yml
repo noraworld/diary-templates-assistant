@@ -104,9 +104,7 @@ jobs:
       - name: Check if weekly off days
         if: github.event.inputs.work == 'false'
         run: |
-          weekly=$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.DATE }} +%A))
-
-          if [ "$weekly" -gt 0 ]; then
+          if [ "$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.DATE }} +%A))" -gt 0 ]; then
             weekly_off_day="true"
           else
             weekly_off_day="false"
