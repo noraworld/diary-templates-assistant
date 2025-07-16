@@ -128,5 +128,5 @@ jobs:
             git push -u origin main
           fi
         shell: sh
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        # env:
+        #   GH_TOKEN: ${{ secrets.GH_TOKEN }}
