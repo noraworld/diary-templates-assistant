@@ -82,11 +82,17 @@ jobs:
               continue
             fi
 
-            body=$(sed -e '/^---$/,/^---$/d' "$issue_template" |
-                   sed -e "s|\[{{MAIN_REPO_TODAY_URL}}\]|$DIARY_ISSUE_URL|g" |
-                   sed -e "s/\[{{YESTERDAY_YEAR}}\]/$(date '+%Y' --date '1 day ago')/g" |
-                   sed -e "s/\[{{YESTERDAY_MONTH}}\]/$(date '+%m' --date '1 day ago')/g" |
-                   sed -e "s/\[{{YESTERDAY_DATE}}\]/$(date '+%Y-%m-%d' --date '1 day ago')/g")
+            body=$(
+              awk '
+                NR==1 && $0 == "---" { in_header=1; next }
+                in_header && $0 == "---" { in_header=0; next }
+                !in_header
+              ' "$issue_template" |
+              sed -e "s|\[{{MAIN_REPO_TODAY_URL}}\]|$DIARY_ISSUE_URL|g" |
+              sed -e "s/\[{{YESTERDAY_YEAR}}\]/$(date '+%Y' --date '1 day ago')/g" |
+              sed -e "s/\[{{YESTERDAY_MONTH}}\]/$(date '+%m' --date '1 day ago')/g" |
+              sed -e "s/\[{{YESTERDAY_DATE}}\]/$(date '+%Y-%m-%d' --date '1 day ago')/g"
+            )
 
             assignee=$(grep "assignees: " "$issue_template" |
                        sed -e 's/^assignees: //g'           |
