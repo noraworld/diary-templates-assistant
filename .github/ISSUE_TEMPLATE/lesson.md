@@ -61,6 +61,8 @@ assignees: noraworld
 <details>
 <summary>トランスクリプト</summary>
 
+| Speaker | Dialogue |
+| :---: | --- |
 
 </details>
 
