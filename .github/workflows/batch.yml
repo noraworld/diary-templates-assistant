@@ -38,7 +38,7 @@ on:
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790207338
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790217630
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790220599
-    - cron: '50 23 * * *' # 8:50 JST
+    - cron: '50 22 * * *' # 7:50 JST
 
 jobs:
   # reserved-diary
