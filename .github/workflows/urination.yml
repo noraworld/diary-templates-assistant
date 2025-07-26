@@ -9,12 +9,12 @@ on:
         type: choice
         options:
           - ''
-          - 'チョロチョロ（100ml）'
-          - 'チョロッ（200ml）'
-          - 'ふつう（300ml）'
-          - 'ドバッ（400ml）'
-          - 'ドバドバ（500ml）'
-          - 'ドバドバドバ（600ml）'
+          - '100ml'
+          - '200ml'
+          - '300ml'
+          - '400ml'
+          - '500ml'
+          - '600ml'
       color:
         required: true
         description: '色'
