@@ -21,5 +21,8 @@ ${{ if(github.event.inputs.hardships5) }}
 * ${{ github.event.inputs.hardships5 }}
 ${{ endif }}
 
+### チェックリスト
+* [${{ github.event.inputs.practice }}] 発音練習
+
 ### 感想・その他
 ${{ github.event.inputs.impression || '特になし。' }}
