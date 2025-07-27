@@ -23,15 +23,15 @@ on:
           - '杯'
           - '袋'
       food2:
-        required: true
+        required: false
         description: '食べたもの 2'
         type: string
       quantity2:
-        required: true
+        required: false
         description: '分量 2'
         type: number
       unit2:
-        required: true
+        required: false
         description: '単位 2'
         type: choice
         options:
@@ -42,15 +42,15 @@ on:
           - '杯'
           - '袋'
       food3:
-        required: true
+        required: false
         description: '食べたもの 3'
         type: string
       quantity3:
-        required: true
+        required: false
         description: '分量 3'
         type: number
       unit3:
-        required: true
+        required: false
         description: '単位 3'
         type: choice
         options:
