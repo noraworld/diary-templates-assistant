@@ -7,42 +7,59 @@ on:
         required: true
         description: '食べたもの 1'
         type: string
+      quantity1:
+        required: true
+        description: '分量 1'
+        type: number
+      unit1:
+        required: true
+        description: '単位 1'
+        type: choice
+        options:
+          - ''
+          - '人前'
+          - '個'
+          - '本'
+          - '杯'
+          - '袋'
       food2:
-        required: false
-        description: '食べたもの 2'
+        required: true
+        description: '食べたもの 1'
         type: string
+      quantity2:
+        required: true
+        description: '分量 1'
+        type: number
+      unit2:
+        required: true
+        description: '単位 1'
+        type: choice
+        options:
+          - ''
+          - '人前'
+          - '個'
+          - '本'
+          - '杯'
+          - '袋'
       food3:
-        required: false
-        description: '食べたもの 3'
+        required: true
+        description: '食べたもの 1'
         type: string
-      food4:
-        required: false
-        description: '食べたもの 4'
-        type: string
-      food5:
-        required: false
-        description: '食べたもの 5'
-        type: string
-      food6:
-        required: false
-        description: '食べたもの 6'
-        type: string
-      food7:
-        required: false
-        description: '食べたもの 7'
-        type: string
-      food8:
-        required: false
-        description: '食べたもの 8'
-        type: string
-      food9:
-        required: false
-        description: '食べたもの 9'
-        type: string
-      food10:
-        required: false
-        description: '食べたもの 10'
-        type: string
+      quantity3:
+        required: true
+        description: '分量 1'
+        type: number
+      unit3:
+        required: true
+        description: '単位 1'
+        type: choice
+        options:
+          - ''
+          - '人前'
+          - '個'
+          - '本'
+          - '杯'
+          - '袋'
 
 jobs:
   food:
