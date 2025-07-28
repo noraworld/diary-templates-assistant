@@ -7,6 +7,10 @@ on:
         required: true
         description: '食べたもの 1'
         type: string
+      category1:
+        required: true
+        description: '分類 1'
+        type: string
       quantity1:
         required: true
         description: '分量 1'
@@ -27,6 +31,10 @@ on:
         required: false
         description: '食べたもの 2'
         type: string
+      category2:
+        required: true
+        description: '分類 2'
+        type: string
       quantity2:
         required: false
         description: '分量 2'
@@ -34,26 +42,6 @@ on:
       unit2:
         required: false
         description: '単位 2'
-        type: choice
-        options:
-          - ''
-          - '人前'
-          - '個'
-          - '本'
-          - '杯'
-          - '袋'
-          - '箱'
-      food3:
-        required: false
-        description: '食べたもの 3'
-        type: string
-      quantity3:
-        required: false
-        description: '分量 3'
-        type: number
-      unit3:
-        required: false
-        description: '単位 3'
         type: choice
         options:
           - ''
