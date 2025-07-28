@@ -32,7 +32,7 @@ on:
         description: '食べたもの 2'
         type: string
       category2:
-        required: true
+        required: false
         description: '分類 2'
         type: string
       quantity2:
