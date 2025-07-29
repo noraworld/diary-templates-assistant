@@ -1,0 +1,49 @@
+name: '09-1: 🎓📎 クリッピング'
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        required: true
+        description: 'タイトル'
+        type: string
+      url:
+        required: true
+        description: 'URL'
+        type: string
+      type:
+        required: true
+        description: 'タグ'
+        type: choice
+        options:
+          - ''
+          - 'YouTube'
+          - 'ニコニコ動画'
+          - 'AbemaTV'
+          - 'Netflix'
+          - 'Amazon Prime'
+          - ''
+          - 'dotinstall'
+          - 'D ラボ'
+          - 'パレオな男'
+          - ''
+          - 'ブログ'
+          - 'ウェブ記事'
+      progress:
+        required: false
+        description: '進捗率（動画の例: "12:34"）'
+        type: string
+      impression:
+        required: false
+        description: '感想'
+        type: string
+
+jobs:
+  clippings:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "clippings クリッピング"
+      template_name: "clippings"
+      template_repo: "noraworld/diary-templates"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
