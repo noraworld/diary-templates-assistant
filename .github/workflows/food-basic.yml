@@ -1,4 +1,4 @@
-name: '10-2: 🌿🥗 食事記録 / 基本情報'
+name: '11-2: 🌿🥗 食事記録 / 基本情報'
 
 on:
   workflow_dispatch:
