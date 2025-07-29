@@ -3,13 +3,9 @@ name: '09-1: 🎓📎 クリッピング'
 on:
   workflow_dispatch:
     inputs:
-      title:
+      site:
         required: true
-        description: 'タイトル'
-        type: string
-      url:
-        required: true
-        description: 'URL'
+        description: 'サイト（リンク付き）'
         type: string
       type:
         required: true
