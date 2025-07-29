@@ -25,6 +25,7 @@ on:
           - ''
           - 'ブログ'
           - 'ウェブ記事'
+          - '技術記事'
       progress:
         required: false
         description: '進捗率（動画の例: "12:34"）'
