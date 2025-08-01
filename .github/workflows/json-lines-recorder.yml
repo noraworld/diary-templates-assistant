@@ -59,7 +59,7 @@ jobs:
         run: |
           # DO NOT INDENT
           api_filepath="\
-          "repos/noraworld/diary-templates/contents/"\
+          "repos/${{ github.repository }}/contents/"\
           "${{ env.CATEGORY }}/${{ env.YEAR }}/${{ env.YEAR }}-${{ env.MONTH }}.jsonl"\
           "
 
