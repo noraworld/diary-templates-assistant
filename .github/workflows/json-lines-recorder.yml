@@ -34,7 +34,7 @@ jobs:
           committer_name: Kosuke Aoki
           committer_email: mail@noraworld.com
           overwrite_when_modified: '' # false
-          newlines_count_before_extra_text: 1
+          newlines_count_before_extra_text: 0
           extra_text_when_modified: ''
           newlines_count_after_extra_text: 0
           notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
@@ -50,6 +50,7 @@ jobs:
           custom_title: ''
           with_hr: ''
           empty_lines_count_between_comments: 0
+          trailing_newline: true
           skip_body: file
           skip_if_empty_including_body: file
           fail_if_skip: false
