@@ -63,6 +63,8 @@ jobs:
           "${{ env.CATEGORY }}/${{ env.YEAR }}/${{ env.YEAR }}-${{ env.MONTH }}.jsonl"\
           "
 
+          echo "DEBUG: github.repository: ${{ github.repository }}" >&2
+
           # https://github.com/noraworld/to-do/issues/1471
           i=0
           file_content_length=0
