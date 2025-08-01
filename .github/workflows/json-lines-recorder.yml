@@ -1,0 +1,119 @@
+name: JSON Lines Recorder
+
+on:
+  workflow_call:
+    secrets:
+      gh_token:
+        required: true
+
+jobs:
+  json-lines-recorder:
+    if: >
+      github.event.issue.state == 'open' &&
+      github.event.label.name  == 'done' &&
+      contains(github.event.issue.title, 'db_データベース')
+    runs-on: ubuntu-latest
+    steps:
+      # "🗄️_2025-08-01_db_データベース" => "2025"
+      - name: Get a year
+        run: echo "YEAR=$(awk -F '[-_]' '{print $2}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "🗄️_2025-08-01_db_データベース" => "08"
+      - name: Get a month
+        run: echo "MONTH=$(awk -F '[-_]' '{print $3}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "🗄️_2025-08-01_db_データベース" => "db"
+      - name: Get a category
+        run: echo "CATEGORY=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      - name: Issue Recorder
+        uses: noraworld/issue-recorder@main
+        with:
+          mode: file
+          filepath: ${{ env.CATEGORY }}/${{ env.YEAR }}/${{ env.YEAR }}-${{ env.MONTH }}.jsonl
+          committer_name: Kosuke Aoki
+          committer_email: mail@noraworld.com
+          overwrite_when_modified: '' # false
+          extra_text_when_modified: ''
+          notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
+          ##### ↓ The partial content is supposed to be omitted before leaving a comment, but just to be safe...
+          partial_content_target_issue_repo: noraworld/private-diary
+          partial_content_target_issue_number: latest
+          partial_content_start_string: "(<span dir=\"auto\">{private}|<div dir=\"auto\"><p>{private})"
+          partial_content_end_string: "({/private}</span>|{/private}</div>)"
+          ##### ↑ The partial content is supposed to be omitted before leaving a comment, but just to be safe...
+          with_date: ''
+          with_header: ''
+          with_title: ''
+          custom_title: ''
+          with_hr: ''
+          skip_body: file
+          skip_if_empty_including_body: file
+          fail_if_skip: false
+          personal_access_token: GH_TOKEN
+        env:
+          GH_TOKEN: ${{ secrets.gh_token }}
+
+      - name: Make sure the content is saved successfully
+        run: |
+          # DO NOT INDENT
+          api_filepath="\
+          "repos/noraworld/diary-templates/contents/"\
+          "${{ env.CATEGORY }}/${{ env.YEAR }}/${{ env.YEAR }}-${{ env.MONTH }}.jsonl"\
+          "
+
+          # https://github.com/noraworld/to-do/issues/1471
+          i=0
+          file_content_length=0
+          issue_content_length=0
+          while [ "$i" -lt ${{ env.RETRY_THRESHOLD }} ]; do
+            if [ "$file_content_length" -le 0 ]; then
+              file_content_length=$(
+                gh api "$api_filepath" --jq '.content' | base64 --decode | wc -l
+              )
+            else
+              echo "Getting the file content skipped because it's already taken." >&2
+            fi
+
+            if [ "$issue_content_length" -le 0 ]; then
+              issue_content_length=$(
+                gh issue view ${{ github.event.issue.number }} --json comments --jq '.comments.[].body' | wc -l
+              )
+            else
+              echo "Getting the issue content skipped because it's already taken." >&2
+            fi
+
+            if [ "$file_content_length" -gt 0 ] && [ "$issue_content_length" -gt 0 ]; then
+              break
+            fi
+
+            i=$(( i + 1 ))
+            echo "Getting the content failed. The retry will be conducted in $i sec..." >&2
+            echo "DEBUG: file content length:  $file_content_length" >&2
+            echo "DEBUG: issue content length: $issue_content_length" >&2
+            sleep "$i"
+          done
+
+          # Skip length check if private content is included.
+          # It is difficult to obtain the private issue number and content from here.
+          private_content_count=$(
+            gh api "$api_filepath" --jq '.content' | base64 --decode | grep -cE "\[\^pvt_[0-9a-f]{7}\]" || true
+          )
+
+          if   [ "$file_content_length"   -ge "$issue_content_length" ] ||
+             { [ "$private_content_count" -gt 0 ]                       &&
+               [ "$file_content_length"   -ne 0 ]                       &&
+               [ "$issue_content_length"  -ne 0 ]; }
+          then
+            gh issue close ${{ github.event.issue.number }}
+          else
+            gh issue edit ${{ github.event.issue.number }} --remove-label 'done'
+            echo "The file content length should be greater than or equal to the issue content length." >&2
+            echo "DEBUG: file content length:  $file_content_length" >&2
+            echo "DEBUG: issue content length: $issue_content_length" >&2
+            exit 1
+          fi
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.gh_token }}
+          RETRY_THRESHOLD: 10
