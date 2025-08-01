@@ -34,7 +34,9 @@ jobs:
           committer_name: Kosuke Aoki
           committer_email: mail@noraworld.com
           overwrite_when_modified: '' # false
+          newlines_count_before_extra_text: 1
           extra_text_when_modified: ''
+          newlines_count_after_extra_text: 0
           notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
           ##### ↓ The partial content is supposed to be omitted before leaving a comment, but just to be safe...
           partial_content_target_issue_repo: noraworld/private-diary
