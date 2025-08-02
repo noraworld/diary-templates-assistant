@@ -7,7 +7,7 @@ on:
         required: true
         description: 'サイト（リンク付き）'
         type: string
-      type:
+      category:
         required: true
         description: 'タグ'
         type: choice

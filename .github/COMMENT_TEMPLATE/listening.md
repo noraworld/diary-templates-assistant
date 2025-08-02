@@ -1,7 +1,7 @@
 ### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
-| 種別 | ${{ github.event.inputs.type }} |
+| 種別 | ${{ github.event.inputs.category }} |
 | 教材 | ${{ github.event.inputs.material }} |
 ${{ if(github.event.inputs.subtitle) }}
 | 字幕 | ${{ github.event.inputs.subtitle }} |

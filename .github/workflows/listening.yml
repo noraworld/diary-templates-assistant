@@ -3,7 +3,7 @@ name: '08-1: 🎓🎧 リスニング'
 on:
   workflow_dispatch:
     inputs:
-      type:
+      category:
         required: true
         description: '種別'
         type: choice
