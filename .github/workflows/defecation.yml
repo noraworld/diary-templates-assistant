@@ -65,17 +65,18 @@ on:
           - '😌 すっきり'
           - '☹️ ちょい残り'
           - '🤢 苦しい'
-      duration:
+      minutes:
         required: true
-        description: '時間'
+        description: '時間（分）'
         type: choice
         options:
           - ''
-          - 'すぐ（体感 5 分以内）'
-          - 'あっさり（体感 10 分前後）'
-          - 'ちょいふんばり（体感 15 分前後）'
-          - 'ふんばり（体感 20 分前後）'
-          - '超ふんばり（体感 30 分以上）'
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
+          - '30'
       float:
         required: true
         description: 'ぷかぷか'
@@ -92,6 +93,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "defecation"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
