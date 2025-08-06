@@ -94,5 +94,6 @@ jobs:
       search_query: "meditation 瞑想"
       template_name: "meditation"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

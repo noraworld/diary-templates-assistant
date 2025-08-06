@@ -29,5 +29,6 @@ jobs:
       search_query: "readiness 心構え"
       template_name: "readiness"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

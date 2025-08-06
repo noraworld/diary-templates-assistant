@@ -61,5 +61,6 @@ jobs:
       search_query: "listening リスニング"
       template_name: "listening"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

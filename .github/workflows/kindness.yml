@@ -51,5 +51,6 @@ jobs:
       search_query: "esteem 慰労記録"
       template_name: "kindness"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

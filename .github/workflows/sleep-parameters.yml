@@ -88,5 +88,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-parameters"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

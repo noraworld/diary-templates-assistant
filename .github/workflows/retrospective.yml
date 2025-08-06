@@ -65,5 +65,6 @@ jobs:
       search_query: "retrospective 振り返り"
       template_name: "retrospective"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

@@ -71,5 +71,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "urination"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
