@@ -8,6 +8,4 @@
 | 行き先 | ${{ github.event.inputs.destination }} |
 | 外出意欲 | ${{ github.event.inputs.motivation }} |
 | 気分レベル | ${{ github.event.inputs.mood }} |
-
-### チェックリスト
-* [${{ github.event.inputs.garbage }}] ゴミ捨て
+| ゴミ捨て | ${{ github.event.inputs.garbage }} |

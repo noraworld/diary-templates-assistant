@@ -68,7 +68,11 @@ on:
       garbage:
         required: true
         description: 'ゴミ捨て'
-        type: boolean
+        type: choice
+        options:
+          - ''
+          - 'あり'
+          - 'なし'
 
 jobs:
   walking:
