@@ -2,7 +2,7 @@
 | 項目 | 内容 |
 | --- | :---: |
 | クリップ | ${{ github.event.inputs.site }} |
-| 種別 | ${{ github.event.inputs.category }} |
+| 種別 | ${{ github.event.inputs.type }} |
 ${{ if(github.event.inputs.progress) }}
 | 進捗 | ${{ github.event.inputs.progress }} |
 ${{ endif }}

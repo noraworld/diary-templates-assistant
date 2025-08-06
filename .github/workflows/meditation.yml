@@ -78,7 +78,7 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
-      category:
+      type:
         required: true
         description: '種別'
         type: choice
