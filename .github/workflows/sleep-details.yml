@@ -3,7 +3,7 @@ name: '10-4: 🌿💤 睡眠記録 / その他の情報'
 on:
   workflow_dispatch:
     inputs:
-      stress:
+      stress1:
         required: true
         description: '昨日のストレス値'
         type: choice
@@ -14,11 +14,11 @@ on:
           - '多い'
           - '体表温の上昇'
           - '概要なし'
-      stress2:
+      reason1:
         required: false
         description: '考察'
         type: string
-      resilience:
+      resilience2:
         required: true
         description: 'レジリエンス'
         type: choice
@@ -30,7 +30,7 @@ on:
           - 'やや不足'
           - '不足'
           - 'データなし'
-      resilience2:
+      reason2:
         required: false
         description: '考察'
         type: string
@@ -46,6 +46,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-details"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
