@@ -9,25 +9,25 @@ on:
         type: choice
         options:
           - ''
-          - '100ml'
-          - '150ml'
-          - '200ml'
-          - '250ml'
-          - '300ml'
-          - '350ml'
-          - '400ml'
-          - '450ml'
-          - '500ml'
-          - '550ml'
-          - '600ml'
-          - '650ml'
-          - '700ml'
-          - '750ml'
-          - '800ml'
-          - '850ml'
-          - '900ml'
-          - '950ml'
-          - '1,000ml'
+          - '100'
+          - '150'
+          - '200'
+          - '250'
+          - '300'
+          - '350'
+          - '400'
+          - '450'
+          - '500'
+          - '550'
+          - '600'
+          - '650'
+          - '700'
+          - '750'
+          - '800'
+          - '850'
+          - '900'
+          - '950'
+          - '1000'
       color:
         required: true
         description: '色'
@@ -71,6 +71,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "urination"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
