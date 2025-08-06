@@ -3,43 +3,43 @@ name: '18-2: 🍀✨ 慰労記録 / ポジティブ'
 on:
   workflow_dispatch:
     inputs:
-      content1:
+      positive1:
         required: true
         description: 'ポジティブ 1'
         type: string
-      content2:
+      positive2:
         required: true
         description: 'ポジティブ 2'
         type: string
-      content3:
+      positive3:
         required: true
         description: 'ポジティブ 3'
         type: string
-      content4:
+      positive4:
         required: true
         description: 'ポジティブ 4'
         type: string
-      content5:
+      positive5:
         required: false
         description: 'ポジティブ 5'
         type: string
-      content6:
+      positive6:
         required: false
         description: 'ポジティブ 6'
         type: string
-      content7:
+      positive7:
         required: false
         description: 'ポジティブ 7'
         type: string
-      content8:
+      positive8:
         required: false
         description: 'ポジティブ 8'
         type: string
-      content9:
+      positive9:
         required: false
         description: 'ポジティブ 9'
         type: string
-      content10:
+      positive10:
         required: false
         description: 'ポジティブ 10'
         type: string
@@ -51,6 +51,6 @@ jobs:
       search_query: "esteem 慰労記録"
       template_name: "positive"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
