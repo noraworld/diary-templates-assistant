@@ -26,6 +26,7 @@ on:
           - 'ブログ'
           - 'ウェブ記事'
           - '技術記事'
+          - 'ChatGPT'
         default: 'YouTube'
       progress:
         required: false
@@ -43,6 +44,6 @@ jobs:
       search_query: "clippings クリッピング"
       template_name: "clippings"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
