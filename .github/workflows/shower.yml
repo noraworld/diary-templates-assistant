@@ -43,5 +43,6 @@ jobs:
       search_query: "shower 入浴記録"
       template_name: "shower"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

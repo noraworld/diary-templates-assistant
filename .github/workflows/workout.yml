@@ -73,5 +73,6 @@ jobs:
       search_query: "workout ワークアウト"
       template_name: "workout"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

@@ -26,5 +26,6 @@ jobs:
       search_query: "food 食事記録"
       template_name: "food-basic"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

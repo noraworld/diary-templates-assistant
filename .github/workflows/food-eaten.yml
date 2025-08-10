@@ -3,45 +3,21 @@ name: '11-1: 🌿🥗 食事記録 / 食べたもの'
 on:
   workflow_dispatch:
     inputs:
-      food1:
+      food:
         required: true
-        description: '食べたもの 1'
+        description: '食べたもの'
         type: string
-      category1:
+      category:
         required: true
-        description: '分類 1'
+        description: '分類'
         type: string
-      quantity1:
+      quantity:
         required: true
-        description: '分量 1'
+        description: '分量'
         type: number
-      unit1:
+      unit:
         required: true
-        description: '単位 1'
-        type: choice
-        options:
-          - ''
-          - '人前'
-          - '個'
-          - '本'
-          - '杯'
-          - '袋'
-          - '箱'
-      food2:
-        required: false
-        description: '食べたもの 2'
-        type: string
-      category2:
-        required: false
-        description: '分類 2'
-        type: string
-      quantity2:
-        required: false
-        description: '分量 2'
-        type: number
-      unit2:
-        required: false
-        description: '単位 2'
+        description: '単位'
         type: choice
         options:
           - ''
@@ -59,5 +35,6 @@ jobs:
       search_query: "food 食事記録"
       template_name: "food-eaten"
       template_repo: "noraworld/diary-templates"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

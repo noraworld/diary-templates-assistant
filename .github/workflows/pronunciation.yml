@@ -80,5 +80,6 @@ jobs:
       search_query: "pronunciation 発音練習"
       template_name: "pronunciation"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

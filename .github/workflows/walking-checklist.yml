@@ -31,5 +31,6 @@ jobs:
       search_query: "walking ウォーキング"
       template_name: "walking-checklist"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

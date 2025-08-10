@@ -3,7 +3,7 @@ name: '08-1: 🎓🎧 リスニング'
 on:
   workflow_dispatch:
     inputs:
-      type:
+      category:
         required: true
         description: '種別'
         type: choice
@@ -61,5 +61,6 @@ jobs:
       search_query: "listening リスニング"
       template_name: "listening"
       template_repo: "noraworld/diary-templates"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

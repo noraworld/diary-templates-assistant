@@ -55,5 +55,6 @@ jobs:
       search_query: "teeth 歯磨き"
       template_name: "teeth"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

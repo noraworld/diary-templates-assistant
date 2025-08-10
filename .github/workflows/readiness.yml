@@ -3,14 +3,14 @@ name: '17-1: 🍀🎯 心構え'
 on:
   workflow_dispatch:
     inputs:
-      notification1:
+      legal:
         required: true
         description: '見ずに一括でチェックを付ける不正をしていない？'
         type: choice
         options:
           - ''
           - 'はい'
-      notification2:
+      resolved:
         required: true
         description: '心構えを肝に銘じた？'
         type: choice
@@ -29,5 +29,6 @@ jobs:
       search_query: "readiness 心構え"
       template_name: "readiness"
       template_repo: "noraworld/diary-templates"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

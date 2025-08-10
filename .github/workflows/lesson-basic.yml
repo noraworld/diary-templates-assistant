@@ -64,5 +64,6 @@ jobs:
       search_query: "lesson オンライン英会話"
       template_name: "lesson-basic"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

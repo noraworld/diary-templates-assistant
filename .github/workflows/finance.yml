@@ -74,5 +74,6 @@ jobs:
       search_query: "finance 入出金履歴チェック"
       template_name: "finance"
       template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

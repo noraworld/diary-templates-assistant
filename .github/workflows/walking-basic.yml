@@ -68,11 +68,7 @@ on:
       garbage:
         required: true
         description: 'ゴミ捨て'
-        type: choice
-        options:
-          - ''
-          - 'あり'
-          - 'なし'
+        type: boolean
 
 jobs:
   walking:
@@ -81,5 +77,6 @@ jobs:
       search_query: "walking ウォーキング"
       template_name: "walking-basic"
       template_repo: "noraworld/diary-templates"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

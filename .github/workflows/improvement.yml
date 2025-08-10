@@ -3,43 +3,43 @@ name: '18-1: 🍀🧩 慰労記録 / 改善点'
 on:
   workflow_dispatch:
     inputs:
-      content1:
+      improvement1:
         required: true
         description: '改善点 1'
         type: string
-      content2:
+      improvement2:
         required: false
         description: '改善点 2'
         type: string
-      content3:
+      improvement3:
         required: false
         description: '改善点 3'
         type: string
-      content4:
+      improvement4:
         required: false
         description: '改善点 4'
         type: string
-      content5:
+      improvement5:
         required: false
         description: '改善点 5'
         type: string
-      content6:
+      improvement6:
         required: false
         description: '改善点 6'
         type: string
-      content7:
+      improvement7:
         required: false
         description: '改善点 7'
         type: string
-      content8:
+      improvement8:
         required: false
         description: '改善点 8'
         type: string
-      content9:
+      improvement9:
         required: false
         description: '改善点 9'
         type: string
-      content10:
+      improvement10:
         required: false
         description: '改善点 10'
         type: string
@@ -51,5 +51,6 @@ jobs:
       search_query: "esteem 慰労記録"
       template_name: "improvement"
       template_repo: "noraworld/diary-templates"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
