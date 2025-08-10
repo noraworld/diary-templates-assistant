@@ -3,12 +3,10 @@
 | --- | :---: |
 | かたち | ${{ github.event.inputs.shape }} |
 | 色 | ${{ github.event.inputs.color }} |
-| 量 | ${{ github.event.inputs.amount }} |
+| 量 | ${{ github.event.inputs.amount }} g |
 | におい | ${{ github.event.inputs.smell }} |
 | すっきり感 | ${{ github.event.inputs.relief }} |
-${{ if(github.event.inputs.duration) }}
-| ふんばりタイム | ${{ github.event.inputs.duration }} |
-${{ endif }}
+| ふんばりタイム | ${{ github.event.inputs.minutes }} 分前後 |
 
 ### 詳細
 * [${{ github.event.inputs.float }}] ぷかぷか
