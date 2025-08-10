@@ -12,6 +12,9 @@ on:
       template_repo:
         required: true
         type: string
+      version:
+        required: true
+        type: string
     secrets:
       token:
         required: true
@@ -32,7 +35,7 @@ jobs:
         run: npm install
         shell: sh
 
-      - name: Comment
+      - name: Comment as markdown
         run: node app/comment_from_dispatch.js
         shell: sh
         env:
@@ -40,3 +43,15 @@ jobs:
           SEARCH_QUERY: ${{ inputs.search_query }}
           TEMPLATE_NAME: ${{ inputs.template_name }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}
+
+      - name: Comment as JSON Lines
+        run: node app/jsonl.js
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.token }}
+          PARTIAL_CONTENT_START_STRING: '(<span dir=\"auto\">{private}|<div dir=\"auto\"><p>{private})'
+          PARTIAL_CONTENT_END_STRING: '({/private}</span>|{/private}</div>)'
+          SEARCH_QUERY: 'db データベース'
+          TEMPLATE_NAME: ${{ inputs.template_name }}
+          TEMPLATE_REPO: ${{ inputs.template_repo }}
+          VERSION: ${{ inputs.version }}
