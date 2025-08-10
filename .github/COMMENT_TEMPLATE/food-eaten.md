@@ -1,8 +1,6 @@
-| 食べたもの | 分類 | 分量 | 単位 |
-| --- | :---: | :---: | :---: |
-${{ if(github.event.inputs.food1) }}
-| ${{ github.event.inputs.food1 }} | ${{ github.event.inputs.category1 }} | ${{ github.event.inputs.quantity1 }} | ${{ github.event.inputs.unit1 }} |
-${{ endif }}
-${{ if(github.event.inputs.food2) }}
-| ${{ github.event.inputs.food2 }} | ${{ github.event.inputs.category2 }} | ${{ github.event.inputs.quantity2 }} | ${{ github.event.inputs.unit2 }} |
-${{ endif }}
+| 項目 | 内容 |
+| --- | :---: |
+| 食べたもの | ${{ github.event.inputs.food }} |
+| 分類 | ${{ github.event.inputs.category }} |
+| 分量 | ${{ github.event.inputs.quantity }} |
+| 単位 | ${{ github.event.inputs.unit }} |
