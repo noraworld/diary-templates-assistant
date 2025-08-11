@@ -22,6 +22,10 @@ jobs:
       - name: Get a month
         run: echo "MONTH=$(awk -F '[-_]' '{print $3}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
 
+      # "🗄️_2025-08-01_db_データベース" => "2025-08-01"
+      - name: Get a date
+        run: echo "DATE=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
       # "🗄️_2025-08-01_db_データベース" => "db"
       - name: Get a category
         run: echo "CATEGORY=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
@@ -72,8 +76,9 @@ jobs:
           issue_content_length=0
           while [ "$i" -lt ${{ env.RETRY_THRESHOLD }} ]; do
             if [ "$file_content_length" -le 0 ]; then
+              # Only the lines that have the same date value are counted because this file is managed on a monthly basis
               file_content_length=$(
-                gh api "$api_filepath" --jq '.content' | base64 --decode | wc -l
+                gh api "$api_filepath" --jq '.content' | base64 --decode | jq .date | grep -c ${{ env.DATE }} || true
               )
             else
               echo "Getting the file content skipped because it's already taken." >&2
