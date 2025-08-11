@@ -104,9 +104,11 @@ jobs:
             gh api "$api_filepath" --jq '.content' | base64 --decode | grep -cE "\[\^pvt_[0-9a-f]{7}\]" || true
           )
 
-          if   [ "$file_content_length"   -ge "$issue_content_length" ] ||
-             { [ "$private_content_count" -gt 0 ]                       &&
-               [ "$file_content_length"   -ne 0 ]                       &&
+          # The reason for "issue_content_length - 1" is to ignore the last notification comment.
+          # https://github.com/noraworld/diary-templates/actions/runs/16867263024/job/47775863497
+          if   [ "$file_content_length"   -ge "$(( issue_content_length - 1 ))" ] ||
+             { [ "$private_content_count" -gt 0 ]                                 &&
+               [ "$file_content_length"   -ne 0 ]                                 &&
                [ "$issue_content_length"  -ne 0 ]; }
           then
             gh issue close ${{ github.event.issue.number }}
