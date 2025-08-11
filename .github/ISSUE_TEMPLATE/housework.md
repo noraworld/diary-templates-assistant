@@ -1,5 +1,5 @@
 ---
-name: 22. Housework
+name: fβ. Housework
 about: 家事
 title: "🧼_[{{DATE}}]_housework_家事"
 labels: ''

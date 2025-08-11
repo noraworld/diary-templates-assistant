@@ -1,5 +1,5 @@
 ---
-name: 14. Excretion
+name: cε. Excretion
 about: 排泄記録
 title: "💩_[{{DATE}}]_excretion_排泄記録"
 labels: ''

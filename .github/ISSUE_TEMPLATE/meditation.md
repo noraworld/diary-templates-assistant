@@ -1,5 +1,5 @@
 ---
-name: 01. Meditation
+name: aα. Meditation
 about: 瞑想 | 悩みから解放されストレスフリーな生活を送りましょう
 title: "🌱_[{{DATE}}]_meditation_瞑想"
 labels: ''
