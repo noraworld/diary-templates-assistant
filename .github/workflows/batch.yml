@@ -41,55 +41,55 @@ on:
     - cron: '50 22 * * *' # 7:50 JST
 
 jobs:
-  # reserved-diary
-  comments-transferor-force:
-    uses: noraworld/social-media-recorder/.github/workflows/comments-transferor-force.yml@main
-    secrets:
-      gh_token: ${{ secrets.GH_TOKEN }}
+  # # reserved-diary
+  # comments-transferor-force:
+  #   uses: noraworld/social-media-recorder/.github/workflows/comments-transferor-force.yml@main
+  #   secrets:
+  #     gh_token: ${{ secrets.GH_TOKEN }}
 
-  templates-closer:
-    needs: comments-transferor-force
-    uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
-    with:
-      repo: noraworld/diary-templates
-      # Comment #2
-      #   The value after '||' is only referenced in cron.
-      #   See also Comment #1.
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-      date_check: true
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
+  # templates-closer:
+  #   needs: comments-transferor-force
+  #   uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
+  #   with:
+  #     repo: noraworld/diary-templates
+  #     # Comment #2
+  #     #   The value after '||' is only referenced in cron.
+  #     #   See also Comment #1.
+  #     timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
+  #     date_check: true
+  #   secrets:
+  #     token: ${{ secrets.GH_TOKEN }}
 
-  wait-for-templates-closed:
-    needs: templates-closer
-    if: needs.templates-closer.outputs.succeeded == 'true'
-    uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
-    with:
-      template_repo: noraworld/diary-templates
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
+  # wait-for-templates-closed:
+  #   needs: templates-closer
+  #   if: needs.templates-closer.outputs.succeeded == 'true'
+  #   uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
+  #   with:
+  #     template_repo: noraworld/diary-templates
+  #   secrets:
+  #     token: ${{ secrets.GH_TOKEN }}
 
-  convert-unchecked:
-    needs: wait-for-templates-closed
-    uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
-    with:
-      main_repo: noraworld/reserved-diary
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
+  # convert-unchecked:
+  #   needs: wait-for-templates-closed
+  #   uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
+  #   with:
+  #     main_repo: noraworld/reserved-diary
+  #   secrets:
+  #     token: ${{ secrets.GH_TOKEN }}
 
-  issue-changer:
-    needs: convert-unchecked
-    uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
-    with:
-      main_repo: noraworld/reserved-diary
-      template_repo: noraworld/diary-templates
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
+  # issue-changer:
+  #   needs: convert-unchecked
+  #   uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
+  #   with:
+  #     main_repo: noraworld/reserved-diary
+  #     template_repo: noraworld/diary-templates
+  #     timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
+  #   secrets:
+  #     token: ${{ secrets.GH_TOKEN }}
 
   templates-creator:
-    needs: issue-changer
-    if: needs.issue-changer.outputs.succeeded == 'true'
+    # needs: issue-changer
+    # if: needs.issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
       main_repo: noraworld/reserved-diary
