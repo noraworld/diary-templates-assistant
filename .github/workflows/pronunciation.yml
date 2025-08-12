@@ -3,33 +3,24 @@ name: 'bβа: 🎓🗣️ 発音練習'
 on:
   workflow_dispatch:
     inputs:
-      impression:
-        required: false
-        description: '感想・その他'
-        type: string
-      hardships1:
-        required: false
-        description: '苦労 1'
-        type: string
-      hardships2:
-        required: false
-        description: '苦労 2'
-        type: string
-      hardships3:
-        required: false
-        description: '苦労 3'
-        type: string
-      hardships4:
-        required: false
-        description: '苦労 4'
-        type: string
-      hardships5:
-        required: false
-        description: '苦労 5'
-        type: string
+      material:
+        required: true
+        description: '教材'
+        type: choice
+        options:
+          - 'ELSA Speak'
+        default: 'ELSA Speak'
       minutes:
         required: true
         description: '分'
+        type: number
+      streaks:
+        required: true
+        description: '連続日数'
+        type: number
+      points:
+        required: true
+        description: '経験値'
         type: number
       activeness:
         required: true
@@ -65,13 +56,10 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
-      material:
-        required: true
-        description: '教材'
-        type: choice
-        options:
-          - 'ELSA Speak'
-        default: 'ELSA Speak'
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
 
 jobs:
   pronunciation:
@@ -80,6 +68,6 @@ jobs:
       search_query: "pronunciation 発音練習"
       template_name: "pronunciation"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
