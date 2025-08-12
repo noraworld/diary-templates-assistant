@@ -2,24 +2,11 @@
 | 項目 | 内容 |
 | --- | :---: |
 | 教材 | ${{ github.event.inputs.material }} |
-| 単語数 | ${{ github.event.inputs.words }} |
+| 単語数 | ${{ github.event.inputs.words }} 単語 |
 | 進捗率 | ${{ github.event.inputs.progress }} % |
+| 経験値 | ${{ github.event.inputs.points }} XP |
+| ストリーク | ${{ github.event.inputs.streaks }} 日 |
 | 積極性 | ${{ github.event.inputs.activeness }} |
-
-### 覚えるのに苦労した・すっかり忘れていた単語
-* ${{ github.event.inputs.hardships1 || '特になし' }}
-${{ if(github.event.inputs.hardships2) }}
-* ${{ github.event.inputs.hardships2 }}
-${{ endif }}
-${{ if(github.event.inputs.hardships3) }}
-* ${{ github.event.inputs.hardships3 }}
-${{ endif }}
-${{ if(github.event.inputs.hardships4) }}
-* ${{ github.event.inputs.hardships4 }}
-${{ endif }}
-${{ if(github.event.inputs.hardships5) }}
-* ${{ github.event.inputs.hardships5 }}
-${{ endif }}
 
 ### チェックリスト
 * [${{ github.event.inputs.practice }}] 発音練習

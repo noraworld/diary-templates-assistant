@@ -7,29 +7,37 @@ on:
         required: false
         description: '感想・その他'
         type: string
-      hardships1:
-        required: false
-        description: '苦労 1'
-        type: string
-      hardships2:
-        required: false
-        description: '苦労 2'
-        type: string
-      hardships3:
-        required: false
-        description: '苦労 3'
-        type: string
-      hardships4:
-        required: false
-        description: '苦労 4'
-        type: string
+      material:
+        required: true
+        description: '教材'
+        type: choice
+        options:
+          - ''
+          - 'Distinction I'
+          - 'Distinction II'
+          - 'Distinction III'
+          - 'Distinction IV'
+          - 'Distinction V'
+          - 'Distinction 2000'
       words:
         required: true
         description: '単語数'
         type: number
+      practice:
+        required: true
+        description: '発音練習'
+        type: boolean
       progress:
         required: true
         description: '進捗率'
+        type: number
+      points:
+        required: true
+        description: '経験値'
+        type: number
+      streaks:
+        required: true
+        description: '連続日数'
         type: number
       activeness:
         required: true
@@ -48,22 +56,6 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
-      material:
-        required: true
-        description: '教材'
-        type: choice
-        options:
-          - ''
-          - 'Distinction I'
-          - 'Distinction II'
-          - 'Distinction III'
-          - 'Distinction IV'
-          - 'Distinction V'
-          - 'Distinction 2000'
-      practice:
-        required: true
-        description: '発音練習'
-        type: boolean
 
 jobs:
   vocabulary:
@@ -72,6 +64,6 @@ jobs:
       search_query: "vocabulary 単語学習"
       template_name: "vocabulary"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
