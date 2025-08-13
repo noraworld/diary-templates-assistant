@@ -7,6 +7,12 @@ on:
         required: true
         description: '書籍名'
         type: string
+        default: ''
+      sample:
+        required: true
+        description: 'サンプル'
+        type: boolean
+        default: false
       percent:
         required: true
         description: '読了率'
@@ -23,6 +29,6 @@ jobs:
       search_query: "reading 読書"
       template_name: "reading"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
