@@ -8,9 +8,9 @@ on:
         description: '合計睡眠'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
       efficiency:
@@ -18,9 +18,9 @@ on:
         description: '効率'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
       restfulness:
@@ -28,9 +28,9 @@ on:
         description: '安眠度'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
       rem:
@@ -38,9 +38,9 @@ on:
         description: 'レム睡眠'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
       deep:
@@ -48,9 +48,9 @@ on:
         description: '深い睡眠'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
       latency:
@@ -58,9 +58,9 @@ on:
         description: '入眠潜時'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
       timing:
@@ -68,9 +68,9 @@ on:
         description: 'タイミング'
         type: choice
         options:
-          - ''
           - '😴 最適'
           - '🙂 良好'
+          - ''
           - '😐 適度'
           - '😵 注意'
 
@@ -81,6 +81,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-parameters"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.1"
+      version: "0.1.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
