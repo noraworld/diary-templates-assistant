@@ -1,4 +1,4 @@
-name: 'cαв: 🌿💤 睡眠記録 / パラメータ'
+name: 'cαг: 🌿💤 睡眠記録 / パラメータ'
 
 on:
   workflow_dispatch:
@@ -73,6 +73,15 @@ on:
           - ''
           - '😐 適度'
           - '😵 注意'
+      impression:
+        required: false
+        description: '所感'
+        type: string
+      merged:
+        required: true
+        description: '前日分とのマージ有無'
+        type: boolean
+        default: false
 
 jobs:
   sleep:
@@ -81,6 +90,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-parameters"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.2"
+      version: "0.1.3"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

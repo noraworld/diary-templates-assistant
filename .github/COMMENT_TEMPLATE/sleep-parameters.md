@@ -8,3 +8,6 @@
 | 深い睡眠 | ${{ github.event.inputs.deep }} |
 | 入眠潜時 | ${{ github.event.inputs.latency }} |
 | タイミング | ${{ github.event.inputs.timing }} |
+
+### 所感
+${{ github.event.inputs.impression || '特になし。' }}
