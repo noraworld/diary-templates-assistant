@@ -18,6 +18,22 @@ on:
         required: false
         description: '考察'
         type: string
+      stressed_hours1:
+        required: true
+        description: 'ストレス時間（時）'
+        type: number
+      stressed_minutes1:
+        required: true
+        description: 'ストレス時間（分）'
+        type: number
+      recovery_hours1:
+        required: true
+        description: '回復時間（時）'
+        type: number
+      recovery_minutes1:
+        required: true
+        description: '回復時間（分）'
+        type: number
       resilience2:
         required: true
         description: 'レジリエンス'
@@ -30,6 +46,14 @@ on:
           - 'やや不足'
           - '不足'
           - 'データなし'
+      tendency2:
+        required: true
+        description: '傾向'
+        type: choice
+        options:
+          - '上昇'
+          - ''
+          - '下降'
       reason2:
         required: false
         description: '考察'
@@ -46,6 +70,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-details"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
