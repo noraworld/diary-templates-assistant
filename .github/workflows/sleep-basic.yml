@@ -3,38 +3,43 @@ name: 'cαб: 🌿💤 睡眠記録 / 基本情報'
 on:
   workflow_dispatch:
     inputs:
-      sleep:
+      sleep_hours:
         required: true
-        description: '合計睡眠'
-        type: string
-      bed:
+        description: '合計睡眠（時）'
+        type: number
+      sleep_minutes:
         required: true
-        description: 'ベッド時間'
-        type: string
+        description: '合計睡眠（分）'
+        type: number
+      bed_hours:
+        required: true
+        description: 'ベッド時間（時）'
+        type: number
+      bed_minutes:
+        required: true
+        description: 'ベッド時間（分）'
+        type: number
       efficiency:
         required: true
-        description: '睡眠効率'
+        description: '睡眠効率 (%)'
         type: number
       bpm:
         required: true
-        description: '安静時心拍数'
+        description: '安静時心拍数 (bpm)'
         type: number
       score:
         required: true
         description: '睡眠スコア'
         type: number
-      quality:
+      impression:
         required: false
-        description: '質の考察'
+        description: '所感'
         type: string
-      night:
+      merged:
         required: true
-        description: '就寝時刻'
-        type: string
-      morning:
-        required: true
-        description: '起床時刻'
-        type: string
+        description: '前日分とのマージ有無'
+        type: boolean
+        default: false
 
 jobs:
   sleep:
@@ -43,6 +48,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-basic"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
