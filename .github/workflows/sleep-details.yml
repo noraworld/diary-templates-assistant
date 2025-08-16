@@ -52,6 +52,7 @@ on:
         type: choice
         options:
           - '上昇'
+          - '変化なし'
           - ''
           - '下降'
       reason2:
