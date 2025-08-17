@@ -15,6 +15,20 @@ cp -i tmp/github_event_path_sample.json tmp/github_event_path.json
 node --env-file=.env app/<FILENAME>.js
 ```
 
+### TypeScript
+```shell
+npx tsc app/<FILENAME>.ts --noEmit && npx tsx --env-file=.env app/<FILENAME>.ts
+```
+
+* 初回実行時や `npx` のキャッシュが切れたときには `tsx` のインストールを求められるのでそのままエンターキーを押してインストールを続行する
+* `npx tsx app/<FILENAME>.ts` だけだと型チェックをしないまま実行するので事前に `npx tsc app/<FILENAME>.ts --noEmit` を実行する
+    * `--noEmit` は型チェックのみを行うオプションで、これを外すと `app/<FILENAME>.js` を生成する
+    * ローカルでは JavaScript ファイルを生成する必要はないので、うっかりコミットしてしまわないように通常は `--noEmit` を付与して実行する
+* ファイルに変更がない状態で連続して `tsc` コマンド（`--noEmit` なし）を実行しても JavaScript ファイルは生成されない
+    * https://chatgpt.com/s/t_68a24a833804819198cd68195959649c
+    * https://chatgpt.com/s/t_68a24afe457881919f08405f6f90a9ee
+    * まあローカルでは JavaScript ファイルを生成する必要はないのだが
+
 ### Python
 ```shell
 pipenv install
