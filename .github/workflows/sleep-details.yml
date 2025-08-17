@@ -14,10 +14,6 @@ on:
           - '多い'
           - '体表温の上昇'
           - '概要なし'
-      reason1:
-        required: false
-        description: '考察'
-        type: string
       stressed_hours1:
         required: true
         description: 'ストレス時間（時）'
@@ -34,6 +30,10 @@ on:
         required: true
         description: '回復時間（分）'
         type: number
+      reason1:
+        required: false
+        description: '考察'
+        type: string
       resilience2:
         required: true
         description: 'レジリエンス'
