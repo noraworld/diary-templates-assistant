@@ -7,7 +7,7 @@ on:
         required: true
         description: '書籍名'
         type: string
-        default: '働かない勇気'
+        default: '自己肯定感の教科書'
       sample:
         required: true
         description: 'サンプル'
