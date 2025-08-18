@@ -14,6 +14,7 @@ on:
           - '多い'
           - '体表温の上昇'
           - '概要なし'
+        default: ''
       stressed_hours1:
         required: true
         description: 'ストレス時間（時）'
@@ -46,6 +47,7 @@ on:
           - 'やや不足'
           - '不足'
           - 'データなし'
+        default: ''
       tendency2:
         required: true
         description: '傾向'
@@ -55,6 +57,7 @@ on:
           - '変化なし'
           - ''
           - '下降'
+        default: ''
       reason2:
         required: false
         description: '考察'
