@@ -1,0 +1,16 @@
+// https://chatgpt.com/s/t_68a207be3ef08191aa756f8e74c30571 (in https://chatgpt.com/share/68a207ca-9710-8004-a8a0-9ece14105c1b)
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "app",
+    "strict": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "incremental": true
+  },
+  "include": ["app/**/*.ts"],
+  "exclude": ["node_modules"]
+}

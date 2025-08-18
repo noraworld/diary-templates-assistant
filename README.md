@@ -15,6 +15,11 @@ cp -i tmp/github_event_path_sample.json tmp/github_event_path.json
 node --env-file=.env app/<FILENAME>.js
 ```
 
+### TypeScript
+```shell
+npm run ts app/<FILENAME>.ts
+```
+
 ### Python
 ```shell
 pipenv install

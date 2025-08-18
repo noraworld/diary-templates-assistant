@@ -56,3 +56,8 @@ jobs:
       version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
+
+  timeline:
+    uses: noraworld/diary-templates-assistant/.github/workflows/timeline.yml@main
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

@@ -1,0 +1,39 @@
+# https://chatgpt.com/s/t_68a207be3ef08191aa756f8e74c30571 (in https://chatgpt.com/share/68a207ca-9710-8004-a8a0-9ece14105c1b)
+
+name: Build TypeScript
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: true
+        type: string
+      out-dir:
+        required: false
+        type: string
+        default: 'dist'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: npm
+
+      - name: Install dependencies (dev + prod)
+        run: npm ci
+
+      - name: Type-check & build
+        run: npx tsc --outDir "${{ inputs.out-dir }}"
+
+      - name: Upload compiled JS
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-js
+          path: ${{ inputs.out-dir }}/
+          if-no-files-found: error
+          retention-days: 7
