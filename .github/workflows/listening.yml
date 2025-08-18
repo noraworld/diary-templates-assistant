@@ -9,8 +9,8 @@ on:
         type: choice
         options:
           - ''
-          - '受動的なリスニング'
           - '自由なアクティブ・イマージョン'
+          - '受動的なリスニング'
       material:
         required: true
         description: '教材（リンク付き）'
