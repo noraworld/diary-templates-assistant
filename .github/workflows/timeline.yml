@@ -41,7 +41,19 @@ jobs:
           name: dist-js
           path: dist
 
+      - name: Get date from reserved diary
+        run: |
+          DATE=$(gh issue list --repo noraworld/reserved-diary --limit 1 --json title --jq '.[0].title')
+          echo "DATE=$DATE" >> $GITHUB_ENV
+
       - name: Record timeline
         run: node dist/timeline.js
         env:
+          COMMITTER_EMAIL: mail@noraworld.com
+          COMMITTER_NAME: Kosuke Aoki
+          DATE: ${{ env.DATE }}
+          FILEPATH: static/timeline.jsonl
           GH_TOKEN: ${{ secrets.token }}
+          MESSAGE_IF_FILE_EXISTS: Update <FILENAME>
+          MESSAGE_IF_FILE_NOT_EXISTS: Create <FILENAME>
+          REPO: noraworld/reserved-diary
