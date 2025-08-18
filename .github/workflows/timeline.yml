@@ -45,6 +45,8 @@ jobs:
         run: |
           DATE=$(gh issue list --repo noraworld/reserved-diary --limit 1 --json title --jq '.[0].title')
           echo "DATE=$DATE" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
 
       - name: Record timeline
         run: node dist/timeline.js
@@ -53,7 +55,7 @@ jobs:
           COMMITTER_NAME: Kosuke Aoki
           DATE: ${{ env.DATE }}
           FILEPATH: static/timeline.jsonl
-          GH_TOKEN: ${{ secrets.token }}
+          GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
           MESSAGE_IF_FILE_EXISTS: Update <FILENAME>
           MESSAGE_IF_FILE_NOT_EXISTS: Create <FILENAME>
           REPO: noraworld/reserved-diary
