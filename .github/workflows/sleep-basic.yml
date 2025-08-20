@@ -27,14 +27,14 @@ on:
         required: true
         description: '安静時心拍数 (bpm)'
         type: number
-      score:
-        required: true
-        description: '睡眠スコア'
-        type: number
       impression:
         required: false
         description: '所感'
         type: string
+      score:
+        required: true
+        description: '睡眠スコア'
+        type: number
       merged:
         required: true
         description: '前日分とのマージ有無'
@@ -48,6 +48,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-basic"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
