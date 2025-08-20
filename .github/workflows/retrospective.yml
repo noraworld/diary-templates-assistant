@@ -58,6 +58,7 @@ jobs:
       token: ${{ secrets.GH_TOKEN }}
 
   timeline:
+    if: ${{ inputs.timeline != '' }}
     uses: noraworld/diary-templates-assistant/.github/workflows/timeline.yml@main
     secrets:
       token: ${{ secrets.GH_TOKEN }}
