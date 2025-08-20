@@ -14,20 +14,17 @@ on:
         options:
           - ''
           - 'YouTube'
-          - 'ニコニコ動画'
-          - 'AbemaTV'
-          - 'Netflix'
-          - 'Amazon Prime'
-          - ''
           - 'dotinstall'
-          - 'D ラボ'
+          - 'ChatGPT'
+          - '技術記事'
           - 'パレオな男'
-          - ''
+          - 'D ラボ'
+          - 'Amazon Prime'
+          - 'Netflix'
+          - 'AbemaTV'
+          - 'ニコニコ動画'
           - 'ブログ'
           - 'ウェブ記事'
-          - '技術記事'
-          - 'ChatGPT'
-        default: 'YouTube'
       progress:
         required: false
         description: '進捗率（動画の例: "12:34"）'
@@ -44,6 +41,6 @@ jobs:
       search_query: "clippings クリッピング"
       template_name: "clippings"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.1"
+      version: "0.2.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
