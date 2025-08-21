@@ -2,7 +2,7 @@ import datetime
 import os
 import re
 
-DATE_DELIMITER_REGEXP = '[\/\-]'
+DATE_DELIMITER_REGEXP = '[/-]'
 
 class Util:
     def full_date(date_str):
