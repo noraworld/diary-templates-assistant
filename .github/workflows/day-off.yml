@@ -61,7 +61,7 @@ jobs:
 
       - name: Check if today is a day off or a holiday
         id: check
-        run: pipenv run python app/day-off.py check >> $GITHUB_OUTPUT
+        run: PYTHONPATH=. pipenv run python app/day-off.py check >> $GITHUB_OUTPUT
         shell: sh
         env:
           FAIL_IF_DAY_OFF: ${{ inputs.fail_if_day_off || github.event.inputs.fail_if_day_off }}
