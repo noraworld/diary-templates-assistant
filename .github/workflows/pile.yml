@@ -81,10 +81,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Check out repository
-        if: github.event.inputs.work == 'false'
-        uses: actions/checkout@v4
-
       - name: Get tomorrow
         if: github.event.inputs.work == 'false'
         run: |
@@ -104,19 +100,9 @@ jobs:
 
       - name: Update day-off list
         if: github.event.inputs.work == 'false'
-        run: |
-          pipenv run python app/day-off.py append ${{ env.TOMORROW }}
-
-          if [ "$(git status --porcelain)" != "" ]; then
-            git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-            git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
-            git add data/day-off.json
-            git commit -m "Make ${{ env.TOMORROW }} day off"
-            git push -u origin main
-          fi
-        shell: sh
-        env:
-          FAIL_IF_DAY_OFF: false
-          GH_OUTPUT_FORMAT: true
-          PYTHONPATH: .
-          TZ: Asia/Tokyo
+        uses: noraworld/diary-templates-assistant/.github/workflows/update-day-off.yml@main
+        with:
+          date: ${{ env.TOMORROW }}
+          fail_if_day_off: false
+          gh_output_format: true
+          timezone: Asia/Tokyo
