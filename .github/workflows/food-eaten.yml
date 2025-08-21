@@ -15,7 +15,6 @@ on:
         required: true
         description: '分量'
         type: number
-        default: 1
       unit:
         required: true
         description: '単位'
@@ -36,6 +35,6 @@ jobs:
       search_query: "food 食事記録"
       template_name: "food-eaten"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.1"
+      version: "0.2.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
