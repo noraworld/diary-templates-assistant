@@ -25,8 +25,12 @@ on:
 jobs:
   pile:
     runs-on: ubuntu-latest
+    outputs:
+      template_repo: ${{ steps.set.outputs.template_repo }}
+      search_query: ${{ steps.set.outputs.search_query }}
     steps:
       - name: Set
+        id: set
         run: |
           case "${{ github.event.inputs.target }}" in
             "プライベート")
@@ -35,6 +39,9 @@ jobs:
               echo "TEMPLATE_FILE_PATH=.github/ISSUE_TEMPLATE/pile.md" >> $GITHUB_ENV
               echo "TASK_REPO=noraworld/to-do" >> $GITHUB_ENV
               echo "SEARCH_QUERY=pile 翌日やること整理" >> $GITHUB_ENV
+
+              echo "template_repo=noraworld/diary-templates" >> $GITHUB_OUTPUT
+              echo "search_query=pile 翌日やること整理" >> $GITHUB_OUTPUT
               ;;
             "仕事")
               echo "TEMPLATE_REPO=noraworld/daily-report-templates" >> $GITHUB_ENV
@@ -42,6 +49,9 @@ jobs:
               echo "TEMPLATE_FILE_PATH=.github/ISSUE_TEMPLATE/pile.md" >> $GITHUB_ENV
               echo "TASK_REPO=noraworld/work-scraps" >> $GITHUB_ENV
               echo "SEARCH_QUERY=翌営業日にやること整理" >> $GITHUB_ENV
+
+              echo "template_repo=noraworld/daily-report-templates" >> $GITHUB_OUTPUT
+              echo "search_query=翌営業日にやること整理" >> $GITHUB_OUTPUT
               ;;
             *)
               echo "ERROR: invalid target" >&2
@@ -81,32 +91,36 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-  day-off-update:
+  get-tomorrow:
     needs: pile
+    if: github.event.inputs.work == 'false'
     runs-on: ubuntu-latest
+    outputs:
+      tomorrow: ${{ steps.tomorrow.outputs.tomorrow }}
     steps:
       - name: Get tomorrow
-        if: github.event.inputs.work == 'false'
+        id: tomorrow
         run: |
           today=$(gh issue list \
-            --repo ${{ env.TEMPLATE_REPO }} \
-            --search "${{ env.SEARCH_QUERY }}" \
+            --repo ${{ needs.pile.outputs.template_repo }} \
+            --search "${{ needs.pile.outputs.search_query }}" \
             --limit 1 \
             --json title \
             --jq '.[].title' |
             cut -d '_' -f2)
           tomorrow=$(date -d "$today +1 day" +%F)
 
-          echo "TOMORROW=$tomorrow" >> $GITHUB_ENV
+          echo "tomorrow=$tomorrow" >> $GITHUB_OUTPUT
         shell: sh
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Update day-off list
-        if: github.event.inputs.work == 'false'
-        uses: noraworld/diary-templates-assistant/.github/workflows/update-day-off.yml@main
-        with:
-          date: ${{ env.TOMORROW }}
-          fail_if_day_off: false
-          gh_output_format: true
-          timezone: Asia/Tokyo
+  day-off-update:
+    needs: get-tomorrow
+    if: github.event.inputs.work == 'false'
+    uses: noraworld/diary-templates-assistant/.github/workflows/update-day-off.yml@main
+    with:
+      date: ${{ needs.get-tomorrow.outputs.tomorrow }}
+      fail_if_day_off: false
+      gh_output_format: true
+      timezone: Asia/Tokyo
