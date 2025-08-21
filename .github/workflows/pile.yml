@@ -23,7 +23,7 @@ on:
         type: string
 
 jobs:
-  build:
+  pile:
     runs-on: ubuntu-latest
     steps:
       - name: Set
@@ -81,6 +81,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+  day-off-update:
+    needs: pile
+    runs-on: ubuntu-latest
+    steps:
       - name: Get tomorrow
         if: github.event.inputs.work == 'false'
         run: |
