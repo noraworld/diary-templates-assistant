@@ -27,7 +27,7 @@ asdf install python $(cat .python-version)
 pip install pipenv
 diff <(python --version) <(pipenv run python --version 2>/dev/null) || pipenv --rm
 pipenv install
-PYTHONPATH=. pipenv run python app/<FILENAME>.py
+pipenv run python app/<FILENAME>.py
 ```
 
 ## 各テンプレートのワークフローにおけるバージョンルールについて
