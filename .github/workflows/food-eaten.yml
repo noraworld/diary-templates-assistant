@@ -27,6 +27,10 @@ on:
           - '杯'
           - '袋'
           - '箱'
+      impression:
+        required: false
+        description: '感想'
+        type: string
 
 jobs:
   food:
@@ -35,6 +39,6 @@ jobs:
       search_query: "food 食事記録"
       template_name: "food-eaten"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.2"
+      version: "0.2.3"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
