@@ -34,7 +34,7 @@ if __name__ == '__main__':
             data['day_off'].append(datetime.date.today().strftime("%Y-%m-%d"))
             with open(DAY_OFF_JSON, 'w') as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
-                print('', file=f)
+                print('', file=f) # insert a trailing newline
         case 'check':
             if Util.cast_bool(os.getenv('GH_OUTPUT_FORMAT')) is True:
                 print('day_off=false')
