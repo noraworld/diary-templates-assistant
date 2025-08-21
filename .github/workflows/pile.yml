@@ -102,26 +102,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Check if weekly off days
+      - name: Update day-off list
         if: github.event.inputs.work == 'false'
         run: |
-          if [ "$(jq '.weekly' data/day-off.json | grep -c $(date -d ${{ env.TOMORROW }} +%A))" -gt 0 ]; then
-            weekly_off_day="true"
-          else
-            weekly_off_day="false"
-          fi
+          pipenv run python app/day-off.py append ${{ env.TOMORROW }}
 
-          echo "WEEKLY_OFF_DAY=$weekly_off_day" >> $GITHUB_ENV
-        shell: sh
-
-      - name: Update day-off list
-        if: github.event.inputs.work == 'false' && env.WEEKLY_OFF_DAY == 'false'
-        run: |
-          tmpfile=$(mktemp)
-          jq '.day_off |= (. + ["${{ env.TOMORROW }}"] | unique)' data/day-off.json > "$tmpfile"
-
-          if [ "$(diff data/day-off.json "$tmpfile")" != "" ]; then
-            mv "$tmpfile" data/day-off.json
+          if [ "$(git status --porcelain)" != "" ]; then
             git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
             git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
             git add data/day-off.json
@@ -129,3 +115,8 @@ jobs:
             git push -u origin main
           fi
         shell: sh
+        env:
+          FAIL_IF_DAY_OFF: false
+          GH_OUTPUT_FORMAT: true
+          PYTHONPATH: .
+          TZ: Asia/Tokyo

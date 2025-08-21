@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0e6a46071e6312864077eabae796ae0fa12c4d01363c1193c8bda360c73f81ca"
+            "sha256": "6b157b8753cc6d012aab90b943a2024830b26da0e4cee4fb5d4e7d93af206036"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.9"
+            "python_version": "3.13.7"
         },
         "sources": [
             {
@@ -18,11 +18,11 @@
     "default": {
         "jpholiday": {
             "hashes": [
-                "sha256:117895652111138d21353f5686a6eb68c36ccf69ffef4ad9246f7ba801f54cfc",
-                "sha256:2f4bea7380a6cd6dc263e1fec37ea9699e7b7c7e0f6e4a44fe8910d0e1b130ad"
+                "sha256:40ae95057f86198c0949c2b71c04b7c5ba5624af0cbed4e8325bf74d02da2ec5",
+                "sha256:a8070e9558427a208eaed36c57f56560023356f5529f1a792bfd85873721f217"
             ],
             "index": "pypi",
-            "version": "==0.1.10"
+            "version": "==1.0.2"
         }
     },
     "develop": {}
