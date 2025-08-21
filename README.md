@@ -22,6 +22,10 @@ npm run ts app/<FILENAME>.ts
 
 ### Python
 ```shell
+diff .python-version <(grep python_version Pipfile | awk '{ print $3 }' | tr -d "'") || echo Align versions!
+asdf install python $(cat .python-version)
+pip install pipenv
+diff <(python --version) <(pipenv run python --version 2>/dev/null) || pipenv --rm
 pipenv install
 pipenv run python app/<FILENAME>.py
 ```
