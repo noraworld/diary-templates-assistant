@@ -9,7 +9,6 @@ from lib.day_off.option import Option
 from lib.day_off.util import Util
 
 DAY_OFF_JSON = 'data/day-off.json'
-WEEKLY_OFF_DAYS = ['Saturday', 'Sunday']
 
 if __name__ == '__main__':
     args = Option.parse()
@@ -25,7 +24,7 @@ if __name__ == '__main__':
     if jpholiday.is_holiday(Util.full_date(args.date)) is True:
         Util.handle_error(HolidayError)
 
-    if (Util.full_date(args.date).strftime('%A') in WEEKLY_OFF_DAYS) is True:
+    if (Util.full_date(args.date).strftime('%A') in data['weekly']) is True:
         Util.handle_error(WeeklyOffError)
 
     match args.operation:
