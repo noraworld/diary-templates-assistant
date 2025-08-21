@@ -1,5 +1,6 @@
 # cf. https://github.com/noraworld/attendance
 
+from argparse import ArgumentParser
 import datetime
 import jpholiday
 import json
@@ -62,6 +63,21 @@ class Util:
         else:
             return False
 
+class Option:
+    def parse():
+        parser = ArgumentParser(description='')
+
+        operation_subparsers = parser.add_subparsers(dest='operation')
+        operation_subparsers.required = True
+
+        operation_parsers = []
+        operation_parsers.append(operation_subparsers.add_parser('append', help='Append a specified day to a day off JSON file'))
+        operation_parsers.append(operation_subparsers.add_parser('check', help='Check if a specified day is a day off'))
+
+        args = parser.parse_args()
+
+        return args
+
 class HolidayError(Exception):
     def __str__(self):
         return 'today is a holiday!'
@@ -75,10 +91,11 @@ class WeeklyOffError(Exception):
         return 'today is a weekly off!'
 
 if __name__ == '__main__':
+    args = Option.parse()
+
     if os.path.isfile(DAY_OFF_JSON):
-        file = open(DAY_OFF_JSON)
-        data = json.load(file)
-        file.close()
+        with open(DAY_OFF_JSON, 'r') as f:
+            data = json.load(f)
 
         for day_off in data['day_off']:
             if datetime.date.today() == Util.full_date(day_off):
@@ -90,5 +107,12 @@ if __name__ == '__main__':
     if (datetime.date.today().strftime('%A') in WEEKLY_OFF_DAYS) is True:
         Util.handle_error(WeeklyOffError)
 
-    if Util.cast_bool(os.getenv('GH_OUTPUT_FORMAT')) is True:
-        print('day_off=false')
+    match args.operation:
+        case 'append':
+            data['day_off'].append(datetime.date.today().strftime("%Y-%m-%d"))
+            with open(DAY_OFF_JSON, 'w') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+                print('', file=f)
+        case 'check':
+            if Util.cast_bool(os.getenv('GH_OUTPUT_FORMAT')) is True:
+                print('day_off=false')
