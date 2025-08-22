@@ -1,5 +1,8 @@
 # https://chatgpt.com/s/t_68a207be3ef08191aa756f8e74c30571 (in https://chatgpt.com/share/68a207ca-9710-8004-a8a0-9ece14105c1b)
 
+# TODO: Move to general purpose GitHub Actions language setup repository in the future?
+#       https://github.com/noraworld/to-do/issues/1806
+
 name: Build TypeScript
 
 on:
