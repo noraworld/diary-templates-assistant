@@ -35,15 +35,10 @@ jobs:
         run: npm install
         shell: sh
 
-      - name: Comment as markdown
-        run: node app/comment_from_dispatch.js
-        shell: sh
-        env:
-          GH_TOKEN: ${{ secrets.token }}
-          SEARCH_QUERY: ${{ inputs.search_query }}
-          TEMPLATE_NAME: ${{ inputs.template_name }}
-          TEMPLATE_REPO: ${{ inputs.template_repo }}
-
+      # This should be performed before 'Comment as markdown'
+      #   https://github.com/noraworld/to-do/issues/1807
+      #   https://github.com/noraworld/diary-templates-assistant/actions/runs/16912208720/job/47916650024
+      #   https://github.com/noraworld/diary-templates-assistant/actions/runs/17118740677/job/48554795096
       - name: Comment as JSON Lines
         run: node app/jsonl.js
         shell: sh
@@ -55,3 +50,12 @@ jobs:
           TEMPLATE_NAME: ${{ inputs.template_name }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}
           VERSION: ${{ inputs.version }}
+
+      - name: Comment as markdown
+        run: node app/comment_from_dispatch.js
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.token }}
+          SEARCH_QUERY: ${{ inputs.search_query }}
+          TEMPLATE_NAME: ${{ inputs.template_name }}
+          TEMPLATE_REPO: ${{ inputs.template_repo }}
