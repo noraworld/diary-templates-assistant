@@ -25,13 +25,13 @@ on:
           - 'ニコニコ動画'
           - 'ブログ'
           - 'ウェブ記事'
-      progress:
-        required: false
-        description: '進捗率（動画の例: "12:34"）'
-        type: string
       impression:
         required: false
         description: '感想'
+        type: string
+      progress:
+        required: false
+        description: '進捗率（動画の例: "12:34"）'
         type: string
 
 jobs:
