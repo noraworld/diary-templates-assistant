@@ -3,14 +3,6 @@ name: 'aβа: 🚀💪 ワークアウト'
 on:
   workflow_dispatch:
     inputs:
-      impression:
-        required: false
-        description: '所感・その他'
-        type: string
-      streaks:
-        required: true
-        description: '連続日数'
-        type: number
       minutes:
         required: true
         description: '分'
@@ -23,14 +15,10 @@ on:
         required: true
         description: '消費カロリー'
         type: number
-      trainer:
+      streaks:
         required: true
-        description: 'トレーナー'
-        type: choice
-        options:
-          - 'Streaks Workout'
-          - 'Home Workout'
-        default: 'Home Workout'
+        description: '連続日数'
+        type: number
       strength:
         required: true
         description: '所感強度'
@@ -65,6 +53,18 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
+      impression:
+        required: false
+        description: '所感・その他'
+        type: string
+      trainer:
+        required: true
+        description: 'トレーナー'
+        type: choice
+        options:
+          - 'Streaks Workout'
+          - 'Home Workout'
+        default: 'Home Workout'
 
 jobs:
   workout:
