@@ -3,10 +3,6 @@ name: 'cεб: 🌿💩 排泄記録 / 排便'
 on:
   workflow_dispatch:
     inputs:
-      impression:
-        required: false
-        description: 'メモ'
-        type: string
       shape:
         required: true
         description: 'かたち'
@@ -77,6 +73,10 @@ on:
           - '20'
           - '25'
           - '30'
+      impression:
+        required: false
+        description: 'メモ'
+        type: string
       float:
         required: true
         description: 'ぷかぷか'
