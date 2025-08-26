@@ -1,0 +1,224 @@
+name: Issue Recorder
+
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  build:
+    if: github.event.label.name == '.system:done'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if title is valid
+        run: |
+          if [ "$(
+            echo "${{ github.event.issue.title }}" |
+            grep -cE '^([0-9]{4}-[0-9]{2}-[0-9]{2})_([A-Za-z0-9]+(-[A-Za-z0-9]+)*)_([^_]+)$'
+          )" -eq 0 ]; then
+            echo "ERROR: title format is invalid" >&2
+            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label ".system:done"
+            exit 1
+          fi
+
+      # "2025-06-16_start-blog_ブログはじめました" => "2025"
+      - name: Get year
+        run: |
+          YEAR=$(awk -F '[-_]' '{print $1}' <<< "${{ github.event.issue.title }}")
+          if [ "$YEAR" = "" ] || [ "$(echo "$YEAR" | grep -cE '^[0-9]{4}$')" -eq 0 ]; then
+            echo "ERROR: YEAR is empty or invalid" >&2
+            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label ".system:done"
+            exit 1
+          else
+            echo "YEAR=$YEAR" >> $GITHUB_ENV
+          fi
+      # "2025-06-16_start-blog_ブログはじめました" => "06"
+      - name: Get month
+        run: |
+          MONTH=$(awk -F '[-_]' '{print $2}' <<< "${{ github.event.issue.title }}")
+          if [ "$MONTH" = "" ] || [ "$(echo "$MONTH" | grep -cE '^[0-9]{2}$')" -eq 0 ]; then
+            echo "ERROR: MONTH is empty or invalid" >&2
+            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label ".system:done"
+            exit 1
+          else
+            echo "MONTH=$MONTH" >> $GITHUB_ENV
+          fi
+      # "2025-06-16_start-blog_ブログはじめました" => "16"
+      - name: Get day
+        run: |
+          DAY=$(awk -F '[-_]' '{print $3}' <<< "${{ github.event.issue.title }}")
+          if [ "$DAY" = "" ] || [ "$(echo "$DAY" | grep -cE '^[0-9]{2}$')" -eq 0 ]; then
+            echo "ERROR: DAY is empty or invalid" >&2
+            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label ".system:done"
+            exit 1
+          else
+            echo "DAY=$DAY" >> $GITHUB_ENV
+          fi
+      # "2025-06-16_start-blog_ブログはじめました" => "start-blog"
+      - name: Get slug
+        run: |
+          SLUG=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")
+          if [ "$SLUG" = "" ] || [ "$(echo "$SLUG" | grep -cE '^[A-Za-z0-9]+(-[A-Za-z0-9]+)*$')" -eq 0 ]; then
+            echo "ERROR: SLUG is empty or invalid" >&2
+            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label ".system:done"
+            exit 1
+          else
+            echo "SLUG=$SLUG" >> $GITHUB_ENV
+          fi
+      # "2025-06-16_start-blog_ブログはじめました" => "ブログはじめました"
+      - name: Get title
+        run: |
+          TITLE=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")
+          if [ "$TITLE" = "" ] || [ "$(echo "$TITLE" | grep -cE '^[^_]+$')" -eq 0 ]; then
+            echo "ERROR: TITLE is empty or invalid" >&2
+            gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label ".system:done"
+            exit 1
+          else
+            echo "TITLE=$TITLE" >> $GITHUB_ENV
+          fi
+
+      - name: Check if initial release or update
+        run: |
+          if [ "$(
+            gh issue view --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --json state --jq '.state' |
+            tr 'A-Z' 'a-z'
+          )" = "closed" ]; then
+            echo "PUBLISHED=true" >> $GITHUB_ENV
+          else
+            echo "PUBLISHED=false" >> $GITHUB_ENV
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Decide whether to save to diary issue
+        run: |
+          # https://zenn.dev/link/comments/ac4003f2728de7
+          # https://stackoverflow.com/questions/59588605/how-to-check-for-a-label-in-a-github-action-condition#answer-59588725
+          if [ "${{ env.PUBLISHED }}" = "true" ]; then
+            echo "MODE=file" >> $GITHUB_ENV
+          else
+            echo "MODE=file, issue" >> $GITHUB_ENV
+          fi
+
+      - name: Delete system labels
+        run: |
+          # These labels should be removed because the label information is used as the tag information as well.
+          SYSTEM_LABELS=".system:done"
+          gh issue edit --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} --remove-label "$SYSTEM_LABELS"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      # The list of the issue labels needs to be retrieved here
+      # because the value of '${{ toJson(github.event.issue.labels.*.name) }}' is fixed once a workflow is performed.
+      #
+      # 'jq --indent 2 .' is needed to output the result with multiple lines.
+      #
+      #   without 'jq --indent 2 .':
+      #
+      #     tags: ["test2","test3"]
+      #
+      #   https://github.com/noraworld/blog/blob/ac46249ee329e3690451b73a3ed5930ef291ba3f/_posts/2025/06/2025-06-16-writing-blog-from-issue.md?plain=1#L10
+      #
+      #   with 'jq --indent 2 .':
+      #
+      #     tags: [
+      #       "test2",
+      #       "test3"
+      #     ]
+      #
+      #   https://github.com/noraworld/blog/blob/f1f8e108fe5b8887cb49297a1bbfe2110668c483/_posts/2025/06/2025-06-16-writing-blog-from-issue.md?plain=1#L10-L13
+      #
+      - name: Declare issue labels for blog
+        run: |
+          {
+            echo 'ISSUE_LABELS<<EOF'
+            gh issue view \
+              --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }} \
+              --json labels --jq '[.labels[].name]' |
+              jq --indent 2 .
+            echo EOF
+          } >> "$GITHUB_ENV"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Issue Recorder
+        uses: noraworld/issue-recorder@main
+        with:
+          mode: ${{ env.MODE }}
+          filepath: _posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.YEAR }}-${{ env.MONTH }}-${{ env.DAY }}-${{ env.SLUG }}.md
+          committer_name: Kosuke Aoki
+          committer_email: mail@noraworld.com
+          overwrite_when_modified: true
+          # notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
+          target_file_repo: noraworld/blog
+          target_issue_repo: noraworld/reserved-diary
+          target_issue_number: latest
+          partial_content_target_issue_repo: noraworld/private-diary
+          partial_content_target_issue_number: latest
+          partial_content_start_string: "(<span dir=\"auto\">{private}|<div dir=\"auto\"><p>{private})"
+          partial_content_end_string: "({/private}</span>|{/private}</div>)"
+          with_repo_assets: ${{ env.MODE }}
+          assets_repo: noraworld/box-ivysaur
+          assets_directory: ${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DAY }}
+          with_assets_compression: true
+          compression_threshold: 1048576
+          resize_width: 1920
+          with_compatible_format: true
+          title_prefix_for_issue: 🪶
+          with_date: ""
+          timezone: Asia/Tokyo
+          time_format: "yyyy-MM-dd HH:mm:ss ZZ"
+          with_header: "---\r\nlayout: post\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nauthor: <ASSIGNEES>\r\ndescription: <TITLE>\r\ndate: <CREATED_AT>\r\ntags: ${{ env.ISSUE_LABELS }}\r\npublished: true\r\n---"
+          with_title: "issue"
+          custom_title: ${{ env.TITLE }}
+          with_quote: ""
+          with_hr: ""
+          personal_access_token: GH_TOKEN
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Share blog link with diary issue
+        run: |
+          DIARY_ISSUE_NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
+
+          ##### DO NOT DELETE THE NEWLINE!! #####
+          DIARY_NOTIFY_BODY="ブログ書いた。
+
+          [${{ env.TITLE }}](https://noraworld.github.io/blog/${{ env.SLUG }})"
+          ##### DO NOT DELETE THE NEWLINE!! #####
+
+          if [ "${{ env.PUBLISHED }}" = "false" ]; then
+            gh issue comment --repo "noraworld/reserved-diary" $DIARY_ISSUE_NUMBER --body "$DIARY_NOTIFY_BODY"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      # https://github.com/noraworld/to-do/blob/04bd6f5b9823bd52b7e273f0d82fea189910ceff/.github/workflows/issue-recorder.yml#L99-L128
+      - name: Append blog issue to diary checklist
+        run: |
+          NUMBER=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $1 }')
+          body=$(gh issue view --repo "noraworld/reserved-diary" --json body --jq .body "$NUMBER")
+          processed_body=$(echo "$body" | sed -E 's/\* 特になし//g')
+          TITLE="ブログ執筆: $(echo "${{ github.event.issue.title }}" | cut -d '_' -f3)"
+
+          ESCAPED_TITLE=$( echo "$TITLE" | sed 's/[^^]/[&]/g; s/\^/\\^/g; s/\[\[/\[\\[/g; s/\]\]/\]\\]/g' )
+          ESCAPED_URL=$(   echo "$URL"   | sed 's/[^^]/[&]/g; s/\^/\\^/g' )
+
+          # DO NOT INDENT INSIDE THE CONDITION!
+          if [ "$(echo "$processed_body" | grep -cE "\[$ESCAPED_TITLE\]\($ESCAPED_URL\)")" -eq 0 ]; then
+          gh issue edit --repo "noraworld/reserved-diary" --body "$processed_body
+          * [x] [$TITLE]($URL)
+          " "$NUMBER"
+          else
+          NEW_BODY=$( echo "$processed_body" | sed -E "s/\* \[ \] (\[$ESCAPED_TITLE\]\($ESCAPED_URL\))/\* \[x\] \1/g" )
+          gh issue edit --repo "noraworld/reserved-diary" --body "$NEW_BODY" "$NUMBER"
+          fi
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          URL: ${{ github.event.issue.html_url }}
+
+      - name: Close issue
+        run: gh issue close --repo "$GITHUB_REPOSITORY" ${{ github.event.issue.number }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
