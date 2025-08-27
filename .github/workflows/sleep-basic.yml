@@ -3,6 +3,10 @@ name: 'cαб: 🌿💤 睡眠記録 / 基本情報'
 on:
   workflow_dispatch:
     inputs:
+      impression:
+        required: false
+        description: '所感'
+        type: string
       sleep_hours:
         required: true
         description: '合計睡眠（時）'
@@ -27,10 +31,6 @@ on:
         required: true
         description: '安静時心拍数 (bpm)'
         type: number
-      impression:
-        required: false
-        description: '所感'
-        type: string
       score:
         required: true
         description: '睡眠スコア'
