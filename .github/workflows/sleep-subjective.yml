@@ -11,6 +11,10 @@ on:
         required: true
         description: '主観起床時刻'
         type: string
+      window:
+        required: false
+        description: '就寝寝起考察'
+        type: string
       mood:
         required: true
         description: '寝起気分'
@@ -28,10 +32,6 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
-      window:
-        required: false
-        description: '就寝寝起考察'
-        type: string
       emotion:
         required: false
         description: '気分考察'
