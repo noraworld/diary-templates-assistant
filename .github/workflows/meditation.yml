@@ -3,6 +3,14 @@ name: 'aαа: 🚀🌱 瞑想'
 on:
   workflow_dispatch:
     inputs:
+      minutes:
+        required: true
+        description: '分'
+        type: number
+      seconds:
+        required: true
+        description: '秒'
+        type: number
       thoughts:
         required: false
         description: '気がそれたとき'
@@ -19,14 +27,6 @@ on:
         required: false
         description: '所感'
         type: string
-      minutes:
-        required: true
-        description: '分'
-        type: number
-      seconds:
-        required: true
-        description: '秒'
-        type: number
       focused:
         required: true
         description: '集中度'
