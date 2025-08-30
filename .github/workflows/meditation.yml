@@ -86,6 +86,7 @@ on:
           - ''
           - '呼吸瞑想'
           - '慈悲の瞑想（カスタム版）'
+        default: '呼吸瞑想'
 
 jobs:
   meditation:
