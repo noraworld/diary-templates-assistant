@@ -50,7 +50,7 @@ on:
         default: Kosuke Aoki
       date:
         required: false
-        description: '日付'
+        description: '日付（YYYY-MM-DD）'
         type: string
         default: ''
       filepath:
