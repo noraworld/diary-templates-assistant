@@ -11,6 +11,7 @@ on:
           - ''
           - '自由なアクティブ・イマージョン'
           - '受動的なリスニング'
+        default: '自由なアクティブ・イマージョン'
       material:
         required: true
         description: '教材（リンク付き）'
