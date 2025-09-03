@@ -7,6 +7,36 @@ on:
         required: true
         description: '痛い部位'
         type: string
+      characteristic:
+        required: true
+        description: '特徴'
+        type: choice
+        # https://chatgpt.com/share/68b7a198-7f58-8004-b0fb-7c99681fed83
+        options:
+          - ''
+          - 🔪
+          - 'チクチク'
+          - 'チクリ'
+          - 'キリキリ'
+          - 💓
+          - 'ズキズキ'
+          - 'ズキン'
+          - 'ガンガン'
+          - 🔥
+          - 'ヒリヒリ'
+          - 'ジリジリ'
+          - 🪨
+          - 'シクシク'
+          - 'ジーン'
+          - 'ズーン'
+          - ⚡
+          - 'ビリビリ'
+          - 'ピリピリ'
+          - 'ジンジン'
+          - 🌀
+          - 'ギューッ'
+          - 'キューッ'
+          - 'ゴロゴロ'
       degree:
         required: true
         description: '痛レベル'
@@ -48,6 +78,6 @@ jobs:
       search_query: "condition 体調記録"
       template_name: "pain"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
