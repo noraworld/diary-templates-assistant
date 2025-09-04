@@ -27,6 +27,7 @@ on:
           - '杯'
           - '袋'
           - '箱'
+          - 'g'
       impression:
         required: false
         description: '感想'
