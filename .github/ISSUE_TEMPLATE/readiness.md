@@ -15,6 +15,10 @@ assignees: noraworld
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/readiness/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
+
+
+
+
 <!------------------------------------------------------------------------------------------------------
   ⭐️ 作成ルール ⭐️
     * 各項目の文言は太字にする
@@ -29,6 +33,8 @@ assignees: noraworld
 * [ ] **「まあいっか」、「仕方ない」、「そういうときもある」、「人生そんなもん」を口癖にしよう！**
 * [ ] **「べき」思考にとらわれないで！**
 * [ ] **物事を完璧にしないで！**
+
+
 
 
 
