@@ -194,7 +194,7 @@ assignees: noraworld
 
 
 
-| <h3>考えすぎず気楽に生きていこっ 😉</h3> |
+| <h3>考えすぎず気楽に生きてこっ 😉</h3> |
 | --- |
 | <a href="https://github.com/noraworld/diary-templates-assistant/actions/workflows/readiness.yml"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="100%"></a> |
 
