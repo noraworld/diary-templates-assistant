@@ -1,6 +1,7 @@
 const { basename } = require("node:path");
 const fs = require('fs');
 const { Octokit } = require('@octokit/rest');
+const os = require('os');
 
 interface ContentObject {
   existingContent: string | undefined;
@@ -56,8 +57,9 @@ class GitHub {
   }
 
   protected async buildPushObject(): Promise<PushObject> {
+    const trailingNewlineRegExp = new RegExp(/(\r\n|\r|\n)?$/);
     const { existingContent, message, sha }: ContentObject = await this.#getContent();
-    const content: string = (existingContent ? existingContent.replace(/\n?$/, '\n') : '') + this.content + '\n';
+    const content: string = (existingContent ? existingContent.replace(trailingNewlineRegExp, os.EOL) : '') + this.content + os.EOL;
     const encodedContent: string = this.#convertToBase64(content);
     const pushObject: PushObject = {
       owner: this.owner,
