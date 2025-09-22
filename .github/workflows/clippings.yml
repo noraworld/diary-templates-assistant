@@ -3,9 +3,9 @@ name: 'bζа: 🎓📎 クリッピング'
 on:
   workflow_dispatch:
     inputs:
-      site:
+      site1:
         required: true
-        description: 'サイト（リンク付き）'
+        description: 'サイト 1（リンク付き）'
         type: string
       category:
         required: true
@@ -33,6 +33,30 @@ on:
         required: false
         description: '進捗率（動画の例: "12:34"）'
         type: string
+      site2:
+        required: false
+        description: 'サイト 2（リンク付き）'
+        type: string
+      site3:
+        required: false
+        description: 'サイト 3（リンク付き）'
+        type: string
+      site4:
+        required: false
+        description: 'サイト 4（リンク付き）'
+        type: string
+      site5:
+        required: false
+        description: 'サイト 5（リンク付き）'
+        type: string
+      site6:
+        required: false
+        description: 'サイト 6（リンク付き）'
+        type: string
+      site7:
+        required: false
+        description: 'サイト 7（リンク付き）'
+        type: string
 
 jobs:
   clippings:
@@ -41,6 +65,6 @@ jobs:
       search_query: "clippings クリッピング"
       template_name: "clippings"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.2"
+      version: "0.2.3"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
