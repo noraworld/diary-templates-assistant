@@ -28,11 +28,11 @@ assignees: noraworld
 ----------------------------------------------------------------------------------------------------------------------->
 
 ### 心構え
-* [ ] **楽しむこと優先だよ！**
-* [ ] **「まあいっか」、「仕方ない」、「そういうときもある」、「人生そんなもん」を口癖にしよう！**
-* [ ] **「べき」思考にとらわれないで！**
-* [ ] **物事を完璧にしないで！**
-* [ ] **未来を考えすぎず『今』に全集中しよう！**
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **楽しむこと優先だよ！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「まあいっか」、「仕方ない」、「そういうときもある」、「人生そんなもん」を口癖にしよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/vulpix.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「べき」思考にとらわれないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事を完璧にしないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **未来を考えすぎず『今』に全集中しよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
 
 <!----------------------------------------------------------------------------------------------------------------------
   このファイルを変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
