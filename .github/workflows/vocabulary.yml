@@ -18,6 +18,7 @@ on:
           - 'Distinction III'
           - 'Distinction IV'
           - 'Distinction V'
+          - 'Distinction VI'
           - 'Distinction 2000'
         default: 'Distinction V'
       words:
