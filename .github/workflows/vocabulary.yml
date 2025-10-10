@@ -19,6 +19,7 @@ on:
           - 'Distinction IV'
           - 'Distinction V'
           - 'Distinction 2000'
+        default: 'Distinction V'
       words:
         required: true
         description: '単語数'
