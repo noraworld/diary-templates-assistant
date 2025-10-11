@@ -15,6 +15,9 @@ assignees: noraworld
 
 ### テンプレート
 
+<details>
+<summary>スケジューリング</summary>
+
 ```
 ### 基本情報
 | 項目 | 内容 |
@@ -24,6 +27,9 @@ assignees: noraworld
 ### 悩み事・心配事・モヤモヤすること・イライラすること等
 
 ```
+</details>
+
+
 
 ```
 ### 基本情報
