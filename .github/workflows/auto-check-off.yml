@@ -26,6 +26,12 @@ jobs:
       - name: Get a title
         run: echo "TITLE=$(cut -d '_' -f4 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
 
+      # to avoid situations where the checklist is not reflected because of a simultaneous update
+      - name: Sleep
+        if: env.TITLE == 'データベース'
+        run: sleep 30
+        shell: sh
+
       - name: Check if off
         run: |
           NUMBER=$(
