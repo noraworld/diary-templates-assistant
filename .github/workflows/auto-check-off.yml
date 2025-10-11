@@ -32,7 +32,7 @@ jobs:
         run: sleep 30
         shell: sh
 
-      - name: Check if off
+      - name: Check it off
         run: |
           NUMBER=$(
             gh issue list         \
