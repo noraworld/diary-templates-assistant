@@ -20,12 +20,14 @@ assignees: noraworld
 ----------------------------------------------------------------------------------------------------------------------->
 
 ### 心構え
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **楽しむこと優先だよ！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「ま、いっか」を口癖にしよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/vulpix.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **楽しむことを優先してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「ま、いっか」を口癖にしてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/vulpix.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
     > 「仕方ない」、「そういうときもある」、「人生そんなもん」、「もう考えるの、やーめた！」
+    >
+    > _自己肯定感の教科書_
     > </details>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **否定語を肯定語に変えてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
     > <details>
@@ -56,10 +58,10 @@ assignees: noraworld
     > | 力まないでね | → | **自然体でいこう** |
     > | 無理しないで | → | **着実にやっていこう** |
     >
-    > 自己肯定感の教科書 p.231 (リフレーミング)
+    > _自己肯定感の教科書 p.231 (リフレーミング)_
     > </details>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事を完璧にしないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **未来を考えすぎず『今』に全集中！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **『今』に全集中してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
