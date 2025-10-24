@@ -27,7 +27,37 @@ assignees: noraworld
     >
     > 「仕方ない」、「そういうときもある」、「人生そんなもん」、「もう考えるの、やーめた！」
     > </details>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「べき」思考にとらわれないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **否定語を肯定語に変えてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
+    > <details>
+    > <summary>詳細を読む</summary>
+    >
+    > | 否定語 | | **肯定語** |
+    > | :---: | :---: | :---: |
+    > | こぼさないでね | → | **しっかり持っていってね** |
+    > | 失敗しないように気をつけて | → | **いつもどおりやればいいよ** |
+    > | 忘れ物ない？ | → | **全部持った？** |
+    > | 遅れないでね | → | **間に合うように来てね** |
+    > | お疲れさま | → | **ありがとう** |
+    > | なんか、ツイていない | → | **最近、いつもツイているなー** |
+    > | 運が悪い | → | **運が良い** |
+    > | 目の前にあることをきちんとできなければ、次はない | → | **目の前にあることをきちんとやってこそ、次がある** |
+    > | お菓子を食べるべきではない | → | **健康的な身体を維持したい** |
+    > | 英語の勉強をやらねばならない | → | **ネイティブ相手でもスラスラと英語がしゃべれるようになりたい** |
+    > | どうするの | → | **なんとかなるよ** |
+    > | 疲れた | → | **よくがんばった** |
+    > | 嫌だ | → | **◯◯ だとうれしいな** |
+    > | なんで ◯◯ してくれないの？ | → | **◯◯ してくれてありがとう** |
+    > | どうせダメだ | → | **きっとうまくいく** |
+    > | もうダメだ | → | **なんとかなる** |
+    > | 許せない | → | **許す** |
+    > | 失敗しないように | → | **成功しますように** |
+    > | 左に行かないように | → | **右を狙って** |
+    > | 緊張するなよ | → | **いつも通りでいいよ** |
+    > | 力まないでね | → | **自然体でいこう** |
+    > | 無理しないで | → | **着実にやっていこう** |
+    >
+    > 自己肯定感の教科書 p.231
+    > </details>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事を完璧にしないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **未来を考えすぎず『今』に全集中！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
     > <details>
