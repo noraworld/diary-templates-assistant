@@ -30,6 +30,11 @@ assignees: noraworld
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「べき」思考にとらわれないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事を完璧にしないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **未来を考えすぎず『今』に全集中！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
+    > <details>
+    > <summary>詳細を読む</summary>
+    >
+    > お金のことを考えてもすぐにどうにかできるわけじゃないし、今後このままやっていけるか考えても未来はどうなるかわからない。だから、今、できることに全力で集中しよう！
+    > </details>
 
 <!----------------------------------------------------------------------------------------------------------------------
   このファイルを変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
