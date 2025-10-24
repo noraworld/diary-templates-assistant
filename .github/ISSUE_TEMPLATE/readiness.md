@@ -62,7 +62,34 @@ assignees: noraworld
     >
     > _自己肯定感の教科書 p.231 (リフレーミング)_
     > </details>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事を完璧にしないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事は 60 点を目指そう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
+    > <details>
+    > <summary>詳細を読む</summary>
+    >
+    > * 成長を楽しもう
+    > * 学びながら進もう
+    > * できる範囲でベストを尽くそう
+    > * 自分に優しくいよう
+    > * 挑戦してみよう
+    > * 最初の一歩を大切にしよう
+    > * まずやってみよう
+    > * 小さく始めよう
+    > * 完璧より一歩を大事にしよう
+    > * 60 点でいい、進めよう
+    > * 手を動かすことを優先しよう
+    > * 完璧じゃなくてもいい、今やろう
+    > * 完璧さより行動を選ぼう
+    > * まず形にしてみよう
+    > * 完璧より着手
+    > * 0 点より 60 点
+    > * 小さく始めて、大きく育てよう
+    > * 動きながら整えよう
+    > * 完璧じゃなくても、大丈夫
+    > * まずは一歩、形にしよう
+    > * 少しずつでも、進むことが大事
+    >
+    > _[否定語の肯定語変換 - ChatGPT](https://chatgpt.com/share/68fbae37-0fdc-8004-8c6b-d6e475243305)_
+    > </details>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **『今』に全集中してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
