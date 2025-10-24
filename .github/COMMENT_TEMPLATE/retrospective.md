@@ -4,6 +4,9 @@
 | 今日のタスクのやる気 | ${{ github.event.inputs.motivation }} |
 | 今日のタスクの生産性 | ${{ github.event.inputs.productivity }} |
 
+### チェックリスト
+* [${{ github.event.inputs.readiness }}] 心構えの意識
+
 ### タイムラインへの記録
 ${{ github.event.inputs.timeline || '特になし。' }}
 

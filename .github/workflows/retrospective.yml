@@ -41,6 +41,10 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
+      readiness:
+        required: true
+        description: '心構えは意識できた？'
+        type: boolean
       retrospective:
         required: false
         description: '今日の振り返り'
