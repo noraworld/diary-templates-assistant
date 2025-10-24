@@ -11,14 +11,6 @@ assignees: noraworld
   このファイルを変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
 ----------------------------------------------------------------------------------------------------------------------->
 
-### クイックリンク
-* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
-* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/readiness/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
-
-
-
-
-
 <!----------------------------------------------------------------------------------------------------------------------
   ⭐️ 作成ルール ⭐️
     * 各項目の文言は太字にする
@@ -216,6 +208,14 @@ assignees: noraworld
 </details>
 
 ---
+
+
+
+
+
+### クイックリンク
+* [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
+* [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/readiness/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 
 
