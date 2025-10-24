@@ -23,6 +23,11 @@ assignees: noraworld
 
 ### 心構え
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **楽しむことを優先してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+    > <details>
+    > <summary>詳細を読む</summary>
+    >
+    > 楽しむことに意識を向けるだけで、だいたいうまくいく！ 自分を信じてみよう！
+    > </details>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「ま、いっか」を口癖にしてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/vulpix.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
