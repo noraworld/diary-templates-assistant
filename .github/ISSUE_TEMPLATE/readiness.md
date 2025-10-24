@@ -56,7 +56,7 @@ assignees: noraworld
     > | 力まないでね | → | **自然体でいこう** |
     > | 無理しないで | → | **着実にやっていこう** |
     >
-    > 自己肯定感の教科書 p.231
+    > 自己肯定感の教科書 p.231 (リフレーミング)
     > </details>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事を完璧にしないで！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
 * [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **未来を考えすぎず『今』に全集中！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
