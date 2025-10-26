@@ -5,6 +5,7 @@
 | 量 | ${{ github.event.inputs.amount }} ml |
 
 ### できごと
+* [${{ github.event.inputs.eyeballing }}] 目分量
 * [${{ github.event.inputs.urgency }}] 切迫感
 * [${{ github.event.inputs.incontinence }}] 失禁
 * [${{ github.event.inputs.residuals }}] 残尿感

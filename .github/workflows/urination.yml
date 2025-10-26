@@ -43,6 +43,10 @@ on:
           - 'チェリー'
           - 'コーラ'
           - 'ブルーハワイ'
+      eyeballing:
+        required: true
+        description: '目分量'
+        type: boolean
       pain:
         required: true
         description: '痛み'
@@ -71,6 +75,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "urination"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
