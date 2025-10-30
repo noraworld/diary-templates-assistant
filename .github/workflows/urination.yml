@@ -43,6 +43,10 @@ on:
           - 'チェリー'
           - 'コーラ'
           - 'ブルーハワイ'
+      impression:
+        required: false
+        description: 'メモ'
+        type: string
       eyeballing:
         required: true
         description: '目分量'
@@ -63,10 +67,6 @@ on:
         required: true
         description: '失禁'
         type: boolean
-      impression:
-        required: false
-        description: 'メモ'
-        type: string
 
 jobs:
   urination:
@@ -75,6 +75,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "urination"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.1"
+      version: "0.2.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
