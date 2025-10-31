@@ -37,7 +37,10 @@ class Util:
         else:
             day = splitted_date[2]
 
-        return datetime.date(year, month, day)
+        # Let's say today is 2025/10/31 and date_str is "2025-09-00"
+        # The result at the moment is [2025, 9, 31], which is invalid as date format
+        # So call this to avoid invalid date format
+        return Util.__normalize_date(year, month, day)
 
     def handle_error(error_class):
         error = error_class()
@@ -55,3 +58,13 @@ class Util:
             return True
         else:
             return False
+
+    # datetime.date(2025, 9, 31) -> datetime.date(2025, 9, 30)
+    # datetime.date(2025, 2, 31) -> datetime.date(2025, 2, 28)
+    # datetime.date(2024, 2, 31) -> datetime.date(2024, 2, 29)
+    def __normalize_date(year, month, day):
+        while day > 0:
+            try:
+                return datetime.date(year, month, day)
+            except ValueError:
+                day -= 1
