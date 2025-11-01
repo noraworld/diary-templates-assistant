@@ -43,14 +43,14 @@ on:
           - 'チェリー'
           - 'コーラ'
           - 'ブルーハワイ'
-      impression:
-        required: false
-        description: 'メモ'
-        type: string
       eyeballing:
         required: true
         description: '目分量'
         type: boolean
+      impression:
+        required: false
+        description: 'メモ'
+        type: string
       pain:
         required: true
         description: '痛み'
