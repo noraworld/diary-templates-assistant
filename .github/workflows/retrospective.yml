@@ -9,7 +9,7 @@ on:
         type: string
       motivation:
         required: true
-        description: 'タスクのやる気'
+        description: 'プライベートタスクのやる気'
         type: choice
         options:
           - ''
@@ -26,7 +26,7 @@ on:
           - '★★★★★★★★★★'
       productivity:
         required: true
-        description: 'タスクの生産性'
+        description: 'プライベートタスクの生産性'
         type: choice
         options:
           - ''
