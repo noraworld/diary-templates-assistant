@@ -34,7 +34,6 @@ on:
         type: choice
         options:
           - ''
-          - 'バブル'
           - '透明'
           - 'レモン'
           - 'パイン'
@@ -51,6 +50,11 @@ on:
         required: false
         description: 'メモ'
         type: string
+      foam:
+        required: true
+        description: 'バブル'
+        type: boolean
+        default: true
       pain:
         required: true
         description: '痛み'
@@ -75,6 +79,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "urination"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.2"
+      version: "0.3.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
