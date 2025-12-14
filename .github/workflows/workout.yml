@@ -81,7 +81,7 @@ on:
           - 'Leg - Beginner'
           - 'Leg - Intermediate'
           - 'Leg - Advanced'
-        default: 'Daily'
+        default: ''
       trainer:
         required: true
         description: 'トレーナー'
