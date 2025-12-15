@@ -62,6 +62,7 @@ on:
         description: 'メニュー'
         type: choice
         options:
+          - ''
           - 'Daily'
           - 'Chest - Beginner'
           - 'Chest - Intermediate'
