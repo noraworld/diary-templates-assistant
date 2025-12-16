@@ -38,6 +38,10 @@ assignees: noraworld
 
 
 
+---
+
+
+
 #### レッスン後
 ```
 ### 基本情報
@@ -181,6 +185,9 @@ assignees: noraworld
 
 
 
+<details>
+<summary>うまく言えなかったこと・表現できなかったこと</summary>
+
 ```
 <!-- chatgpt
 これは私がオンライン英会話に参加した際に英語でうまく言えなかったこと・表現できなかったことです。それぞれの日本語の自然な英語をまとめてください。
@@ -195,6 +202,7 @@ assignees: noraworld
 ### 英語でうまく言えなかったこと・表現できなかったこと
 *
 ```
+</details>
 
 
 
@@ -202,10 +210,14 @@ assignees: noraworld
 
 
 
+<details>
+<summary>所感・総評のみ</summary>
+
 ```
 ### 所感・総評
-特になし。
+
 ```
+</details>
 
 <details>
 <summary>表現・コロケーション・チェックリスト入り</summary>
@@ -247,6 +259,10 @@ assignees: noraworld
 
 ```
 </details>
+
+
+
+---
 
 
 
