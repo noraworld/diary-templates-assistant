@@ -95,7 +95,9 @@ assignees: noraworld
 </details>
 
 ### チャット
-*
+| Speaker | Message |
+| :---: | --- |
+
 ```
 
 <details>
