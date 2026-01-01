@@ -158,7 +158,7 @@ jobs:
           partial_content_start_string: "(<span dir=\"auto\">{private}|<div dir=\"auto\"><p>{private})"
           partial_content_end_string: "({/private}</span>|{/private}</div>)"
           with_repo_assets: ${{ env.MODE }}
-          assets_repo: noraworld/box-ivysaur
+          assets_repo_gist_id: f3eec6798d8f6296c1a5482ce2f13ed8
           assets_directory: ${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DAY }}
           with_assets_compression: true
           compression_threshold: 1048576
