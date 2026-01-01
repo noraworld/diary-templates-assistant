@@ -7,7 +7,7 @@ on:
         required: true
         description: '書籍名'
         type: string
-        default: '天皇の日本史'
+        default: '自分とか、ないから。教養としての東洋哲学'
       sample:
         required: true
         description: 'サンプル'
