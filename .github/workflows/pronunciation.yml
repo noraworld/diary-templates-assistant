@@ -9,6 +9,7 @@ on:
         type: choice
         options:
           - 'ELSA Speak'
+          - 'BoldVoice'
         default: 'ELSA Speak'
       minutes:
         required: true
@@ -19,7 +20,7 @@ on:
         description: '連続日数'
         type: number
       points:
-        required: true
+        required: false
         description: '経験値'
         type: number
       activeness:
@@ -68,6 +69,6 @@ jobs:
       search_query: "pronunciation 発音練習"
       template_name: "pronunciation"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
