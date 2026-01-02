@@ -8,9 +8,9 @@ on:
         description: '教材'
         type: choice
         options:
+          - ''
           - 'ELSA Speak'
           - 'BoldVoice'
-        default: 'ELSA Speak'
       minutes:
         required: true
         description: '分'
@@ -20,8 +20,8 @@ on:
         description: '連続日数'
         type: number
       points:
-        required: false
-        description: '経験値'
+        required: true
+        description: '経験値・星'
         type: number
       activeness:
         required: true
