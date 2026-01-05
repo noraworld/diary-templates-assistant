@@ -37,9 +37,9 @@ on:
       #     - '触れた'
       #     - '一区切り'
       #     - 'ひとつ終えた'
-      sessions:
+      duration:
         required: false
-        description: 'セッションの長さ（分）'
+        description: '1 セッションの長さ（分）'
         type: choice
         options:
           - '20'
@@ -50,7 +50,7 @@ on:
           - '25'
           - '30'
         default: '20'
-      duration:
+      sessions:
         required: false
         description: '今日は、何セッション触れた？'
         type: number # 'choice' にすると 2.25 とか入れづらい（「全端数用意するんか？」ってなる）
