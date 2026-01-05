@@ -37,17 +37,23 @@ on:
       #     - '触れた'
       #     - '一区切り'
       #     - 'ひとつ終えた'
-      duration:
+      sessions:
         required: false
-        description: '今日、どれくらい時間を使った？'
+        description: 'セッションの長さ（分）'
         type: choice
         options:
-          - ''
+          - '20'
+          - '' # 長さを計測していない場合はデフォルトを外すため
           - '5'
           - '10'
-          - '20'
-          - '40'
-          - '60'
+          - '15'
+          - '25'
+          - '30'
+        default: '20'
+      duration:
+        required: false
+        description: '今日は、何セッション触れた？'
+        type: number # 'choice' にすると 2.25 とか入れづらい（「全端数用意するんか？」ってなる）
       milestone:
         required: false
         description: '今日は、どこまで進んだ？'
