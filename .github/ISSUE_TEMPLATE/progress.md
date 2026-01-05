@@ -11,6 +11,7 @@ assignees: noraworld
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * [ワークフローディスパッチ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/progress.yml)
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/progress/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
+* [やりたいことリスト](https://github.com/noraworld/to-do/issues)
 
 
 
