@@ -69,6 +69,7 @@ on:
         type: string
       #
       # 振り返り / 改善点 / 反省 / 目標 / 評価 / モチベーション などは入れないこと（重要）
+      #   https://chatgpt.com/share/6942cb5d-f1d4-8004-961a-41cbb77301ce
       #
       motto:
         required: false
