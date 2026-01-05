@@ -1,0 +1,83 @@
+name: 'aγа: 🚀🪜 ワンステップチャレンジ' # https://chatgpt.com/share/6942cb5d-f1d4-8004-961a-41cbb77301ce
+
+on:
+  workflow_dispatch:
+    inputs:
+      engagement:
+        required: true
+        description: '今日は、自分のやりたいことに一歩触れた？'
+        type: boolean
+      activity:
+        required: true
+        description: '今日、触れたこと（タスクあればリンク付き）'
+        type: string
+      mode:
+        required: true
+        description: '今日は、どう進めた？'
+        type: choice
+        options:
+          - ''
+          - '時間'
+          - 'ゴール'
+          - '時間 & ゴール'
+      # duration / milestone 合体版
+      # 入力のときに一つで済むので楽だが記録の精度が落ちる
+      #
+      # extent:
+      #   required: true
+      #   description: '今日、どれくらい触れた？'
+      #   type: choice
+      #   options:
+      #     - ''
+      #     - '5'
+      #     - '10'
+      #     - '20'
+      #     - '40'
+      #     - '60'
+      #     - '触れた'
+      #     - '一区切り'
+      #     - 'ひとつ終えた'
+      duration:
+        required: false
+        description: '今日、どれくらい時間を使った？'
+        type: choice
+        options:
+          - ''
+          - '5'
+          - '10'
+          - '20'
+          - '40'
+          - '60'
+      milestone:
+        required: false
+        description: '今日は、どこまで進んだ？'
+        type: choice
+        options:
+          - ''
+          - '触れた'
+          - '一区切り'
+          - 'ひとつ終えた'
+      note:
+        required: false
+        description: '今日のひとこと'
+        type: string
+      #
+      # 振り返り / 改善点 / 反省 / 目標 / 評価 / モチベーション などは入れないこと（重要）
+      #
+      motto:
+        required: false
+        description: '触れたら OK！ それだけで 100 点 🌸'
+        type: choice
+        options:
+          - ''
+
+jobs:
+  progress:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "progress ワンステップチャレンジ"
+      template_name: "progress"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
