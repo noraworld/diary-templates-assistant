@@ -11,7 +11,6 @@ on:
         required: false
         description: 'タイマー（分）'
         type: number
-        default: '19'
       minutes:
         required: false
         description: '分'
