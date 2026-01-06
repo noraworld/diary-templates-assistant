@@ -2,9 +2,11 @@ ${{ if(github.event.inputs.minutes) }}
 ### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
+${{ endif }}
 ${{ if(github.event.inputs.timer) }}
 | タイマー | ${{ github.event.inputs.timer }} 分 |
 ${{ endif }}
+${{ if(github.event.inputs.minutes) }}
 | 時間 | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
 ${{ endif }}
 
