@@ -7,6 +7,11 @@ on:
         required: false
         description: '所感'
         type: string
+      timer:
+        required: false
+        description: 'タイマー（分）'
+        type: number
+        default: 20
       minutes:
         required: false
         description: '分'
