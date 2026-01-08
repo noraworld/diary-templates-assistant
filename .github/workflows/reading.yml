@@ -17,6 +17,25 @@ on:
         required: true
         description: '読了率 (%)'
         type: number
+      timer:
+        required: false
+        description: 'タイマー（分）'
+        type: choice
+        options:
+          - '20'
+          - '' # 長さを計測していない場合はデフォルトを外すため
+          - '5'
+          - '10'
+          - '15'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+        default: '20'
       impression:
         required: false
         description: '感想・学び'
@@ -29,6 +48,6 @@ jobs:
       search_query: "reading 読書"
       template_name: "reading"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.2"
+      version: "0.1.3"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

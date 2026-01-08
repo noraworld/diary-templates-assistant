@@ -3,6 +3,9 @@
 | --- | :---: |
 | 書籍名 | ${{ github.event.inputs.title }} |
 | 読了率 | ${{ github.event.inputs.percent }} % |
+${{ if(github.event.inputs.timer) }}
+| タイマー | ${{ github.event.inputs.timer }} 分 |
+${{ endif }}
 
 ### チェックリスト
 * [${{ github.event.inputs.sample }}] サンプル
