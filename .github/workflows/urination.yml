@@ -55,6 +55,10 @@ on:
         description: 'バブル'
         type: boolean
         default: true
+      cloudy:
+        required: true
+        description: '濁り'
+        type: boolean
       pain:
         required: true
         description: '痛み'
@@ -79,6 +83,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "urination"
       template_repo: "noraworld/diary-templates"
-      version: "0.3.0"
+      version: "0.3.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
