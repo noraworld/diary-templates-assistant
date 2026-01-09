@@ -13,6 +13,7 @@ ${{ endif }}
 ### チェックリスト
 * [${{ github.event.inputs.toner }}] 化粧水
 * [${{ github.event.inputs.shaved }}] 髭剃り
+* [${{ github.event.inputs.pubes }}] 下毛処理
 * [${{ github.event.inputs.shampoo }}] シャンプー
 * [${{ github.event.inputs.bathed }}] 洗体
 * [${{ github.event.inputs.bath }}] 入浴

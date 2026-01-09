@@ -42,6 +42,10 @@ on:
         required: true
         description: '髭剃り'
         type: boolean
+      pubes:
+        required: true
+        description: '下毛処理'
+        type: boolean
       shampoo:
         required: true
         description: 'シャンプー'
@@ -62,6 +66,6 @@ jobs:
       search_query: "shower 入浴記録"
       template_name: "shower"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
