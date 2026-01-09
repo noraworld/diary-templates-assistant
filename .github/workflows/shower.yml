@@ -10,7 +10,22 @@ on:
       timer:
         required: false
         description: 'タイマー（分）'
-        type: number
+        type: choice
+        options:
+          - '20'
+          - '' # 長さを計測していない場合はデフォルトを外すため
+          - '5'
+          - '10'
+          - '15'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+        default: '20'
       minutes:
         required: false
         description: '分'
