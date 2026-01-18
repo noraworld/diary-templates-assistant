@@ -20,11 +20,11 @@ on:
         default: 'Distinction V'
       progress:
         required: true
-        description: '進捗率'
+        description: '進捗率 (%)'
         type: number
       words:
         required: true
-        description: '単語数'
+        description: '単語数 (words)'
         type: number
       practice:
         required: true
@@ -33,11 +33,11 @@ on:
         default: true
       points:
         required: true
-        description: '経験値'
+        description: '経験値 (XP)'
         type: number
       streaks:
         required: true
-        description: '連続日数'
+        description: '連続日数 (Streaks)'
         type: number
       impression:
         required: false
