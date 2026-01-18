@@ -3,10 +3,6 @@ name: 'bγа: 🎓📖 単語学習'
 on:
   workflow_dispatch:
     inputs:
-      impression:
-        required: false
-        description: '感想・その他'
-        type: string
       material:
         required: true
         description: '教材'
@@ -22,6 +18,10 @@ on:
           - 'Distinction Structures'
           - 'Distinction 2000'
         default: 'Distinction V'
+      progress:
+        required: true
+        description: '進捗率'
+        type: number
       words:
         required: true
         description: '単語数'
@@ -38,10 +38,10 @@ on:
         required: true
         description: '連続日数'
         type: number
-      progress:
-        required: true
-        description: '進捗率'
-        type: number
+      impression:
+        required: false
+        description: '感想・その他'
+        type: string
       activeness:
         required: true
         description: '積極性'
