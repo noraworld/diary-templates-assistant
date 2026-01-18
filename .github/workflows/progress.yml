@@ -43,13 +43,12 @@ on:
         type: choice
         options:
           - '20'
-          - '' # 長さを計測していない場合はデフォルトを外すため
+          - ''
           - '5'
           - '10'
           - '15'
           - '25'
           - '30'
-        default: '20'
       sessions:
         required: false
         description: '今日は、何セッション触れた？'
@@ -85,6 +84,6 @@ jobs:
       search_query: "progress ワンステップチャレンジ"
       template_name: "progress"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
