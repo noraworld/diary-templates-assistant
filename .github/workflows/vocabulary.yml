@@ -37,7 +37,7 @@ on:
         type: number
       streaks:
         required: true
-        description: '連続日数 (Streaks)'
+        description: '連続日数 (streaks)'
         type: number
       impression:
         required: false
