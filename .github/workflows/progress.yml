@@ -42,13 +42,14 @@ on:
         description: '1 セッションの長さ（分）'
         type: choice
         options:
-          - '20'
+          - '30'
           - ''
           - '5'
           - '10'
           - '15'
+          - '20'
           - '25'
-          - '30'
+          # - '30'
       sessions:
         required: false
         description: '今日は、何セッション触れた？'
