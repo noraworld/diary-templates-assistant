@@ -17,7 +17,7 @@ on:
           - 'Distinction VI'
           - 'Distinction Structures'
           - 'Distinction 2000'
-        default: 'Distinction V'
+        default: 'Distinction VI'
       progress:
         required: true
         description: '進捗率 (%)'
