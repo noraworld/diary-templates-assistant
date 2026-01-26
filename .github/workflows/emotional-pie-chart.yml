@@ -3,10 +3,6 @@ name: 'dαа: 🪷🤔 気分記録 / 感情パイチャート'
 on:
   workflow_dispatch:
     inputs:
-      event:
-        required: true
-        description: '出来事'
-        type: string
       mood:
         required: true
         description: '気分度'
@@ -24,6 +20,10 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
+      event:
+        required: true
+        description: '出来事'
+        type: string
       type1:
         required: false
         description: 'ラベル 1'
