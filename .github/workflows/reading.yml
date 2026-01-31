@@ -7,7 +7,7 @@ on:
         required: true
         description: '書籍名'
         type: string
-        default: '自分とか、ないから。教養としての東洋哲学'
+        default: '真・韓国の歴史 なぜ「反日」を捨てられないのか'
         # 読了リスト:
         #
         #   * 自分とか、ないから。教養としての東洋哲学
