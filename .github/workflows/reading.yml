@@ -8,6 +8,13 @@ on:
         description: '書籍名'
         type: string
         default: '自分とか、ないから。教養としての東洋哲学'
+        # 読了リスト:
+        #
+        #   * 自分とか、ないから。教養としての東洋哲学
+        #   * 天皇の日本史
+        #   * 自己肯定感の教科書
+        #   * 働かない勇気
+        #
       sample:
         required: true
         description: 'サンプル'
