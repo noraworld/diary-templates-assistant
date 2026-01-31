@@ -11,10 +11,6 @@ on:
           - ''
           - 'ELSA Speak'
           - 'BoldVoice'
-      minutes:
-        required: true
-        description: '分'
-        type: number
       streaks:
         required: true
         description: '連続日数'
@@ -22,6 +18,10 @@ on:
       points:
         required: true
         description: '経験値・星'
+        type: number
+      minutes:
+        required: true
+        description: '分'
         type: number
       activeness:
         required: true
