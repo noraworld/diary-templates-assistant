@@ -1,0 +1,154 @@
+name: Journal Recorder
+
+on:
+  workflow_call:
+    secrets:
+      gh_token:
+        required: true
+
+jobs:
+  journal-recorder:
+    if: >
+      github.event.issue.state == 'open' &&
+      github.event.label.name  == 'done' &&
+      contains(github.event.issue.title, 'journal_ジャーナル')
+    runs-on: ubuntu-latest
+    steps:
+      # ${{ env.TARGET_REPO }} => noraworld/reserved-journal
+      - name: Get a target file repo
+        run: echo "TARGET_REPO=noraworld/reserved-journal" >> $GITHUB_ENV
+
+      # "📖_2026-02-03_journal_ジャーナル" => "2026"
+      - name: Get a year
+        run: echo "YEAR=$(awk -F '[-_]' '{print $2}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "📖_2026-02-03_journal_ジャーナル" => "02"
+      - name: Get a month
+        run: echo "MONTH=$(awk -F '[-_]' '{print $3}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "📖_2026-02-03_journal_ジャーナル" => "03"
+      - name: Get a day
+        run: echo "DAY=$(awk -F '[-_]' '{print $4}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "📖_2026-02-03_journal_ジャーナル" => "2026-02-03"
+      - name: Get a date
+        run: echo "DATE=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "📖_2026-02-03_journal_ジャーナル" => "journal"
+      # - name: Get a category
+      #   run: echo "CATEGORY=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # "📖_2026-02-03_journal_ジャーナル" => "ジャーナル"
+      - name: Get a title
+        run: echo "TITLE=$(cut -d '_' -f4 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      - name: Issue Recorder
+        uses: noraworld/issue-recorder@main
+        with:
+          mode: "file, issue"
+          filepath: _posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md
+          committer_name: Kosuke Aoki
+          committer_email: mail@noraworld.com
+          overwrite_when_modified: true
+          newlines_count_before_extra_text: 1
+          extra_text_when_modified: "# 重複投稿！"
+          newlines_count_after_extra_text: 1
+          notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
+          target_file_repo: ${{ env.TARGET_REPO }}
+          # title_prefix_for_file: ""
+          target_issue_repo: noraworld/reserved-diary
+          target_issue_number: latest
+          partial_content_target_issue_repo: noraworld/private-diary
+          partial_content_target_issue_number: latest
+          partial_content_start_string: "(<span dir=\"auto\">{private}|<div dir=\"auto\"><p>{private})"
+          partial_content_end_string: "({/private}</span>|{/private}</div>)"
+          with_repo_assets: "file, issue"
+          assets_repo_gist_id: f3eec6798d8f6296c1a5482ce2f13ed8
+          assets_directory: ${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DAY }}
+          with_assets_compression: true
+          compression_threshold: 1048576
+          resize_width: 1920
+          with_compatible_format: true
+          # fold_threshold: 0
+          fold_summary: 詳細を表示
+          title_prefix_for_issue: 📖
+          with_date: ""
+          timezone: Asia/Tokyo
+          time_format: "yyyy-MM-dd HH:mm:ss ZZ"
+          with_header: "---\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nassignees: <ASSIGNEES>\r\ncreated_at: <CREATED_AT>\r\n---"
+          with_title: "issue"
+          custom_title: ${{ env.TITLE }}
+          with_quote: ""
+          with_hr: "issue"
+          empty_lines_count_between_comments: 1
+          trailing_newline: true
+          skip_body: "file, issue"
+          skip_if_empty_including_body: "file, issue"
+          fail_if_skip: false
+          personal_access_token: GH_TOKEN
+        env:
+          GH_TOKEN: ${{ secrets.gh_token }}
+
+      - name: Make sure the content is saved successfully
+        run: |
+          # DO NOT INDENT
+          api_filepath="\
+          "repos/${{ env.TARGET_REPO }}/contents/"\
+          "_posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md"\
+          "
+
+          # https://github.com/noraworld/to-do/issues/1471
+          i=0
+          file_content_length=0
+          issue_content_length=0
+          while [ "$i" -lt ${{ env.RETRY_THRESHOLD }} ]; do
+            if [ "$file_content_length" -le 0 ]; then
+              file_content_length=$(
+                gh api "$api_filepath" --jq '.content' | base64 --decode | wc -l
+              )
+            else
+              echo "Getting the file content skipped because it's already taken." >&2
+            fi
+
+            if [ "$issue_content_length" -le 0 ]; then
+              issue_content_length=$(
+                gh issue view ${{ github.event.issue.number }} --json comments --jq '.comments.[].body' | wc -l
+              )
+            else
+              echo "Getting the issue content skipped because it's already taken." >&2
+            fi
+
+            if [ "$file_content_length" -gt 0 ] && [ "$issue_content_length" -gt 0 ]; then
+              break
+            fi
+
+            i=$(( i + 1 ))
+            echo "Getting the content failed. The retry will be conducted in $i sec..." >&2
+            echo "DEBUG: file content length:  $file_content_length" >&2
+            echo "DEBUG: issue content length: $issue_content_length" >&2
+            sleep "$i"
+          done
+
+          # Skip length check if private content is included.
+          # It is difficult to obtain the private issue number and content from here.
+          private_content_count=$(
+            gh api "$api_filepath" --jq '.content' | base64 --decode | grep -cE "\[\^pvt_[0-9a-f]{7}\]" || true
+          )
+
+          if   [ "$file_content_length"   -ge "$(( issue_content_length - 1 ))" ] ||
+             { [ "$private_content_count" -gt 0 ]                                 &&
+               [ "$file_content_length"   -ne 0 ]                                 &&
+               [ "$issue_content_length"  -ne 0 ]; }
+          then
+            gh issue close ${{ github.event.issue.number }}
+          else
+            gh issue edit ${{ github.event.issue.number }} --remove-label 'done'
+            echo "The file content length should be greater than or equal to the issue content length." >&2
+            echo "DEBUG: file content length:  $file_content_length" >&2
+            echo "DEBUG: issue content length: $issue_content_length" >&2
+            exit 1
+          fi
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.gh_token }}
+          RETRY_THRESHOLD: 10
