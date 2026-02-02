@@ -3,21 +3,6 @@ name: 'bγа: 🎓📖 単語学習'
 on:
   workflow_dispatch:
     inputs:
-      material:
-        required: true
-        description: '教材'
-        type: choice
-        options:
-          - ''
-          - 'Distinction I'
-          - 'Distinction II'
-          - 'Distinction III'
-          - 'Distinction IV'
-          - 'Distinction V'
-          - 'Distinction VI'
-          - 'Distinction Structures'
-          - 'Distinction 2000'
-        default: 'Distinction VI'
       progress:
         required: true
         description: '進捗率 (%)'
@@ -38,6 +23,10 @@ on:
       streaks:
         required: true
         description: '連続日数 (streaks)'
+        type: number
+      minutes:
+        required: true
+        description: '分'
         type: number
       impression:
         required: false
@@ -60,6 +49,21 @@ on:
           - '★★★★★★★★☆☆'
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
+      material:
+        required: true
+        description: '教材'
+        type: choice
+        options:
+          - ''
+          - 'Distinction I'
+          - 'Distinction II'
+          - 'Distinction III'
+          - 'Distinction IV'
+          - 'Distinction V'
+          - 'Distinction VI'
+          - 'Distinction Structures'
+          - 'Distinction 2000'
+        default: 'Distinction VI'
 
 jobs:
   vocabulary:
@@ -68,6 +72,6 @@ jobs:
       search_query: "vocabulary 単語学習"
       template_name: "vocabulary"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.1"
+      version: "0.2.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

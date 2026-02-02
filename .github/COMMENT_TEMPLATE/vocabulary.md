@@ -3,6 +3,7 @@
 | --- | :---: |
 | 教材 | ${{ github.event.inputs.material }} |
 | 単語数 | ${{ github.event.inputs.words }} 単語 |
+| 時間 | ${{ github.event.inputs.minutes }} 分 |
 | 進捗率 | ${{ github.event.inputs.progress }} % |
 | 経験値 | ${{ github.event.inputs.points }} XP |
 | ストリーク | ${{ github.event.inputs.streaks }} 日 |
