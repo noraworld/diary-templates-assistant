@@ -14,10 +14,6 @@ jobs:
       contains(github.event.issue.title, 'journal_ジャーナル')
     runs-on: ubuntu-latest
     steps:
-      # ${{ env.TARGET_REPO }} => noraworld/reserved-journal
-      - name: Get a target file repo
-        run: echo "TARGET_REPO=noraworld/reserved-journal" >> $GITHUB_ENV
-
       # "📖_2026-02-03_journal_ジャーナル" => "2026"
       - name: Get a year
         run: echo "YEAR=$(awk -F '[-_]' '{print $2}' <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
@@ -54,7 +50,7 @@ jobs:
           extra_text_when_modified: "# 重複投稿！"
           newlines_count_after_extra_text: 1
           notification_comment: "[`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>))"
-          target_file_repo: ${{ env.TARGET_REPO }}
+          # target_file_repo: noraworld/diary-templates
           # title_prefix_for_file: ""
           target_issue_repo: noraworld/reserved-diary
           target_issue_number: latest
@@ -93,7 +89,7 @@ jobs:
         run: |
           # DO NOT INDENT
           api_filepath="\
-          "repos/${{ env.TARGET_REPO }}/contents/"\
+          "repos/${{ github.repository }}/contents/"\
           "_posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md"\
           "
 
