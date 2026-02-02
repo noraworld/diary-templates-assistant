@@ -42,7 +42,7 @@ jobs:
         uses: noraworld/issue-recorder@main
         with:
           mode: "file, issue"
-          filepath: _posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md
+          filepath: journal/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md
           committer_name: Kosuke Aoki
           committer_email: mail@noraworld.com
           overwrite_when_modified: true
@@ -90,7 +90,7 @@ jobs:
           # DO NOT INDENT
           api_filepath="\
           "repos/${{ github.repository }}/contents/"\
-          "_posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md"\
+          "journal/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md"\
           "
 
           # https://github.com/noraworld/to-do/issues/1471
