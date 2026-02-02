@@ -68,6 +68,10 @@ jobs:
           # fold_threshold: 0
           fold_summary: 詳細を表示
           title_prefix_for_issue: 📖
+          # TODO:
+          #   I would like to specify 'with_date: "issue",' but it only accepts true/false,
+          #   which means I can't remove the date from only the file.
+          #   I need to update the implementation of Issue Recorder.
           with_date: ""
           timezone: Asia/Tokyo
           time_format: "yyyy-MM-dd HH:mm:ss ZZ"
@@ -75,7 +79,10 @@ jobs:
           with_title: "issue"
           custom_title: ${{ env.TITLE }}
           with_quote: ""
-          with_hr: "issue"
+          # TODO:
+          #   I would like to specify 'with_hr: "issue",' but I don't want horizontal lines with no dates.
+          #   I will update it after 'with_date: "issue".'
+          with_hr: ""
           empty_lines_count_between_comments: 1
           trailing_newline: true
           skip_body: "file, issue"
