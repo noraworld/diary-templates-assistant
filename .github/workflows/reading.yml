@@ -29,8 +29,8 @@ on:
         description: 'タイマー（分）'
         type: choice
         options:
-          - '20'
           - ''
+          - '20'
           - '5'
           - '10'
           - '15'
