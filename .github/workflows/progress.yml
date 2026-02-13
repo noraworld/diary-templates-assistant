@@ -3,10 +3,6 @@ name: 'aγа: 🚀🪜 ワンステップチャレンジ' # https://chatgpt.com/
 on:
   workflow_dispatch:
     inputs:
-      engagement:
-        required: true
-        description: '今日は、自分のやりたいことに一歩触れた？'
-        type: boolean
       activity:
         required: true
         description: '今日、触れたこと（タスクあればリンク付き）'
@@ -67,6 +63,10 @@ on:
         required: false
         description: '今日のひとこと'
         type: string
+      engagement:
+        required: true
+        description: '今日は、自分のやりたいことに一歩触れた？'
+        type: boolean
       #
       # 振り返り / 改善点 / 反省 / 目標 / 評価 / モチベーション などは入れないこと（重要）
       #   https://chatgpt.com/share/6942cb5d-f1d4-8004-961a-41cbb77301ce
