@@ -71,12 +71,6 @@ on:
       # 振り返り / 改善点 / 反省 / 目標 / 評価 / モチベーション などは入れないこと（重要）
       #   https://chatgpt.com/share/6942cb5d-f1d4-8004-961a-41cbb77301ce
       #
-      motto:
-        required: false
-        description: '触れたら OK！ それだけで 100 点 🌸'
-        type: choice
-        options:
-          - ''
 
 jobs:
   progress:
@@ -85,6 +79,6 @@ jobs:
       search_query: "progress ワンステップチャレンジ"
       template_name: "progress"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.1"
+      version: "0.1.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

@@ -16,6 +16,7 @@ assignees: noraworld
 
 
 ### 参考
+* 触れたら OK！ それだけで 100 点 🌸
 * [John Resig - Write Code Every Day](https://johnresig.com/blog/write-code-every-day/)
     * [毎日コードを書く習慣](https://chatgpt.com/share/695bc077-8c30-8004-a9fb-6af68e809236)
 * [20分コードの効果](https://chatgpt.com/share/6942cb5d-f1d4-8004-961a-41cbb77301ce)
