@@ -3,9 +3,21 @@ name: 'aγа: 🚀🪜 ワンステップチャレンジ' # https://chatgpt.com/
 on:
   workflow_dispatch:
     inputs:
-      activity:
+      activity1:
         required: true
-        description: '今日、触れたこと（タスクあればリンク付き）'
+        description: '今日、触れたこと 1（タスクあればリンク付き）'
+        type: string
+      activity2:
+        required: false
+        description: '今日、触れたこと 2（なければ書かなくて OK！）'
+        type: string
+      activity3:
+        required: false
+        description: '今日、触れたこと 3（なければ書かなくて OK！）'
+        type: string
+      activity4:
+        required: false
+        description: '今日、触れたこと 4（なければ書かなくて OK！）'
         type: string
       mode:
         required: true
