@@ -90,13 +90,13 @@ assignees: noraworld
 <summary>トランスクリプト</summary>
 
 | Speaker | Dialogue |
-| :---: | --- |
+| --- | --- |
 
 </details>
 
 ### チャット
 | Speaker | Message |
-| :---: | --- |
+| --- | --- |
 
 ```
 
@@ -130,7 +130,7 @@ assignees: noraworld
 <summary>トランスクリプト</summary>
 
 | Speaker | Dialogue |
-| :---: | --- |
+| --- | --- |
 
 </details>
 
@@ -156,7 +156,7 @@ assignees: noraworld
 <summary>トランスクリプト</summary>
 
 | Speaker | Dialogue |
-| :---: | --- |
+| --- | --- |
 
 </details>
 ```
