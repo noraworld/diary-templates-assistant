@@ -21,6 +21,9 @@ assignees: noraworld
     > From Oura
 * [一日一善はほんの少しの優しい選択でいい](https://chatgpt.com/share/698f3efe-e5f0-8004-84b5-48324d946061)
 
+<details>
+<summary>手動入力用テンプレート</summary>
+
 ```
 ### 他人に感謝したこと
 | 感謝した相手 | 感謝の言葉 |
@@ -47,3 +50,4 @@ assignees: noraworld
 ### 改善点
 *
 ```
+</details>
