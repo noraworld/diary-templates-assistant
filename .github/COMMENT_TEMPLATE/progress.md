@@ -14,9 +14,15 @@ ${{ endif }}
 
 ### 触れたこと
 * ${{ github.event.inputs.activity1 }}
+${{ if(github.event.inputs.activity2) }}
 * ${{ github.event.inputs.activity2 }}
+${{ endif }}
+* ${{ if(github.event.inputs.activity3) }}
 * ${{ github.event.inputs.activity3 }}
+${{ endif }}
+* ${{ if(github.event.inputs.activity4) }}
 * ${{ github.event.inputs.activity4 }}
+${{ endif }}
 
 ### チェックリスト
 * [${{ github.event.inputs.engagement }}] 自分のやりたいことに一歩触れた？
