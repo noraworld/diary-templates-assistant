@@ -17,10 +17,10 @@ ${{ endif }}
 ${{ if(github.event.inputs.activity2) }}
 * ${{ github.event.inputs.activity2 }}
 ${{ endif }}
-* ${{ if(github.event.inputs.activity3) }}
+${{ if(github.event.inputs.activity3) }}
 * ${{ github.event.inputs.activity3 }}
 ${{ endif }}
-* ${{ if(github.event.inputs.activity4) }}
+${{ if(github.event.inputs.activity4) }}
 * ${{ github.event.inputs.activity4 }}
 ${{ endif }}
 
