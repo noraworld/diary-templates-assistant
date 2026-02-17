@@ -1,0 +1,65 @@
+name: 'fβ5: 🧹🧼🧴 衛生'
+
+on:
+  workflow_dispatch:
+    inputs:
+      toys1:
+        required: true
+        description: '使用器具 1'
+        type: choice
+        options:
+          - 'セブンティーン'
+          - ''
+      toys2:
+        required: false
+        description: '使用器具 2'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+      toys3:
+        required: false
+        description: '使用器具 3'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+      toys4:
+        required: false
+        description: '使用器具 4'
+        type: string
+      toys5:
+        required: false
+        description: '使用器具 5'
+        type: string
+      toys6:
+        required: false
+        description: '使用器具 6'
+        type: string
+      toys7:
+        required: false
+        description: '使用器具 7'
+        type: string
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
+
+jobs:
+  hygiene:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "housework 家事"
+      template_name: "hygiene"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

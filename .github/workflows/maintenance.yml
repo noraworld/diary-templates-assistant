@@ -1,0 +1,92 @@
+name: 'fβ4: 🧹🧼🛠️ メンテナンス'
+
+on:
+  workflow_dispatch:
+    inputs:
+      supplies1:
+        required: true
+        description: '消耗品 1'
+        type: choice
+        options:
+          - 'ゴミ袋交換'
+          - ''
+          - 'ハンドソープ詰替'
+          - 'シャンプー詰替'
+          - 'ボディソープ詰替'
+          - 'シーリングライトリモコン電池交換'
+          - 'エアコンリモコン電池交換'
+          - '吸気口フィルター交換'
+      supplies2:
+        required: false
+        description: '消耗品 2'
+        type: choice
+        options:
+          - ''
+          - 'ゴミ袋交換'
+          - 'ハンドソープ詰替'
+          - 'シャンプー詰替'
+          - 'ボディソープ詰替'
+          - 'シーリングライトリモコン電池交換'
+          - 'エアコンリモコン電池交換'
+          - '吸気口フィルター交換'
+      supplies3:
+        required: false
+        description: '消耗品 3'
+        type: choice
+        options:
+          - ''
+          - 'ゴミ袋交換'
+          - 'ハンドソープ詰替'
+          - 'シャンプー詰替'
+          - 'ボディソープ詰替'
+          - 'シーリングライトリモコン電池交換'
+          - 'エアコンリモコン電池交換'
+          - '吸気口フィルター交換'
+      supplies4:
+        required: false
+        description: '消耗品 4'
+        type: choice
+        options:
+          - ''
+          - 'ゴミ袋交換'
+          - 'ハンドソープ詰替'
+          - 'シャンプー詰替'
+          - 'ボディソープ詰替'
+          - 'シーリングライトリモコン電池交換'
+          - 'エアコンリモコン電池交換'
+          - '吸気口フィルター交換'
+      supplies5:
+        required: false
+        description: '消耗品 5'
+        type: string
+      supplies6:
+        required: false
+        description: '消耗品 6'
+        type: string
+      supplies7:
+        required: false
+        description: '消耗品 7'
+        type: string
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
+
+jobs:
+  maintenance:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "housework 家事"
+      template_name: "maintenance"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

@@ -1,0 +1,84 @@
+name: 'fβ1: 🧹🧼🧽 食器洗い'
+
+on:
+  workflow_dispatch:
+    inputs:
+      dishes1:
+        required: true
+        description: '食器 1'
+        type: choice
+        options:
+          - ''
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+      dishes2:
+        required: false
+        description: '食器 2'
+        type: choice
+        options:
+          - ''
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+      dishes3:
+        required: false
+        description: '食器 3'
+        type: choice
+        options:
+          - ''
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+      dishes4:
+        required: false
+        description: '食器 4'
+        type: choice
+        options:
+          - ''
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+      dishes5:
+        required: false
+        description: '食器 5'
+        type: string
+      dishes6:
+        required: false
+        description: '食器 6'
+        type: string
+      dishes7:
+        required: false
+        description: '食器 7'
+        type: string
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
+
+jobs:
+  dishwashing:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "housework 家事"
+      template_name: "dishwashing"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

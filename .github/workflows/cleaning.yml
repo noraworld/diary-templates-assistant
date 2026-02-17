@@ -1,0 +1,92 @@
+name: 'fβ3: 🧹🧼🧹 掃除'
+
+on:
+  workflow_dispatch:
+    inputs:
+      areas1:
+        required: true
+        description: 'エリア 1'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas2:
+        required: false
+        description: 'エリア 2'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas3:
+        required: false
+        description: 'エリア 3'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas4:
+        required: false
+        description: 'エリア 4'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas5:
+        required: false
+        description: 'エリア 5'
+        type: string
+      areas6:
+        required: false
+        description: 'エリア 6'
+        type: string
+      areas7:
+        required: false
+        description: 'エリア 7'
+        type: string
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
+
+jobs:
+  cleaning:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "housework 家事"
+      template_name: "cleaning"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
