@@ -20,8 +20,8 @@ on:
         description: '使用器具 1'
         type: choice
         options:
-          - 'セブンティーン'
           - ''
+          - 'セブンティーン'
       toys2:
         required: false
         description: '使用器具 2'
