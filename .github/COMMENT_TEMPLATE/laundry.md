@@ -1,11 +1,12 @@
+### 洗濯
 ${{ if(github.event.inputs.minutes) }}
-### 基本情報
+#### 基本情報
 | 項目 | 内容 |
 | --- | :---: |
 | 時間 | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
 ${{ endif }}
 
-### 衣類
+#### 衣類
 * ${{ github.event.inputs.clothes1 }}
 ${{ if(github.event.inputs.clothes2) }}
 * ${{ github.event.inputs.clothes2 }}
@@ -27,6 +28,6 @@ ${{ if(github.event.inputs.clothes7) }}
 ${{ endif }}
 
 ${{ if(github.event.inputs.note) }}
-### メモ
+#### メモ
 ${{ github.event.inputs.note }}
 ${{ endif }}
