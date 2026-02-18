@@ -3,8 +3,8 @@ ${{ if(github.event.inputs.minutes) }}
 | 項目 | 内容 |
 | --- | :---: |
 | 時間 | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
-
 ${{ endif }}
+
 ### 食器
 * ${{ github.event.inputs.dishes1 }}
 ${{ if(github.event.inputs.dishes2) }}
@@ -25,8 +25,8 @@ ${{ endif }}
 ${{ if(github.event.inputs.dishes7) }}
 * ${{ github.event.inputs.dishes7 }}
 ${{ endif }}
-${{ if(github.event.inputs.note) }}
 
+${{ if(github.event.inputs.note) }}
 ### メモ
 ${{ github.event.inputs.note }}
 ${{ endif }}

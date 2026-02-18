@@ -3,8 +3,8 @@ ${{ if(github.event.inputs.minutes) }}
 | 項目 | 内容 |
 | --- | :---: |
 | 時間 | ${{ github.event.inputs.minutes }} 分 ${{ github.event.inputs.seconds }} 秒 |
-
 ${{ endif }}
+
 ### 消耗品
 * ${{ github.event.inputs.supplies1 }}
 ${{ if(github.event.inputs.supplies2) }}
@@ -25,8 +25,8 @@ ${{ endif }}
 ${{ if(github.event.inputs.supplies7) }}
 * ${{ github.event.inputs.supplies7 }}
 ${{ endif }}
-${{ if(github.event.inputs.note) }}
 
+${{ if(github.event.inputs.note) }}
 ### メモ
 ${{ github.event.inputs.note }}
 ${{ endif }}
