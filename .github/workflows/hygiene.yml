@@ -3,6 +3,18 @@ name: 'fβ5: 🧹🧼🧴 衛生'
 on:
   workflow_dispatch:
     inputs:
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
       toys1:
         required: true
         description: '使用器具 1'
@@ -39,18 +51,6 @@ on:
       toys7:
         required: false
         description: '使用器具 7'
-        type: string
-      minutes:
-        required: false
-        description: '分'
-        type: number
-      seconds:
-        required: false
-        description: '秒'
-        type: number
-      note:
-        required: false
-        description: 'メモ'
         type: string
 
 jobs:

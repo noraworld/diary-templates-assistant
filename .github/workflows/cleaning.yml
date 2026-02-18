@@ -3,6 +3,18 @@ name: 'fβ3: 🧹🧼🧹 掃除'
 on:
   workflow_dispatch:
     inputs:
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
       areas1:
         required: true
         description: 'エリア 1'
@@ -66,18 +78,6 @@ on:
       areas7:
         required: false
         description: 'エリア 7'
-        type: string
-      minutes:
-        required: false
-        description: '分'
-        type: number
-      seconds:
-        required: false
-        description: '秒'
-        type: number
-      note:
-        required: false
-        description: 'メモ'
         type: string
 
 jobs:

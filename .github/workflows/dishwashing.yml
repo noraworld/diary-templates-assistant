@@ -3,6 +3,18 @@ name: 'fβ1: 🧹🧼🧽 食器洗い'
 on:
   workflow_dispatch:
     inputs:
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
       dishes1:
         required: true
         description: '食器 1'
@@ -58,18 +70,6 @@ on:
       dishes7:
         required: false
         description: '食器 7'
-        type: string
-      minutes:
-        required: false
-        description: '分'
-        type: number
-      seconds:
-        required: false
-        description: '秒'
-        type: number
-      note:
-        required: false
-        description: 'メモ'
         type: string
 
 jobs:

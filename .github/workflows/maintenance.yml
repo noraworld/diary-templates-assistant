@@ -3,6 +3,18 @@ name: 'fβ4: 🧹🧼🛠️ メンテナンス'
 on:
   workflow_dispatch:
     inputs:
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
       supplies1:
         required: true
         description: '消耗品 1'
@@ -66,18 +78,6 @@ on:
       supplies7:
         required: false
         description: '消耗品 7'
-        type: string
-      minutes:
-        required: false
-        description: '分'
-        type: number
-      seconds:
-        required: false
-        description: '秒'
-        type: number
-      note:
-        required: false
-        description: 'メモ'
         type: string
 
 jobs:

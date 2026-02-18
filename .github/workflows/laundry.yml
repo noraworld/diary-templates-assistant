@@ -3,6 +3,18 @@ name: 'fβ2: 🧹🧼👕 洗濯'
 on:
   workflow_dispatch:
     inputs:
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
       clothes1:
         required: true
         description: '衣類 1'
@@ -122,18 +134,6 @@ on:
           - 'アイマスク'
           - 'まくらカバー'
           - 'シーツ'
-      minutes:
-        required: false
-        description: '分'
-        type: number
-      seconds:
-        required: false
-        description: '秒'
-        type: number
-      note:
-        required: false
-        description: 'メモ'
-        type: string
 
 jobs:
   laundry:
