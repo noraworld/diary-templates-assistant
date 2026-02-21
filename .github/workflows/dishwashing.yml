@@ -27,6 +27,8 @@ on:
           - 'コーヒーカップ'
           - 'スプーン'
           - 'どんぶり'
+          - '包丁'
+          - 'まな板'
       dishes2:
         required: false
         description: '食器 2'
@@ -39,6 +41,8 @@ on:
           - 'コーヒーカップ'
           - 'スプーン'
           - 'どんぶり'
+          - '包丁'
+          - 'まな板'
       dishes3:
         required: false
         description: '食器 3'
@@ -51,6 +55,8 @@ on:
           - 'コーヒーカップ'
           - 'スプーン'
           - 'どんぶり'
+          - '包丁'
+          - 'まな板'
       dishes4:
         required: false
         description: '食器 4'
@@ -63,6 +69,8 @@ on:
           - 'コーヒーカップ'
           - 'スプーン'
           - 'どんぶり'
+          - '包丁'
+          - 'まな板'
       dishes5:
         required: false
         description: '食器 5'
@@ -83,6 +91,6 @@ jobs:
       search_query: "housework 家事"
       template_name: "dishwashing"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
