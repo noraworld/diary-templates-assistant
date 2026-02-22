@@ -1,9 +1,10 @@
 name: Issue Recorder
 
 on:
-  issues:
-    types:
-      - labeled
+  workflow_call:
+    secrets:
+      token:
+        required: true
 
 jobs:
   build:
