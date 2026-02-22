@@ -3,10 +3,13 @@ name: Issue Recorder
 on:
   issues:
     types:
-      - closed
+      - labeled
 
 jobs:
   build:
+    if: >
+      github.event.issue.state == 'open' &&
+      github.event.label.name == 'done'
     runs-on: ubuntu-latest
     steps:
       - name: Retrieve the title prefix
@@ -18,6 +21,28 @@ jobs:
           else
             echo "TITLE_PREFIX=✅" >> $GITHUB_ENV
           fi
+
+      - name: Retrieve whether to skip body or not
+        run: |
+          if [ "$(echo "${{ toJson(github.event.issue.labels.*.name) }}" | grep -c "skip-body")" -gt 0 ]; then
+            echo "SKIP_BODY=file, issue" >> $GITHUB_ENV
+          else
+            echo "SKIP_BODY=" >> $GITHUB_ENV
+          fi
+
+      - name: Get diary title
+        run: echo "DIARY_TITLE=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $3 }')" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Get year
+        run: echo "YEAR=$(cut -d '-' -f1 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
+
+      - name: Get month
+        run: echo "MONTH=$(cut -d '-' -f2 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
+
+      - name: Get day
+        run: echo "DAY=$(cut -d '-' -f3 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
 
       - name: Track issues
         uses: noraworld/issue-recorder@main
@@ -33,6 +58,15 @@ jobs:
           target_issue_repo: noraworld/daily-report
           target_issue_number: latest
           fold_threshold: infinity
+          # THE ASSETS SHOULD NEVER BE PUBLIC
+          with_repo_assets: "file, issue"
+          assets_repo_gist_id: f14aef1d07a99eb7922318d91aca03fc
+          assets_directory: ${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DAY }}
+          with_assets_compression: true
+          compression_threshold: 1048576
+          resize_width: 1920
+          with_compatible_format: true
+          # THE ASSETS SHOULD NEVER BE PUBLIC
           fold_summary: 詳細を表示
           title_prefix_for_issue: ${{ env.TITLE_PREFIX }}
           with_date: true
@@ -41,7 +75,8 @@ jobs:
           with_header: "---\r\nnumber: <NUMBER>\r\ntitle: <TITLE>\r\nassignees: <ASSIGNEES>\r\nlabels: <LABELS>\r\ncreated_at: <CREATED_AT>\r\n---"
           with_title: "file, issue"
           # with_quote: issue
-          skip_body: "file, issue"
+          skip_body: ${{ env.SKIP_BODY }}
+          personal_access_token: GH_TOKEN
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -75,3 +110,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           TITLE: ${{ github.event.issue.title }}
           URL: ${{ github.event.issue.html_url }}
+
+      - name: Close the issue
+        run: gh issue close ${{ github.event.issue.number }}
+        shell: sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
