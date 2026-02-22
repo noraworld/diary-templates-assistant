@@ -34,7 +34,7 @@ jobs:
       - name: Get diary title
         run: echo "DIARY_TITLE=$(gh issue list --repo "noraworld/reserved-diary" --limit 1 | awk '{ print $3 }')" >> $GITHUB_ENV
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.token }}
 
       - name: Get year
         run: echo "YEAR=$(cut -d '-' -f1 <<< ${{ env.DIARY_TITLE }})" >> $GITHUB_ENV
@@ -79,7 +79,7 @@ jobs:
           skip_body: ${{ env.SKIP_BODY }}
           personal_access_token: GH_TOKEN
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.token }}
 
       - name: Pile up today's to-do list on daily report's issue
         run: |
@@ -108,7 +108,7 @@ jobs:
           fi
         shell: sh
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.token }}
           TITLE: ${{ github.event.issue.title }}
           URL: ${{ github.event.issue.html_url }}
 
@@ -116,4 +116,4 @@ jobs:
         run: gh issue close ${{ github.event.issue.number }}
         shell: sh
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.token }}
