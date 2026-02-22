@@ -49,6 +49,7 @@ on:
         required: true
         description: '分類'
         type: choice
+        # 上記の「食べたもの」をそのまま分類に変換して隣り合って重複している部分を取り除く
         options:
           - ''
           - '☕️'
