@@ -3,14 +3,14 @@ name: 'fβ2: 🧹🧼👕 洗濯'
 on:
   workflow_dispatch:
     inputs:
-      minutes:
-        required: false
-        description: '分'
-        type: number
-      seconds:
-        required: false
-        description: '秒'
-        type: number
+      # minutes:
+      #   required: false
+      #   description: '分'
+      #   type: number
+      # seconds:
+      #   required: false
+      #   description: '秒'
+      #   type: number
       note:
         required: false
         description: 'メモ'
@@ -120,6 +120,40 @@ on:
       clothes7:
         required: false
         description: '衣類 7'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes8:
+        required: false
+        description: '衣類 8'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes9:
+        required: false
+        description: '衣類 9'
         type: choice
         options:
           - ''
