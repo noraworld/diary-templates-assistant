@@ -76,18 +76,29 @@ jobs:
             gh issue edit --repo "$MAIN_REPO" --body "$BODY_WITH_CHECKED_OPTIONAL_TASK" "$NUMBER"
           fi
 
-          EDITED_BODY=$(
-            gh issue view         \
-              --repo "$MAIN_REPO" \
-              --json body         \
-              --jq .body          \
-              "$NUMBER"
-          )
+          ATTEMPT=1
+          MAX_ATTEMPTS=5
+          while :; do
+            EDITED_BODY=$(
+              gh issue view         \
+                --repo "$MAIN_REPO" \
+                --json body         \
+                --jq .body          \
+                "$NUMBER"
+            )
 
-          if ! printf '%s\n' "$EDITED_BODY" | grep -qE "$CHECKED_PATTERN"; then
-            echo "ERROR: [$TITLE] doesn't seem to be checked off in issue #$NUMBER" >&2
-            exit 1
-          fi
+            if printf '%s\n' "$EDITED_BODY" | grep -qE "$CHECKED_PATTERN"; then
+              break
+            fi
+
+            if [ "$ATTEMPT" -ge "$MAX_ATTEMPTS" ]; then
+              echo "ERROR: [$TITLE] doesn't seem to be checked off in issue #$NUMBER" >&2
+              exit 1
+            fi
+
+            sleep 3
+            ATTEMPT=$((ATTEMPT + 1))
+          done
 
           if [ "$(printf '%s\n' "$EDITED_BODY" | grep -cE "^\* *\[x\] *\[x\]")" -ne 0 ]; then
             BODY_WITH_DUPLICATED_CHECKMARK_FIXED=$(
