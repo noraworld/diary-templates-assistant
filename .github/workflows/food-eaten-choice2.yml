@@ -1,0 +1,68 @@
+name: 'cβ2: 🌿🥗 食事記録 / 食べたもの（選択式）2'
+
+on:
+  workflow_dispatch:
+    inputs:
+      food:
+        required: true
+        description: '食べたもの'
+        type: choice
+        options:
+          - ''
+          - '🥛'
+          - '牛乳'
+          - '濃厚ティラミス ショコララテ'
+          - '🍛'
+          - '1食分のたんぱく質 鶏ひき肉と3種の豆のキーマカレー'
+          - '1日分の食物繊維 完熟トマトとカボチャの緑黄色野菜カレー'
+          - 'みなさまのお墨付き 甘口カレー'
+          - 'みなさまのお墨付き フォン・ド・ボー仕込み ビーフカレー [甘口]'
+          - 'みなさまのお墨付き とろけるチーズとコクとソテー・ド・オニオンの甘み 欧風チーズカレー'
+          - 'みなさまのお墨付き カシューナッツ香る マッサマンカレー'
+          - 'みなさまのお墨付き ほうれん草と生クリームのサグダールカレー'
+          - 'みなさまのお墨付き 1食分の野菜と食物繊維がとれるカレー'
+          - 'みなさまのお墨付き たんぱく質と食物繊維がとれるハリラ風豆カレー'
+      category:
+        required: true
+        description: '分類'
+        type: choice
+        # 上記の「食べたもの」をそのまま分類に変換して隣り合って重複している部分を取り除く
+        options:
+          - ''
+          - '🥛'
+          - '牛乳'
+          - '粉末清涼飲料'
+          - '🍛'
+          - 'レトルト'
+      quantity:
+        required: true
+        description: '分量'
+        type: number
+      unit:
+        required: true
+        description: '単位'
+        type: choice
+        options:
+          - ''
+          - '人前'
+          - '個'
+          - '本'
+          - '杯'
+          - '袋'
+          - '箱'
+          - 'g'
+      impression:
+        required: false
+        description: '感想'
+        type: string
+
+jobs:
+  food:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "food 食事記録"
+      template_name: "food-eaten"
+      template_repo: "noraworld/diary-templates"
+      version: "0.2.3"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
