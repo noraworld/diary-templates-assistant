@@ -1,5 +1,5 @@
 ---
-name: eα. Readiness
+name: 51. Readiness
 about: 心構え | 最初に必ずこれを見ること
 title: "🎯_[{{DATE}}]_readiness_心構え"
 labels: ''

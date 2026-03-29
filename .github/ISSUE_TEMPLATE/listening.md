@@ -1,5 +1,5 @@
 ---
-name: bε. Listening
+name: 25. Listening
 about: リスニング | 毎日リスニングしてネイティブの会話が日本語並みに聴き取れることを目指しましょう
 title: "🎧_[{{DATE}}]_listening_リスニング"
 labels: ''

@@ -1,5 +1,5 @@
 ---
-name: fα. Chore
+name: 61. Chore
 about: デジタルハウスキーピング
 title: "📨_[{{DATE}}]_chore_デジタルハウスキーピング"
 labels: ''

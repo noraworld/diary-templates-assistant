@@ -1,5 +1,5 @@
 ---
-name: bβ. Pronunciation
+name: 22. Pronunciation
 about: 発音練習 | 発音の間違いはなかなか気付けないので AI に添削してもらい発音を向上させましょう
 title: "🗣️_[{{DATE}}]_pronunciation_発音練習"
 labels: ''

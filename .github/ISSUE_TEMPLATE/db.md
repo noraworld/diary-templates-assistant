@@ -1,5 +1,5 @@
 ---
-name: gα. DB
+name: 71. DB
 about: データベース
 title: "🗄️_[{{DATE}}]_db_データベース"
 labels: ''

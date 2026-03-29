@@ -1,5 +1,5 @@
 ---
-name: eε. Journal
+name: 55. Journal
 about: ジャーナル | 思ったことや感じたことをありのままに表現することでメンタルの改善に寄与します
 title: "📖_[{{DATE}}]_journal_ジャーナル"
 labels: ''

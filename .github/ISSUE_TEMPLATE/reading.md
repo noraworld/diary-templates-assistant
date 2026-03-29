@@ -1,5 +1,5 @@
 ---
-name: bα. Reading
+name: 21. Reading
 about: 読書 | 知識を増やすだけでなくストレスを軽減するのにも役立ちます
 title: "📚_[{{DATE}}]_reading_読書"
 labels: ''

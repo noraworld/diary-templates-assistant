@@ -1,5 +1,5 @@
 ---
-name: cγ. Teeth
+name: 33. Teeth
 about: 歯磨き | 虫歯にならないように食後は歯を磨きましょう
 title: "🦷_[{{DATE}}]_teeth_歯磨き"
 labels: ''

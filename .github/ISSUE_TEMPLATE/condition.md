@@ -1,5 +1,5 @@
 ---
-name: cδ. Condition
+name: 34. Condition
 about: 体調記録
 title: "😷_[{{DATE}}]_condition_体調記録"
 labels: ''

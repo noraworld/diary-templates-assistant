@@ -1,5 +1,5 @@
 ---
-name: aγ. Progress
+name: 13. Progress
 about: ワンステップチャレンジ | 5 分でもいい。なにをその日のゴールにしてもいい。短くても少なくてもいいから、続けよう。
 title: "🪜_[{{DATE}}]_progress_ワンステップチャレンジ"
 labels: ''

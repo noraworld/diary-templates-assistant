@@ -1,5 +1,5 @@
 ---
-name: bζ. Clippings
+name: 26. Clippings
 about: クリッピング
 title: "📎_[{{DATE}}]_clippings_クリッピング"
 labels: ''

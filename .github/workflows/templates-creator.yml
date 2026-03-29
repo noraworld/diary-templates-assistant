@@ -86,7 +86,7 @@ jobs:
           fi
 
           find tmp/.github/ISSUE_TEMPLATE -type f | while read -r issue_template; do
-            sort_key=$(grep -m1 '^name:' "$issue_template" | sed -E 's/^name:[[:space:]]*([a-z][αβγδεζηθικλμνξοπρστυφχψω])\..*/\1/')
+            sort_key=$(grep -m1 '^name:' "$issue_template" | sed -E 's/^name:[[:space:]]*(([a-z][αβγδεζηθικλμνξοπρστυφχψω])|([0-9]{2}))\..*/\1/')
             printf "%s: %s\n" "$sort_key" "$issue_template"
           done | sort -r -t: -k1,1 | while read -r sort_key issue_template; do
             title=$(grep "title: " "$issue_template"                              |
