@@ -37,11 +37,26 @@ jobs:
             exit 0
           fi
 
+          OPEN_ISSUE_COUNT=$(gh issue list --repo "$MAIN_REPO" --json number --jq 'length')
+
+          if [ "$OPEN_ISSUE_COUNT" -ne 1 ]; then
+            echo "Exactly one open issue must exist before creating the new issue." >&2
+            echo "succeeded=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          OLD_ISSUE_NUMBER=$(gh issue list --repo "$MAIN_REPO" --json number --jq '.[0].number')
+
+          if [ "$OLD_ISSUE_NUMBER" = "null" ] || [ "$OLD_ISSUE_NUMBER" = "" ]; then
+            echo "No issue to close was found before creating the new issue." >&2
+            echo "succeeded=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           ISSUE_TEMPLATE=$(gh api "/repos/$MAIN_REPO/contents/.github/ISSUE_TEMPLATE/general.md" \
                            --jq .content                                                         |
                            base64 --decode)
           ISSUE_TITLE_LIST=$(gh issue list --repo "$MAIN_REPO" --json title --jq .[].title)
-          OLD_ISSUE_NUMBER=$(gh issue list --repo "$MAIN_REPO" --json number --jq '.[0].number')
 
           title=$(echo "$ISSUE_TEMPLATE"                                        |
                   grep "title: "                                                |
@@ -86,12 +101,6 @@ jobs:
                      grep "assignees: "         |
                      sed -e 's/^assignees: //g' |
                      sed -e "s/[\"\']//g")
-
-          if [ "$OLD_ISSUE_NUMBER" = "null" ] || [ "$OLD_ISSUE_NUMBER" = "" ]; then
-            echo "No issue to close was found before creating the new issue." >&2
-            echo "succeeded=false" >> $GITHUB_OUTPUT
-            exit 0
-          fi
 
           gh issue create                  \
             --repo "$MAIN_REPO"            \
