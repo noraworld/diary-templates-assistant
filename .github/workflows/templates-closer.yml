@@ -71,7 +71,7 @@ jobs:
           echo "succeeded=true" >> $GITHUB_OUTPUT
         shell: sh
         env:
-          GH_TOKEN: ${{ secrets.token }}
+          GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
           REPO: ${{ inputs.repo }}
           TZ: ${{ inputs.timezone }}
           DATE_CHECK: ${{ inputs.date_check }}
