@@ -9,6 +9,11 @@ on:
     secrets:
       token:
         required: true
+  workflow_dispatch:
+    inputs:
+      main_repo:
+        required: true
+        type: string
 
 jobs:
   convert:
@@ -29,4 +34,4 @@ jobs:
         shell: sh
         env:
           MAIN_REPO: ${{ inputs.main_repo }}
-          GH_TOKEN: ${{ secrets.token }}
+          GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
