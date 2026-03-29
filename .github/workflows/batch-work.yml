@@ -33,11 +33,11 @@ on:
           - 'Asia/Tokyo'
           - 'Australia/Sydney'
         default: 'Asia/Tokyo'
-      my_annual:
-        required: true
-        description: 'My annual'
-        type: string
-        default: '864'
+      # my_annual:
+      #   required: true
+      #   description: 'My annual'
+      #   type: string
+      #   default: '864'
   schedule:
     # JST: 07:50 AM
     - cron: '50 22 * * *'
@@ -114,11 +114,11 @@ jobs:
     secrets:
       token: ${{ secrets.GH_TOKEN }}
 
-  daily-report-wage:
-    needs: daily-report-templates-linker
-    uses: noraworld/diary-templates-assistant/.github/workflows/wage.yml@main
-    with:
-      my_annual: ${{ github.event.inputs.my_annual || '864' }}
-    secrets:
-      gh_token: ${{ secrets.GH_TOKEN }}
-      resas_api_key: ${{ secrets.RESAS_API_KEY }}
+  # daily-report-wage:
+  #   needs: daily-report-templates-linker
+  #   uses: noraworld/diary-templates-assistant/.github/workflows/wage.yml@main
+  #   with:
+  #     my_annual: ${{ github.event.inputs.my_annual || '864' }}
+  #   secrets:
+  #     gh_token: ${{ secrets.GH_TOKEN }}
+  #     resas_api_key: ${{ secrets.RESAS_API_KEY }}
