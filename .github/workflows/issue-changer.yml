@@ -18,6 +18,17 @@ on:
     secrets:
       token:
         required: true
+  workflow_dispatch:
+    inputs:
+      main_repo:
+        required: true
+        type: string
+      template_repo:
+        required: true
+        type: string
+      timezone:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -113,7 +124,7 @@ jobs:
           echo "succeeded=true" >> $GITHUB_OUTPUT
         shell: sh
         env:
-          GH_TOKEN: ${{ secrets.token }}
+          GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
           MAIN_REPO: ${{ inputs.main_repo }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}
           TZ: ${{ inputs.timezone }}
