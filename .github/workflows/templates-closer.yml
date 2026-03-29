@@ -18,6 +18,17 @@ on:
     secrets:
       token:
         required: true
+  workflow_dispatch:
+    inputs:
+      repo:
+        required: true
+        type: string
+      timezone:
+        required: true
+        type: string
+      date_check:
+        required: true
+        type: string
 
 jobs:
   build:
