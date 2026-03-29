@@ -1,3 +1,5 @@
+# See also: .github/workflows/batch-work.yml
+
 name: '001: Issue Refresh Batch (personal)'
 
 on:
@@ -31,7 +33,8 @@ on:
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790207338
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790217630
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790220599
-    - cron: '50 22 * * *' # 7:50 JST
+    # JST: 07:50 AM
+    - cron: '50 22 * * *'
 
 jobs:
   # reserved-diary

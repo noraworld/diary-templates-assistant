@@ -1,3 +1,5 @@
+# See also: .github/workflows/batch.yml
+
 name: '002: Issue Refresh Batch (work)'
 
 on:
@@ -26,15 +28,10 @@ on:
         description: 'Timezone'
         type: choice
         options:
-          # https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a
           - ''
           - 'Etc/Universal'
           - 'Asia/Tokyo'
           - 'Australia/Sydney'
-        # Comment #1
-        #   When it is performed by workflow_dispatch, this default value will be referenced
-        #   instead of 'foo' in '${{ github.event.inputs.timezone || 'foo' }}'.
-        #   See also Comment #2.
         default: 'Asia/Tokyo'
       my_annual:
         required: true
@@ -42,11 +39,8 @@ on:
         type: string
         default: '864'
   schedule:
-    # Read this if you want to delay the time to change the diary issues.
-    #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790207338
-    #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790217630
-    #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790220599
-    - cron: '50 22 * * *' # 7:50 JST
+    # JST: 07:50 AM
+    - cron: '50 22 * * *'
 
 jobs:
   daily-report-day-off:
