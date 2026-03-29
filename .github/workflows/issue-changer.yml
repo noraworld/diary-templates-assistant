@@ -41,6 +41,7 @@ jobs:
                            --jq .content                                                         |
                            base64 --decode)
           ISSUE_TITLE_LIST=$(gh issue list --repo "$MAIN_REPO" --json title --jq .[].title)
+          OLD_ISSUE_NUMBER=$(gh issue list --repo "$MAIN_REPO" --json number --jq '.[0].number')
 
           title=$(echo "$ISSUE_TEMPLATE"                                        |
                   grep "title: "                                                |
@@ -86,23 +87,19 @@ jobs:
                      sed -e 's/^assignees: //g' |
                      sed -e "s/[\"\']//g")
 
-          url=$(gh issue create            \
-                  --repo "$MAIN_REPO"      \
-                  --title "$title"         \
-                  --body "$processed_body" \
-                  --assignee "$assignee")
-
-          if [ "$(gh issue list --repo "$MAIN_REPO" | wc -l)" -ne 2 ]; then
-            echo "There are more than 2 issues, which means something is wrong." >&2
+          if [ "$OLD_ISSUE_NUMBER" = "null" ] || [ "$OLD_ISSUE_NUMBER" = "" ]; then
+            echo "No issue to close was found before creating the new issue." >&2
             echo "succeeded=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          gh issue list         \
-            --repo "$MAIN_REPO" |
-            awk '{ print $1 }'  |
-            tail -n 1           |
-            xargs -I {} gh issue close {} --repo "$MAIN_REPO"
+          gh issue create                  \
+            --repo "$MAIN_REPO"            \
+            --title "$title"               \
+            --body "$processed_body"       \
+            --assignee "$assignee" >/dev/null
+
+          gh issue close "$OLD_ISSUE_NUMBER" --repo "$MAIN_REPO"
 
           echo "succeeded=true" >> $GITHUB_OUTPUT
         shell: sh
