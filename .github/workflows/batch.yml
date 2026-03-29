@@ -1,4 +1,4 @@
-name: '00-1: Issue Refresh Batch'
+name: '001: Issue Refresh Batch (personal)'
 
 on:
   workflow_dispatch:
@@ -11,16 +11,6 @@ on:
           - 'true'
           - 'false'
         default: 'true'
-      fail_if_day_off:
-        required: false
-        description: 'Fail if day off'
-        type: boolean
-        default: false
-      gh_output_format:
-        required: false
-        description: 'GitHub output'
-        type: boolean
-        default: true
       timezone:
         required: true
         description: 'Timezone'
@@ -36,11 +26,6 @@ on:
         #   instead of 'foo' in '${{ github.event.inputs.timezone || 'foo' }}'.
         #   See also Comment #2.
         default: 'Asia/Tokyo'
-      my_annual:
-        required: true
-        description: 'My annual'
-        type: string
-        default: '864'
   schedule:
     # Read this if you want to delay the time to change the diary issues.
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790207338
@@ -186,86 +171,3 @@ jobs:
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
     secrets:
       token: ${{ secrets.GH_TOKEN }}
-
-
-
-  # daily-report
-  daily-report-day-off:
-    uses: noraworld/diary-templates-assistant/.github/workflows/day-off.yml@main
-    with:
-      fail_if_day_off: ${{ github.event.inputs.fail_if_day_off || false }}
-      gh_output_format: ${{ github.event.inputs.gh_output_format || true }}
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-
-  daily-report-templates-closer:
-    needs: daily-report-day-off
-    if: needs.daily-report-day-off.outputs.day_off == 'false'
-    uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
-    with:
-      repo: noraworld/daily-report-templates
-      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-      date_check: false
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
-
-  daily-report-wait-for-templates-closed:
-    needs: daily-report-templates-closer
-    if: needs.daily-report-templates-closer.outputs.succeeded == 'true'
-    uses: noraworld/diary-templates-assistant/.github/workflows/wait-closed.yml@main
-    with:
-      template_repo: noraworld/daily-report-templates
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
-
-  daily-report-convert-unchecked:
-    needs: daily-report-wait-for-templates-closed
-    uses: noraworld/diary-templates-assistant/.github/workflows/convert-unchecked.yml@main
-    with:
-      main_repo: noraworld/daily-report
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
-
-  daily-report-issue-changer:
-    needs: daily-report-convert-unchecked
-    uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
-    with:
-      main_repo: noraworld/daily-report
-      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
-      template_repo: noraworld/daily-report-templates
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
-
-  daily-report-templates-creator:
-    needs: daily-report-issue-changer
-    if: needs.daily-report-issue-changer.outputs.succeeded == 'true'
-    uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
-    with:
-      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
-      main_repo: noraworld/daily-report
-      template_repo: noraworld/daily-report-templates
-      issue_template_repo: noraworld/daily-report-templates
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
-
-  daily-report-templates-linker:
-    needs: daily-report-templates-creator
-    if: needs.daily-report-templates-creator.outputs.succeeded == 'true'
-    uses: noraworld/diary-templates-assistant/.github/workflows/templates-linker.yml@main
-    with:
-      main_repo: noraworld/daily-report
-      template_repo: noraworld/daily-report-templates
-      timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
-    secrets:
-      token: ${{ secrets.GH_TOKEN }}
-
-  daily-report-wage:
-    needs: daily-report-templates-linker
-    uses: noraworld/diary-templates-assistant/.github/workflows/wage.yml@main
-    with:
-      my_annual: ${{ github.event.inputs.my_annual || '864' }}
-    secrets:
-      gh_token: ${{ secrets.GH_TOKEN }}
-      resas_api_key: ${{ secrets.RESAS_API_KEY }}
