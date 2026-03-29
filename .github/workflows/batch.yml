@@ -3,6 +3,14 @@ name: '00-1: Issue Refresh Batch'
 on:
   workflow_dispatch:
     inputs:
+      fail_on_unsuccessful:
+        required: true
+        description: 'Fail when a reusable workflow reports unsuccessful'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+        default: 'true'
       fail_if_day_off:
         required: false
         description: 'Fail if day off'
@@ -55,6 +63,7 @@ jobs:
       # Comment #2
       #   The value after '||' is only referenced in cron.
       #   See also Comment #1.
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
       date_check: true
     secrets:
@@ -82,6 +91,7 @@ jobs:
     uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/reserved-diary
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       template_repo: noraworld/diary-templates
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
     secrets:
@@ -92,6 +102,7 @@ jobs:
     if: needs.issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       main_repo: noraworld/reserved-diary
       template_repo: noraworld/diary-templates
       issue_template_repo: noraworld/diary-templates-assistant
@@ -118,6 +129,7 @@ jobs:
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
     with:
       repo: noraworld/private-diary-templates
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
       date_check: true
     secrets:
@@ -145,6 +157,7 @@ jobs:
     uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/private-diary
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       template_repo: noraworld/private-diary-templates
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
     secrets:
@@ -155,6 +168,7 @@ jobs:
     if: needs.private-issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       main_repo: noraworld/private-diary
       template_repo: noraworld/private-diary-templates
       issue_template_repo: noraworld/private-diary-templates
@@ -189,6 +203,7 @@ jobs:
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-closer.yml@main
     with:
       repo: noraworld/daily-report-templates
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
       date_check: false
     secrets:
@@ -216,6 +231,7 @@ jobs:
     uses: noraworld/diary-templates-assistant/.github/workflows/issue-changer.yml@main
     with:
       main_repo: noraworld/daily-report
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       template_repo: noraworld/daily-report-templates
       timezone: ${{ github.event.inputs.timezone || 'Asia/Tokyo' }}
     secrets:
@@ -226,6 +242,7 @@ jobs:
     if: needs.daily-report-issue-changer.outputs.succeeded == 'true'
     uses: noraworld/diary-templates-assistant/.github/workflows/templates-creator.yml@main
     with:
+      fail_on_unsuccessful: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.fail_on_unsuccessful }}
       main_repo: noraworld/daily-report
       template_repo: noraworld/daily-report-templates
       issue_template_repo: noraworld/daily-report-templates

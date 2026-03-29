@@ -3,6 +3,10 @@ name: Templates Creator
 on:
   workflow_call:
     inputs:
+      fail_on_unsuccessful:
+        required: false
+        type: string
+        default: 'false'
       main_repo:
         required: true
         type: string
@@ -23,6 +27,13 @@ on:
         required: true
   workflow_dispatch:
     inputs:
+      fail_on_unsuccessful:
+        required: false
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+        default: 'false'
       main_repo:
         required: true
         type: string
@@ -53,6 +64,14 @@ jobs:
       - name: Create issues from templates
         id: create
         run: |
+          handle_unsuccessful() {
+            echo "succeeded=false" >> "$GITHUB_OUTPUT"
+            if [ "$FAIL_ON_UNSUCCESSFUL" = "true" ]; then
+              exit 1
+            fi
+            exit 0
+          }
+
           DIARY_ISSUE=$(gh issue list --repo "$MAIN_REPO" --limit 1 --json number,url)
           DIARY_ISSUE_NUMBER=$(echo "$DIARY_ISSUE" | jq -r '.[0].number')
           DIARY_ISSUE_URL=$(echo "$DIARY_ISSUE" | jq -r '.[0].url')
@@ -63,8 +82,7 @@ jobs:
             echo "DEBUG: diary issue title: $diary_issue_title" >&2
             echo "DEBUG: today's date:      $(date '+%Y-%m-%d' --date '0 day')" >&2
             echo "The diary issue title does not match today's date." >&2
-            echo "succeeded=false" >> $GITHUB_OUTPUT
-            exit 0
+            handle_unsuccessful
           fi
 
           find tmp/.github/ISSUE_TEMPLATE -type f | while read -r issue_template; do
@@ -115,6 +133,7 @@ jobs:
 
           echo "succeeded=true" >> $GITHUB_OUTPUT
         env:
+          FAIL_ON_UNSUCCESSFUL: ${{ inputs.fail_on_unsuccessful || github.event.inputs.fail_on_unsuccessful || 'false' }}
           GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
           MAIN_REPO: ${{ inputs.main_repo }}
           TEMPLATE_REPO: ${{ inputs.template_repo }}

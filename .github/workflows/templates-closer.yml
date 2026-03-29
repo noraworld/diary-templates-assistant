@@ -3,6 +3,10 @@ name: Templates Closer
 on:
   workflow_call:
     inputs:
+      fail_on_unsuccessful:
+        required: false
+        type: string
+        default: 'false'
       repo:
         required: true
         type: string
@@ -20,6 +24,13 @@ on:
         required: true
   workflow_dispatch:
     inputs:
+      fail_on_unsuccessful:
+        required: false
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+        default: 'false'
       repo:
         required: true
         type: string
@@ -42,6 +53,14 @@ jobs:
       - name: Add done label to close issues
         id: close
         run: |
+          handle_unsuccessful() {
+            echo "succeeded=false" >> "$GITHUB_OUTPUT"
+            if [ "$FAIL_ON_UNSUCCESSFUL" = "true" ]; then
+              exit 1
+            fi
+            exit 0
+          }
+
           issue_templates_count=$(gh issue list  \
                                   --repo "$REPO" \
                                   --json title   \
@@ -59,8 +78,7 @@ jobs:
             printf "DEBUG: the current time in %-18s %s\n" "$TZ:" "$(date)" >&2
             printf "DEBUG: the target date in %-19s %s\n" "$TZ:" "$(date '+%Y-%m-%d' --date '-1 day')" >&2
             echo   "Some of or all of the diary templates issue title does not match yesterday's date." >&2
-            echo "succeeded=false" >> $GITHUB_OUTPUT
-            exit 0
+            handle_unsuccessful
           fi
 
           gh issue list        \
@@ -71,6 +89,7 @@ jobs:
           echo "succeeded=true" >> $GITHUB_OUTPUT
         shell: sh
         env:
+          FAIL_ON_UNSUCCESSFUL: ${{ inputs.fail_on_unsuccessful || github.event.inputs.fail_on_unsuccessful || 'false' }}
           GH_TOKEN: ${{ secrets.token || secrets.GH_TOKEN }}
           REPO: ${{ inputs.repo }}
           TZ: ${{ inputs.timezone }}
