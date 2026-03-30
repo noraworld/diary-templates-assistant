@@ -1,6 +1,6 @@
 # See also: .github/workflows/batch.yml
 
-name: '002: Issue Refresh Batch (work)'
+name: 'Issue Refresh Batch (work)'
 
 on:
   workflow_dispatch:
