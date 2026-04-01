@@ -22,8 +22,8 @@ on:
         options:
           - ''
           - 'セブンティーン'
-          - 'atom リング大'
           - 'atom リング小'
+          - 'atom リング大'
       toys2:
         required: false
         description: '使用器具 2'
@@ -31,8 +31,8 @@ on:
         options:
           - ''
           - 'セブンティーン'
-          - 'atom リング大'
           - 'atom リング小'
+          - 'atom リング大'
       toys3:
         required: false
         description: '使用器具 3'
@@ -40,8 +40,8 @@ on:
         options:
           - ''
           - 'セブンティーン'
-          - 'atom リング大'
           - 'atom リング小'
+          - 'atom リング大'
       toys4:
         required: false
         description: '使用器具 4'
