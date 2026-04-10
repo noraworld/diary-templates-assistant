@@ -7,9 +7,10 @@ on:
         required: true
         description: '書籍名'
         type: string
-        default: '反応しない練習'
+        default: '史上最強の哲学入門 東洋の哲人たち'
         # 読了リスト:
         #
+        #   * 反応しない練習
         #   * 無（最高の状態）
         #   * 考えすぎない練習
         #   * 会社を辞めて週休3日生活しています
