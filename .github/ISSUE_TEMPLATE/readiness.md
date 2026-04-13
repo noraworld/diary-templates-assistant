@@ -48,13 +48,13 @@ assignees: noraworld
 <details>
 <summary><code>v2 (2026/04/13)</code></summary>
 
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **楽しむことを優先してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+* <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **楽しむことを優先してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
     > 楽しむことに意識を向けるだけで、だいたいうまくいく！ 自分を信じてみよう！
     > </details>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「ま、いっか」を口癖にしてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/vulpix.gif" title="" width="28px"></a>
+* <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **「ま、いっか」を口癖にしてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/vulpix.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
@@ -65,7 +65,7 @@ assignees: noraworld
     >
     > _自己肯定感の教科書_
     > </details>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **否定語を肯定語に変えてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
+* <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **否定語を肯定語に変えてみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/poliwag.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
@@ -96,7 +96,7 @@ assignees: noraworld
     >
     > _自己肯定感の教科書 p.231 (リフレーミング)_
     > </details>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事は 60 点を目指そう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
+* <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **物事は 60 点を目指そう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/eevee.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
@@ -124,7 +124,7 @@ assignees: noraworld
     >
     > _[否定語の肯定語変換 - ChatGPT](https://chatgpt.com/share/68fbae37-0fdc-8004-8c6b-d6e475243305)_
     > </details>
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **『今』に全集中してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
+* <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> **『今』に全集中してみよう！**<a href="#issue-body-viewer"><img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/snorlax.gif" title="" width="28px"></a>
     > <details>
     > <summary>詳細を読む</summary>
     >
