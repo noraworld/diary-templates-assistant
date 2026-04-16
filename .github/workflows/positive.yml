@@ -8,15 +8,15 @@ on:
         description: 'ポジティブ 1'
         type: string
       positive2:
-        required: true
+        required: false # was true
         description: 'ポジティブ 2'
         type: string
       positive3:
-        required: true
+        required: false # was true
         description: 'ポジティブ 3'
         type: string
       positive4:
-        required: true
+        required: false # was true
         description: 'ポジティブ 4'
         type: string
       positive5:
