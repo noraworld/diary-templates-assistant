@@ -9,8 +9,9 @@ on:
         type: choice
         options:
           - ''
-          - 'BoldVoice'
           - 'ELSA Speak'
+          - 'BoldVoice'
+        default: 'BoldVoice'
       streaks:
         required: true
         description: '連続日数'
