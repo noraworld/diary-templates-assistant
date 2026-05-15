@@ -9,6 +9,8 @@ ${{ endif }}
 
 ### チェックリスト
 * [${{ github.event.inputs.sample }}] サンプル
+* [${{ github.event.inputs.reread }}] 読み返し
+* [${{ github.event.inputs.partial }}] 部分読み
 
 ### 感想・学び
 ${{ github.event.inputs.impression || '特になし。' }}

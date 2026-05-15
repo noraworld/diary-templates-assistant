@@ -26,6 +26,16 @@ on:
         description: 'サンプル'
         type: boolean
         default: false
+      reread:
+        required: true
+        description: '読み返し'
+        type: boolean
+        default: false
+      partial:
+        required: true
+        description: '部分読み'
+        type: boolean
+        default: false
       percent:
         required: true
         description: '読了率 (%)'
