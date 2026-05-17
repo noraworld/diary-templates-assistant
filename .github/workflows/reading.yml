@@ -7,7 +7,7 @@ on:
         required: true
         description: '書籍名'
         type: choice
-        default: '哲学的な何か、あと科学とか'
+        default: ''
         options:
           - '哲学的な何か、あと科学とか'
           - '史上最強の哲学入門'
