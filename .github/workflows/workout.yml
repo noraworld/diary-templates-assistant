@@ -82,6 +82,7 @@ on:
           - 'Leg - Beginner'
           - 'Leg - Intermediate'
           - 'Leg - Advanced'
+          - 'Other'
         default: ''
       trainer:
         required: true
