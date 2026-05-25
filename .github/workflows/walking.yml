@@ -1,4 +1,4 @@
-name: '142: 🚀👟 ウォーキング / 基本情報'
+name: '141: 🚀👟 ウォーキング'
 
 on:
   workflow_dispatch:
@@ -69,14 +69,50 @@ on:
         required: true
         description: 'ゴミ捨て'
         type: boolean
+      mail:
+        required: true
+        description: '郵便物'
+        type: string
+      scenery:
+        required: true
+        description: '今回見たいい景色'
+        type: string
+      mood:
+        required: true
+        description: '気分の変化'
+        type: string
+      impression:
+        required: false
+        description: '所感'
+        type: string
+      pokemon:
+        required: true
+        description: 'Pokémon GO'
+        type: boolean
+      mail_check:
+        required: true
+        description: '郵便物の確認'
+        type: boolean
+      mail_collection:
+        required: true
+        description: '郵便物の回収'
+        type: boolean
+      negative:
+        required: true
+        description: 'ネガティブな意味で他人に意識を向けない努力'
+        type: boolean
+      positive:
+        required: true
+        description: 'いい景色や新たな発見にポジティブな意識を向ける努力'
+        type: boolean
 
 jobs:
   walking:
     uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
     with:
       search_query: "walking ウォーキング"
-      template_name: "walking-basic"
+      template_name: "walking"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.1.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
