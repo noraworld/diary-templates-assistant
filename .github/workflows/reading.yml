@@ -46,6 +46,10 @@ on:
         required: true
         description: '読了率 (%)'
         type: number
+      impression:
+        required: false
+        description: '感想・学び'
+        type: string
       timer:
         required: false
         description: 'タイマー（分）'
@@ -64,10 +68,6 @@ on:
           - '50'
           - '55'
           - '60'
-      impression:
-        required: false
-        description: '感想・学び'
-        type: string
 
 jobs:
   reading:
