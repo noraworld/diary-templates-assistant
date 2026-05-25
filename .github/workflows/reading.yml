@@ -3,9 +3,9 @@ name: '211: 🎓📚 読書'
 on:
   workflow_dispatch:
     inputs:
-      title:
-        required: true
-        description: '書籍名'
+      candidate:
+        required: false
+        description: '（確認用）'
         type: choice
         default: ''
         options:
@@ -22,6 +22,11 @@ on:
           - '天皇の日本史'
           - '自己肯定感の教科書'
           - '働かない勇気'
+      title:
+        required: true
+        description: '書籍名'
+        type: string
+        default: ''
       sample:
         required: true
         description: 'サンプル'
@@ -71,6 +76,6 @@ jobs:
       search_query: "reading 読書"
       template_name: "reading"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.5"
+      version: "0.1.6"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
