@@ -25,7 +25,7 @@ on:
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
       productivity:
-        required: true
+        required: false
         description: 'プライベートタスクの生産性'
         type: choice
         options:
@@ -57,7 +57,7 @@ jobs:
       search_query: "retrospective 振り返り"
       template_name: "retrospective"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
 
