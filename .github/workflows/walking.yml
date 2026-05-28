@@ -131,6 +131,10 @@ on:
         required: true
         description: 'ゴミ捨て'
         type: boolean
+      music:
+        required: true
+        description: '音楽'
+        type: boolean
       pokemon:
         required: true
         description: 'Pokémon GO'
