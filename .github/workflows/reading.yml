@@ -31,6 +31,14 @@ on:
         type: string
         # MEMO: いま読んでいる書籍がしばらく続く場合はここにデフォルト値を設定しておくと便利
         default: ''
+      percent:
+        required: true
+        description: '読了率 (%)'
+        type: number
+      impression:
+        required: false
+        description: '感想・学び'
+        type: string
       sample:
         required: true
         description: 'サンプル'
@@ -51,14 +59,6 @@ on:
         description: '部分読み'
         type: boolean
         default: false
-      percent:
-        required: true
-        description: '読了率 (%)'
-        type: number
-      impression:
-        required: false
-        description: '感想・学び'
-        type: string
       timer:
         required: false
         description: 'タイマー（分）'
