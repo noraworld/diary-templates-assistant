@@ -27,6 +27,18 @@ on:
         required: true
         description: '秒'
         type: number
+      distance:
+        required: true
+        description: '距離'
+        type: number
+      pace:
+        required: true
+        description: '平均ペース'
+        type: number
+      heart:
+        required: true
+        description: '平均心拍数'
+        type: number
       burned:
         required: true
         description: '消費カロリー'
