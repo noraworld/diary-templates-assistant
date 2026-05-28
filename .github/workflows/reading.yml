@@ -32,6 +32,11 @@ on:
         description: 'サンプル'
         type: boolean
         default: false
+      unlimited:
+        required: true
+        description: '読み放題'
+        type: boolean
+        default: false
       reread:
         required: true
         description: '読み返し'
