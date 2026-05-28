@@ -101,14 +101,10 @@ on:
         description: 'ゴミ捨て'
         type: boolean
       mail:
-        required: true
+        required: false
         description: '郵便物'
         type: string
-      scenery:
-        required: true
-        description: '今回見たいい景色'
-        type: string
-      mood:
+      feeling:
         required: true
         description: '気分の変化'
         type: string
@@ -128,14 +124,18 @@ on:
         required: true
         description: '郵便物の回収'
         type: boolean
-      negative:
+      awe_inspiring:
+        required: false
+        description: '畏経行'
+        type: string
+      loving_kindness:
         required: true
-        description: 'ネガティブな意味で他人に意識を向けない努力'
+        description: '慈経行'
         type: boolean
-      positive:
-        required: true
-        description: 'いい景色や新たな発見にポジティブな意識を向ける努力'
-        type: boolean
+      # positive:
+      #   required: true
+      #   description: 'いい景色や新たな発見にポジティブな意識を向ける努力'
+      #   type: boolean
 
 jobs:
   walking:
