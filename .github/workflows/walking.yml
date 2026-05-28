@@ -6,11 +6,30 @@ on:
       weather:
         required: true
         description: '天気'
-        type: string
+        type: choice
+        options:
+          - ''
+          - '晴れ'
+          - 'くもり'
+          - '雨'
       temperature:
         required: true
         description: '体感気温'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'とても寒い'
+          - '寒い'
+          - '肌寒い'
+          - '少し肌寒い'
+          - '涼しい'
+          - '少し涼しい'
+          - '普通'
+          - '温暖'
+          - '暖かい'
+          - '少し蒸し暑い'
+          - '蒸し暑い'
+          - '暑い'
       destination:
         required: true
         description: '行き先'
