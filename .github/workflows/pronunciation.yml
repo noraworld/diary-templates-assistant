@@ -8,7 +8,6 @@ on:
         description: '教材'
         type: choice
         options:
-          - ''
           - 'ELSA Speak'
           - 'BoldVoice'
         default: 'BoldVoice'
@@ -70,6 +69,6 @@ jobs:
       search_query: "pronunciation 発音練習"
       template_name: "pronunciation"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.1"
+      version: "0.2.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
