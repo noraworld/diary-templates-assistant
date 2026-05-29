@@ -74,14 +74,106 @@ on:
       dishes5:
         required: false
         description: '食器 5'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'スポンジ'
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+          - '包丁'
+          - 'まな板'
       dishes6:
         required: false
         description: '食器 6'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'スポンジ'
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+          - '包丁'
+          - 'まな板'
       dishes7:
         required: false
         description: '食器 7'
+        type: choice
+        options:
+          - ''
+          - 'スポンジ'
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+          - '包丁'
+          - 'まな板'
+      dishes8:
+        required: false
+        description: '食器 8'
+        type: choice
+        options:
+          - ''
+          - 'スポンジ'
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+          - '包丁'
+          - 'まな板'
+      dishes9:
+        required: false
+        description: '食器 9'
+        type: choice
+        options:
+          - ''
+          - 'スポンジ'
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+          - '包丁'
+          - 'まな板'
+      dishes10:
+        required: false
+        description: '食器 10'
+        type: choice
+        options:
+          - ''
+          - 'スポンジ'
+          - 'プロテインスプーン'
+          - 'プロテインシェイカー'
+          - 'コーヒーカップ'
+          - 'スプーン'
+          - 'どんぶり'
+          - '包丁'
+          - 'まな板'
+      dishes11:
+        required: false
+        description: '食器 11'
+        type: string
+      dishes12:
+        required: false
+        description: '食器 12'
+        type: string
+      dishes13:
+        required: false
+        description: '食器 13'
+        type: string
+      dishes14:
+        required: false
+        description: '食器 14'
+        type: string
+      dishes15:
+        required: false
+        description: '食器 15'
         type: string
 
 jobs:
@@ -91,6 +183,6 @@ jobs:
       search_query: "housework 家事"
       template_name: "dishwashing"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.1"
+      version: "0.1.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

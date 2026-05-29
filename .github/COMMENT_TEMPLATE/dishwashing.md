@@ -26,6 +26,30 @@ ${{ endif }}
 ${{ if(github.event.inputs.dishes7) }}
 * ${{ github.event.inputs.dishes7 }}
 ${{ endif }}
+${{ if(github.event.inputs.dishes8) }}
+* ${{ github.event.inputs.dishes8 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes9) }}
+* ${{ github.event.inputs.dishes9 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes10) }}
+* ${{ github.event.inputs.dishes10 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes11) }}
+* ${{ github.event.inputs.dishes11 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes12) }}
+* ${{ github.event.inputs.dishes12 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes13) }}
+* ${{ github.event.inputs.dishes13 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes14) }}
+* ${{ github.event.inputs.dishes14 }}
+${{ endif }}
+${{ if(github.event.inputs.dishes15) }}
+* ${{ github.event.inputs.dishes15 }}
+${{ endif }}
 
 ${{ if(github.event.inputs.note) }}
 #### メモ
