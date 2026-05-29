@@ -10,9 +10,9 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
-    * 🥗 [食べたもの（記述式）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten.yml)
-    * 🥗 [食べたもの（選択式）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten-choice.yml)
-    * 🥗 [食べたもの（選択式）2](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten-choice2.yml)
+    * 🥗 [食事記録（記述）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten.yml)
+    * 🥗 [食事記録（選択・健康）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten-choice.yml)
+    * 🥗 [食事記録（選択・嗜好）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten-choice2.yml)
     * 🥗 ~~[基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-basic.yml)~~
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/food/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
