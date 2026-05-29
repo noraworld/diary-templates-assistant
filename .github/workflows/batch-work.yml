@@ -39,7 +39,7 @@ on:
       #   type: string
       #   default: '864'
   schedule:
-    # JST: 07:50 AM
+    # See batch.yml
     - cron: '50 22 * * *'
 
 jobs:
