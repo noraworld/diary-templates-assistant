@@ -13,7 +13,7 @@ assignees: noraworld
     * 🥗 [食べたもの（記述式）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten.yml)
     * 🥗 [食べたもの（選択式）](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten-choice.yml)
     * 🥗 [食べたもの（選択式）2](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-eaten-choice2.yml)
-    * 🥗 [基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-basic.yml)
+    * 🥗 ~~[基本情報](https://github.com/noraworld/diary-templates-assistant/actions/workflows/food-basic.yml)~~
 * [昨日の記録](https://github.com/noraworld/diary-templates/blob/main/templates/food/[{{YESTERDAY_YEAR}}]/[{{YESTERDAY_MONTH}}]/[{{YESTERDAY_DATE}}]-.md)
 
 ### 注意事項
