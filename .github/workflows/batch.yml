@@ -36,8 +36,8 @@ on:
     #
     # ⚠️ Change batch-work.yml as well if changing this.
     #
-    # JST: 07:50 AM
-    - cron: '50 22 * * *'
+    # JST: 07:45 AM
+    - cron: '45 22 * * *'
 
 jobs:
   # reserved-diary
