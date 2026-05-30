@@ -1,5 +1,5 @@
 ---
-name: 64. Shower
+name: 65. Shower
 about: 入浴記録
 title: "🛁_[{{DATE}}]_shower_入浴記録"
 labels: ''

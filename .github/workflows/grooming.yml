@@ -1,0 +1,286 @@
+name: '641: 🧹🪞 身だしなみ'
+
+on:
+  workflow_dispatch:
+    inputs:
+      timer:
+        required: false
+        description: 'タイマー（分）'
+        type: choice
+        options:
+          - ''
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
+          - '30'
+          - '35'
+          - '40'
+          - '45'
+          - '50'
+          - '55'
+          - '60'
+      minutes:
+        required: false
+        description: '分'
+        type: number
+      seconds:
+        required: false
+        description: '秒'
+        type: number
+      note:
+        required: false
+        description: 'メモ'
+        type: string
+      grooming1:
+        required: true
+        description: 'セルフケア 1'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming2:
+        required: false
+        description: 'セルフケア 2'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming3:
+        required: false
+        description: 'セルフケア 3'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming4:
+        required: false
+        description: 'セルフケア 4'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming5:
+        required: false
+        description: 'セルフケア 5'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming6:
+        required: false
+        description: 'セルフケア 6'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming7:
+        required: false
+        description: 'セルフケア 7'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming8:
+        required: false
+        description: 'セルフケア 8'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming9:
+        required: false
+        description: 'セルフケア 9'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming10:
+        required: false
+        description: 'セルフケア 10'
+        type: choice
+        options:
+          - ''
+          - '💊'
+          - 'サフランカプセル服用'
+          - '✨'
+          - '化粧水'
+          - 'ハンドクリーム'
+          - '🪒'
+          - '髭剃り'
+          - '鼻毛剃り'
+          - '下毛処理'
+          - '爪切り'
+          - '🛁'
+          - 'シャンプー'
+          - 'ヘアドライ'
+          - '洗体'
+          - '💈'
+          - '散髪'
+      grooming11:
+        required: false
+        description: 'セルフケア 11'
+        type: string
+      grooming12:
+        required: false
+        description: 'セルフケア 12'
+        type: string
+      grooming13:
+        required: false
+        description: 'セルフケア 13'
+        type: string
+      grooming14:
+        required: false
+        description: 'セルフケア 14'
+        type: string
+      grooming15:
+        required: false
+        description: 'セルフケア 15'
+        type: string
+
+jobs:
+  grooming:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "grooming 身だしなみ"
+      template_name: "grooming"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
