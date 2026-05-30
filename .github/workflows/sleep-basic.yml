@@ -1,4 +1,4 @@
-name: '312: 🌿💤 睡眠記録 / 基本情報'
+name: 'z312: 🌿💤 睡眠記録 / 基本情報'
 
 on:
   workflow_dispatch:
