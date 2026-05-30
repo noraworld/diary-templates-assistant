@@ -3,10 +3,6 @@ name: '651: 🧹🛁 入浴記録'
 on:
   workflow_dispatch:
     inputs:
-      impression:
-        required: false
-        description: '所感'
-        type: string
       timer:
         required: false
         description: 'タイマー（分）'
@@ -33,6 +29,10 @@ on:
         required: false
         description: '秒'
         type: number
+      impression:
+        required: false
+        description: '所感'
+        type: string
       bath:
         required: true
         description: '入浴'
