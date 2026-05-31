@@ -1,5 +1,5 @@
 ### 心構え
-* [x] [`2636aa2`](https://github.com/noraworld/diary-templates-assistant/blob/2636aa26613d81172045888ba343d90e0d86e6b4/.github/ISSUE_TEMPLATE/readiness.md)
+* [x] [`ce26232`](https://github.com/noraworld/diary-templates-assistant/blob/ce262321a07174089e7fdd4cce2d13dca4ddea84/.github/ISSUE_TEMPLATE/readiness.md)
 
 ### 所感
 ${{ github.event.inputs.impression || '特になし。' }}
