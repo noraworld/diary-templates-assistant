@@ -22,7 +22,7 @@ assignees: noraworld
 ----------------------------------------------------------------------------------------------------------------------->
 
 ### 心構え
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> [**執着に気づいたら**](https://github.com/noraworld/blog/blob/main/_posts/ja/2026/04/2026-04-08-obsessions.md#-心のよりどころ-)[**手放す練習をしてみよう**](https://noraworld.github.io/blog/obsessions#-心のよりどころ-)<img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> [**心を落ち着かせる読み物に触れてみよう**](https://noraworld.github.io/blog/tags/notes)<img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
 
 <!----------------------------------------------------------------------------------------------------------------------
   このファイルを変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
@@ -44,6 +44,12 @@ assignees: noraworld
       * 例: 2025 年 9 月 7 日にアーカイブした場合は "v1 (2025/09/07)" とする
     * チェックマークはアーカイブ時に削除する
 ----------------------------------------------------------------------------------------------------------------------->
+
+<details>
+<summary><code>v3 (2026/05/31)</code></summary>
+
+* <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> [**執着に気づいたら**](https://github.com/noraworld/blog/blob/main/_posts/ja/2026/04/2026-04-08-obsessions.md#-心のよりどころ-)[**手放す練習をしてみよう**](https://noraworld.github.io/blog/obsessions#-心のよりどころ-)<img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+</details>
 
 <details>
 <summary><code>v2 (2026/04/13)</code></summary>
