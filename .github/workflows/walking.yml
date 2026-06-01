@@ -38,16 +38,20 @@ on:
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
       feeling:
-        required: true
+        required: false
         description: '気分の変化'
         type: string
       loving_kindness:
         required: true
         description: '慈経行'
         type: boolean
+      awe:
+        required: true
+        description: '畏経行'
+        type: boolean
       awe_inspiring:
         required: false
-        description: '畏経行'
+        description: '景色・超越性・畏怖'
         type: string
 
       weather:
@@ -65,18 +69,18 @@ on:
         type: choice
         options:
           - ''
-          - 'とても寒い'
-          - '寒い'
-          - '肌寒い'
-          - '少し肌寒い'
-          - '涼しい'
-          - '少し涼しい'
-          - '普通'
-          - '温暖'
-          - '暖かい'
-          - '少し蒸し暑い'
-          - '蒸し暑い'
           - '暑い'
+          - '蒸し暑い'
+          - '少し蒸し暑い'
+          - '暖かい'
+          - '温暖'
+          - '普通'
+          - '少し涼しい'
+          - '涼しい'
+          - '少し肌寒い'
+          - '肌寒い'
+          - '寒い'
+          - 'とても寒い'
       impression:
         required: false
         description: '所感'
@@ -100,15 +104,19 @@ on:
         type: number
       distance:
         required: true
-        description: '距離'
+        description: '距離（km）'
         type: number
       burned:
         required: true
         description: '消費カロリー'
         type: number
-      pace:
+      pace_minutes:
         required: true
-        description: '平均ペース'
+        description: '平均ペース（分）'
+        type: number
+      pace_seconds:
+        required: true
+        description: '平均ペース（秒）'
         type: number
       heart:
         required: true
@@ -147,6 +155,6 @@ jobs:
       search_query: "walking ウォーキング"
       template_name: "walking"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.2.0"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
