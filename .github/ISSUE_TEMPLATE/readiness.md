@@ -22,7 +22,7 @@ assignees: noraworld
 ----------------------------------------------------------------------------------------------------------------------->
 
 ### 心構え
-* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> [**心を落ち着かせる読み物に触れてみよう**](https://noraworld.github.io/blog/tags/notes)<img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
+* [ ] <a href="#issue-body-viewer"><img src="https://noraworld.github.io/box-ash/assets/begging_girl.png" title="" width="28px"></a> [**心を落ち着かせる読み物に触れてみよう**](https://noraworld.github.io/blog/tags/wellbeing)<img src="https://klaudiosinani.com/hyper-pokemon/pokecursors/pikachu.gif" title="" width="28px"></a>
 
 <!----------------------------------------------------------------------------------------------------------------------
   このファイルを変更した際は `.github/COMMENT_TEMPLATE/readiness.md` のコミットハッシュも変更することを忘れずに！！
