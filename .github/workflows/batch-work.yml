@@ -40,7 +40,7 @@ on:
       #   default: '864'
   schedule:
     # See batch.yml also
-    - cron: '45 22 * * *'
+    - cron: '30 22 * * *'
 
 jobs:
   daily-report-day-off:
