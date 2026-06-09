@@ -28,9 +28,12 @@ jobs:
       - name: Check if all of the templates have successfully been closed
         run: |
           attempt=0
+          count=$(gh issue list --repo "$TEMPLATE_REPO" --limit 100 --json number --jq 'length')
 
           # Wait for all of the templates to be closed.
-          while [ "$(gh issue list --repo "$TEMPLATE_REPO" | wc -l)" -ne 0 ]; do
+          while [ "$count" -ne 0 ]; do
+            echo "DEBUG: the number of the templates is now $count ($(date))" >&2
+
             # The shorter the sleep interval is, the more frequently the error below may occur.
             #   GraphQL: was submitted too quickly (createIssue)
             sleep $SLEEP_INTERVAL
@@ -40,6 +43,8 @@ jobs:
               echo "Timeout period exceeded." >&2
               exit 1
             fi
+
+            count=$(gh issue list --repo "$TEMPLATE_REPO" --limit 100 --json number --jq 'length')
           done
 
           # To avoid causing the error. Just in case.
