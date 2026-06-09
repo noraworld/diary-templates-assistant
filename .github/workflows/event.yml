@@ -1,0 +1,144 @@
+name: '611: 🧭🗓️ イベントログ'
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        required: false
+        description: 'メモ'
+        type: string
+      event1:
+        required: false
+        description: 'イベント 1'
+        type: string
+      event2:
+        required: false
+        description: 'イベント 2'
+        type: string
+      event3:
+        required: false
+        description: 'イベント 3'
+        type: string
+      event4:
+        required: false
+        description: 'イベント 4'
+        type: string
+      event5:
+        required: false
+        description: 'イベント 5'
+        type: choice
+        options:
+          - ''
+          - '🤝'
+          - '友人と遊ぶ'
+          - '飲み会に参加する'
+          - 'オフ会に参加する'
+          - 'オンラインイベントに参加する'
+          - 'ミートアップに参加する'
+          - 'ワークショップに参加する'
+          - 'デートする'
+          - '✨'
+          - '髪を切りに行く'
+          - '💼'
+          - '面接・面談を受ける'
+          - '🏥'
+          - '病院に行く'
+          - '歯医者に行く'
+          - 'カウンセリングに行く'
+          - '🚶'
+          - '未開拓地に足を運ぶ'
+          - '😌'
+          - 'マッサージを受けに行く'
+          - 'お風呂屋さんに行く'
+      event6:
+        required: false
+        description: 'イベント 6'
+        type: choice
+        options:
+          - ''
+          - '🤝'
+          - '友人と遊ぶ'
+          - '飲み会に参加する'
+          - 'オフ会に参加する'
+          - 'オンラインイベントに参加する'
+          - 'ミートアップに参加する'
+          - 'ワークショップに参加する'
+          - 'デートする'
+          - '✨'
+          - '髪を切りに行く'
+          - '💼'
+          - '面接・面談を受ける'
+          - '🏥'
+          - '病院に行く'
+          - '歯医者に行く'
+          - 'カウンセリングに行く'
+          - '🚶'
+          - '未開拓地に足を運ぶ'
+          - '😌'
+          - 'マッサージを受けに行く'
+          - 'お風呂屋さんに行く'
+      event7:
+        required: false
+        description: 'イベント 7'
+        type: choice
+        options:
+          - ''
+          - '🤝'
+          - '友人と遊ぶ'
+          - '飲み会に参加する'
+          - 'オフ会に参加する'
+          - 'オンラインイベントに参加する'
+          - 'ミートアップに参加する'
+          - 'ワークショップに参加する'
+          - 'デートする'
+          - '✨'
+          - '髪を切りに行く'
+          - '💼'
+          - '面接・面談を受ける'
+          - '🏥'
+          - '病院に行く'
+          - '歯医者に行く'
+          - 'カウンセリングに行く'
+          - '🚶'
+          - '未開拓地に足を運ぶ'
+          - '😌'
+          - 'マッサージを受けに行く'
+          - 'お風呂屋さんに行く'
+      event8:
+        required: false
+        description: 'イベント 8'
+        type: choice
+        options:
+          - ''
+          - '🤝'
+          - '友人と遊ぶ'
+          - '飲み会に参加する'
+          - 'オフ会に参加する'
+          - 'オンラインイベントに参加する'
+          - 'ミートアップに参加する'
+          - 'ワークショップに参加する'
+          - 'デートする'
+          - '✨'
+          - '髪を切りに行く'
+          - '💼'
+          - '面接・面談を受ける'
+          - '🏥'
+          - '病院に行く'
+          - '歯医者に行く'
+          - 'カウンセリングに行く'
+          - '🚶'
+          - '未開拓地に足を運ぶ'
+          - '😌'
+          - 'マッサージを受けに行く'
+          - 'お風呂屋さんに行く'
+
+jobs:
+  event:
+    uses: noraworld/diary-templates-assistant/.github/workflows/base.yml@main
+    with:
+      search_query: "event イベントログ"
+      template_name: "event"
+      template_repo: "noraworld/diary-templates"
+      version: "0.1.0"
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}

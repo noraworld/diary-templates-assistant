@@ -1,5 +1,5 @@
 ---
-name: 64. Grooming
+name: 74. Grooming
 about: 身だしなみ
 title: "🪞_[{{DATE}}]_grooming_身だしなみ"
 labels: ''

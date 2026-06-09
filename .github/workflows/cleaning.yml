@@ -1,4 +1,4 @@
-name: '624: 🧹🧼🧹 掃除'
+name: '724: 🧹🧼🧹 掃除'
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: '625: 🧹🧼🛠️ メンテナンス'
+name: '725: 🧹🧼🛠️ メンテナンス'
 
 on:
   workflow_dispatch:
