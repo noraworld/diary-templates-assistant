@@ -1,4 +1,4 @@
-name: '641: 🧹🪞 身だしなみ'
+name: '741: 🧹🪞 身だしなみ'
 
 on:
   workflow_dispatch:

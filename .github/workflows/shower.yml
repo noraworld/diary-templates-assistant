@@ -1,4 +1,4 @@
-name: '651: 🧹🛁 入浴記録'
+name: '751: 🧹🛁 入浴記録'
 
 on:
   workflow_dispatch:
