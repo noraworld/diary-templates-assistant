@@ -38,7 +38,9 @@ on:
     #      https://github.com/noraworld/diary-templates-assistant/blob/721ddbc088c79fc3b82a7305492b1cd9160ed5fe/.github/workflows/batch-work.yml#L43
     #      https://github.com/noraworld/cron-conf/blob/b7239f4e919aa1191eda6630c116460b51ccc19b/raspberrypi/schedules.cron#L54
     #
-    # JST: 07:30 AM
+    # Run at: 07:00 AM (JST)
+    #   It should be done before ** 08:00 AM (JST) ** because of the network restrictions on Raspberry Pi.
+    #   But be careful that the GitHub Actions schedule takes waaaaaaaaaay toooooooooo loooooooooong to be started.
     - cron: '30 22 * * *'
 
 jobs:
