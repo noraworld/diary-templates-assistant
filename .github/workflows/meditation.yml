@@ -88,7 +88,12 @@ on:
           - '慈悲の瞑想（通常版）'
           - '慈悲の瞑想（カスタム版）'
           - 'オープンモニタリング'
+          - 'ボディスキャン'
         # default: '呼吸瞑想'
+      guide:
+        required: true
+        description: 'ガイドの有無'
+        type: boolean
 
 jobs:
   meditation:
@@ -97,6 +102,6 @@ jobs:
       search_query: "meditation 瞑想"
       template_name: "meditation"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

@@ -7,6 +7,9 @@
 | リラックスレベル | ${{ github.event.inputs.relaxed }} |
 | 気分レベル | ${{ github.event.inputs.mood }} |
 
+### チェックリスト
+* [${{ github.event.inputs.guide }}] ガイド
+
 ### 気がそれたときに考えていたことやそのときの感情
 ${{ github.event.inputs.thoughts || '特になし。' }}
 
