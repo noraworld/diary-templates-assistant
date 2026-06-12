@@ -39,8 +39,10 @@ on:
         type: choice
         options:
           - ''
-          - '💊'
-          - 'サフランカプセル服用'
+          # 薬やサプリメントはライフログ（テンプレートワークフロー）での記録対象外とする
+          #   cf. https://github.com/noraworld/reserved-diary/issues/1137#issuecomment-4689340555
+          # - '💊'
+          # - 'サフランカプセル服用'
           - '✨'
           - '化粧水'
           - 'ハンドクリーム'
