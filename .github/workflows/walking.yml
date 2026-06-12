@@ -81,10 +81,6 @@ on:
           - '肌寒い'
           - '寒い'
           - 'とても寒い'
-      impression:
-        required: false
-        description: '所感'
-        type: string
 
       destination:
         required: true
@@ -122,6 +118,10 @@ on:
         required: true
         description: '平均心拍数'
         type: number
+      impression:
+        required: false
+        description: '所感'
+        type: string
 
       mail:
         required: false
