@@ -1,5 +1,5 @@
 ---
-name: 61. Event
+name: 62. Event
 about: イベントログ
 title: "🗓️_[{{DATE}}]_event_イベントログ"
 labels: ''

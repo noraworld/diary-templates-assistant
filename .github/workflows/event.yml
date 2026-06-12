@@ -1,4 +1,4 @@
-name: '611: 🧭🗓️ イベントログ'
+name: '621: 🧭🗓️ イベントログ'
 
 on:
   workflow_dispatch:

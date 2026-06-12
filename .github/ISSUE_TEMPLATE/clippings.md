@@ -1,5 +1,5 @@
 ---
-name: 26. Clippings
+name: 61. Clippings
 about: クリッピング
 title: "📎_[{{DATE}}]_clippings_クリッピング"
 labels: ''
