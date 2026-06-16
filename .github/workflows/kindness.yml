@@ -43,6 +43,46 @@ on:
         required: false
         description: '親切の内容 5'
         type: string
+      people6:
+        required: false
+        description: '親切にした相手 6'
+        type: string
+      words6:
+        required: false
+        description: '親切の内容 6'
+        type: string
+      people7:
+        required: false
+        description: '親切にした相手 7'
+        type: string
+      words7:
+        required: false
+        description: '親切の内容 7'
+        type: string
+      people8:
+        required: false
+        description: '親切にした相手 8'
+        type: string
+      words8:
+        required: false
+        description: '親切の内容 8'
+        type: string
+      people9:
+        required: false
+        description: '親切にした相手 9'
+        type: string
+      words9:
+        required: false
+        description: '親切の内容 9'
+        type: string
+      people10:
+        required: false
+        description: '親切にした相手 10'
+        type: string
+      words10:
+        required: false
+        description: '親切の内容 10'
+        type: string
 
 jobs:
   kindness:
@@ -51,6 +91,6 @@ jobs:
       search_query: "esteem 慰労記録"
       template_name: "kindness"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

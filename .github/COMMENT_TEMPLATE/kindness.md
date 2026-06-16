@@ -16,3 +16,18 @@ ${{ endif }}
 ${{ if(github.event.inputs.people5) }}
 | ${{ github.event.inputs.people5 }} | ${{ github.event.inputs.words5 }} |
 ${{ endif }}
+${{ if(github.event.inputs.people6) }}
+| ${{ github.event.inputs.people6 }} | ${{ github.event.inputs.words6 }} |
+${{ endif }}
+${{ if(github.event.inputs.people7) }}
+| ${{ github.event.inputs.people7 }} | ${{ github.event.inputs.words7 }} |
+${{ endif }}
+${{ if(github.event.inputs.people8) }}
+| ${{ github.event.inputs.people8 }} | ${{ github.event.inputs.words8 }} |
+${{ endif }}
+${{ if(github.event.inputs.people9) }}
+| ${{ github.event.inputs.people9 }} | ${{ github.event.inputs.words9 }} |
+${{ endif }}
+${{ if(github.event.inputs.people10) }}
+| ${{ github.event.inputs.people10 }} | ${{ github.event.inputs.words10 }} |
+${{ endif }}
