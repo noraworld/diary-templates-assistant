@@ -85,6 +85,7 @@ on:
         options:
           - ''
           - '呼吸瞑想'
+          - '慈悲の瞑想'
           - '慈悲の瞑想（通常版）'
           - '慈悲の瞑想（カスタム版）'
           - 'オープンモニタリング'
@@ -102,6 +103,6 @@ jobs:
       search_query: "meditation 瞑想"
       template_name: "meditation"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.1"
+      version: "0.2.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
