@@ -7,7 +7,9 @@ ${{ if(github.event.inputs.minutes) }}
 ${{ endif }}
 
 #### 使用器具
+${{ if(github.event.inputs.toys1) }}
 * ${{ github.event.inputs.toys1 }}
+${{ endif }}
 ${{ if(github.event.inputs.toys2) }}
 * ${{ github.event.inputs.toys2 }}
 ${{ endif }}
@@ -25,6 +27,15 @@ ${{ if(github.event.inputs.toys6) }}
 ${{ endif }}
 ${{ if(github.event.inputs.toys7) }}
 * ${{ github.event.inputs.toys7 }}
+${{ endif }}
+${{ if(github.event.inputs.toys8) }}
+* ${{ github.event.inputs.toys8 }}
+${{ endif }}
+${{ if(github.event.inputs.toys9) }}
+* ${{ github.event.inputs.toys9 }}
+${{ endif }}
+${{ if(github.event.inputs.toys10) }}
+* ${{ github.event.inputs.toys10 }}
 ${{ endif }}
 
 ${{ if(github.event.inputs.note) }}

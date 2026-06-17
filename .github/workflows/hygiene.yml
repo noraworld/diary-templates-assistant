@@ -16,7 +16,7 @@ on:
         description: 'メモ'
         type: string
       toys1:
-        required: true
+        required: false
         description: '使用器具 1'
         type: choice
         options:
@@ -45,11 +45,21 @@ on:
       toys4:
         required: false
         description: '使用器具 4'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
       toys5:
         required: false
         description: '使用器具 5'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
       toys6:
         required: false
         description: '使用器具 6'
@@ -57,6 +67,18 @@ on:
       toys7:
         required: false
         description: '使用器具 7'
+        type: string
+      toys8:
+        required: false
+        description: '使用器具 8'
+        type: string
+      toys9:
+        required: false
+        description: '使用器具 9'
+        type: string
+      toys10:
+        required: false
+        description: '使用器具 10'
         type: string
 
 jobs:
@@ -66,6 +88,6 @@ jobs:
       search_query: "housework 家事"
       template_name: "hygiene"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
