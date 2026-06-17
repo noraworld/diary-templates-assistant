@@ -10,7 +10,8 @@ assignees: noraworld
 ### クイックリンク
 * [今日の日記]([{{MAIN_REPO_TODAY_URL}}])
 * ワークフローディスパッチ
-    * 🧩 [改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)
+    * 🧩 ~~[改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)~~
+        * これは基本的にはスキップして良い（ただネガティブなことを思い出すとシンプルにネガティブになるので。特にメンタルが不調のときはスキップすべし）
     * ✨ [ポジティブ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/positive.yml)
         * 食べたものが美味しかったとか卵の殻がうまく剥けたとかそういう些細なことでも積み重ねれば十分幸せを感じられると信じよう
         * 「今日も一日がんばったね」と自分自身をいたわるイメージで行おう！
