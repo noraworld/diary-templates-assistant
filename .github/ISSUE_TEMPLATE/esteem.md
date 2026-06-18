@@ -15,8 +15,10 @@ assignees: noraworld
         * > 感謝できることを書き留める日記を始めましょう。就寝前に 10 〜 15 分間、ポジティブなことについて書くことで、前向きな思考を呼び覚まし、穏やかな眠りにつくことができます。（From Oura）
     * 💖 [一日一善](https://github.com/noraworld/diary-templates-assistant/actions/workflows/kindness.yml)
         * [一日一善はほんの少しの優しい選択でいい](https://chatgpt.com/share/698f3efe-e5f0-8004-84b5-48324d946061)
-    * 🧩 ~~[改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)~~
-        * これは基本的にはスキップして良い（ただネガティブなことを思い出すとシンプルにネガティブになるので。特にメンタルが不調のときはスキップすべし）
+    <!-- * 🧩 ~~[改善点](https://github.com/noraworld/diary-templates-assistant/actions/workflows/improvement.yml)~~
+        * これは基本的にはスキップして良い。ただネガティブなことを思い出すとシンプルにネガティブになるので。特にメンタルが不調のときはスキップすべし
+        * もしやるとしたら、必ず「ポジティブ」の前に実施すること。そうでないとネガティブなまま終わってしまうので
+        * やるとしても、ネガティブ 1 つに対してポジティブ 4 つの割合にする必要があり、多く書きすぎるとただネガティブになるだけなので気をつけること -->
     * ✨ [ポジティブ](https://github.com/noraworld/diary-templates-assistant/actions/workflows/positive.yml)
         * 食べたものが美味しかったとか卵の殻がうまく剥けたとかそういう些細なことでも積み重ねれば十分幸せを感じられると信じよう
         * 「今日も一日がんばったね」と自分自身をいたわるイメージで行おう！
