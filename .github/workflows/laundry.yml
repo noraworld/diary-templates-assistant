@@ -16,90 +16,25 @@ on:
         description: 'メモ'
         type: string
       clothes1:
-        required: true
+        required: false
         description: '衣類 1'
-        type: choice
-        options:
-          - ''
-          - '下着'
-          - '靴下'
-          - 'シャツ'
-          - '上着'
-          - '部屋着用ズボン'
-          - '外出用ズボン'
-          - '手拭きタオル'
-          - 'バスタオル'
-          - 'アイマスク'
-          - 'まくらカバー'
-          - 'シーツ'
+        type: string
       clothes2:
         required: false
         description: '衣類 2'
-        type: choice
-        options:
-          - ''
-          - '下着'
-          - '靴下'
-          - 'シャツ'
-          - '上着'
-          - '部屋着用ズボン'
-          - '外出用ズボン'
-          - '手拭きタオル'
-          - 'バスタオル'
-          - 'アイマスク'
-          - 'まくらカバー'
-          - 'シーツ'
+        type: string
       clothes3:
         required: false
         description: '衣類 3'
-        type: choice
-        options:
-          - ''
-          - '下着'
-          - '靴下'
-          - 'シャツ'
-          - '上着'
-          - '部屋着用ズボン'
-          - '外出用ズボン'
-          - '手拭きタオル'
-          - 'バスタオル'
-          - 'アイマスク'
-          - 'まくらカバー'
-          - 'シーツ'
+        type: string
       clothes4:
         required: false
         description: '衣類 4'
-        type: choice
-        options:
-          - ''
-          - '下着'
-          - '靴下'
-          - 'シャツ'
-          - '上着'
-          - '部屋着用ズボン'
-          - '外出用ズボン'
-          - '手拭きタオル'
-          - 'バスタオル'
-          - 'アイマスク'
-          - 'まくらカバー'
-          - 'シーツ'
+        type: string
       clothes5:
         required: false
         description: '衣類 5'
-        type: choice
-        options:
-          - ''
-          - '下着'
-          - '靴下'
-          - 'シャツ'
-          - '上着'
-          - '部屋着用ズボン'
-          - '外出用ズボン'
-          - '手拭きタオル'
-          - 'バスタオル'
-          - 'アイマスク'
-          - 'まくらカバー'
-          - 'シーツ'
+        type: string
       clothes6:
         required: false
         description: '衣類 6'
@@ -168,6 +103,108 @@ on:
           - 'アイマスク'
           - 'まくらカバー'
           - 'シーツ'
+      clothes10:
+        required: false
+        description: '衣類 10'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes11:
+        required: false
+        description: '衣類 11'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes12:
+        required: false
+        description: '衣類 12'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes13:
+        required: false
+        description: '衣類 13'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes14:
+        required: false
+        description: '衣類 14'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
+      clothes15:
+        required: false
+        description: '衣類 15'
+        type: choice
+        options:
+          - ''
+          - '下着'
+          - '靴下'
+          - 'シャツ'
+          - '上着'
+          - '部屋着用ズボン'
+          - '外出用ズボン'
+          - '手拭きタオル'
+          - 'バスタオル'
+          - 'アイマスク'
+          - 'まくらカバー'
+          - 'シーツ'
 
 jobs:
   laundry:
@@ -176,6 +213,6 @@ jobs:
       search_query: "housework 家事"
       template_name: "laundry"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
