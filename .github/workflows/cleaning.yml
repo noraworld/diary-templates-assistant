@@ -16,57 +16,21 @@ on:
         description: 'メモ'
         type: string
       areas1:
-        required: true
+        required: false
         description: 'エリア 1'
-        type: choice
-        options:
-          - ''
-          - 'リビング'
-          - '廊下'
-          - '玄関'
-          - '洗面所'
-          - 'キッチン'
-          - 'シャワールーム'
-          - 'トイレ'
+        type: string
       areas2:
         required: false
         description: 'エリア 2'
-        type: choice
-        options:
-          - ''
-          - 'リビング'
-          - '廊下'
-          - '玄関'
-          - '洗面所'
-          - 'キッチン'
-          - 'シャワールーム'
-          - 'トイレ'
+        type: string
       areas3:
         required: false
         description: 'エリア 3'
-        type: choice
-        options:
-          - ''
-          - 'リビング'
-          - '廊下'
-          - '玄関'
-          - '洗面所'
-          - 'キッチン'
-          - 'シャワールーム'
-          - 'トイレ'
+        type: string
       areas4:
         required: false
         description: 'エリア 4'
-        type: choice
-        options:
-          - ''
-          - 'リビング'
-          - '廊下'
-          - '玄関'
-          - '洗面所'
-          - 'キッチン'
-          - 'シャワールーム'
-          - 'トイレ'
+        type: string
       areas5:
         required: false
         description: 'エリア 5'
@@ -74,11 +38,133 @@ on:
       areas6:
         required: false
         description: 'エリア 6'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
       areas7:
         required: false
         description: 'エリア 7'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas8:
+        required: false
+        description: 'エリア 8'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas9:
+        required: false
+        description: 'エリア 9'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas10:
+        required: false
+        description: 'エリア 10'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas11:
+        required: false
+        description: 'エリア 11'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas12:
+        required: false
+        description: 'エリア 12'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas13:
+        required: false
+        description: 'エリア 13'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas14:
+        required: false
+        description: 'エリア 14'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
+      areas15:
+        required: false
+        description: 'エリア 15'
+        type: choice
+        options:
+          - ''
+          - 'リビング'
+          - '廊下'
+          - '玄関'
+          - '洗面所'
+          - 'キッチン'
+          - 'シャワールーム'
+          - 'トイレ'
 
 jobs:
   cleaning:
@@ -87,6 +173,6 @@ jobs:
       search_query: "housework 家事"
       template_name: "cleaning"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.0"
+      version: "0.1.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
