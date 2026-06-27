@@ -11,7 +11,9 @@ ${{ if(github.event.inputs.minutes) }}
 ${{ endif }}
 
 #### 身だしなみ
+${{ if(github.event.inputs.grooming1) }}
 * ${{ github.event.inputs.grooming1 }}
+${{ endif }}
 ${{ if(github.event.inputs.grooming2) }}
 * ${{ github.event.inputs.grooming2 }}
 ${{ endif }}
