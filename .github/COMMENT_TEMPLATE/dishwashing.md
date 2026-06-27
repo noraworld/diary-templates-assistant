@@ -7,7 +7,9 @@ ${{ if(github.event.inputs.minutes) }}
 ${{ endif }}
 
 #### 食器
+${{ if(github.event.inputs.dishes1) }}
 * ${{ github.event.inputs.dishes1 }}
+${{ endif }}
 ${{ if(github.event.inputs.dishes2) }}
 * ${{ github.event.inputs.dishes2 }}
 ${{ endif }}
