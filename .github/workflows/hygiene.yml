@@ -18,68 +18,113 @@ on:
       toys1:
         required: false
         description: '使用器具 1'
-        type: choice
-        options:
-          - ''
-          - 'セブンティーン'
-          - 'atom リング小'
-          - 'atom リング大'
+        type: string
       toys2:
         required: false
         description: '使用器具 2'
-        type: choice
-        options:
-          - ''
-          - 'セブンティーン'
-          - 'atom リング小'
-          - 'atom リング大'
+        type: string
       toys3:
         required: false
         description: '使用器具 3'
-        type: choice
-        options:
-          - ''
-          - 'セブンティーン'
-          - 'atom リング小'
-          - 'atom リング大'
+        type: string
       toys4:
         required: false
         description: '使用器具 4'
-        type: choice
-        options:
-          - ''
-          - 'セブンティーン'
-          - 'atom リング小'
-          - 'atom リング大'
+        type: string
       toys5:
         required: false
         description: '使用器具 5'
+        type: string
+      toys6:
+        required: false
+        description: '使用器具 6'
         type: choice
         options:
           - ''
           - 'セブンティーン'
           - 'atom リング小'
           - 'atom リング大'
-      toys6:
-        required: false
-        description: '使用器具 6'
-        type: string
       toys7:
         required: false
         description: '使用器具 7'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
       toys8:
         required: false
         description: '使用器具 8'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
       toys9:
         required: false
         description: '使用器具 9'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
       toys10:
         required: false
         description: '使用器具 10'
-        type: string
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
+      toys11:
+        required: false
+        description: '使用器具 11'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
+      toys12:
+        required: false
+        description: '使用器具 12'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
+      toys13:
+        required: false
+        description: '使用器具 13'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
+      toys14:
+        required: false
+        description: '使用器具 14'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
+      toys15:
+        required: false
+        description: '使用器具 15'
+        type: choice
+        options:
+          - ''
+          - 'セブンティーン'
+          - 'atom リング小'
+          - 'atom リング大'
 
 jobs:
   hygiene:
@@ -88,6 +133,6 @@ jobs:
       search_query: "housework 家事"
       template_name: "hygiene"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.1"
+      version: "0.1.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

@@ -37,6 +37,21 @@ ${{ endif }}
 ${{ if(github.event.inputs.toys10) }}
 * ${{ github.event.inputs.toys10 }}
 ${{ endif }}
+${{ if(github.event.inputs.toys11) }}
+* ${{ github.event.inputs.toys11 }}
+${{ endif }}
+${{ if(github.event.inputs.toys12) }}
+* ${{ github.event.inputs.toys12 }}
+${{ endif }}
+${{ if(github.event.inputs.toys13) }}
+* ${{ github.event.inputs.toys13 }}
+${{ endif }}
+${{ if(github.event.inputs.toys14) }}
+* ${{ github.event.inputs.toys14 }}
+${{ endif }}
+${{ if(github.event.inputs.toys15) }}
+* ${{ github.event.inputs.toys15 }}
+${{ endif }}
 
 ${{ if(github.event.inputs.note) }}
 #### メモ
