@@ -16,7 +16,7 @@ assignees: noraworld
 
 ### テンプレート
 <details>
-<summary>簡易版（呼吸瞑想）</summary>
+<summary>呼吸瞑想（簡易版）</summary>
 
 ```
 ### 基本情報
@@ -36,7 +36,7 @@ assignees: noraworld
 
 
 <details>
-<summary>簡易版（慈悲の瞑想カスタム版）</summary>
+<summary>慈悲の瞑想（簡易版/カスタム版）</summary>
 
 ```
 ### 基本情報
@@ -57,6 +57,9 @@ assignees: noraworld
 </details>
 
 
+
+<details>
+<summary>呼吸瞑想（通常版）</summary>
 
 ```
 ### 基本情報
@@ -82,8 +85,12 @@ assignees: noraworld
 ### 所感・その他
 特になし。
 ```
+</details>
 
 
+
+<details>
+<summary>慈悲の瞑想（カスタム版）</summary>
 
 ```
 ### 基本情報
@@ -110,6 +117,7 @@ assignees: noraworld
 ### 所感・その他
 特になし。
 ```
+</details>
 
 
 
