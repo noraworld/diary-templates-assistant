@@ -8,9 +8,10 @@ on:
         description: '教材'
         type: choice
         options:
+          - ''
           - 'ELSA Speak'
           - 'BoldVoice'
-        default: 'BoldVoice'
+        # default: 'BoldVoice'
       streaks:
         required: true
         description: '連続日数'
