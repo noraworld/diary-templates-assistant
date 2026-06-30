@@ -37,7 +37,7 @@ on:
         description: '書籍名'
         type: string
         # MEMO: いま読んでいる書籍がしばらく続く場合はここにデフォルト値を設定しておくと便利
-        default: 'ドーパミン復活禁欲法【対話版】'
+        default: '最高の体調'
       percent:
         required: true
         description: '読了率 (%)'
