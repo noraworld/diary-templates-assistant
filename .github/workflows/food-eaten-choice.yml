@@ -108,6 +108,7 @@ on:
         type: choice
         options:
           - ''
+          - '0'
           - '+1'
           - '+2'
           - '+3'
