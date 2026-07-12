@@ -54,6 +54,7 @@ on:
           - '袋'
           - '箱'
           - 'g'
+          - 'ml'
       score:
         required: true
         description: 'MIND スコア'
