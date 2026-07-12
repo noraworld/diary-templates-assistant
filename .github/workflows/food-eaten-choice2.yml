@@ -1,4 +1,4 @@
-name: '323: 🌿🥗 食事記録（選択・嗜好）'
+name: 'y323: 🌿🥗 食事記録（選択・嗜好）'
 
 on:
   workflow_dispatch:
