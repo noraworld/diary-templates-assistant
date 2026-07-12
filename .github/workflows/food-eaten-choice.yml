@@ -117,7 +117,7 @@ on:
           - '-3'
           - '-5'
       seasoning:
-        required: true
+        required: false
         description: '調味料'
         type: choice
         options:
