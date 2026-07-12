@@ -28,6 +28,21 @@ on:
           - '袋'
           - '箱'
           - 'g'
+      score:
+        required: true
+        description: 'MIND スコア'
+        type: choice
+        options:
+          - ''
+          - '+1'
+          - '+2'
+          - '+3'
+          - '+4'
+          - '+5'
+          - ''
+          - '-1'
+          - '-3'
+          - '-5'
       impression:
         required: false
         description: '感想'
@@ -40,6 +55,6 @@ jobs:
       search_query: "food 食事記録"
       template_name: "food-eaten"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.3"
+      version: "0.2.4"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
