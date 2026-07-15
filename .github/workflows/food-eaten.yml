@@ -57,6 +57,8 @@ on:
           - '塩'
           - '醤油'
           - 'はちみつ'
+          - '納豆のタレ'
+          - 'カラシ'
       impression:
         required: false
         description: '感想'
