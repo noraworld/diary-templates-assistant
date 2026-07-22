@@ -28,7 +28,7 @@ on:
         description: 'メモ'
         type: string
       focused:
-        required: true
+        required: false
         description: '集中度'
         type: choice
         options:
@@ -45,7 +45,7 @@ on:
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
       relaxed:
-        required: true
+        required: false
         description: 'リラ度'
         type: choice
         options:
@@ -62,7 +62,7 @@ on:
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
       mood:
-        required: true
+        required: false
         description: '気分度'
         type: choice
         options:
@@ -79,7 +79,7 @@ on:
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
       category:
-        required: true
+        required: false
         description: '種別'
         type: choice
         options:
