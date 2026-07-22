@@ -95,6 +95,10 @@ on:
         required: true
         description: 'ガイドの有無'
         type: boolean
+      bulk:
+        required: true
+        description: 'まとめて記録'
+        type: boolean
 
 jobs:
   meditation:
@@ -103,6 +107,6 @@ jobs:
       search_query: "meditation 瞑想"
       template_name: "meditation"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.2"
+      version: "0.2.3"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

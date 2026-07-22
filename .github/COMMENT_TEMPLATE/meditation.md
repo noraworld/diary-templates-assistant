@@ -9,6 +9,7 @@
 
 ### チェックリスト
 * [${{ github.event.inputs.guide }}] ガイド
+* [${{ github.event.inputs.bulk }}] まとめて記録
 
 ### 気がそれたときに考えていたことやそのときの感情
 ${{ github.event.inputs.thoughts || '特になし。' }}
