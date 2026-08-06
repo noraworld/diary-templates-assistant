@@ -15,7 +15,7 @@ on:
         required: true
         description: '発音練習'
         type: boolean
-        default: true
+        default: false
       points:
         required: true
         description: '経験値 (XP)'
@@ -63,7 +63,7 @@ on:
           - 'Distinction VI'
           - 'Distinction Structures'
           - 'Distinction 2000'
-        default: 'Distinction VI'
+        default: 'Distinction Structures'
 
 jobs:
   vocabulary:
