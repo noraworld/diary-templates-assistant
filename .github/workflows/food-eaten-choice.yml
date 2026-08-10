@@ -122,7 +122,7 @@ on:
         type: string
       seasonings1:
         required: false
-        description: '調味料'
+        description: '調味料 1'
         type: choice
         options:
           - ''
