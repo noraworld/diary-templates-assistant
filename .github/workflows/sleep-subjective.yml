@@ -3,6 +3,21 @@ name: '311: 🌿💤 睡眠記録 / 主観情報'
 on:
   workflow_dispatch:
     inputs:
+      alarm1:
+        required: false
+        description: '目覚まし 1 (mm:ss)'
+        type: string
+        default: '10:00'
+      alarm2:
+        required: false
+        description: '目覚まし 2 (mm:ss)'
+        type: string
+        # default: ''
+      alarm3:
+        required: false
+        description: '目覚まし 3 (mm:ss)'
+        type: string
+        # default: ''
       night:
         required: false
         description: '主観就寝時刻'

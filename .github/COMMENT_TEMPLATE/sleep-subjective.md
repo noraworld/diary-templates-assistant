@@ -5,6 +5,15 @@
 | 主観就寝時刻 | ${{ github.event.inputs.night || '—' }} |
 | 主観起床時刻 | ${{ github.event.inputs.morning }} |
 
+### アラーム
+* ${{ github.event.inputs.alarm1 || 'なし' }}
+${{ if(github.event.inputs.alarm2) }}
+* ${{ github.event.inputs.alarm2 }}
+${{ endif }}
+${{ if(github.event.inputs.alarm3) }}
+* ${{ github.event.inputs.alarm3 }}
+${{ endif }}
+
 ### 夢日記
 ${{ github.event.inputs.dream || '見ていない。' }}
 
