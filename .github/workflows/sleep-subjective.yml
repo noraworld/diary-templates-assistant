@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       night:
-        required: true
+        required: false
         description: '主観就寝時刻'
         type: string
       morning:
@@ -52,6 +52,6 @@ jobs:
       search_query: "sleep 睡眠記録"
       template_name: "sleep-subjective"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.1"
+      version: "0.1.2"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
