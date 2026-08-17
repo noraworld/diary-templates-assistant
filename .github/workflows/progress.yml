@@ -19,6 +19,14 @@ on:
         required: false
         description: '今日、触れたこと 4（なければ書かなくて OK！）'
         type: string
+      activity5:
+        required: false
+        description: '今日、触れたこと 5（なければ書かなくて OK！）'
+        type: string
+      activity6:
+        required: false
+        description: '今日、触れたこと 6（なければ書かなくて OK！）'
+        type: string
       mode:
         required: true
         description: '今日は、どう進めた？'
@@ -91,6 +99,6 @@ jobs:
       search_query: "progress ワンステップチャレンジ"
       template_name: "progress"
       template_repo: "noraworld/diary-templates"
-      version: "0.1.2"
+      version: "0.1.3"
     secrets:
       token: ${{ secrets.GH_TOKEN }}

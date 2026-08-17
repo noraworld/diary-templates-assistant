@@ -23,6 +23,12 @@ ${{ endif }}
 ${{ if(github.event.inputs.activity4) }}
 * ${{ github.event.inputs.activity4 }}
 ${{ endif }}
+${{ if(github.event.inputs.activity5) }}
+* ${{ github.event.inputs.activity5 }}
+${{ endif }}
+${{ if(github.event.inputs.activity6) }}
+* ${{ github.event.inputs.activity6 }}
+${{ endif }}
 
 ### チェックリスト
 * [${{ github.event.inputs.engagement }}] 自分のやりたいことに一歩触れた？
