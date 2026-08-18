@@ -21,6 +21,16 @@ on:
           - '50'
           - '55'
           - '60'
+      repeat:
+        required: false
+        description: 'タイマーリピート回数'
+        type: choice
+        options:
+          - ''
+          - '0'
+          - '1'
+          - '2'
+          - '3'
       minutes:
         required: false
         description: '分'
