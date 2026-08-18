@@ -82,6 +82,7 @@ on:
           - 'Leg - Beginner'
           - 'Leg - Intermediate'
           - 'Leg - Advanced'
+          - 'Yoga'
           - 'Other'
         default: ''
       trainer:
@@ -100,6 +101,6 @@ jobs:
       search_query: "workout ワークアウト"
       template_name: "workout"
       template_repo: "noraworld/diary-templates"
-      version: "0.2.0"
+      version: "0.2.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
