@@ -31,6 +31,7 @@ on:
           - '1'
           - '2'
           - '3'
+        default: '0'
       minutes:
         required: false
         description: '分'
