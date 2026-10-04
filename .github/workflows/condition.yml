@@ -25,7 +25,7 @@ on:
           - '★★★★★★★★★☆'
           - '★★★★★★★★★★'
       situation:
-        required: true
+        required: false
         description: '状況'
         type: string
       cause:
