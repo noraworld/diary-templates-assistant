@@ -23,7 +23,7 @@ on:
         description: '主観就寝時刻'
         type: string
       morning:
-        required: true
+        required: false
         description: '主観起床時刻'
         type: string
       mood:

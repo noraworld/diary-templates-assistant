@@ -3,7 +3,7 @@
 | --- | :---: |
 | 寝起きの気分 | ${{ github.event.inputs.mood }} |
 | 主観就寝時刻 | ${{ github.event.inputs.night || '—' }} |
-| 主観起床時刻 | ${{ github.event.inputs.morning }} |
+| 主観起床時刻 | ${{ github.event.inputs.morning || '—' }} |
 
 ### アラーム
 * ${{ github.event.inputs.alarm1 || 'なし' }}
