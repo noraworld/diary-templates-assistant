@@ -7,7 +7,7 @@ on:
         required: false
         description: '目覚まし 1 (mm:ss)'
         type: string
-        default: '10:00'
+        # default: '10:00'
       alarm2:
         required: false
         description: '目覚まし 2 (mm:ss)'
