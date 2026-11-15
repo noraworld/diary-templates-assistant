@@ -11,6 +11,7 @@
 ### 詳細
 * [${{ github.event.inputs.float }}] ぷかぷか
 * [${{ github.event.inputs.pain }}] はらいた
+* [${{ github.event.inputs.blood }}] 血便（血の混じり）
 
 ### メモ
 ${{ github.event.inputs.impression || '特になし。' }}

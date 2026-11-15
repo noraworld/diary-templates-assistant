@@ -85,6 +85,10 @@ on:
         required: true
         description: 'はらいた'
         type: boolean
+      blood:
+        required: true
+        description: '血便（血の混じり）'
+        type: boolean
 
 jobs:
   defecation:
@@ -93,6 +97,6 @@ jobs:
       search_query: "excretion 排泄記録"
       template_name: "defecation"
       template_repo: "noraworld/diary-templates"
-      version: "0.3.0"
+      version: "0.3.1"
     secrets:
       token: ${{ secrets.GH_TOKEN }}
