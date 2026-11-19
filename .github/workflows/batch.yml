@@ -28,7 +28,11 @@ on:
         #   instead of 'foo' in '${{ github.event.inputs.timezone || 'foo' }}'.
         #   See also Comment #2.
         default: 'Asia/Tokyo'
-  schedule:
+  # ‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️
+  #   'schedule' is disabled because it delays way too much. It is run by the Raspberry Pi instead.
+  #   https://github.com/noraworld/cron-conf/blob/63c1e73e73201d883ffe3b3eff33a87c8a1e5f2d/raspberrypi/schedules.cron#L49-L50
+  # ‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️
+  # schedule:
     # Read this if you want to delay the time to change the diary issues.
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790207338
     #   https://github.com/noraworld/reserved-diary/issues/708#issuecomment-2790217630
@@ -41,7 +45,7 @@ on:
     # Run at: 03:42 AM (JST)
     #   It should be done before ** 08:00 AM (JST) ** because of the network restrictions on Raspberry Pi.
     #   But be careful that the GitHub Actions schedule takes waaaaaaaaaay toooooooooo loooooooooong to be started.
-    - cron: '42 18 * * *'
+    # - cron: '42 18 * * *'
 
 jobs:
   # reserved-diary

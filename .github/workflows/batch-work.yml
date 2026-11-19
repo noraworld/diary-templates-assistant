@@ -38,9 +38,9 @@ on:
       #   description: 'My annual'
       #   type: string
       #   default: '864'
-  schedule:
+  # schedule:
     # See batch.yml also
-    - cron: '42 18 * * *'
+    # - cron: '42 18 * * *'
 
 jobs:
   daily-report-day-off:
