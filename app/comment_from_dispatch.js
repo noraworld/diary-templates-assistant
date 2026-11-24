@@ -77,10 +77,7 @@ async function getIssueNumber({ owner, repo }) {
     return 7141;
   }
 
-  // DEPRECATED WARNING!
-  // https://docs.github.com/rest/search/search#search-issues-and-pull-requests
-  // https://github.blog/changelog/2025-03-06-github-issues-projects-api-support-for-issues-advanced-search-and-more/
-  const result = await octokit.rest.search.issuesAndPullRequests({
+  const result = await octokit.request('GET /search/issues', {
     q,
     per_page: 1,
   });
